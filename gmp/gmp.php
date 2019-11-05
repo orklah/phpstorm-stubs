@@ -23,7 +23,7 @@
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_init ($number, $base = 0) {}
+function gmp_init ($number, int $base = 0) {}
 
 /**
  * Convert GMP number to integer
@@ -63,7 +63,7 @@ function gmp_random_seed ($seed ) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_strval ($gmpnumber, $base = 10) {}
+function gmp_strval ($gmpnumber, int $base = 10) {}
 
 /**
  * Add numbers
@@ -146,7 +146,7 @@ function gmp_mul ($a, $b) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_div_qr ($n, $d, $round = GMP_ROUND_ZERO) {}
+function gmp_div_qr ($n, $d, int $round = GMP_ROUND_ZERO) {}
 
 /**
  * Divide numbers
@@ -171,7 +171,7 @@ function gmp_div_qr ($n, $d, $round = GMP_ROUND_ZERO) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_div_q ($a, $b, $round = GMP_ROUND_ZERO) {}
+function gmp_div_q ($a, $b, int $round = GMP_ROUND_ZERO) {}
 
 /**
  * Remainder of the division of numbers
@@ -194,7 +194,7 @@ function gmp_div_q ($a, $b, $round = GMP_ROUND_ZERO) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_div_r ($n, $d, $round = GMP_ROUND_ZERO) {}
+function gmp_div_r ($n, $d, int $round = GMP_ROUND_ZERO) {}
 
 /**
  * Divide numbers
@@ -219,7 +219,7 @@ function gmp_div_r ($n, $d, $round = GMP_ROUND_ZERO) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_div ($a, $b, $round = GMP_ROUND_ZERO) {}
+function gmp_div ($a, $b, int $round = GMP_ROUND_ZERO) {}
 
 /**
  * Modulo operation
@@ -336,7 +336,7 @@ function gmp_sqrtrem ($a) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_pow ($base, $exp) {}
+function gmp_pow ($base, int $exp) {}
 
 /**
  * Raise number into power with modulo
@@ -400,7 +400,7 @@ function gmp_perfect_square ($a) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_prob_prime ($a, $reps = 10) {}
+function gmp_prob_prime ($a, int $reps = 10) {}
 
 /**
  * Random number
@@ -410,7 +410,7 @@ function gmp_prob_prime ($a, $reps = 10) {}
  * or a numeric string provided that it is possible to convert the latter to a number.</p>
  * @return GMP A random GMP number.
  */
-function gmp_random_bits($bits) {}
+function gmp_random_bits(int $bits) {}
 
 /**
  * Random number
@@ -534,7 +534,7 @@ function gmp_sign ($a) {}
  * @since 5.0
  * @deprecated 7.2 Use {@see gmp_random_bits()} or {@see gmp_random_range()} instead.
  */
-function gmp_random ($limiter = 20) {}
+function gmp_random (int $limiter = 20) {}
 
 /**
  * Bitwise AND
@@ -605,7 +605,7 @@ function gmp_xor ($a, $b) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_setbit (&$a, $index, $set_clear = true) {}
+function gmp_setbit (&$a, int $index, bool $set_clear = true) {}
 
 /**
  * Clear bit
@@ -618,7 +618,7 @@ function gmp_setbit (&$a, $index, $set_clear = true) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_clrbit (&$a, $index) {}
+function gmp_clrbit (&$a, int $index) {}
 
 /**
  * Scan for 0
@@ -636,7 +636,7 @@ function gmp_clrbit (&$a, $index) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_scan0 ($a, $start) {}
+function gmp_scan0 ($a, int $start) {}
 
 /**
  * Scan for 1
@@ -654,7 +654,7 @@ function gmp_scan0 ($a, $start) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gmp_scan1 ($a, $start) {}
+function gmp_scan1 ($a, int $start) {}
 
 /**
  * Tests if a bit is set
@@ -667,7 +667,7 @@ function gmp_scan1 ($a, $start) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.3
  */
-function gmp_testbit ($a, $index) {}
+function gmp_testbit ($a, int $index) {}
 
 /**
  * Population count
@@ -709,7 +709,7 @@ function gmp_hamdist ($a, $b) {}
  * @return GMP|false Returns a GMP number or FALSE on failure.
  * @since 5.6.1
  */
-function gmp_import ($data, $word_size = 1, $options = GMP_MSW_FIRST | GMP_NATIVE_ENDIAN) {}
+function gmp_import (string $data, int $word_size = 1, int $options = GMP_MSW_FIRST | GMP_NATIVE_ENDIAN) {}
 
 /**
  * Export to a binary string
@@ -721,7 +721,7 @@ function gmp_import ($data, $word_size = 1, $options = GMP_MSW_FIRST | GMP_NATIV
  * @return string|false Returns a string or FALSE on failure.
  * @since 5.6.1
  */
-function gmp_export (GMP $gmpnumber, $word_size = 1, $options = GMP_MSW_FIRST | GMP_NATIVE_ENDIAN) {}
+function gmp_export (GMP $gmpnumber, int $word_size = 1, int $options = GMP_MSW_FIRST | GMP_NATIVE_ENDIAN) {}
 
 /**
  * Takes the nth root of a and returns the integer component of the result.
@@ -732,7 +732,7 @@ function gmp_export (GMP $gmpnumber, $word_size = 1, $options = GMP_MSW_FIRST | 
  * @return GMP The integer component of the resultant root, as a GMP number.
  * @since 5.6
  */
-function gmp_root (GMP $a, $nth) {}
+function gmp_root (GMP $a, int $nth) {}
 
 /**
  * Takes the nth root of a and returns the integer component and remainder of the result.
@@ -744,7 +744,7 @@ function gmp_root (GMP $a, $nth) {}
  * the root, and the second element is the remainder, both represented as GMP numbers.</p>
  * @since 5.6
  */
-function gmp_rootrem (GMP $a, $nth) {}
+function gmp_rootrem (GMP $a, int $nth) {}
 
 /**
  * Find next prime number
