@@ -78,7 +78,7 @@
  * @since 4.2
  * @since 5.0
  */
-function exif_read_data ($stream, $sections = null, $arrays = false, $thumbnail = false) {}
+function exif_read_data ($stream, string $sections = null, bool $arrays = false, bool $thumbnail = false) {}
 
 /**
  * Alias of <b>exif_read_data</b>
@@ -104,7 +104,7 @@ function read_exif_data ($filename, $sections = null, $arrays = false, $thumbnai
  * @since 4.2
  * @since 5.0
  */
-function exif_tagname ($index) {}
+function exif_tagname (int $index) {}
 
 /**
  * Retrieve the embedded thumbnail of a TIFF or JPEG image
@@ -129,7 +129,7 @@ function exif_tagname ($index) {}
  * @since 4.2
  * @since 5.0
  */
-function exif_thumbnail ($stream, &$width = null, &$height = null, &$imagetype = null) {}
+function exif_thumbnail ($stream, int &$width = null, int &$height = null, int &$imagetype = null) {}
 
 /**
  * Determine the type of an image
@@ -147,7 +147,7 @@ function exif_thumbnail ($stream, &$width = null, &$height = null, &$imagetype =
  * @since 4.3
  * @since 5.0
  */
-function exif_imagetype ($filename) {}
+function exif_imagetype (string $filename) {}
 
 define ('EXIF_USE_MBSTRING', 1);
 
