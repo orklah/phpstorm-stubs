@@ -68,7 +68,7 @@ function enchant_broker_list_dicts ($broker) {}
  * </p>
  * @return resource a dictionary resource on success or <b>FALSE</b> on failure.
  */
-function enchant_broker_request_dict ($broker, $tag) {}
+function enchant_broker_request_dict ($broker, string $tag) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -82,7 +82,7 @@ function enchant_broker_request_dict ($broker, $tag) {}
  * </p>
  * @return resource a dictionary resource on success or <b>FALSE</b> on failure.
  */
-function enchant_broker_request_pwl_dict ($broker, $filename) {}
+function enchant_broker_request_pwl_dict ($broker, string $filename) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -107,7 +107,7 @@ function enchant_broker_free_dict ($dict) {}
  * </p>
  * @return bool <b>TRUE</b> when the tag exist or <b>FALSE</b> when not.
  */
-function enchant_broker_dict_exists ($broker, $tag) {}
+function enchant_broker_dict_exists ($broker, string $tag) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -126,7 +126,7 @@ function enchant_broker_dict_exists ($broker, $tag) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function enchant_broker_set_ordering ($broker, $tag, $ordering) {}
+function enchant_broker_set_ordering ($broker, string $tag, string $ordering) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0)<br/>
@@ -151,7 +151,7 @@ function enchant_broker_describe ($broker) {}
  * </p>
  * @return bool <b>TRUE</b> if the word is spelled correctly, <b>FALSE</b> if not.
  */
-function enchant_dict_check ($dict, $word) {}
+function enchant_dict_check ($dict, string $word) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -165,7 +165,7 @@ function enchant_dict_check ($dict, $word) {}
  * </p>
  * @return array|false Will returns an array of suggestions if the word is bad spelled.
  */
-function enchant_dict_suggest ($dict, $word) {}
+function enchant_dict_suggest ($dict, string $word) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -179,7 +179,7 @@ function enchant_dict_suggest ($dict, $word) {}
  * </p>
  * @return void
  */
-function enchant_dict_add_to_personal ($dict, $word) {}
+function enchant_dict_add_to_personal ($dict, string $word) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -193,7 +193,7 @@ function enchant_dict_add_to_personal ($dict, $word) {}
  * </p>
  * @return void <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function enchant_dict_add_to_session ($dict, $word) {}
+function enchant_dict_add_to_session ($dict, string $word) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -207,7 +207,7 @@ function enchant_dict_add_to_session ($dict, $word) {}
  * </p>
  * @return bool <b>TRUE</b> if the word exists or <b>FALSE</b>
  */
-function enchant_dict_is_in_session ($dict, $word) {}
+function enchant_dict_is_in_session ($dict, string $word) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -224,7 +224,7 @@ function enchant_dict_is_in_session ($dict, $word) {}
  * </p>
  * @return void
  */
-function enchant_dict_store_replacement ($dict, $mis, $cor) {}
+function enchant_dict_store_replacement ($dict, string $mis, string $cor) {}
 
 /**
  * (PHP 5 &gt;= 5.3.0, PECL enchant &gt;= 0.1.0 )<br/>
@@ -264,7 +264,7 @@ function enchant_dict_describe ($dict) {}
  * </p>
  * @return bool <b>TRUE</b> if the word is correctly spelled or <b>FALSE</b>
  */
-function enchant_dict_quick_check ($dict, $word, array &$suggestions = null) {}
+function enchant_dict_quick_check ($dict, string $word, array &$suggestions = null) {}
 
 define ('ENCHANT_MYSPELL', 1);
 define ('ENCHANT_ISPELL', 2);
