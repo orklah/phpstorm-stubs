@@ -48,7 +48,7 @@
  * @since 4.0
  * @since 5.0
  */
-function imap_open ($mailbox, $username, $password, $options = 0, $n_retries = 0, array $params = null) {}
+function imap_open (string $mailbox, string $username, string $password, int $options = 0, int $n_retries = 0, array $params = null) {}
 
 /**
  * Reopen IMAP stream to new mailbox
@@ -69,7 +69,7 @@ function imap_open ($mailbox, $username, $password, $options = 0, $n_retries = 0
  * @since 4.0
  * @since 5.0
  */
-function imap_reopen ($imap_stream, $mailbox, $options = 0, $n_retries = 0) {}
+function imap_reopen ($imap_stream, string $mailbox, int $options = 0, int $n_retries = 0) {}
 
 /**
  * Close an IMAP stream
@@ -85,7 +85,7 @@ function imap_reopen ($imap_stream, $mailbox, $options = 0, $n_retries = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_close ($imap_stream, $flag = 0) {}
+function imap_close ($imap_stream, int $flag = 0) {}
 
 /**
  * Gets the number of messages in the current mailbox
@@ -169,7 +169,7 @@ function imap_headers ($imap_stream) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_headerinfo ($stream_id, $msg_no, $from_length = 0, $subject_length = 0, $default_host = null) {}
+function imap_headerinfo ($stream_id, int $msg_no, int $from_length = 0, int $subject_length = 0, $default_host = null) {}
 
 /**
  * Parse mail headers from a string
@@ -186,7 +186,7 @@ function imap_headerinfo ($stream_id, $msg_no, $from_length = 0, $subject_length
  * @since 4.0
  * @since 5.0
  */
-function imap_rfc822_parse_headers ($headers, $defaulthost = "UNKNOWN") {}
+function imap_rfc822_parse_headers (string $headers, string $defaulthost = "UNKNOWN") {}
 
 /**
  * Returns a properly formatted email address given the mailbox, host, and personal info
@@ -205,7 +205,7 @@ function imap_rfc822_parse_headers ($headers, $defaulthost = "UNKNOWN") {}
  * @since 4.0
  * @since 5.0
  */
-function imap_rfc822_write_address ($mailbox, $host, $personal) {}
+function imap_rfc822_write_address (string $mailbox, string $host, string $personal) {}
 
 /**
  * Parses an address string
@@ -226,7 +226,7 @@ function imap_rfc822_write_address ($mailbox, $host, $personal) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_rfc822_parse_adrlist ($address, $default_host) {}
+function imap_rfc822_parse_adrlist (string $address, string $default_host) {}
 
 /**
  * Read the message body
@@ -243,7 +243,7 @@ function imap_rfc822_parse_adrlist ($address, $default_host) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_body ($imap_stream, $msg_number, $options = 0) {}
+function imap_body ($imap_stream, int $msg_number, int $options = 0) {}
 
 /**
  * Read the structure of a specified body section of a specific message
@@ -261,7 +261,7 @@ function imap_body ($imap_stream, $msg_number, $options = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_bodystruct ($imap_stream, $msg_number, $section) {}
+function imap_bodystruct ($imap_stream, int $msg_number, string $section) {}
 
 /**
  * Fetch a particular section of the body of the message
@@ -282,7 +282,7 @@ function imap_bodystruct ($imap_stream, $msg_number, $section) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_fetchbody ($imap_stream, $msg_number, $section, $options = 0) {}
+function imap_fetchbody ($imap_stream, int $msg_number, string $section, int $options = 0) {}
 
 /**
  * Fetch MIME headers for a particular section of the message
@@ -302,7 +302,7 @@ function imap_fetchbody ($imap_stream, $msg_number, $section, $options = 0) {}
  * text string.
  * @since 5.3.6
  */
-function imap_fetchmime ($imap_stream, $msg_number, $section, $options = 0) {}
+function imap_fetchmime ($imap_stream, int $msg_number, string $section, int $options = 0) {}
 
 /**
  * Save a specific body section to a file
@@ -325,7 +325,7 @@ function imap_fetchmime ($imap_stream, $msg_number, $section, $options = 0) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.1.3
  */
-function imap_savebody ($imap_stream, $file, $msg_number, $part_number = "", $options = 0) {}
+function imap_savebody ($imap_stream, $file, int $msg_number, string $part_number = "", int $options = 0) {}
 
 /**
  * Returns header for a message
@@ -342,7 +342,7 @@ function imap_savebody ($imap_stream, $file, $msg_number, $part_number = "", $op
  * @since 4.0
  * @since 5.0
  */
-function imap_fetchheader ($imap_stream, $msg_number, $options = 0) {}
+function imap_fetchheader ($imap_stream, int $msg_number, int $options = 0) {}
 
 /**
  * Read the structure of a particular message
@@ -468,7 +468,7 @@ function imap_fetchheader ($imap_stream, $msg_number, $options = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_fetchstructure ($imap_stream, $msg_number, $options = 0) {}
+function imap_fetchstructure ($imap_stream, int $msg_number, int $options = 0) {}
 
 /**
  * Clears IMAP cache
@@ -484,7 +484,7 @@ function imap_fetchstructure ($imap_stream, $msg_number, $options = 0) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.3
  */
-function imap_gc ($imap_stream, $caches) {}
+function imap_gc ($imap_stream, int $caches) {}
 
 /**
  * Delete all messages marked for deletion
@@ -512,7 +512,7 @@ function imap_expunge ($imap_stream) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_delete ($imap_stream, $msg_number, $options = 0) {}
+function imap_delete ($imap_stream, int $msg_number, int $options = 0) {}
 
 /**
  * Unmark the message which is marked deleted
@@ -526,7 +526,7 @@ function imap_delete ($imap_stream, $msg_number, $options = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_undelete ($imap_stream, $msg_number, $flags = 0) {}
+function imap_undelete ($imap_stream, int $msg_number, int $flags = 0) {}
 
 /**
  * Check current mailbox
@@ -575,7 +575,7 @@ function imap_check ($imap_stream) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_listscan ($imap_stream, $ref, $pattern, $content) {}
+function imap_listscan ($imap_stream, string $ref, string $pattern, string $content) {}
 
 /**
  * Copy specified messages to a mailbox
@@ -596,7 +596,7 @@ function imap_listscan ($imap_stream, $ref, $pattern, $content) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_mail_copy ($imap_stream, $msglist, $mailbox, $options = 0) {}
+function imap_mail_copy ($imap_stream, string $msglist, string $mailbox, int $options = 0) {}
 
 /**
  * Move specified messages to a mailbox
@@ -617,7 +617,7 @@ function imap_mail_copy ($imap_stream, $msglist, $mailbox, $options = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_mail_move ($imap_stream, $msglist, $mailbox, $options = 0) {}
+function imap_mail_move ($imap_stream, string $msglist, string $mailbox, int $options = 0) {}
 
 /**
  * Create a MIME message based on given envelope and body sections
@@ -656,7 +656,7 @@ function imap_mail_compose (array $envelope, array $body) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_createmailbox ($imap_stream, $mailbox) {}
+function imap_createmailbox ($imap_stream, string $mailbox) {}
 
 /**
  * Rename an old mailbox to new mailbox
@@ -674,7 +674,7 @@ function imap_createmailbox ($imap_stream, $mailbox) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_renamemailbox ($imap_stream, $old_mbox, $new_mbox) {}
+function imap_renamemailbox ($imap_stream, string $old_mbox, string $new_mbox) {}
 
 /**
  * Delete a mailbox
@@ -688,7 +688,7 @@ function imap_renamemailbox ($imap_stream, $old_mbox, $new_mbox) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_deletemailbox ($imap_stream, $mailbox) {}
+function imap_deletemailbox ($imap_stream, string $mailbox) {}
 
 /**
  * Subscribe to a mailbox
@@ -702,7 +702,7 @@ function imap_deletemailbox ($imap_stream, $mailbox) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_subscribe ($imap_stream, $mailbox) {}
+function imap_subscribe ($imap_stream, string $mailbox) {}
 
 /**
  * Unsubscribe from a mailbox
@@ -716,7 +716,7 @@ function imap_subscribe ($imap_stream, $mailbox) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_unsubscribe ($imap_stream, $mailbox) {}
+function imap_unsubscribe ($imap_stream, string $mailbox) {}
 
 /**
  * Append a string message to a specified mailbox
@@ -745,7 +745,7 @@ function imap_unsubscribe ($imap_stream, $mailbox) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_append ($imap_stream, $mailbox, $message, $options = null, $internal_date = null) {}
+function imap_append ($imap_stream, string $mailbox, string $message, string $options = null, string $internal_date = null) {}
 
 /**
  * Check if the IMAP stream is still active
@@ -767,7 +767,7 @@ function imap_ping ($imap_stream) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_base64 ($text) {}
+function imap_base64 (string $text) {}
 
 /**
  * Convert a quoted-printable string to an 8 bit string
@@ -779,7 +779,7 @@ function imap_base64 ($text) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_qprint ($string) {}
+function imap_qprint (string $string) {}
 
 /**
  * Convert an 8bit string to a quoted-printable string
@@ -791,7 +791,7 @@ function imap_qprint ($string) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_8bit ($string) {}
+function imap_8bit (string $string) {}
 
 /**
  * Convert an 8bit string to a base64 string
@@ -803,7 +803,7 @@ function imap_8bit ($string) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_binary ($string) {}
+function imap_binary (string $string) {}
 
 /**
  * Converts MIME-encoded text to UTF-8
@@ -816,7 +816,7 @@ function imap_binary ($string) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_utf8 ($mime_encoded_text) {}
+function imap_utf8 (string $mime_encoded_text) {}
 
 /**
  * Returns status information on a mailbox
@@ -841,7 +841,7 @@ function imap_utf8 ($mime_encoded_text) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_status ($imap_stream, $mailbox, $options) {}
+function imap_status ($imap_stream, string $mailbox, int $options) {}
 
 /**
  * @param $stream_id
@@ -920,7 +920,7 @@ function imap_mailboxmsginfo ($imap_stream) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_setflag_full ($imap_stream, $sequence, $flag, $options = NIL) {}
+function imap_setflag_full ($imap_stream, string $sequence, string $flag, int $options = NIL) {}
 
 /**
  * Clears flags on messages
@@ -944,7 +944,7 @@ function imap_setflag_full ($imap_stream, $sequence, $flag, $options = NIL) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_clearflag_full ($imap_stream, $sequence, $flag, $options = 0) {}
+function imap_clearflag_full ($imap_stream, string $sequence, string $flag, int $options = 0) {}
 
 /**
  * Gets and sort messages
@@ -967,7 +967,7 @@ function imap_clearflag_full ($imap_stream, $sequence, $flag, $options = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_sort ($imap_stream, $criteria, $reverse, $options = 0, $search_criteria = null, $charset = 'NIL') {}
+function imap_sort ($imap_stream, int $criteria, int $reverse, int $options = 0, string $search_criteria = null, string $charset = 'NIL') {}
 
 /**
  * This function returns the UID for the given message sequence number
@@ -980,7 +980,7 @@ function imap_sort ($imap_stream, $criteria, $reverse, $options = 0, $search_cri
  * @since 4.0
  * @since 5.0
  */
-function imap_uid ($imap_stream, $msg_number) {}
+function imap_uid ($imap_stream, int $msg_number) {}
 
 /**
  * Gets the message sequence number for the given UID
@@ -994,7 +994,7 @@ function imap_uid ($imap_stream, $msg_number) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_msgno ($imap_stream, $uid) {}
+function imap_msgno ($imap_stream, int $uid) {}
 
 /**
  * Read the list of mailboxes
@@ -1020,7 +1020,7 @@ function imap_msgno ($imap_stream, $uid) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_list ($imap_stream, $ref, $pattern) {}
+function imap_list ($imap_stream, string $ref, string $pattern) {}
 
 /**
  * List all the subscribed mailboxes
@@ -1046,7 +1046,7 @@ function imap_list ($imap_stream, $ref, $pattern) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_lsub ($imap_stream, $ref, $pattern) {}
+function imap_lsub ($imap_stream, string $ref, string $pattern) {}
 
 /**
  * Read an overview of the information in the headers of the given message
@@ -1084,7 +1084,7 @@ function imap_lsub ($imap_stream, $ref, $pattern) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_fetch_overview ($imap_stream, $sequence, $options = 0) {}
+function imap_fetch_overview ($imap_stream, string $sequence, int $options = 0) {}
 
 /**
  * Returns all IMAP alert messages that have occurred
@@ -1142,7 +1142,7 @@ function imap_last_error () {}
  * @since 4.0
  * @since 5.0
  */
-function imap_search ($imap_stream, $criteria, $options = SE_FREE, $charset = NIL) {}
+function imap_search ($imap_stream, string $criteria, int $options = SE_FREE, string $charset = NIL) {}
 
 /**
  * Decodes a modified UTF-7 encoded string
@@ -1159,7 +1159,7 @@ function imap_search ($imap_stream, $criteria, $options = SE_FREE, $charset = NI
  * @since 4.0
  * @since 5.0
  */
-function imap_utf7_decode ($text) {}
+function imap_utf7_decode (string $text) {}
 
 /**
  * Converts ISO-8859-1 string to modified UTF-7 text
@@ -1173,7 +1173,7 @@ function imap_utf7_decode ($text) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_utf7_encode ($data) {}
+function imap_utf7_encode (string $data) {}
 
 /**
  * Decode MIME header elements
@@ -1192,7 +1192,7 @@ function imap_utf7_encode ($data) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_mime_header_decode ($text) {}
+function imap_mime_header_decode (string $text) {}
 
 /**
  * Returns a tree of threaded message
@@ -1218,7 +1218,7 @@ function imap_mime_header_decode ($text) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imap_thread ($imap_stream, $options = SE_FREE) {}
+function imap_thread ($imap_stream, int $options = SE_FREE) {}
 
 /**
  * Set or fetch imap timeout
@@ -1243,7 +1243,7 @@ function imap_thread ($imap_stream, $options = SE_FREE) {}
  * @since 4.3.3
  * @since 5.0
  */
-function imap_timeout ($timeout_type, $timeout = -1) {}
+function imap_timeout (int $timeout_type, int $timeout = -1) {}
 
 /**
  * Retrieve the quota level settings, and usage statics per mailbox
@@ -1273,7 +1273,7 @@ function imap_timeout ($timeout_type, $timeout = -1) {}
  * @since 4.0.5
  * @since 5.0
  */
-function imap_get_quota ($imap_stream, $quota_root) {}
+function imap_get_quota ($imap_stream, string $quota_root) {}
 
 /**
  * Retrieve the quota settings per user
@@ -1294,7 +1294,7 @@ function imap_get_quota ($imap_stream, $quota_root) {}
  * @since 4.3
  * @since 5.0
  */
-function imap_get_quotaroot ($imap_stream, $quota_root) {}
+function imap_get_quotaroot ($imap_stream, string $quota_root) {}
 
 /**
  * Sets a quota for a given mailbox
@@ -1311,7 +1311,7 @@ function imap_get_quotaroot ($imap_stream, $quota_root) {}
  * @since 4.0.5
  * @since 5.0
  */
-function imap_set_quota ($imap_stream, $quota_root, $quota_limit) {}
+function imap_set_quota ($imap_stream, string $quota_root, int $quota_limit) {}
 
 /**
  * Sets the ACL for a given mailbox
@@ -1332,7 +1332,7 @@ function imap_set_quota ($imap_stream, $quota_root, $quota_limit) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imap_setacl ($imap_stream, $mailbox, $id, $rights) {}
+function imap_setacl ($imap_stream, string $mailbox, string $id, string $rights) {}
 
 /**
  * Gets the ACL for a given mailbox
@@ -1345,7 +1345,7 @@ function imap_setacl ($imap_stream, $mailbox, $id, $rights) {}
  * @return array an associative array of "folder" => "acl" pairs.
  * @since 5.0
  */
-function imap_getacl ($imap_stream, $mailbox) {}
+function imap_getacl ($imap_stream, string $mailbox) {}
 
 /**
  * @param $stream_id
@@ -1398,7 +1398,7 @@ function imap_getannotation ($stream_id, $mailbox, $entry, $attr) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_mail ($to, $subject, $message, $additional_headers = null, $cc = null, $bcc = null, $rpath = null) {}
+function imap_mail (string $to, string $subject, string $message, string $additional_headers = null, string $cc = null, string $bcc = null, string $rpath = null) {}
 
 /**
  * Alias of <b>imap_headerinfo</b>
@@ -1450,7 +1450,7 @@ function imap_mail ($to, $subject, $message, $additional_headers = null, $cc = n
  * @since 4.0
  * @since 5.0
  */
-function imap_header ($stream_id, $msg_no, $from_length = 0, $subject_length = 0, $default_host = null) {}
+function imap_header ($stream_id, int $msg_no, int $from_length = 0, int $subject_length = 0, $default_host = null) {}
 
 /**
  * Alias of <b>imap_list</b>
@@ -1512,7 +1512,7 @@ function imap_listmailbox ($stream_id, $ref, $pattern) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_getmailboxes ($imap_stream, $ref, $pattern) {}
+function imap_getmailboxes ($imap_stream, string $ref, string $pattern) {}
 
 /**
  * Alias of <b>imap_listscan</b>
@@ -1575,7 +1575,7 @@ function imap_listsubscribed ($stream_id, $ref, $pattern) {}
  * @since 4.0
  * @since 5.0
  */
-function imap_getsubscribed ($imap_stream, $ref, $pattern) {}
+function imap_getsubscribed ($imap_stream, string $ref, string $pattern) {}
 
 /**
  * (PHP 4, PHP 5)</br>
@@ -1588,7 +1588,7 @@ function imap_getsubscribed ($imap_stream, $ref, $pattern) {}
  * <li>FT_INTERNAL - The return string is in internal format, will not canonicalize to CRLF.</ul><p>
  * @return string body of the specified message
  */
-function imap_fetchtext ($stream, $msg_no, $options = 0) {}
+function imap_fetchtext ($stream, int $msg_no, int $options = 0) {}
 
 /**
  * Alias of <b>imap_listscan</b>
