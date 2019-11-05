@@ -14,7 +14,7 @@
  *
  * @return int a unique (<i>inotify</i> instance-wide) watch descriptor.
  */
-function inotify_add_watch( $inotify_instance, $pathname, $mask )
+function inotify_add_watch( $inotify_instance, string $pathname, int $mask )
 {
 }
 
@@ -79,7 +79,7 @@ function inotify_read( $inotify_instance )
  *
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function inotify_rm_watch( $inotify_instance, $watch_descriptor )
+function inotify_rm_watch( $inotify_instance, int $watch_descriptor )
 {
 }
 
