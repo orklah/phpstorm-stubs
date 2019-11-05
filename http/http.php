@@ -60,7 +60,7 @@ class HttpDeflateStream  {
 	 * initialization flags
 	 * </p>
 	 */
-	public function __construct ($flags = null) {}
+	public function __construct (int $flags = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -71,7 +71,7 @@ class HttpDeflateStream  {
 	 * </p>
 	 * @return string|false deflated data on success or false on failure.
 	 */
-	public function update ($data) {}
+	public function update (string $data) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -82,7 +82,7 @@ class HttpDeflateStream  {
 	 * </p>
 	 * @return string|false some deflated data as string on success or false on failure.
 	 */
-	public function flush ($data = null) {}
+	public function flush (string $data = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -93,7 +93,7 @@ class HttpDeflateStream  {
 	 * </p>
 	 * @return string the final part of deflated data.
 	 */
-	public function finish ($data = null) {}
+	public function finish (string $data = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 1.4.0)<br/>
@@ -107,7 +107,7 @@ class HttpDeflateStream  {
 	 * </p>
 	 * @return HttpDeflateStream 
 	 */
-	public static function factory ($flags = null, $class_name = null) {}
+	public static function factory (int $flags = null, string $class_name = null) {}
 
 }
 
@@ -128,7 +128,7 @@ class HttpInflateStream  {
 	 * initialization flags
 	 * </p>
 	 */
-	public function __construct ($flags = null) {}
+	public function __construct (int $flags = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -139,7 +139,7 @@ class HttpInflateStream  {
 	 * </p>
 	 * @return string|false inflated data on success or false on failure.
 	 */
-	public function update ($data) {}
+	public function update (string $data) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -150,7 +150,7 @@ class HttpInflateStream  {
 	 * </p>
 	 * @return string|false some inflated data as string on success or false on failure.
 	 */
-	public function flush ($data = null) {}
+	public function flush (string $data = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -161,7 +161,7 @@ class HttpInflateStream  {
 	 * </p>
 	 * @return string the final part of inflated data.
 	 */
-	public function finish ($data = null) {}
+	public function finish (string $data = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 1.4.0)<br/>
@@ -175,7 +175,7 @@ class HttpInflateStream  {
 	 * </p>
 	 * @return HttpInflateStream 
 	 */
-	public static function factory ($flags = null, $class_name = null) {}
+	public static function factory (int $flags = null, string $class_name = null) {}
 
 }
 
@@ -206,7 +206,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * a single or several consecutive HTTP messages
 	 * </p>
 	 */
-	public function __construct ($message = null) {}
+	public function __construct (string $message = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -225,7 +225,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return void 
 	 */
-	public function setBody ($body) {}
+	public function setBody (string $body) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 1.1.0)<br/>
@@ -236,7 +236,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return string|null the header value on success or NULL if the header does not exist.
 	 */
-	public function getHeader ($header) {}
+	public function getHeader (string $header) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -271,7 +271,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return void
 	 */
-	public function addHeaders (array $headers, $append = null) {}
+	public function addHeaders (array $headers, bool $append = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -290,7 +290,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return void 
 	 */
-	public function setType ($type) {}
+	public function setType (int $type) {}
 
 	public function getInfo () {}
 
@@ -317,7 +317,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * @return bool TRUE on success, or FALSE if the message is not of type
 	 * HttpMessage::TYPE_RESPONSE or the response code is out of range (100-510).
 	 */
-	public function setResponseCode ($code) {}
+	public function setResponseCode (int $code) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.23.0)<br/>
@@ -338,7 +338,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * @return bool TRUE on success or FALSE if the message is not of type
 	 * HttpMessage::TYPE_RESPONSE.
 	 */
-	public function setResponseStatus ($status) {}
+	public function setResponseStatus (string $status) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -359,7 +359,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * @return bool TRUE on success, or FALSE if the message is not of type
 	 * HttpMessage::TYPE_REQUEST or an invalid request method was supplied.
 	 */
-	public function setRequestMethod ($method) {}
+	public function setRequestMethod (string $method) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -380,7 +380,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * @return bool TRUE on success, or FALSE if the message is not of type
 	 * HttpMessage::TYPE_REQUEST or supplied URL was empty.
 	 */
-	public function setRequestUrl ($url) {}
+	public function setRequestUrl (string $url) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -399,7 +399,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return bool TRUE on success, or FALSE if supplied version is out of range (1.0/1.1).
 	 */
-	public function setHttpVersion ($version) {}
+	public function setHttpVersion (string $version) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 1.0.0)<br/>
@@ -413,7 +413,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return string|false the guessed content type on success or false on failure.
 	 */
-	public function guessContentType ($magic_file, $magic_mode = null) {}
+	public function guessContentType (string $magic_file, int $magic_mode = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -440,7 +440,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return string the message as string.
 	 */
-	public function toString ($include_parent = null) {}
+	public function toString (bool $include_parent = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.22.0)<br/>
@@ -486,7 +486,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return HttpMessage|null an HttpMessage object on success or NULL on failure.
 	 */
-	public static function factory ($raw_message = null, $class_name = null) {}
+	public static function factory (string $raw_message = null, string $class_name = null) {}
 
 	/**
 	 * (PECL pecl_http 0.10.0-1.3.3)<br/>
@@ -500,7 +500,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return HttpMessage|null an HttpMessage object on success or NULL on failure.
 	 */
-	public static function fromString ($raw_message = null, $class_name = null) {}
+	public static function fromString (string $raw_message = null, string $class_name = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 1.5.0)<br/>
@@ -514,7 +514,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return HttpMessage|null an HttpMessage object on success or NULL on failure.
 	 */
-	public static function fromEnv ($message_type, $class_name = null) {}
+	public static function fromEnv (int $message_type, string $class_name = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.22.0)<br/>
@@ -536,7 +536,7 @@ class HttpMessage implements Countable, Serializable, Iterator {
 	 * </p>
 	 * @return void 
 	 */
-	public function prepend (HttpMessage $message, $top = null) {}
+	public function prepend (HttpMessage $message, bool $top = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.23.0)<br/>
@@ -576,7 +576,7 @@ class HttpQueryString implements Serializable, ArrayAccess {
 	 * additional/initial query string parameters
 	 * </p>
 	 */
-	final public function __construct ($global = null, $add = null) {}
+	final public function __construct (bool $global = null, $add = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.22.0)<br/>
@@ -617,7 +617,7 @@ class HttpQueryString implements Serializable, ArrayAccess {
 	 * </p>
 	 * @return mixed the value of the query string param or the whole query string if no key was specified on success or defval if key does not exist.
 	 */
-	public function get ($key = null, $type = null, $defval = null, $delete = null) {}
+	public function get (string $key = null, $type = null, $defval = null, bool $delete = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.22.0)<br/>
@@ -700,7 +700,7 @@ class HttpQueryString implements Serializable, ArrayAccess {
 	 * </p>
 	 * @return HttpQueryString always the same HttpQueryString instance regarding the global setting.
 	 */
-	public static function singleton ($global = null) {}
+	public static function singleton (bool $global = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.25.0)<br/>
@@ -714,7 +714,7 @@ class HttpQueryString implements Serializable, ArrayAccess {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function xlate ($ie, $oe) {}
+	public function xlate (string $ie, string $oe) {}
 
 	/**
 	 * String representation of object
@@ -875,7 +875,7 @@ class HttpRequest  {
 	 * an associative array with request options
 	 * </p>
 	 */
-	public function __construct ($url = null, $request_method = null, array $options = null ) {}
+	public function __construct (string $url = null, int $request_method = null, array $options = null ) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1008,7 +1008,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function resetCookies ($session_only = null) {}
+	public function resetCookies (bool $session_only = null) {}
 
 	public function flushCookies () {}
 
@@ -1021,7 +1021,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function setMethod ($request_method) {}
+	public function setMethod (int $request_method) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1040,7 +1040,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function setUrl ($url) {}
+	public function setUrl (string $url) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1060,7 +1060,7 @@ class HttpRequest  {
 	 * @return bool TRUE on success, or FALSE if the content type does not seem to
 	 * contain a primary and a secondary part.
 	 */
-	public function setContentType ($content_type) {}
+	public function setContentType (string $content_type) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1154,7 +1154,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function setRawPostData ($raw_post_data = null) {}
+	public function setRawPostData (string $raw_post_data = null) {}
 
 	/**
 	 * (PECL pecl_http 0.14.0-1.4.1)<br/>
@@ -1173,7 +1173,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function addRawPostData ($raw_post_data) {}
+	public function addRawPostData (string $raw_post_data) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1203,7 +1203,7 @@ class HttpRequest  {
 	 * @return bool TRUE on success, or FALSE if the content type seems not to contain a 
 	 * primary and a secondary content type part.
 	 */
-	public function addPostFile ($name, $file, $content_type = null) {}
+	public function addPostFile (string $name, string $file, string $content_type = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1223,7 +1223,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function setPutFile ($file = null) {}
+	public function setPutFile (string $file = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1242,7 +1242,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function setPutData ($put_data = null) {}
+	public function setPutData (string $put_data = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.25.0)<br/>
@@ -1261,7 +1261,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public function addPutData ($put_data) {}
+	public function addPutData (string $put_data) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1291,7 +1291,7 @@ class HttpRequest  {
 	 * @return mixed either a string with the value of the header matching name if requested, 
 	 * FALSE on failure, or an associative array containing all response headers.
 	 */
-	public function getResponseHeader ($name = null) {}
+	public function getResponseHeader (string $name = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.23.0)<br/>
@@ -1305,7 +1305,7 @@ class HttpRequest  {
 	 * </p>
 	 * @return stdClass[] an array of stdClass objects like http_parse_cookie would return.
 	 */
-	public function getResponseCookies ($flags = null,  array $allowed_extras = null ) {}
+	public function getResponseCookies (int $flags = null,  array $allowed_extras = null ) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1343,7 +1343,7 @@ class HttpRequest  {
 	 * requested, FALSE on failure, or an associative array containing all
 	 * available info.
 	 */
-	public function getResponseInfo ($name = null) {}
+	public function getResponseInfo (string $name = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1681,7 +1681,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setHeader ($name, $value = null, $replace = null) {}
+	public static function setHeader (string $name, $value = null, bool $replace = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.12.0)<br/>
@@ -1694,7 +1694,7 @@ class HttpResponse  {
 	 * @return mixed either a string containing the value of the header matching name,
 	 * false on failure, or an associative array with all headers.
 	 */
-	public static function getHeader ($name = null) {}
+	public static function getHeader (string $name = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1705,7 +1705,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setETag ($etag) {}
+	public static function setETag (string $etag) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1724,7 +1724,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setLastModified ($timestamp) {}
+	public static function setLastModified (int $timestamp) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.12.0)<br/>
@@ -1747,7 +1747,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setContentDisposition ($filename, $inline = null) {}
+	public static function setContentDisposition (string $filename, bool $inline = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1767,7 +1767,7 @@ class HttpResponse  {
 	 * @return bool true on success, or false if the content type does not seem to
 	 * contain a primary and secondary content type part.
 	 */
-	public static function setContentType ($content_type) {}
+	public static function setContentType (string $content_type) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1789,7 +1789,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return string|false the guessed content type on success or false on failure.
 	 */
-	public static function guessContentType ($magic_file, $magic_mode = null) {}
+	public static function guessContentType (string $magic_file, int $magic_mode = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1800,7 +1800,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setCache ($cache) {}
+	public static function setCache (bool $cache) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1825,7 +1825,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success, or false if control does not match one of public, private or no-cache.
 	 */
-	public static function setCacheControl ($control, $max_age = null, $must_revalidate = null) {}
+	public static function setCacheControl (string $control, int $max_age = null, bool $must_revalidate = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1844,7 +1844,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setGzip ($gzip) {}
+	public static function setGzip (bool $gzip) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1863,7 +1863,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setThrottleDelay ($seconds) {}
+	public static function setThrottleDelay (float $seconds) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1882,7 +1882,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setBufferSize ($bytes) {}
+	public static function setBufferSize (int $bytes) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1920,7 +1920,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function setFile ($file) {}
+	public static function setFile (string $file) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1958,7 +1958,7 @@ class HttpResponse  {
 	 * </p>
 	 * @return bool true on success or false on failure.
 	 */
-	public static function send ($clean_ob = null) {}
+	public static function send (bool $clean_ob = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -1978,7 +1978,7 @@ class HttpResponse  {
 	 * @param int $status [optional] 
 	 * @return void 
 	 */
-	public static function redirect ($url = null,  array $params = null , $session = null, $status = null) {}
+	public static function redirect (string $url = null,  array $params = null , bool $session = null, int $status = null) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.12.0)<br/>
@@ -1987,7 +1987,7 @@ class HttpResponse  {
 	 * @param int $status 
 	 * @return bool 
 	 */
-	public static function status ($status) {}
+	public static function status (int $status) {}
 
 	/**
 	 * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2132,7 +2132,7 @@ class HttpUtil  {
  * </p>
  * @return string the HTTP date as string.
  */
-function http_date ($timestamp = null) {}
+function http_date (int $timestamp = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -2153,7 +2153,7 @@ function http_date ($timestamp = null) {}
  * </p>
  * @return string the new URL as string on success or false on failure.
  */
-function http_build_url ($url = null, $parts = null, $flags = null,  array &$new_url = null ) {}
+function http_build_url ($url = null, $parts = null, int $flags = null,  array &$new_url = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.23.0)<br/>
@@ -2170,7 +2170,7 @@ function http_build_url ($url = null, $parts = null, $flags = null,  array &$new
  * </p>
  * @return string the built query as string on success or false on failure.
  */
-function http_build_str (array $query, $prefix = null, $arg_separator = null) {}
+function http_build_str (array $query, string $prefix = null, string $arg_separator = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2232,7 +2232,7 @@ function http_negotiate_content_type (array $supported,  array &$result = null )
  * </p>
  * @return void returns false or exits with the specified redirection status code
  */
-function http_redirect ($url = null,  array $params = null , $session = null, $status = null) {}
+function http_redirect (string $url = null,  array $params = null , bool $session = null, int $status = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2246,7 +2246,7 @@ function http_redirect ($url = null,  array $params = null , $session = null, $s
  * </p>
  * @return void 
  */
-function http_throttle ($sec = null, $bytes = null) {}
+function http_throttle (float $sec = null, int $bytes = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2257,7 +2257,7 @@ function http_throttle ($sec = null, $bytes = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_status ($status) {}
+function http_send_status (int $status) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2269,7 +2269,7 @@ function http_send_status ($status) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_last_modified ($timestamp = null) {}
+function http_send_last_modified (int $timestamp = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2280,7 +2280,7 @@ function http_send_last_modified ($timestamp = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_content_type ($content_type = null) {}
+function http_send_content_type (string $content_type = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2295,7 +2295,7 @@ function http_send_content_type ($content_type = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_content_disposition ($filename, $inline = null) {}
+function http_send_content_disposition (string $filename, bool $inline = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2309,7 +2309,7 @@ function http_send_content_disposition ($filename, $inline = null) {}
  * </p>
  * @return bool true if timestamp represents an earlier date than the header, else false.
  */
-function http_match_modified ($timestamp = null, $for_range = null) {}
+function http_match_modified (int $timestamp = null, bool $for_range = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2323,7 +2323,7 @@ function http_match_modified ($timestamp = null, $for_range = null) {}
  * </p>
  * @return bool true if ETag matches or the header contained the asterisk (&quot;*&quot;), else false.
  */
-function http_match_etag ($etag, $for_range = null) {}
+function http_match_etag (string $etag, bool $for_range = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2335,7 +2335,7 @@ function http_match_etag ($etag, $for_range = null) {}
  * @return bool &returns.http.false.orexits; with 304 Not Modified if the entity is cached.
  * &see.http.configuration.force_exit;
  */
-function http_cache_last_modified ($timestamp_or_expires = null) {}
+function http_cache_last_modified (int $timestamp_or_expires = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2347,7 +2347,7 @@ function http_cache_last_modified ($timestamp_or_expires = null) {}
  * @return bool &returns.http.false.orexits; with 304 Not Modified if the entity is cached.
  * &see.http.configuration.force_exit;
  */
-function http_cache_etag ($etag = null) {}
+function http_cache_etag (string $etag = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2358,7 +2358,7 @@ function http_cache_etag ($etag = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_data ($data) {}
+function http_send_data (string $data) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2369,7 +2369,7 @@ function http_send_data ($data) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function http_send_file ($file) {}
+function http_send_file (string $file) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2391,7 +2391,7 @@ function http_send_stream ($stream) {}
  * </p>
  * @return string|false the decoded string on success or false on failure.
  */
-function http_chunked_decode ($encoded) {}
+function http_chunked_decode (string $encoded) {}
 
 /**
  * (PECL pecl_http &gt;= 0.12.0)<br/>
@@ -2402,7 +2402,7 @@ function http_chunked_decode ($encoded) {}
  * </p>
  * @return object a hierarchical object structure of the parsed messages.
  */
-function http_parse_message ($message) {}
+function http_parse_message (string $message) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2413,7 +2413,7 @@ function http_parse_message ($message) {}
  * </p>
  * @return array|false an array on success or false on failure.
  */
-function http_parse_headers ($header) {}
+function http_parse_headers (string $header) {}
 
 /**
  * (PECL pecl_http &gt;= 0.20.0)<br/>
@@ -2431,7 +2431,7 @@ function http_parse_headers ($header) {}
  * </p>
  * @return stdClass|false a stdClass object on success or false on failure.
  */
-function http_parse_cookie ($cookie, $flags = null,  array $allowed_extras = null ) {}
+function http_parse_cookie (string $cookie, int $flags = null,  array $allowed_extras = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 1.2.0)<br/>
@@ -2456,7 +2456,7 @@ function http_build_cookie (array $cookie) {}
  * </p>
  * @return stdClass parameter list as stdClass object.
  */
-function http_parse_params ($param, $flags = null) {}
+function http_parse_params (string $param, int $flags = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2497,7 +2497,7 @@ function http_get_request_body_stream () {}
  * </p>
  * @return bool true if header value matches, else false.
  */
-function http_match_request_header ($header, $value, $match_case = null) {}
+function http_match_request_header (string $header, string $value, bool $match_case = null) {}
 
 /**
  * (PECL pecl_http &gt;= 1.5.0)<br/>
@@ -2514,7 +2514,7 @@ function http_persistent_handles_count () {}
  * @param string $ident [optional] 
  * @return string 
  */
-function http_persistent_handles_clean ($ident = null) {}
+function http_persistent_handles_clean (string $ident = null) {}
 
 /**
  * (PECL pecl_http &gt;= 1.5.0)<br/>
@@ -2525,7 +2525,7 @@ function http_persistent_handles_clean ($ident = null) {}
  * </p>
  * @return string|false the prior ident as string on success or false on failure.
  */
-function http_persistent_handles_ident ($ident) {}
+function http_persistent_handles_ident (string $ident) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2542,7 +2542,7 @@ function http_persistent_handles_ident ($ident) {}
  * </p>
  * @return string &returns.http.response;
  */
-function http_get ($url, array $options = null ,  array &$info = null ) {}
+function http_get (string $url, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2559,7 +2559,7 @@ function http_get ($url, array $options = null ,  array &$info = null ) {}
  * </p>
  * @return string &returns.http.response;
  */
-function http_head ($url = null, array $options = null ,  array &$info = null ) {}
+function http_head (string $url = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.1.0)<br/>
@@ -2579,7 +2579,7 @@ function http_head ($url = null, array $options = null ,  array &$info = null ) 
  * </p>
  * @return string &returns.http.response;
  */
-function http_post_data ($url, $data = null, array $options = null ,  array &$info = null ) {}
+function http_post_data (string $url, string $data = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2602,7 +2602,7 @@ function http_post_data ($url, $data = null, array $options = null ,  array &$in
  * </p>
  * @return string &returns.http.response;
  */
-function http_post_fields ($url,  array $data = null ,  array $files = null , array $options = null ,  array &$info = null ) {}
+function http_post_fields (string $url,  array $data = null ,  array $files = null , array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.25.0)<br/>
@@ -2622,7 +2622,7 @@ function http_post_fields ($url,  array $data = null ,  array $files = null , ar
  * </p>
  * @return string &returns.http.response;
  */
-function http_put_data ($url, $data = null, array $options = null ,  array &$info = null ) {}
+function http_put_data (string $url, string $data = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2642,7 +2642,7 @@ function http_put_data ($url, $data = null, array $options = null ,  array &$inf
  * </p>
  * @return string &returns.http.response;
  */
-function http_put_file ($url, $file = null, array $options = null ,  array &$info = null ) {}
+function http_put_file (string $url, string $file = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2662,7 +2662,7 @@ function http_put_file ($url, $file = null, array $options = null ,  array &$inf
  * </p>
  * @return string &returns.http.response;
  */
-function http_put_stream ($url, $stream = null, array $options = null ,  array &$info = null ) {}
+function http_put_stream (string $url, $stream = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 1.0.0)<br/>
@@ -2685,7 +2685,7 @@ function http_put_stream ($url, $stream = null, array $options = null ,  array &
  * </p>
  * @return string &returns.http.response;
  */
-function http_request ($method, $url = null, $body = null, array $options = null ,  array &$info = null ) {}
+function http_request (int $method, string $url = null, string $body = null, array $options = null ,  array &$info = null ) {}
 
 /**
  * (PECL pecl_http &gt;= 1.0.0)<br/>
@@ -2710,7 +2710,7 @@ function http_request_body_encode (array $fields, array $files) {}
  * </p>
  * @return int|false the ID of the request method on success or false on failure.
  */
-function http_request_method_register ($method) {}
+function http_request_method_register (string $method) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2743,7 +2743,7 @@ function http_request_method_exists ($method) {}
  * </p>
  * @return string|false the request method name as string on success or false on failure.
  */
-function http_request_method_name ($method) {}
+function http_request_method_name (int $method) {}
 
 /**
  * (PECL pecl_http &gt;= 0.10.0)<br/>
@@ -2753,7 +2753,7 @@ function http_request_method_name ($method) {}
  * @param int $mode 
  * @return string 
  */
-function ob_etaghandler ($data, $mode) {}
+function ob_etaghandler (string $data, int $mode) {}
 
 /**
  * (PECL pecl_http &gt;= 0.15.0)<br/>
@@ -2767,7 +2767,7 @@ function ob_etaghandler ($data, $mode) {}
  * </p>
  * @return string|null the encoded string on success, or NULL on failure.
  */
-function http_deflate ($data, $flags = null) {}
+function http_deflate (string $data, int $flags = null) {}
 
 /**
  * (PECL pecl_http &gt;= 0.15.0)<br/>
@@ -2778,7 +2778,7 @@ function http_deflate ($data, $flags = null) {}
  * </p>
  * @return string|null the decoded string on success, or NULL on failure.
  */
-function http_inflate ($data) {}
+function http_inflate (string $data) {}
 
 /**
  * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -2788,7 +2788,7 @@ function http_inflate ($data) {}
  * @param int $mode 
  * @return string 
  */
-function ob_deflatehandler ($data, $mode) {}
+function ob_deflatehandler (string $data, int $mode) {}
 
 /**
  * (PECL pecl_http &gt;= 0.21.0)<br/>
@@ -2798,7 +2798,7 @@ function ob_deflatehandler ($data, $mode) {}
  * @param int $mode 
  * @return string 
  */
-function ob_inflatehandler ($data, $mode) {}
+function ob_inflatehandler (string $data, int $mode) {}
 
 /**
  * (PECL pecl_http &gt;= 0.15.0)<br/>
@@ -2810,7 +2810,7 @@ function ob_inflatehandler ($data, $mode) {}
  * @return int integer, whether requested feature is supported,
  * or a bitmask with all supported features if feature was omitted.
  */
-function http_support ($feature = null) {}
+function http_support (int $feature = null) {}
 
 
 /**
