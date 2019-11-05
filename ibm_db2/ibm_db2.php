@@ -49,7 +49,7 @@
  * successful. If the connection attempt fails, db2_connect
  * returns false.
  */
-function db2_connect ($database, $username, $password, array $options = null) {}
+function db2_connect (string $database, string $username, string $password, array $options = null) {}
 
 /**
  * Commits a transaction
@@ -93,7 +93,7 @@ function db2_commit ($connection) {}
  * password parameters. If the connection attempt fails,
  * db2_pconnect returns false.
  */
-function db2_pconnect ($database, $username, $password, array $options = null) {}
+function db2_pconnect (string $database, string $username, string $password, array $options = null) {}
 
 /**
  * Returns or sets the AUTOCOMMIT state for a database connection
@@ -121,7 +121,7 @@ function db2_pconnect ($database, $username, $password, array $options = null) {
  * AUTOCOMMIT state of the requested connection to the corresponding state.
  * true on success or false on failure.
  */
-function db2_autocommit ($connection, $value = null) {}
+function db2_autocommit ($connection, int $value = null) {}
 
 /**
  * Binds a PHP variable to an SQL statement parameter
@@ -147,7 +147,7 @@ function db2_autocommit ($connection, $value = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function db2_bind_param ($stmt, $parameter_number, $variable_name, $parameter_type = null, $data_type = null, $precision = null, $scale = null) {}
+function db2_bind_param ($stmt, int $parameter_number, string $variable_name, int $parameter_type = null, int $data_type = null, int $precision = null, int $scale = null) {}
 
 /**
  * Closes a database connection
@@ -218,7 +218,7 @@ function db2_close ($connection) {}
  * other users.</td>
  * </tr>
  */
-function db2_column_privileges ($connection, $qualifier = null, $schema = null, $table_name = null, $column_name = null) {}
+function db2_column_privileges ($connection, string $qualifier = null, string $schema = null, string $table_name = null, string $column_name = null) {}
 
 function db2_columnprivileges () {}
 
@@ -339,7 +339,7 @@ function db2_columnprivileges () {}
  * </td>
  * </tr>
  */
-function db2_columns ($connection, $qualifier = null, $schema = null, $table_name = null, $column_name = null) {}
+function db2_columns ($connection, string $qualifier = null, string $schema = null, string $table_name = null, string $column_name = null) {}
 
 /**
  * Returns a result set listing the foreign keys for a table
@@ -441,7 +441,7 @@ function db2_columns ($connection, $qualifier = null, $schema = null, $table_nam
  * </td>
  * </tr>
  */
-function db2_foreign_keys ($connection, $qualifier, $schema, $table_name) {}
+function db2_foreign_keys ($connection, string $qualifier, string $schema, string $table_name) {}
 
 function db2_foreignkeys () {}
 
@@ -498,7 +498,7 @@ function db2_foreignkeys () {}
  * <td>The name of the primary key.</td>
  * </tr>
  */
-function db2_primary_keys ($connection, $qualifier, $schema, $table_name) {}
+function db2_primary_keys ($connection, string $qualifier, string $schema, string $table_name) {}
 
 function db2_primarykeys () {}
 
@@ -656,7 +656,7 @@ function db2_primarykeys () {}
  * </td>
  * </tr>
  */
-function db2_procedure_columns ($connection, $qualifier, $schema, $procedure, $parameter) {}
+function db2_procedure_columns ($connection, string $qualifier, string $schema, string $procedure, string $parameter) {}
 
 function db2_procedurecolumns () {}
 
@@ -722,7 +722,7 @@ function db2_procedurecolumns () {}
  * procedure does not return a return value.</td>
  * </tr>
  */
-function db2_procedures ($connection, $qualifier, $schema, $procedure) {}
+function db2_procedures ($connection, string $qualifier, string $schema, string $procedure) {}
 
 /**
  * Returns a result set listing the unique row identifier columns for a table
@@ -848,7 +848,7 @@ function db2_procedures ($connection, $qualifier, $schema, $procedure) {}
  * <td>Always returns 1.</td>
  * </tr>
  */
-function db2_special_columns ($connection, $qualifier, $schema, $table_name, $scope) {}
+function db2_special_columns ($connection, string $qualifier, string $schema, string $table_name, int $scope) {}
 
 function db2_specialcolumns () {}
 
@@ -1014,7 +1014,7 @@ function db2_specialcolumns () {}
  * <td>Always returns &null;.</td>
  * </tr>
  */
-function db2_statistics ($connection, $qualifier, $schema, $table_name, $unique) {}
+function db2_statistics ($connection, string $qualifier, string $schema, string $table_name, bool $unique) {}
 
 /**
  * Returns a result set listing the tables and associated privileges in a database
@@ -1079,7 +1079,7 @@ function db2_statistics ($connection, $qualifier, $schema, $table_name, $unique)
  * </td>
  * </tr>
  */
-function db2_table_privileges ($connection, $qualifier = null, $schema = null, $table_name = null) {}
+function db2_table_privileges ($connection, string $qualifier = null, string $schema = null, string $table_name = null) {}
 
 function db2_tableprivileges () {}
 
@@ -1129,7 +1129,7 @@ function db2_tableprivileges () {}
  * <td>Description of the table.</td>
  * </tr>
  */
-function db2_tables ($connection, $qualifier = null, $schema = null, $table_name = null, $table_type = null) {}
+function db2_tables ($connection, string $qualifier = null, string $schema = null, string $table_name = null, string $table_type = null) {}
 
 /**
  * Executes an SQL statement directly
@@ -1162,7 +1162,7 @@ function db2_tables ($connection, $qualifier = null, $schema = null, $table_name
  * @return resource|false A statement resource if the SQL statement was issued successfully,
  * or false if the database failed to execute the SQL statement.
  */
-function db2_exec ($connection, $statement, array $options = null) {}
+function db2_exec ($connection, string $statement, array $options = null) {}
 
 /**
  * Prepares an SQL statement to be executed
@@ -1197,7 +1197,7 @@ function db2_exec ($connection, $statement, array $options = null) {}
  * returned an error. You can determine which error was returned by calling
  * db2_stmt_error or db2_stmt_errormsg.
  */
-function db2_prepare ($connection, $statement, array $options = null) {}
+function db2_prepare ($connection, string $statement, array $options = null) {}
 
 /**
  * Executes a prepared SQL statement
@@ -1478,7 +1478,7 @@ function db2_result ($stmt, $column) {}
  * @return bool true if the requested row exists in the result set. Returns
  * false if the requested row does not exist in the result set.
  */
-function db2_fetch_row ($stmt, $row_number = null) {}
+function db2_fetch_row ($stmt, int $row_number = null) {}
 
 /**
  * Returns an array, indexed by column name, representing a row in a result set
@@ -1496,7 +1496,7 @@ function db2_fetch_row ($stmt, $row_number = null) {}
  * there are no rows left in the result set, or if the row requested by
  * row_number does not exist in the result set.
  */
-function db2_fetch_assoc ($stmt, $row_number = null) {}
+function db2_fetch_assoc ($stmt, int $row_number = null) {}
 
 /**
  * Returns an array, indexed by column position, representing a row in a result set
@@ -1514,7 +1514,7 @@ function db2_fetch_assoc ($stmt, $row_number = null) {}
  * there are no rows left in the result set, or if the row requested by
  * row_number does not exist in the result set.
  */
-function db2_fetch_array ($stmt, $row_number = null) {}
+function db2_fetch_array ($stmt, int $row_number = null) {}
 
 /**
  * Returns an array, indexed by both column name and position, representing a row in a result set
@@ -1533,7 +1533,7 @@ function db2_fetch_array ($stmt, $row_number = null) {}
  * in the result set, or if the row requested by
  * row_number does not exist in the result set.
  */
-function db2_fetch_both ($stmt, $row_number = null) {}
+function db2_fetch_both ($stmt, int $row_number = null) {}
 
 /**
  * Frees resources associated with a result set
@@ -1584,7 +1584,7 @@ function db2_free_result ($stmt) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function db2_set_option ($resource, array $options, $type) {}
+function db2_set_option ($resource, array $options, int $type) {}
 
 function db2_setoption () {}
 
@@ -1616,7 +1616,7 @@ function db2_setoption () {}
  * <p>
  * Returns false if no row was retrieved.
  */
-function db2_fetch_object ($stmt, $row_number = null) {}
+function db2_fetch_object ($stmt, int $row_number = null) {}
 
 /**
  * Returns an object with properties that describe the DB2 database server
@@ -1650,7 +1650,7 @@ function db2_client_info ($connection) {}
  * @return string string_literal with the special characters 
  * noted above prepended with backslashes.
  */
-function db2_escape_string ($string_literal) {}
+function db2_escape_string (string $string_literal) {}
 
 /**
  * Gets a user defined size of LOB files with each invocation
@@ -1667,7 +1667,7 @@ function db2_escape_string ($string_literal) {}
  * @return string|false The amount of data the user specifies. Returns
  * false if the data cannot be retrieved.
  */
-function db2_lob_read ($stmt, $colnum, $length) {}
+function db2_lob_read ($stmt, int $colnum, int $length) {}
 
 /**
  * Retrieves an option value for a statement resource or a connection resource
@@ -1710,7 +1710,7 @@ function db2_lob_read ($stmt, $colnum, $length) {}
  * @return string|false The current setting of the connection attribute provided on success
  * or false on failure.
  */
-function db2_get_option ($resource, $option) {}
+function db2_get_option ($resource, string $option) {}
 
 /**
  * @link https://php.net/manual/en/function.db2-last-insert-id.php
