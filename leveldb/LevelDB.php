@@ -14,7 +14,7 @@ class LevelDB{
 	 * @param array  $read_options
 	 * @param array  $write_options
 	 */
-	public function __construct($name, array $options = [
+	public function __construct(string $name, array $options = [
 		'create_if_missing' => true, // if the specified database does not exist will create a new one
 		'error_if_exists'   => false, // if the opened database exists will throw exception
 		'paranoid_checks'   => false,
@@ -39,7 +39,7 @@ class LevelDB{
 	 *
 	 * @return string|bool
 	 */
-	public function get($key, array $read_options = []){}
+	public function get(string $key, array $read_options = []){}
 
 	/**
 	 * Alias of LevelDB::put()
@@ -48,14 +48,14 @@ class LevelDB{
 	 * @param string $value
 	 * @param array  $write_options
 	 */
-	public function set($key, $value, array $write_options = []){}
+	public function set(string $key, string $value, array $write_options = []){}
 
 	/**
 	 * @param string $key
 	 * @param string $value
 	 * @param array  $write_options
 	 */
-	public function put($key, $value, array $write_options = []){}
+	public function put(string $key, string $value, array $write_options = []){}
 
 	/**
 	 * @param string $key
@@ -63,7 +63,7 @@ class LevelDB{
 	 *
 	 * @return bool
 	 */
-	public function delete($key, array $write_options = []){}
+	public function delete(string $key, array $write_options = []){}
 
 	/**
 	 * Executes all of the operations added in the write batch.
@@ -83,7 +83,7 @@ class LevelDB{
 	 *
 	 * @return mixed
 	 */
-	public function getProperty($name){}
+	public function getProperty(string $name){}
 
 	public function getApproximateSizes($start, $limit){}
 
