@@ -27,7 +27,7 @@
  * returns <b>FALSE</b> if the variable is not set and <b>NULL</b> if the filter fails.
  * @since 5.2
  */
-function filter_input ($type, $variable_name, $filter = FILTER_DEFAULT, $options = null) {}
+function filter_input (int $type, string $variable_name, int $filter = FILTER_DEFAULT, $options = null) {}
 
 /**
  * Filters a variable with a specified filter
@@ -83,7 +83,7 @@ function filter_input ($type, $variable_name, $filter = FILTER_DEFAULT, $options
  * @return mixed the filtered data, or <b>FALSE</b> if the filter fails.
  * @since 5.2
  */
-function filter_var ($variable, $filter = FILTER_DEFAULT, $options = null) {}
+function filter_var ($variable, int $filter = FILTER_DEFAULT, $options = null) {}
 
 /**
  * Gets external variables and optionally filters them
@@ -117,7 +117,7 @@ function filter_var ($variable, $filter = FILTER_DEFAULT, $options = null) {}
  * fails.
  * @since 5.2
  */
-function filter_input_array ($type, $definition = null, $add_empty = true) {}
+function filter_input_array (int $type, $definition = null, bool $add_empty = true) {}
 
 /**
  * Gets multiple variables and optionally filters them
@@ -148,7 +148,7 @@ function filter_input_array ($type, $definition = null, $add_empty = true) {}
  * the variable is not set.
  * @since 5.2
  */
-function filter_var_array (array $data, $definition = null, $add_empty = true) {}
+function filter_var_array (array $data, $definition = null, bool $add_empty = true) {}
 
 /**
  * Returns a list of all supported filters
@@ -174,7 +174,7 @@ function filter_list () {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.2
  */
-function filter_has_var ($type, $variable_name) {}
+function filter_has_var (int $type, string $variable_name) {}
 
 /**
  * Returns the filter ID belonging to a named filter
@@ -185,7 +185,7 @@ function filter_has_var ($type, $variable_name) {}
  * @return int|false ID of a filter on success or <b>FALSE</b> if filter doesn't exist.
  * @since 5.2
  */
-function filter_id ($filtername) {}
+function filter_id (string $filtername) {}
 
 
 /**
