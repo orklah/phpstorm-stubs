@@ -114,7 +114,7 @@ function gd_info () {}
  * @since 4.0
  * @since 5.0
  */
-function imagearc ($image, $cx, $cy, $width, $height, $start, $end, $color) {}
+function imagearc ($image, int $cx, int $cy, int $width, int $height, int $start, int $end, int $color) {}
 
 /**
  * Draw an ellipse
@@ -140,7 +140,7 @@ function imagearc ($image, $cx, $cy, $width, $height, $start, $end, $color) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imageellipse ($image, $cx, $cy, $width, $height, $color) {}
+function imageellipse ($image, int $cx, int $cy, int $width, int $height, int $color) {}
 
 /**
  * Draw a character horizontally
@@ -164,7 +164,7 @@ function imageellipse ($image, $cx, $cy, $width, $height, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagechar ($image, $font, $x, $y, $c, $color) {}
+function imagechar ($image, int $font, int $x, int $y, string $c, int $color) {}
 
 /**
  * Draw a character vertically
@@ -188,7 +188,7 @@ function imagechar ($image, $font, $x, $y, $c, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecharup ($image, $font, $x, $y, $c, $color) {}
+function imagecharup ($image, int $font, int $x, int $y, string $c, int $color) {}
 
 /**
  * Get the index of the color of a pixel
@@ -204,7 +204,7 @@ function imagecharup ($image, $font, $x, $y, $c, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorat ($image, $x, $y) {}
+function imagecolorat ($image, int $x, int $y) {}
 
 /**
  * Allocate a color for an image
@@ -217,7 +217,7 @@ function imagecolorat ($image, $x, $y) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorallocate ($image, $red, $green, $blue) {}
+function imagecolorallocate ($image, int $red, int $green, int $blue) {}
 
 /**
  * Copy the palette from one image to another
@@ -246,7 +246,7 @@ function imagepalettecopy ($destination, $source) {}
  * @since 4.0.4
  * @since 5.0
  */
-function imagecreatefromstring ($image) {}
+function imagecreatefromstring (string $image) {}
 
 /**
  * Get the index of the closest color to the specified color
@@ -260,7 +260,7 @@ function imagecreatefromstring ($image) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorclosest ($image, $red, $green, $blue) {}
+function imagecolorclosest ($image, int $red, int $green, int $blue) {}
 
 /**
  * Get the index of the color which has the hue, white and blackness
@@ -274,7 +274,7 @@ function imagecolorclosest ($image, $red, $green, $blue) {}
  * @since 4.0.1
  * @since 5.0
  */
-function imagecolorclosesthwb ($image, $red, $green, $blue) {}
+function imagecolorclosesthwb ($image, int $red, int $green, int $blue) {}
 
 /**
  * De-allocate a color for an image
@@ -287,7 +287,7 @@ function imagecolorclosesthwb ($image, $red, $green, $blue) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolordeallocate ($image, $color) {}
+function imagecolordeallocate ($image, int $color) {}
 
 /**
  * Get the index of the specified color or its closest possible alternative
@@ -300,7 +300,7 @@ function imagecolordeallocate ($image, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorresolve ($image, $red, $green, $blue) {}
+function imagecolorresolve ($image, int $red, int $green, int $blue) {}
 
 /**
  * Get the index of the specified color
@@ -314,7 +314,7 @@ function imagecolorresolve ($image, $red, $green, $blue) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorexact ($image, $red, $green, $blue) {}
+function imagecolorexact ($image, int $red, int $green, int $blue) {}
 
 /**
  * Set the color for the specified palette index
@@ -333,7 +333,7 @@ function imagecolorexact ($image, $red, $green, $blue) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorset ($image, $index, $red, $green, $blue, $alpha = 0) {}
+function imagecolorset ($image, int $index, int $red, int $green, int $blue, int $alpha = 0) {}
 
 /**
  * Define a color as transparent
@@ -350,7 +350,7 @@ function imagecolorset ($image, $index, $red, $green, $blue, $alpha = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolortransparent ($image, $color = null) {}
+function imagecolortransparent ($image, int $color = null) {}
 
 /**
  * Find out the number of colors in an image's palette
@@ -378,7 +378,7 @@ function imagecolorstotal ($image) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecolorsforindex ($image, $index) {}
+function imagecolorsforindex ($image, int $index) {}
 
 /**
  * Copy part of an image
@@ -411,7 +411,7 @@ function imagecolorsforindex ($image, $index) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecopy ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h) {}
+function imagecopy ($dst_im, $src_im, int $dst_x, int $dst_y, int $src_x, int $src_y, int $src_w, int $src_h) {}
 
 /**
  * Copy and merge part of an image
@@ -451,7 +451,7 @@ function imagecopy ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $s
  * @since 4.0.1
  * @since 5.0
  */
-function imagecopymerge ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct) {}
+function imagecopymerge ($dst_im, $src_im, int $dst_x, int $dst_y, int $src_x, int $src_y, int $src_w, int $src_h, int $pct) {}
 
 /**
  * Copy and merge part of an image with gray scale
@@ -491,7 +491,7 @@ function imagecopymerge ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_
  * @since 4.0.6
  * @since 5.0
  */
-function imagecopymergegray ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct) {}
+function imagecopymergegray ($dst_im, $src_im, int $dst_x, int $dst_y, int $src_x, int $src_y, int $src_w, int $src_h, int $pct) {}
 
 /**
  * Copy and resize part of an image
@@ -526,7 +526,7 @@ function imagecopymergegray ($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $
  * @since 4.0
  * @since 5.0
  */
-function imagecopyresized ($dst_image, $src_image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h) {}
+function imagecopyresized ($dst_image, $src_image, int $dst_x, int $dst_y, int $src_x, int $src_y, int $dst_w, int $dst_h, int $src_w, int $src_h) {}
 
 /**
  * Create a new palette based image
@@ -541,7 +541,7 @@ function imagecopyresized ($dst_image, $src_image, $dst_x, $dst_y, $src_x, $src_
  * @since 4.0
  * @since 5.0
  */
-function imagecreate ($width, $height) {}
+function imagecreate (int $width, int $height) {}
 
 /**
  * Create a new true color image
@@ -556,7 +556,7 @@ function imagecreate ($width, $height) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagecreatetruecolor ($width, $height) {}
+function imagecreatetruecolor (int $width, int $height) {}
 
 /**
  * Finds whether an image is a truecolor image
@@ -585,7 +585,7 @@ function imageistruecolor ($image) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagetruecolortopalette ($image, $dither, $ncolors) {}
+function imagetruecolortopalette ($image, bool $dither, int $ncolors) {}
 
 /**
  * Set the thickness for line drawing
@@ -598,7 +598,7 @@ function imagetruecolortopalette ($image, $dither, $ncolors) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagesetthickness ($image, $thickness) {}
+function imagesetthickness ($image, int $thickness) {}
 
 /**
  * Draw a partial arc and fill it
@@ -635,7 +635,7 @@ function imagesetthickness ($image, $thickness) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagefilledarc ($image, $cx, $cy, $width, $height, $start, $end, $color, $style) {}
+function imagefilledarc ($image, int $cx, int $cy, int $width, int $height, int $start, int $end, int $color, int $style) {}
 
 /**
  * Draw a filled ellipse
@@ -661,7 +661,7 @@ function imagefilledarc ($image, $cx, $cy, $width, $height, $start, $end, $color
  * @since 4.0.6
  * @since 5.0
  */
-function imagefilledellipse ($image, $cx, $cy, $width, $height, $color) {}
+function imagefilledellipse ($image, int $cx, int $cy, int $width, int $height, int $color) {}
 
 /**
  * Set the blending mode for an image
@@ -675,7 +675,7 @@ function imagefilledellipse ($image, $cx, $cy, $width, $height, $color) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagealphablending ($image, $blendmode) {}
+function imagealphablending ($image, bool $blendmode) {}
 
 /**
  * Set the flag to save full alpha channel information (as opposed to single-color transparency) when saving PNG images
@@ -688,7 +688,7 @@ function imagealphablending ($image, $blendmode) {}
  * @since 4.3.2
  * @since 5.0
  */
-function imagesavealpha ($image, $saveflag) {}
+function imagesavealpha ($image, bool $saveflag) {}
 
 /**
  * Allocate a color for an image
@@ -712,7 +712,7 @@ function imagesavealpha ($image, $saveflag) {}
  * @since 4.3.2
  * @since 5.0
  */
-function imagecolorallocatealpha ($image, $red, $green, $blue, $alpha) {}
+function imagecolorallocatealpha ($image, int $red, int $green, int $blue, int $alpha) {}
 
 /**
  * Get the index of the specified color + alpha or its closest possible alternative
@@ -736,7 +736,7 @@ function imagecolorallocatealpha ($image, $red, $green, $blue, $alpha) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagecolorresolvealpha ($image, $red, $green, $blue, $alpha) {}
+function imagecolorresolvealpha ($image, int $red, int $green, int $blue, int $alpha) {}
 
 /**
  * Get the index of the closest color to the specified color + alpha
@@ -761,7 +761,7 @@ function imagecolorresolvealpha ($image, $red, $green, $blue, $alpha) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagecolorclosestalpha ($image, $red, $green, $blue, $alpha) {}
+function imagecolorclosestalpha ($image, int $red, int $green, int $blue, int $alpha) {}
 
 /**
  * Get the index of the specified color + alpha
@@ -787,7 +787,7 @@ function imagecolorclosestalpha ($image, $red, $green, $blue, $alpha) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagecolorexactalpha ($image, $red, $green, $blue, $alpha) {}
+function imagecolorexactalpha ($image, int $red, int $green, int $blue, int $alpha) {}
 
 /**
  * Copy and resize part of an image with resampling
@@ -822,7 +822,7 @@ function imagecolorexactalpha ($image, $red, $green, $blue, $alpha) {}
  * @since 4.0.6
  * @since 5.0
  */
-function imagecopyresampled ($dst_image, $src_image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h) {}
+function imagecopyresampled ($dst_image, $src_image, int $dst_x, int $dst_y, int $src_x, int $src_y, int $dst_w, int $dst_h, int $src_w, int $src_h) {}
 
 /**
  * Rotate an image with a given angle
@@ -841,7 +841,7 @@ function imagecopyresampled ($dst_image, $src_image, $dst_x, $dst_y, $src_x, $sr
  * @since 4.3
  * @since 5.0
  */
-function imagerotate ($image, $angle, $bgd_color, $ignore_transparent = null) {}
+function imagerotate ($image, float $angle, int $bgd_color, int $ignore_transparent = null) {}
 
 /**
  * Should antialias functions be used or not. <br/>
@@ -855,7 +855,7 @@ function imagerotate ($image, $angle, $bgd_color, $ignore_transparent = null) {}
  * @since 4.3.2
  * @since 5.0
  */
-function imageantialias ($image, $enabled) {}
+function imageantialias ($image, bool $enabled) {}
 
 /**
  * Set the tile image for filling
@@ -908,7 +908,7 @@ function imagesetstyle ($image, array $style) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecreatefrompng ($filename) {}
+function imagecreatefrompng (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -920,7 +920,7 @@ function imagecreatefrompng ($filename) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecreatefromgif ($filename) {}
+function imagecreatefromgif (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -932,7 +932,7 @@ function imagecreatefromgif ($filename) {}
  * @since 4.0
  * @since 5.0
  */
-function imagecreatefromjpeg ($filename) {}
+function imagecreatefromjpeg (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -944,7 +944,7 @@ function imagecreatefromjpeg ($filename) {}
  * @since 4.0.1
  * @since 5.0
  */
-function imagecreatefromwbmp ($filename) {}
+function imagecreatefromwbmp (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -955,7 +955,7 @@ function imagecreatefromwbmp ($filename) {}
  * @return resource|false an image resource identifier on success, false on errors.
  * @since 5.4
  */
-function imagecreatefromwebp ($filename) {}
+function imagecreatefromwebp (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -967,7 +967,7 @@ function imagecreatefromwebp ($filename) {}
  * @since 4.0.1
  * @since 5.0
  */
-function imagecreatefromxbm ($filename) {}
+function imagecreatefromxbm (string $filename) {}
 
 /**
  * Create a new image from file or URL
@@ -979,7 +979,7 @@ function imagecreatefromxbm ($filename) {}
  * @since 4.0.1
  * @since 5.0
  */
-function imagecreatefromxpm ($filename) {}
+function imagecreatefromxpm (string $filename) {}
 
 /**
  * Create a new image from GD file or URL
@@ -991,7 +991,7 @@ function imagecreatefromxpm ($filename) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagecreatefromgd ($filename) {}
+function imagecreatefromgd (string $filename) {}
 
 /**
  * Create a new image from GD2 file or URL
@@ -1003,7 +1003,7 @@ function imagecreatefromgd ($filename) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagecreatefromgd2 ($filename) {}
+function imagecreatefromgd2 (string $filename) {}
 
 /**
  * Create a new image from a given part of GD2 file or URL
@@ -1027,7 +1027,7 @@ function imagecreatefromgd2 ($filename) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagecreatefromgd2part ($filename, $srcX, $srcY, $width, $height) {}
+function imagecreatefromgd2part (string $filename, int $srcX, int $srcY, int $width, int $height) {}
 
 /**
  * Output a PNG image to either the browser or a file
@@ -1055,7 +1055,7 @@ function imagecreatefromgd2part ($filename, $srcX, $srcY, $width, $height) {}
  * @since 4.0
  * @since 5.0
  */
-function imagepng ($image, $filename = null, $quality = null, $filters = null) {}
+function imagepng ($image, string $filename = null, int $quality = null, int $filters = null) {}
 
 /**
  * Output a WebP image to browser or file
@@ -1071,7 +1071,7 @@ function imagepng ($image, $filename = null, $quality = null, $filters = null) {
  * @return bool true on success or false on failure.
  * @since 5.4
  */
-function imagewebp ($image, $to = null, $quality = 80) {}
+function imagewebp ($image, string $to = null, int $quality = 80) {}
 
 /**
  * Output image to browser or file
@@ -1085,7 +1085,7 @@ function imagewebp ($image, $to = null, $quality = 80) {}
  * @since 4.0
  * @since 5.0
  */
-function imagegif ($image, $filename = null) {}
+function imagegif ($image, string $filename = null) {}
 
 /**
  * Output image to browser or file
@@ -1108,7 +1108,7 @@ function imagegif ($image, $filename = null) {}
  * @since 4.0
  * @since 5.0
  */
-function imagejpeg ($image, $filename = null, $quality = null) {}
+function imagejpeg ($image, string $filename = null, int $quality = null) {}
 
 /**
  * Output image to browser or file
@@ -1127,7 +1127,7 @@ function imagejpeg ($image, $filename = null, $quality = null) {}
  * @since 4.0.1
  * @since 5.0
  */
-function imagewbmp ($image, $filename = null, $foreground = null) {}
+function imagewbmp ($image, string $filename = null, int $foreground = null) {}
 
 /**
  * Output GD image to browser or file. <br/>
@@ -1142,7 +1142,7 @@ function imagewbmp ($image, $filename = null, $foreground = null) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagegd ($image, $filename = null) {}
+function imagegd ($image, string $filename = null) {}
 
 /**
  * Output GD2 image to browser or file
@@ -1164,7 +1164,7 @@ function imagegd ($image, $filename = null) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagegd2 ($image, $filename = null, $chunk_size = null, $type = null) {}
+function imagegd2 ($image, string $filename = null, int $chunk_size = null, int $type = null) {}
 
 /**
  * Destroy an image
@@ -1190,7 +1190,7 @@ function imagedestroy ($image) {}
  * @since 4.0
  * @since 5.0
  */
-function imagegammacorrect ($image, $inputgamma, $outputgamma) {}
+function imagegammacorrect ($image, float $inputgamma, float $outputgamma) {}
 
 /**
  * Flood fill
@@ -1210,7 +1210,7 @@ function imagegammacorrect ($image, $inputgamma, $outputgamma) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefill ($image, $x, $y, $color) {}
+function imagefill ($image, int $x, int $y, int $color) {}
 
 /**
  * Draw a filled polygon
@@ -1231,7 +1231,7 @@ function imagefill ($image, $x, $y, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefilledpolygon ($image, array $points, $num_points, $color) {}
+function imagefilledpolygon ($image, array $points, int $num_points, int $color) {}
 
 /**
  * Draw a filled rectangle
@@ -1257,7 +1257,7 @@ function imagefilledpolygon ($image, array $points, $num_points, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefilledrectangle ($image, $x1, $y1, $x2, $y2, $color) {}
+function imagefilledrectangle ($image, int $x1, int $y1, int $x2, int $y2, int $color) {}
 
 /**
  * Flood fill to specific color
@@ -1281,7 +1281,7 @@ function imagefilledrectangle ($image, $x1, $y1, $x2, $y2, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefilltoborder ($image, $x, $y, $border, $color) {}
+function imagefilltoborder ($image, int $x, int $y, int $border, int $color) {}
 
 /**
  * Get font width
@@ -1291,7 +1291,7 @@ function imagefilltoborder ($image, $x, $y, $border, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefontwidth ($font) {}
+function imagefontwidth (int $font) {}
 
 /**
  * Get font height
@@ -1301,7 +1301,7 @@ function imagefontwidth ($font) {}
  * @since 4.0
  * @since 5.0
  */
-function imagefontheight ($font) {}
+function imagefontheight (int $font) {}
 
 /**
  * Enable or disable interlace
@@ -1316,7 +1316,7 @@ function imagefontheight ($font) {}
  * @since 4.0
  * @since 5.0
  */
-function imageinterlace ($image, $interlace = null) {}
+function imageinterlace ($image, int $interlace = null) {}
 
 /**
  * Draw a line
@@ -1342,7 +1342,7 @@ function imageinterlace ($image, $interlace = null) {}
  * @since 4.0
  * @since 5.0
  */
-function imageline ($image, $x1, $y1, $x2, $y2, $color) {}
+function imageline ($image, int $x1, int $y1, int $x2, int $y2, int $color) {}
 
 /**
  * Load a new font
@@ -1397,7 +1397,7 @@ function imageline ($image, $x1, $y1, $x2, $y2, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imageloadfont ($file) {}
+function imageloadfont (string $file) {}
 
 /**
  * Draws a polygon
@@ -1433,7 +1433,7 @@ function imageloadfont ($file) {}
  * @since 4.0
  * @since 5.0
  */
-function imagepolygon ($image, array $points, $num_points, $color) {}
+function imagepolygon ($image, array $points, int $num_points, int $color) {}
 
 /**
  * Draw a rectangle
@@ -1460,7 +1460,7 @@ function imagepolygon ($image, array $points, $num_points, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagerectangle ($image, $x1, $y1, $x2, $y2, $color) {}
+function imagerectangle ($image, int $x1, int $y1, int $x2, int $y2, int $color) {}
 
 /**
  * Set a single pixel
@@ -1480,7 +1480,7 @@ function imagerectangle ($image, $x1, $y1, $x2, $y2, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagesetpixel ($image, $x, $y, $color) {}
+function imagesetpixel ($image, int $x, int $y, int $color) {}
 
 /**
  * Draw a string horizontally
@@ -1504,7 +1504,7 @@ function imagesetpixel ($image, $x, $y, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagestring ($image, $font, $x, $y, $string, $color) {}
+function imagestring ($image, int $font, int $x, int $y, string $string, int $color) {}
 
 /**
  * Draw a string vertically
@@ -1528,7 +1528,7 @@ function imagestring ($image, $font, $x, $y, $string, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagestringup ($image, $font, $x, $y, $string, $color) {}
+function imagestringup ($image, int $font, int $x, int $y, string $string, int $color) {}
 
 /**
  * Get image width
@@ -1577,7 +1577,7 @@ function imagesy ($image) {}
  * @since 5.0
  * @deprecated Use combination of imagesetstyle() and imageline() instead
  */
-function imagedashedline ($image, $x1, $y1, $x2, $y2, $color) {}
+function imagedashedline ($image, int $x1, int $y1, int $x2, int $y2, int $color) {}
 
 /**
  * Give the bounding box of a text using TrueType fonts
@@ -1645,7 +1645,7 @@ function imagedashedline ($image, $x1, $y1, $x2, $y2, $color) {}
  * @since 4.0
  * @since 5.0
  */
-function imagettfbbox ($size, $angle, $fontfile, $text) {}
+function imagettfbbox (float $size, float $angle, string $fontfile, string $text) {}
 
 /**
  * Write text to the image using TrueType fonts
@@ -1739,7 +1739,7 @@ function imagettfbbox ($size, $angle, $fontfile, $text) {}
  * @since 4.0
  * @since 5.0
  */
-function imagettftext ($image, $size, $angle, $x, $y, $color, $fontfile, $text) {}
+function imagettftext ($image, float $size, float $angle, int $x, int $y, int $color, string $fontfile, string $text) {}
 
 /**
  * Give the bounding box of a text using fonts via freetype2
@@ -1820,7 +1820,7 @@ function imagettftext ($image, $size, $angle, $x, $y, $color, $fontfile, $text) 
  * @since 4.0.7
  * @since 5.0
  */
-function imageftbbox ($size, $angle, $fontfile, $text, $extrainfo = null ) {}
+function imageftbbox (float $size, float $angle, string $fontfile, string $text, array $extrainfo = null ) {}
 
 /**
  * Write text to the image using fonts using FreeType 2
@@ -1940,7 +1940,7 @@ function imageftbbox ($size, $angle, $fontfile, $text, $extrainfo = null ) {}
  * @since 4.0.7
  * @since 5.0
  */
-function imagefttext ($image, $size, $angle, $x, $y, $color, $fontfile, $text, $extrainfo = null ) {}
+function imagefttext ($image, float $size, float $angle, int $x, int $y, int $color, string $fontfile, string $text, array $extrainfo = null ) {}
 
 /**
  * Load a PostScript Type 1 font from file
@@ -1954,7 +1954,7 @@ function imagefttext ($image, $size, $angle, $x, $y, $color, $fontfile, $text, $
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepsloadfont ($filename) {}
+function imagepsloadfont (string $filename) {}
 
 /**
  * Free memory used by a PostScript Type 1 font
@@ -1986,7 +1986,7 @@ function imagepsfreefont ($font_index) {}
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepsencodefont ($font_index, $encodingfile) {}
+function imagepsencodefont ($font_index, string $encodingfile) {}
 
 /**
  * Extend or condense a font
@@ -2002,7 +2002,7 @@ function imagepsencodefont ($font_index, $encodingfile) {}
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepsextendfont ($font_index, $extend) {}
+function imagepsextendfont ($font_index, float $extend) {}
 
 /**
  * Slant a font
@@ -2018,7 +2018,7 @@ function imagepsextendfont ($font_index, $extend) {}
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepsslantfont ($font_index, $slant) {}
+function imagepsslantfont ($font_index, float $slant) {}
 
 /**
  * Draws a text over an image using PostScript Type1 fonts
@@ -2093,7 +2093,7 @@ function imagepsslantfont ($font_index, $slant) {}
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepstext ($image, $text, $font_index, $size, $foreground, $background, $x, $y, $space = null, $tightness = null, $angle = null, $antialias_steps = null) {}
+function imagepstext ($image, string $text, $font_index, int $size, int $foreground, int $background, int $x, int $y, int $space = null, int $tightness = null, float $angle = null, int $antialias_steps = null) {}
 
 /**
  * Give the bounding box of a text rectangle using PostScript Type1 fonts
@@ -2127,7 +2127,7 @@ function imagepstext ($image, $text, $font_index, $size, $foreground, $backgroun
  * @since 5.0
  * @deprecated 7.0 This function was REMOVED in PHP 7.0.0.
  */
-function imagepsbbox ($text, $font, $size) {}
+function imagepsbbox (string $text, $font, int $size) {}
 
 /**
  * Return the image types supported by this PHP build
@@ -2163,7 +2163,7 @@ function imagetypes () {}
  * @since 5.0
  * @deprecated 7.2 Use imagecreatefromjpeg() and imagewbmp() instead
  */
-function jpeg2wbmp ($jpegname, $wbmpname, $dest_height, $dest_width, $threshold) {}
+function jpeg2wbmp (string $jpegname, string $wbmpname, int $dest_height, int $dest_width, int $threshold) {}
 
 /**
  * Convert PNG image file to WBMP image file
@@ -2188,7 +2188,7 @@ function jpeg2wbmp ($jpegname, $wbmpname, $dest_height, $dest_width, $threshold)
  * @since 5.0
  * @deprecated 7.2 Use imagecreatefrompng() and imagewbmp() instead
  */
-function png2wbmp ($pngname, $wbmpname, $dest_height, $dest_width, $threshold) {}
+function png2wbmp (string $pngname, string $wbmpname, int $dest_height, int $dest_width, int $threshold) {}
 
 /**
  * Output image to browser or file
@@ -2206,7 +2206,7 @@ function png2wbmp ($pngname, $wbmpname, $dest_height, $dest_width, $threshold) {
  * @since 5.0
  * @deprecated 7.3 Use imagewbmp() instead
  */
-function image2wbmp ($image, $filename = null, $threshold = null) {}
+function image2wbmp ($image, string $filename = null, int $threshold = null) {}
 
 /**
  * Set the alpha blending flag to use the bundled libgd layering effects
@@ -2221,7 +2221,7 @@ function image2wbmp ($image, $filename = null, $threshold = null) {}
  * @since 4.3
  * @since 5.0
  */
-function imagelayereffect ($image, $effect) {}
+function imagelayereffect ($image, int $effect) {}
 
 /**
  * Makes the colors of the palette version of an image more closely match the true color version
@@ -2252,7 +2252,7 @@ function imagecolormatch ($image1, $image2) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function imagexbm ($image, $filename, $foreground = null) {}
+function imagexbm ($image, string $filename, int $foreground = null) {}
 
 /**
  * Applies a filter to an image
@@ -2274,7 +2274,7 @@ function imagexbm ($image, $filename, $foreground = null) {}
  * completely transparent.
  * @return bool true on success or false on failure.
  */
-function imagefilter ($image, $filtertype, $arg1 = null, $arg2 = null, $arg3 = null, $arg4 = null) {}
+function imagefilter ($image, int $filtertype, int $arg1 = null, int $arg2 = null, int $arg3 = null, int $arg4 = null) {}
 
 /**
  * Apply a 3x3 convolution matrix, using coefficient and offset
@@ -2292,7 +2292,7 @@ function imagefilter ($image, $filtertype, $arg1 = null, $arg2 = null, $arg3 = n
  * @return bool true on success or false on failure.
  * @since 5.1
  */
-function imageconvolution ($image, array $matrix, $div, $offset) {}
+function imageconvolution ($image, array $matrix, float $div, float $offset) {}
 
 /**
  * @param resource $im An image resource, returned by one of the image creation functions, such as {@see imagecreatetruecolor()}.
@@ -2302,7 +2302,7 @@ function imageconvolution ($image, array $matrix, $div, $offset) {}
  * @link https://php.net/manual/en/function.imageresolution.php
  * @since 7.2
  */
-function imageresolution ($im, $res_x = 96, $res_y = 96) {}
+function imageresolution ($im, int $res_x = 96, int $res_y = 96) {}
 
 
 /**
@@ -2317,7 +2317,7 @@ function imageresolution ($im, $res_x = 96, $res_y = 96) {}
  * @see imagegetclip()
  * @since 7.2
  */
-function imagesetclip ($im, $x1, $y1, $x2, $y2) {}
+function imagesetclip ($im, int $x1, int $y1, int $x2, int $y2) {}
 
 /**
  * <b>imagegetclip()</b> retrieves the current clipping rectangle, i.e. the area beyond which no pixels will be drawn.
@@ -2353,7 +2353,7 @@ function imagegetclip ($im) {}
  * @since 7.2
  * @see imageplygon()
  */
-function imageopenpolygon ($image , $points, $num_points, $color) {}
+function imageopenpolygon ($image , array $points, int $num_points, int $color) {}
 
 /**
  * <b>imagecreatefrombmp()</b> returns an image identifier representing the image obtained from the given filename.
@@ -2363,7 +2363,7 @@ function imageopenpolygon ($image , $points, $num_points, $color) {}
  * @link https://php.net/manual/en/function.imagecreatefrombmp.php
  * @since 7.2
  */
-function imagecreatefrombmp($filename){}
+function imagecreatefrombmp(string $filename){}
 
 /**
  * Outputs or saves a BMP version of the given <b>image</b>.
@@ -2378,7 +2378,7 @@ function imagecreatefrombmp($filename){}
  * @link https://php.net/manual/en/function.imagebmp.php
  * @since 7.2
  */
-function imagebmp ($image, $to = null, $compressed = true) {}
+function imagebmp ($image, $to = null, bool $compressed = true) {}
 
 
 /**
@@ -2959,7 +2959,7 @@ define('IMG_TRIANGLE', 20);
  * @param array $clip [optional] <p>Array with keys "x", "y", "width" and "height".</p>
  * @return resource|bool Return affined image resource on success or FALSE on failure.
  */
-function imageaffine($image, $affine, $clip = null) {}
+function imageaffine($image, array $affine, array $clip = null) {}
 
 /**
  * Concat two matrices (as in doing many ops in one go)
@@ -2980,7 +2980,7 @@ function imageaffinematrixconcat(array $m1, array $m2) {}
  * @since 5.5
  */
 
-function imageaffinematrixget ($type, $options = null) {}
+function imageaffinematrixget (int $type, $options = null) {}
 
 /**
  * Crop an image using the given coordinates and size, x, y, width and height
@@ -2992,7 +2992,7 @@ function imageaffinematrixget ($type, $options = null) {}
  * @return resource|bool Return cropped image resource on success or FALSE on failure.
  * @since 5.5
  */
-function imagecrop ($image, $rect) {}
+function imagecrop ($image, array $rect) {}
 
 /**
  * Crop an image automatically using one of the available modes
@@ -3013,7 +3013,7 @@ function imagecrop ($image, $rect) {}
  * @return resource|bool Return cropped image resource on success or <b>FALSE</b> on failure.
  * @since 5.5
  */
-function imagecropauto ($image, $mode = -1, $threshold = .5, $color = -1) {}
+function imagecropauto ($image, int $mode = -1, float $threshold = .5, int $color = -1) {}
 
 /**
  * Flips an image using a given mode
@@ -3054,7 +3054,7 @@ function imagecropauto ($image, $mode = -1, $threshold = .5, $color = -1) {}
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.5
  */
-function imageflip ($image, $mode) {}
+function imageflip ($image, int $mode) {}
 
 /**
  * Converts a palette based image to true color
@@ -3080,7 +3080,7 @@ function imagepalettetotruecolor ($image) {}
  * @return resource|bool Return scaled image resource on success or <b>FALSE</b> on failure.
  */
 
-function imagescale ($image, $new_width, $new_height = -1, $mode = IMG_BILINEAR_FIXED) {}
+function imagescale ($image, int $new_width, int $new_height = -1, int $mode = IMG_BILINEAR_FIXED) {}
 
 /**
  * Set the interpolation method
@@ -3159,4 +3159,4 @@ function imagescale ($image, $new_width, $new_height = -1, $mode = IMG_BILINEAR_
  * @return bool Returns TRUE on success or FALSE on failure.
  * @since 5.5
  */
-function imagesetinterpolation ($image, $method = IMG_BILINEAR_FIXED) {}
+function imagesetinterpolation ($image, int $method = IMG_BILINEAR_FIXED) {}
