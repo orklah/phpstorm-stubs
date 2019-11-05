@@ -16,7 +16,7 @@ class COM {
      * @param int $codepage [optional]
      * @param string $typelib [optional]
      */
-    public function __construct ( $module_name, $server_name, $codepage, $typelib ) {}
+    public function __construct ( string $module_name, string $server_name, int $codepage, string $typelib ) {}
 
     public function __get ($name) {}
 
@@ -39,7 +39,7 @@ class DOTNET {
      * @param string $class_name
      * @param int $codepage [optional]
      */
-    public function __construct ( $assembly_name , string $class_name, $codepage ) {}
+    public function __construct ( string $assembly_name , string $class_name, int $codepage ) {}
 
     public function __get ($name) {}
 
@@ -62,7 +62,7 @@ class VARIANT {
      * @param int $type [optional]
      * @param int $codepage [optional]
      */
-    public function __construct ( $value , string $class_name, $codepage ) {}
+    public function __construct ( $value , string $class_name, int $codepage ) {}
 
     public function __get ($name) {}
 
@@ -95,7 +95,7 @@ function com_create_guid () {}
  * @param string $sinkinterface [optional]
  * @return bool
  */
-function com_event_sink ( $comobject, $sinkobject, $sinkinterface) {}
+function com_event_sink ( \VARIANT $comobject, object $sinkobject, string $sinkinterface) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -105,7 +105,7 @@ function com_event_sink ( $comobject, $sinkobject, $sinkinterface) {}
  * @param int $code_page [optional]
  * @return \VARIANT
  */
-function com_get_active_object ( $progid, $code_page ) {}
+function com_get_active_object ( string $progid, int $code_page ) {}
 
 /**
  * (PHP 4 &gt;= 4.1.0, PHP 5, PHP 7)<br/>
@@ -115,7 +115,7 @@ function com_get_active_object ( $progid, $code_page ) {}
  * @param bool $case_insensitive [optional]
  * @return bool
  */
-function com_load_typelib ( $typelib_name, $case_insensitive = true ) {}
+function com_load_typelib ( string $typelib_name, bool $case_insensitive = true ) {}
 
 /**
  * (PHP 4 &gt;= 4.2.0, PHP 5, PHP 7)<br/>
@@ -124,7 +124,7 @@ function com_load_typelib ( $typelib_name, $case_insensitive = true ) {}
  * @param int $timeoutms [optional]
  * @return bool
  */
-function com_message_pump ( $timeoutms = 0 ) {}
+function com_message_pump ( int $timeoutms = 0 ) {}
 
 /**
  * (PHP 4 &gt;= 4.2.0, PHP 5, PHP 7)<br/>
@@ -135,7 +135,7 @@ function com_message_pump ( $timeoutms = 0 ) {}
  * @param bool $wantsink [optional]
  * @return bool
  */
-function com_print_typeinfo ( $comobject, $dispinterface, $wantsink = false ) {}
+function com_print_typeinfo ( object $comobject, string $dispinterface, bool $wantsink = false ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -174,7 +174,7 @@ function variant_and ( $left, $right ) {}
  * @param int $type
  * @return \VARIANT
  */
-function variant_cast ( $variant, $type ) {}
+function variant_cast ( \VARIANT $variant, int $type ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -196,7 +196,7 @@ function variant_cat ( $left, $right ) {}
  * @param int $flags [optional]
  * @return int
  */
-function variant_cmp ( $left, $right, $lcid, $flags ) {}
+function variant_cmp ( $left, $right, int $lcid, int $flags ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -205,7 +205,7 @@ function variant_cmp ( $left, $right, $lcid, $flags ) {}
  * @param int $timestamp
  * @return \VARIANT
  */
-function variant_date_from_timestamp ( $timestamp ) {}
+function variant_date_from_timestamp ( int $timestamp ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -214,7 +214,7 @@ function variant_date_from_timestamp ( $timestamp ) {}
  * @param \VARIANT $variant
  * @return int
  */
-function variant_date_to_timestamp ( $variant ) {}
+function variant_date_to_timestamp ( \VARIANT $variant ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -349,7 +349,7 @@ function variant_pow ( $left, $right ) {}
  * @param int $decimals
  * @return mixed
  */
-function variant_round ( $variant, $decimals ) {}
+function variant_round ( $variant, int $decimals ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
@@ -359,7 +359,7 @@ function variant_round ( $variant, $decimals ) {}
  * @param int $type
  * @return void
  */
-function variant_set_type ( $variant, $type ) {}
+function variant_set_type ( $variant, int $type ) {}
 
 /**
  * (PHP 5, PHP 7)<br/>
