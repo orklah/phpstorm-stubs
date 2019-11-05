@@ -152,20 +152,20 @@ class AMQPBasicProperties
      * @param string $cluster_id
      */
     public function __construct(
-        $content_type = "",
-        $content_encoding = "",
+        string $content_type = "",
+        string $content_encoding = "",
         array $headers = [],
-        $delivery_mode = 2,
-        $priority = 0,
-        $correlation_id = "",
-        $reply_to = "",
-        $expiration = "",
-        $message_id = "",
-        $timestamp = 0,
-        $type = "",
-        $user_id = "",
-        $app_id = "",
-        $cluster_id = ""
+        int $delivery_mode = 2,
+        int $priority = 0,
+        string $correlation_id = "",
+        string $reply_to = "",
+        string $expiration = "",
+        string $message_id = "",
+        int $timestamp = 0,
+        string $type = "",
+        string $user_id = "",
+        string $app_id = "",
+        string $cluster_id = ""
     ) {
     }
 
@@ -337,7 +337,7 @@ class AMQPChannel
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function qos($size, $count) { }
+    public function qos(int $size, int $count) { }
 
     /**
      * Rollback a transaction.
@@ -367,7 +367,7 @@ class AMQPChannel
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setPrefetchCount($count) { }
+    public function setPrefetchCount(int $count) { }
 
     /**
      * Get the number of messages to prefetch from the broker.
@@ -392,7 +392,7 @@ class AMQPChannel
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setPrefetchSize($size) { }
+    public function setPrefetchSize(int $size) { }
 
     /**
      * Get the window size to prefetch from the broker.
@@ -425,7 +425,7 @@ class AMQPChannel
      *
      * @param bool $requeue
      */
-    public function basicRecover($requeue = true) { }
+    public function basicRecover(bool $requeue = true) { }
 
     /**
      * Set the channel to use publisher acknowledgements. This can only used on a non-transactional channel.
@@ -458,7 +458,7 @@ class AMQPChannel
      *
      * @param float $timeout Timeout in seconds. May be fractional.
      */
-    public function waitForConfirm($timeout = 0.0) { }
+    public function waitForConfirm(float $timeout = 0.0) { }
 
     /**
      * Set callback to process basic.return AMQP server method
@@ -484,7 +484,7 @@ class AMQPChannel
      *
      * @param float $timeout Timeout in seconds. May be fractional.
      */
-    public function waitForBasicReturn($timeout = 0.0) { }
+    public function waitForBasicReturn(float $timeout = 0.0) { }
 
     /**
      * Return array of current consumers where key is consumer and value is AMQPQueue consumer is running on
@@ -655,7 +655,7 @@ class AMQPConnection
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setHost($host) { }
+    public function setHost(string $host) { }
 
     /**
      * Set the login string used to connect to the AMQP broker.
@@ -667,7 +667,7 @@ class AMQPConnection
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setLogin($login) { }
+    public function setLogin(string $login) { }
 
     /**
      * Set the password string used to connect to the AMQP broker.
@@ -679,7 +679,7 @@ class AMQPConnection
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setPassword($password) { }
+    public function setPassword(string $password) { }
 
     /**
      * Set the port used to connect to the AMQP broker.
@@ -691,7 +691,7 @@ class AMQPConnection
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setPort($port) { }
+    public function setPort(int $port) { }
 
     /**
      * Sets the virtual host to which to connect on the AMQP broker.
@@ -703,7 +703,7 @@ class AMQPConnection
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setVhost($vhost) { }
+    public function setVhost(string $vhost) { }
 
     /**
      * Sets the interval of time to wait for income activity from AMQP broker
@@ -714,7 +714,7 @@ class AMQPConnection
      *
      * @return bool
      */
-    public function setTimeout($timeout) { }
+    public function setTimeout(int $timeout) { }
 
     /**
      * Get the configured interval of time to wait for income activity
@@ -733,7 +733,7 @@ class AMQPConnection
      *
      * @return bool
      */
-    public function setReadTimeout($timeout) { }
+    public function setReadTimeout(int $timeout) { }
 
     /**
      * Get the configured interval of time to wait for income activity
@@ -750,7 +750,7 @@ class AMQPConnection
      *
      * @return bool
      */
-    public function setWriteTimeout($timeout) { }
+    public function setWriteTimeout(int $timeout) { }
 
     /**
      * Get the configured interval of time to wait for outcome activity
@@ -818,7 +818,7 @@ class AMQPConnection
      *
      * @param string $cacert
      */
-    public function setCACert($cacert) { }
+    public function setCACert(string $cacert) { }
 
     /**
      * Get path to the client certificate in PEM format
@@ -832,7 +832,7 @@ class AMQPConnection
      *
      * @param string $cert
      */
-    public function setCert($cert) { }
+    public function setCert(string $cert) { }
 
     /**
      * Get path to the client key in PEM format
@@ -846,7 +846,7 @@ class AMQPConnection
      *
      * @param string $key
      */
-    public function setKey($key) { }
+    public function setKey(string $key) { }
 
     /**
      * Get whether peer verification enabled or disabled
@@ -860,7 +860,7 @@ class AMQPConnection
      *
      * @param bool $verify
      */
-    public function setVerify($verify) { }
+    public function setVerify(bool $verify) { }
 
     public function getSaslMethod(){}
 
@@ -961,7 +961,7 @@ class AMQPEnvelope extends AMQPBasicProperties
      * @return string|false The contents of the specified header or FALSE
      *                        if not set.
      */
-    public function getHeader($header_key) { }
+    public function getHeader(string $header_key) { }
 
     /**
      * Check whether specific message header exists.
@@ -970,7 +970,7 @@ class AMQPEnvelope extends AMQPBasicProperties
      *
      * @return bool
      */
-    public function hasHeader($header_key) { }
+    public function hasHeader(string $header_key) { }
 }
 
 /**
@@ -1010,7 +1010,7 @@ class AMQPExchange
      * @throws AMQPConnectionException If the connection to the broker was lost.
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function bind($exchange_name, $routing_key = '', array $arguments = array()) { }
+    public function bind(string $exchange_name, string $routing_key = '', array $arguments = array()) { }
 
     /**
      * Remove binding to another exchange.
@@ -1026,7 +1026,7 @@ class AMQPExchange
      * @throws AMQPConnectionException If the connection to the broker was lost.
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function unbind($exchange_name, $routing_key = '', array $arguments = array()) { }
+    public function unbind(string $exchange_name, string $routing_key = '', array $arguments = array()) { }
 
     /**
      * Create an instance of AMQPExchange.
@@ -1070,7 +1070,7 @@ class AMQPExchange
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function delete($exchangeName = null, $flags = AMQP_NOPARAM) { }
+    public function delete(string $exchangeName = null, int $flags = AMQP_NOPARAM) { }
 
     /**
      * Get the argument associated with the given key.
@@ -1081,7 +1081,7 @@ class AMQPExchange
      *                             with the given key, or FALSE if the key
      *                             is not set.
      */
-    public function getArgument($key) { }
+    public function getArgument(string $key) { }
 
     /**
      * Check whether argument associated with the given key exists.
@@ -1090,7 +1090,7 @@ class AMQPExchange
      *
      * @return bool
      */
-    public function hasArgument($key) { }
+    public function hasArgument(string $key) { }
     /**
      * Get all arguments set on the given exchange.
      *
@@ -1142,9 +1142,9 @@ class AMQPExchange
      * @return bool TRUE on success or FALSE on failure.
      */
     public function publish(
-        $message,
-        $routing_key = '',
-        $flags = AMQP_NOPARAM,
+        string $message,
+        string $routing_key = '',
+        int $flags = AMQP_NOPARAM,
         array $attributes = array()
     ) {
     }
@@ -1157,7 +1157,7 @@ class AMQPExchange
      *
      * @return bool TRUE on success or FALSE on failure.
      */
-    public function setArgument($key, $value) { }
+    public function setArgument(string $key, $value) { }
 
     /**
      * Set all arguments on the exchange.
@@ -1178,7 +1178,7 @@ class AMQPExchange
      *
      * @return void
      */
-    public function setFlags($flags) { }
+    public function setFlags(int $flags) { }
 
     /**
      * Set the name of the exchange.
@@ -1187,7 +1187,7 @@ class AMQPExchange
      *
      * @return void
      */
-    public function setName($exchange_name) { }
+    public function setName(string $exchange_name) { }
 
     /**
      * Set the type of the exchange.
@@ -1199,7 +1199,7 @@ class AMQPExchange
      *
      * @return void
      */
-    public function setType($exchange_type) { }
+    public function setType(string $exchange_type) { }
 
     /**
      * Get the AMQPChannel object in use
@@ -1254,7 +1254,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function ack($delivery_tag, $flags = AMQP_NOPARAM) { }
+    public function ack(string $delivery_tag, int $flags = AMQP_NOPARAM) { }
 
     /**
      * Bind the given queue to a routing key on an exchange.
@@ -1268,7 +1268,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function bind($exchange_name, $routing_key = null, array $arguments = array()) { }
+    public function bind(string $exchange_name, string $routing_key = null, array $arguments = array()) { }
 
     /**
      * Cancel a queue that is already bound to an exchange and routing key.
@@ -1287,7 +1287,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function cancel($consumer_tag = '') { }
+    public function cancel(string $consumer_tag = '') { }
 
     /**
      * Create an instance of an AMQPQueue object.
@@ -1340,8 +1340,8 @@ class AMQPQueue
      */
     public function consume(
         callable $callback = null,
-        $flags = AMQP_NOPARAM,
-        $consumerTag = null
+        int $flags = AMQP_NOPARAM,
+        string $consumerTag = null
     ) {
     }
 
@@ -1370,7 +1370,7 @@ class AMQPQueue
      *
      * @return integer The number of deleted messages.
      */
-    public function delete($flags = AMQP_NOPARAM) { }
+    public function delete(int $flags = AMQP_NOPARAM) { }
 
     /**
      * Retrieve the next message from the queue.
@@ -1394,7 +1394,7 @@ class AMQPQueue
      *
      * @return AMQPEnvelope|false
      */
-    public function get($flags = AMQP_NOPARAM) { }
+    public function get(int $flags = AMQP_NOPARAM) { }
 
     /**
      * Get the argument associated with the given key.
@@ -1405,7 +1405,7 @@ class AMQPQueue
      *                             with the given key, or false if the key
      *                             is not set.
      */
-    public function getArgument($key) { }
+    public function getArgument(string $key) { }
 
     /**
      * Get all set arguments as an array of key/value pairs.
@@ -1452,7 +1452,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function nack($delivery_tag, $flags = AMQP_NOPARAM) { }
+    public function nack(string $delivery_tag, int $flags = AMQP_NOPARAM) { }
 
     /**
      * Mark one message as explicitly not acknowledged.
@@ -1471,7 +1471,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function reject($delivery_tag, $flags = AMQP_NOPARAM) { }
+    public function reject(string $delivery_tag, int $flags = AMQP_NOPARAM) { }
 
     /**
      * Purge the contents of a queue.
@@ -1491,7 +1491,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function setArgument($key, $value) { }
+    public function setArgument(string $key, $value) { }
 
     /**
      * Set all arguments on the given queue.
@@ -1511,7 +1511,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function hasArgument($key) { }
+    public function hasArgument(string $key) { }
 
     /**
      * Set the flags on the queue.
@@ -1522,7 +1522,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function setFlags($flags) { }
+    public function setFlags(int $flags) { }
 
     /**
      * Set the queue name.
@@ -1531,7 +1531,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function setName($queue_name) { }
+    public function setName(string $queue_name) { }
 
     /**
      * Remove a routing key binding on an exchange from the given queue.
@@ -1547,7 +1547,7 @@ class AMQPQueue
      *
      * @return bool
      */
-    public function unbind($exchange_name, $routing_key = null, array $arguments = array()) { }
+    public function unbind(string $exchange_name, string $routing_key = null, array $arguments = array()) { }
 
     /**
      * Get the AMQPChannel object in use
@@ -1600,7 +1600,7 @@ final class AMQPTimestamp
      *
      * @throws AMQPExchangeValue
      */
-    public function __construct($timestamp) { }
+    public function __construct(string $timestamp) { }
 
     /** @return string */
     public function getTimestamp() { }
