@@ -43,7 +43,7 @@ function apache_get_version () {}
  * @since 4.3.0
  * @since 5.0
  */
-function apache_getenv ( $variable, $walk_to_top = false ) {}
+function apache_getenv ( string $variable, bool $walk_to_top = false ) {}
 
 /**
  * Perform a partial request for the specified URI and return all info about it
@@ -57,7 +57,7 @@ function apache_getenv ( $variable, $walk_to_top = false ) {}
  * @since 4.0
  * @since 5.0
  */
-function apache_lookup_uri ( $filename ) {}
+function apache_lookup_uri ( string $filename ) {}
 
 /**
  * Get and set apache request notes
@@ -74,7 +74,7 @@ function apache_lookup_uri ( $filename ) {}
  * @since 4.0
  * @since 5.0
  */
-function apache_note ( $note_name, $note_value = '' ) {}
+function apache_note ( string $note_name, string $note_value = '' ) {}
 
 /**
  * Fetches all HTTP request headers from the current request
@@ -121,7 +121,7 @@ function apache_response_headers () {}
  * @since 4.2.0
  * @since 5.0
  */
-function apache_setenv ( $variable, $value, $walk_to_top = false ) {}
+function apache_setenv ( string $variable, string $value, bool $walk_to_top = false ) {}
 
 /**
  * Fetches all HTTP headers from the current request.
@@ -146,4 +146,4 @@ function getallheaders () {}
  * @since 4.0
  * @since 5.0
  */
-function virtual ( $filename ) {}
+function virtual ( string $filename ) {}
