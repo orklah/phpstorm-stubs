@@ -121,7 +121,7 @@
  * @since 4.0
  * @since 5.0
  */
-function dba_open ($path, $mode, $handler = null, $_ = null) {}
+function dba_open (string $path, string $mode, string $handler = null, $_ = null) {}
 
 /**
  * Open database persistently
@@ -146,7 +146,7 @@ function dba_open ($path, $mode, $handler = null, $_ = null) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_popen ($path, $mode, $handler = null, $_ = null) {}
+function dba_popen (string $path, string $mode, string $handler = null, $_ = null) {}
 
 /**
  * Close a DBA database
@@ -175,7 +175,7 @@ function dba_close ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_delete ($key, $handle) {}
+function dba_delete (string $key, $handle) {}
 
 /**
  * Check whether key exists
@@ -191,7 +191,7 @@ function dba_delete ($key, $handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_exists ($key, $handle) {}
+function dba_exists (string $key, $handle) {}
 
 /**
  * Fetch data specified by key
@@ -213,7 +213,7 @@ function dba_exists ($key, $handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_fetch ($key, $handle) {}
+function dba_fetch (string $key, $handle) {}
 
 /**
  * Fetch data specified by key
@@ -236,7 +236,7 @@ function dba_fetch ($key, $handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_fetch ($key, $skip, $handle) {}
+function dba_fetch (string $key, int $skip, $handle) {}
 
 /**
  * Insert entry
@@ -257,7 +257,7 @@ function dba_fetch ($key, $skip, $handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_insert ($key, $value, $handle) {}
+function dba_insert (string $key, string $value, $handle) {}
 
 /**
  * Replace or insert entry
@@ -276,7 +276,7 @@ function dba_insert ($key, $value, $handle) {}
  * @since 4.0
  * @since 5.0
  */
-function dba_replace ($key, $value, $handle) {}
+function dba_replace (string $key, string $value, $handle) {}
 
 /**
  * Fetch first key
@@ -347,7 +347,7 @@ function dba_sync ($handle) {}
  * @since 4.3
  * @since 5.0
  */
-function dba_handlers ($full_info = false) {}
+function dba_handlers (bool $full_info = false) {}
 
 /**
  * List all open database files
