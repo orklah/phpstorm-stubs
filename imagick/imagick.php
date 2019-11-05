@@ -592,7 +592,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function compareImageLayers ($method) {}
+	public function compareImageLayers (int $method) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -603,7 +603,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function pingImageBlob ($image) {}
+	public function pingImageBlob (string $image) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -617,7 +617,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function pingImageFile ($filehandle, $fileName = null) {}
+	public function pingImageFile ($filehandle, string $fileName = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -648,7 +648,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function trimImage ($fuzz) {}
+	public function trimImage (float $fuzz) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -662,7 +662,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function waveImage ($amplitude, $length) {}
+	public function waveImage (float $amplitude, float $length) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -682,7 +682,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function vignetteImage ($blackPoint, $whitePoint, $x, $y) {}
+	public function vignetteImage (float $blackPoint, float $whitePoint, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -709,7 +709,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageMatte ($matte) {}
+	public function setImageMatte (bool $matte) {}
 
 	/**
 	 * Adaptively resize image with data dependent triangulation
@@ -729,7 +729,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws ImagickException Throws ImagickException on error
 	 * @since 2.0.0
 	 */
-	public function adaptiveResizeImage ($columns, $rows, $bestfit = false, $legacy = false) {}
+	public function adaptiveResizeImage (int $columns, int $rows, bool $bestfit = false, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -746,7 +746,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sketchImage ($radius, $sigma, $angle) {}
+	public function sketchImage (float $radius, float $sigma, float $angle) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -763,7 +763,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function shadeImage ($gray, $azimuth, $elevation) {}
+	public function shadeImage (bool $gray, float $azimuth, float $elevation) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -788,7 +788,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setSizeOffset ($columns, $rows, $offset) {}
+	public function setSizeOffset (int $columns, int $rows, int $offset) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -806,7 +806,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function adaptiveBlurImage ($radius, $sigma, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function adaptiveBlurImage (float $radius, float $sigma, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -826,7 +826,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function contrastStretchImage ($black_point, $white_point, $channel = Imagick::CHANNEL_ALL) {}
+	public function contrastStretchImage (float $black_point, float $white_point, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -843,7 +843,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function adaptiveSharpenImage ($radius, $sigma, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function adaptiveSharpenImage (float $radius, float $sigma, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -863,7 +863,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function randomThresholdImage ($low, $high, $channel = Imagick::CHANNEL_ALL) {}
+	public function randomThresholdImage (float $low, float $high, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * @param $xRounding
@@ -895,7 +895,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function roundCorners ($x_rounding, $y_rounding, $stroke_width = 10.0, $displace = 5.0, $size_correction = -6.0) {}
+	public function roundCorners (float $x_rounding, float $y_rounding, float $stroke_width = 10.0, float $displace = 5.0, float $size_correction = -6.0) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -906,7 +906,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setIteratorIndex ($index) {}
+	public function setIteratorIndex (int $index) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -928,7 +928,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function transformImage ($crop, $geometry) {}
+	public function transformImage (string $crop, string $geometry) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -940,7 +940,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageOpacity ($opacity) {}
+	public function setImageOpacity (float $opacity) {}
 
 	/**
 	 * (PECL imagick 2.2.2)<br/>
@@ -957,7 +957,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function orderedPosterizeImage ($threshold_map, $channel = Imagick::CHANNEL_ALL) {}
+	public function orderedPosterizeImage (string $threshold_map, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -971,7 +971,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function polaroidImage (ImagickDraw $properties, $angle) {}
+	public function polaroidImage (ImagickDraw $properties, float $angle) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -983,7 +983,7 @@ class Imagick implements Iterator, Countable {
 	 * @return string|false a string containing the image property, false if a
 	 * property with the given name does not exist.
 	 */
-	public function getImageProperty ($name) {}
+	public function getImageProperty (string $name) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -993,7 +993,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $value
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageProperty ($name, $value) {}
+	public function setImageProperty (string $name, string $value) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1004,7 +1004,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageInterpolateMethod ($method) {}
+	public function setImageInterpolateMethod (int $method) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1026,7 +1026,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function linearStretchImage ($blackPoint, $whitePoint) {}
+	public function linearStretchImage (float $blackPoint, float $whitePoint) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1054,7 +1054,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function extentImage ($width, $height, $x, $y) {}
+	public function extentImage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1073,7 +1073,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageOrientation ($orientation) {}
+	public function setImageOrientation (int $orientation) {}
 
 	/**
 	 * (PECL imagick 2.1.0)<br/>
@@ -1101,7 +1101,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function paintFloodfillImage ($fill, $fuzz, $bordercolor, $x, $y, $channel = Imagick::CHANNEL_ALL) {}
+	public function paintFloodfillImage ($fill, float $fuzz, $bordercolor, int $x, int $y, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1117,7 +1117,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool <b>TRUE</b> on success.
 	 * @since 2.0.0
 	 */
-	public function clutImage (Imagick $lookup_table, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function clutImage (Imagick $lookup_table, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1131,7 +1131,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array an array containing the image properties or property names.
 	 */
-	public function getImageProperties ($pattern = "*", $only_names = true) {}
+	public function getImageProperties (string $pattern = "*", bool $only_names = true) {}
 
 	/**
 	 * (PECL imagick 2.2.0)<br/>
@@ -1145,7 +1145,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array an array containing the image profiles or profile names.
 	 */
-	public function getImageProfiles ($pattern = "*", $include_values = true) {}
+	public function getImageProfiles (string $pattern = "*", bool $include_values = true) {}
 
 	/**
 	 * (PECL imagick 2.0.1)<br/>
@@ -1162,7 +1162,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function distortImage ($method, array $arguments, $bestfit) {}
+	public function distortImage (int $method, array $arguments, bool $bestfit) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1195,7 +1195,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function resetImagePage ($page) {}
+	public function resetImagePage (string $page) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1225,7 +1225,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function animateImages ($x_server) {}
+	public function animateImages (string $x_server) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1247,7 +1247,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setFont ($font) {}
+	public function setFont (string $font) {}
 
 	/**
 	 * (PECL imagick 2.1.0)<br/>
@@ -1266,7 +1266,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setPointSize ($point_size) {}
+	public function setPointSize (float $point_size) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1286,7 +1286,7 @@ class Imagick implements Iterator, Countable {
 	 * @return Imagick Returns an Imagick object containing the merged image.
 	 * @throws ImagickException
 	 */
-	public function mergeImageLayers ($layer_method) {}
+	public function mergeImageLayers (int $layer_method) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1297,7 +1297,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageAlphaChannel ($mode) {}
+	public function setImageAlphaChannel (int $mode) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1326,7 +1326,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function floodFillPaintImage ($fill, $fuzz, $target, $x, $y, $invert, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function floodFillPaintImage ($fill, float $fuzz, $target, int $x, int $y, bool $invert, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1349,7 +1349,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function opaquePaintImage ($target, $fill, $fuzz, $invert, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function opaquePaintImage ($target, $fill, float $fuzz, bool $invert, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1369,7 +1369,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function transparentPaintImage ($target, $alpha, $fuzz, $invert) {}
+	public function transparentPaintImage ($target, float $alpha, float $fuzz, bool $invert) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1391,7 +1391,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function liquidRescaleImage ($width, $height, $delta_x, $rigidity) {}
+	public function liquidRescaleImage (int $width, int $height, float $delta_x, float $rigidity) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1402,7 +1402,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function encipherImage ($passphrase) {}
+	public function encipherImage (string $passphrase) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1413,7 +1413,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function decipherImage ($passphrase) {}
+	public function decipherImage (string $passphrase) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1425,7 +1425,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setGravity ($gravity) {}
+	public function setGravity (int $gravity) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1445,7 +1445,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array an array containing minima and maxima values of the channel(s).
 	 */
-	public function getImageChannelRange ($channel) {}
+	public function getImageChannelRange (int $channel) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1471,7 +1471,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return float a double describing the channel distortion.
 	 */
-	public function getImageChannelDistortions (Imagick $reference, $metric, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function getImageChannelDistortions (Imagick $reference, int $metric, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1483,7 +1483,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setImageGravity ($gravity) {}
+	public function setImageGravity (int $gravity) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1524,7 +1524,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function importImagePixels ($x, $y, $width, $height, $map, $storage, array $pixels) {}
+	public function importImagePixels (int $x, int $y, int $width, int $height, string $map, int $storage, array $pixels) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1535,7 +1535,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool
 	 */
-	public function deskewImage ($threshold) {}
+	public function deskewImage (float $threshold) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1556,7 +1556,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool
 	 */
-	public function segmentImage ($COLORSPACE, $cluster_threshold, $smooth_threshold, $verbose = false) {}
+	public function segmentImage (int $COLORSPACE, float $cluster_threshold, float $smooth_threshold, bool $verbose = false) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1572,7 +1572,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sparseColorImage ($SPARSE_METHOD, array $arguments, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function sparseColorImage (int $SPARSE_METHOD, array $arguments, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1586,7 +1586,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function remapImage (Imagick $replacement, $DITHER) {}
+	public function remapImage (Imagick $replacement, int $DITHER) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1613,7 +1613,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array an array containing the pixels values.
 	 */
-	public function exportImagePixels ($x, $y, $width, $height, $map, $STORAGE) {}
+	public function exportImagePixels (int $x, int $y, int $width, int $height, string $map, int $STORAGE) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1625,7 +1625,7 @@ class Imagick implements Iterator, Countable {
 	 * @return array an array with kurtosis and skewness
 	 * members.
 	 */
-	public function getImageChannelKurtosis ($channel = Imagick::CHANNEL_DEFAULT) {}
+	public function getImageChannelKurtosis (int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1640,7 +1640,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function functionImage ($function, array $arguments, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function functionImage (int $function, array $arguments, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * @param $COLORSPACE
@@ -1659,7 +1659,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function haldClutImage (Imagick $clut, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function haldClutImage (Imagick $clut, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * @param $CHANNEL [optional]
@@ -1680,7 +1680,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return string the artifact value on success.
 	 */
-	public function getImageArtifact ($artifact) {}
+	public function getImageArtifact (string $artifact) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1694,7 +1694,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageArtifact ($artifact, $value) {}
+	public function setImageArtifact (string $artifact, string $value) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -1705,7 +1705,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function deleteImageArtifact ($artifact) {}
+	public function deleteImageArtifact (string $artifact) {}
 
 	/**
 	 * (PECL imagick 0.9.10-0.9.9)<br/>
@@ -1724,7 +1724,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setColorspace ($COLORSPACE) {}
+	public function setColorspace (int $COLORSPACE) {}
 
 	/**
 	 * @param $CHANNEL [optional]
@@ -1782,7 +1782,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return ImagickPixelIterator an ImagickPixelIterator for an image section.
 	 */
-	public function getPixelRegionIterator ($x, $y, $columns, $rows) {}
+	public function getPixelRegionIterator (int $x, int $y, int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 0.9.0-0.9.9)<br/>
@@ -1792,7 +1792,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool <b>TRUE</b> on success.
 	 * @throws ImagickException Throws ImagickException on error.
 	 */
-	public function readImage ($filename) {}
+	public function readImage (string $filename) {}
 
 	/**
 	 * @param $filenames
@@ -1809,7 +1809,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool <b>TRUE</b> on success.
 	 * @throws ImagickException Throws ImagickException on error.
 	 */
-	public function readImageBlob ($image, $filename = null) {}
+	public function readImageBlob (string $image, string $filename = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1821,7 +1821,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageFormat ($format) {}
+	public function setImageFormat (string $format) {}
 
 	/**
 	 * Scales the size of an image to the given dimensions. Passing zero as either of the arguments will preserve dimension while scaling.<br>
@@ -1836,7 +1836,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws ImagickException Throws ImagickException on error
 	 * @since 2.0.0
 	 */
-	public function scaleImage ($cols, $rows, $bestfit = false, $legacy = false) {}
+	public function scaleImage (int $cols, int $rows, bool $bestfit = false, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 0.9.0-0.9.9)<br/>
@@ -1850,7 +1850,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function writeImage ($filename = NULL) {}
+	public function writeImage (string $filename = NULL) {}
 
 	/**
 	 * (PECL imagick 0.9.0-0.9.9)<br/>
@@ -1860,7 +1860,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $adjoin
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function writeImages ($filename, $adjoin) {}
+	public function writeImages (string $filename, bool $adjoin) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1878,7 +1878,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function blurImage ($radius, $sigma, $channel = null) {}
+	public function blurImage (float $radius, float $sigma, int $channel = null) {}
 
 	/**
 	 * Changes the size of an image to the given dimensions and removes any associated profiles.<br>
@@ -1902,7 +1902,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool <b>TRUE</b> on success.
 	 * @since 2.0.0
 	 */
-	public function thumbnailImage ($columns, $rows, $bestfit = false, $fill = false, $legacy = false) {}
+	public function thumbnailImage (int $columns, int $rows, bool $bestfit = false, bool $fill = false, bool $legacy = false) {}
 
 	/**
 	 * Creates a cropped thumbnail at the requested size.
@@ -1916,7 +1916,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws ImagickException Throws ImagickException on error
 	 * @since 2.0.0
 	 */
-	public function cropThumbnailImage ($width, $height, $legacy = false) {}
+	public function cropThumbnailImage (int $width, int $height, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -1933,7 +1933,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $filename
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageFilename ($filename) {}
+	public function setImageFilename (string $filename) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2060,7 +2060,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageIndex ($index) {}
+	public function setImageIndex (int $index) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2079,7 +2079,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function commentImage ($comment) {}
+	public function commentImage (string $comment) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2099,7 +2099,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function cropImage ($width, $height, $x, $y) {}
+	public function cropImage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2110,7 +2110,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function labelImage ($label) {}
+	public function labelImage (string $label) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2140,7 +2140,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageCompressionQuality ($quality) {}
+	public function setImageCompressionQuality (int $quality) {}
 
 	/**
 	 * (PECL imagick 2.2.2)<br/>
@@ -2171,7 +2171,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function annotateImage (ImagickDraw $draw_settings, $x, $y, $angle, $text) {}
+	public function annotateImage (ImagickDraw $draw_settings, float $x, float $y, float $angle, string $text) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2194,7 +2194,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function compositeImage (Imagick $composite_object, $composite, $x, $y, $channel = Imagick::CHANNEL_ALL) {}
+	public function compositeImage (Imagick $composite_object, int $composite, int $x, int $y, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2205,7 +2205,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $hue
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function modulateImage ($brightness, $saturation, $hue) {}
+	public function modulateImage (float $brightness, float $saturation, float $hue) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2238,7 +2238,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function montageImage (ImagickDraw $draw, $tile_geometry, $thumbnail_geometry, $mode, $frame) {}
+	public function montageImage (ImagickDraw $draw, string $tile_geometry, string $thumbnail_geometry, int $mode, string $frame) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2248,7 +2248,7 @@ class Imagick implements Iterator, Countable {
 	 * @return array Identifies an image and returns the attributes. Attributes include
 	 * the image width, height, size, and others.
 	 */
-	public function identifyImage ($appendRawOutput = false) {}
+	public function identifyImage (bool $appendRawOutput = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2258,7 +2258,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function thresholdImage ($threshold, $channel = Imagick::CHANNEL_ALL) {}
+	public function thresholdImage (float $threshold, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2275,7 +2275,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function adaptiveThresholdImage ($width, $height, $offset) {}
+	public function adaptiveThresholdImage (int $width, int $height, int $offset) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2308,7 +2308,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick Imagick instance on success.
 	 */
-	public function appendImages ($stack = false) {}
+	public function appendImages (bool $stack = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2322,7 +2322,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function charcoalImage ($radius, $sigma) {}
+	public function charcoalImage (float $radius, float $sigma) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2336,7 +2336,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function normalizeImage ($channel = Imagick::CHANNEL_ALL) {}
+	public function normalizeImage (int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2347,7 +2347,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function oilPaintImage ($radius) {}
+	public function oilPaintImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2357,7 +2357,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $dither
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function posterizeImage ($levels, $dither) {}
+	public function posterizeImage (int $levels, bool $dither) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2367,7 +2367,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function radialBlurImage ($angle, $channel = Imagick::CHANNEL_ALL) {}
+	public function radialBlurImage (float $angle, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2380,7 +2380,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $raise
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function raiseImage ($width, $height, $x, $y, $raise) {}
+	public function raiseImage (int $width, int $height, int $x, int $y, bool $raise) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2392,7 +2392,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $blur
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function resampleImage ($x_resolution, $y_resolution, $filter, $blur) {}
+	public function resampleImage (float $x_resolution, float $y_resolution, int $filter, float $blur) {}
 
 	/**
 	 * Scales an image to the desired dimensions with one of these filters:<br>
@@ -2411,7 +2411,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool TRUE on success
 	 * @since 2.0.0
 	 */
-	public function resizeImage ($columns, $rows, $filter, $blur, $bestfit = false, $legacy = false) {}
+	public function resizeImage (int $columns, int $rows, int $filter, float $blur, bool $bestfit = false, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2425,7 +2425,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function rollImage ($x, $y) {}
+	public function rollImage (int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2439,7 +2439,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function rotateImage ($background, $degrees) {}
+	public function rotateImage ($background, float $degrees) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2449,7 +2449,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $rows
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sampleImage ($columns, $rows) {}
+	public function sampleImage (int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2458,7 +2458,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $threshold
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function solarizeImage ($threshold) {}
+	public function solarizeImage (int $threshold) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2470,7 +2470,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function shadowImage ($opacity, $sigma, $x, $y) {}
+	public function shadowImage (float $opacity, float $sigma, int $x, int $y) {}
 
 	/**
 	 * @param $key
@@ -2494,7 +2494,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $compose
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageCompose ($compose) {}
+	public function setImageCompose (int $compose) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2505,7 +2505,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageCompression ($compression) {}
+	public function setImageCompression (int $compression) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2518,7 +2518,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageDelay ($delay) {}
+	public function setImageDelay (int $delay) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2527,7 +2527,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $depth
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageDepth ($depth) {}
+	public function setImageDepth (int $depth) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2536,7 +2536,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $gamma
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageGamma ($gamma) {}
+	public function setImageGamma (float $gamma) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2548,7 +2548,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageIterations ($iterations) {}
+	public function setImageIterations (int $iterations) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2569,7 +2569,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImagePage ($width, $height, $x, $y) {}
+	public function setImagePage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * @param $filename
@@ -2584,7 +2584,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $y_resolution
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageResolution ($x_resolution, $y_resolution) {}
+	public function setImageResolution (float $x_resolution, float $y_resolution) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2593,7 +2593,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $scene
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageScene ($scene) {}
+	public function setImageScene (int $scene) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2605,7 +2605,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageTicksPerSecond ($ticks_per_second) {}
+	public function setImageTicksPerSecond (int $ticks_per_second) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2614,7 +2614,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $image_type
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageType ($image_type) {}
+	public function setImageType (int $image_type) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2623,7 +2623,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $units
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageUnits ($units) {}
+	public function setImageUnits (int $units) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2634,7 +2634,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sharpenImage ($radius, $sigma, $channel = Imagick::CHANNEL_ALL) {}
+	public function sharpenImage (float $radius, float $sigma, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2644,7 +2644,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $rows
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function shaveImage ($columns, $rows) {}
+	public function shaveImage (int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2661,7 +2661,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function shearImage ($background, $x_shear, $y_shear) {}
+	public function shearImage ($background, float $x_shear, float $y_shear) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2673,7 +2673,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function spliceImage ($width, $height, $x, $y) {}
+	public function spliceImage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2684,7 +2684,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function pingImage ($filename) {}
+	public function pingImage (string $filename) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2694,7 +2694,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $fileName [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function readImageFile ($filehandle, $fileName = null) {}
+	public function readImageFile ($filehandle, string $fileName = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2705,7 +2705,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function displayImage ($servername) {}
+	public function displayImage (string $servername) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2716,7 +2716,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function displayImages ($servername) {}
+	public function displayImages (string $servername) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2725,7 +2725,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $radius
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function spreadImage ($radius) {}
+	public function spreadImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2734,7 +2734,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $degrees
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function swirlImage ($degrees) {}
+	public function swirlImage (float $degrees) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2751,7 +2751,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $pattern [optional]
 	 * @return array an array containing the formats supported by Imagick.
 	 */
-	public static function queryFormats ($pattern = "*") {}
+	public static function queryFormats (string $pattern = "*") {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2762,7 +2762,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array an array containing the configured fonts.
 	 */
-	public static function queryFonts ($pattern = "*") {}
+	public static function queryFonts (string $pattern = "*") {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2779,7 +2779,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array a multi-dimensional array representing the font metrics.
 	 */
-	public function queryFontMetrics (ImagickDraw $properties, $text, $multiline = null) {}
+	public function queryFontMetrics (ImagickDraw $properties, string $text, bool $multiline = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2789,7 +2789,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $offset
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function steganoImage (Imagick $watermark_wand, $offset) {}
+	public function steganoImage (Imagick $watermark_wand, int $offset) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2804,7 +2804,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function addNoiseImage ($noise_type, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function addNoiseImage (int $noise_type, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2829,7 +2829,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function motionBlurImage ($radius, $sigma, $angle, $channel = Imagick::CHANNEL_DEFAULT) {}
+	public function motionBlurImage (float $radius, float $sigma, float $angle, int $channel = Imagick::CHANNEL_DEFAULT) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2850,7 +2850,7 @@ class Imagick implements Iterator, Countable {
 	 * Throw an <b>ImagickException</b> on error.
 	 * @throws ImagickException on error
 	 */
-	public function morphImages ($number_frames) {}
+	public function morphImages (int $number_frames) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2894,7 +2894,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function borderImage ($bordercolor, $width, $height) {}
+	public function borderImage ($bordercolor, int $width, int $height) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2914,7 +2914,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function chopImage ($width, $height, $x, $y) {}
+	public function chopImage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -2937,7 +2937,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function clipPathImage ($pathname, $inside) {}
+	public function clipPathImage (string $pathname, bool $inside) {}
 
 	/**
 	 * @param $pathname
@@ -2976,7 +2976,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function colorFloodfillImage ($fill, $fuzz, $bordercolor, $x, $y) {}
+	public function colorFloodfillImage ($fill, float $fuzz, $bordercolor, int $x, int $y) {}
 
 	/**
 	 * Blends the fill color with each pixel in the image. The 'opacity' color is a per channel strength factor for how strongly the color should be applied.<br>
@@ -2994,7 +2994,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws ImagickException Throws ImagickException on error
 	 * @since 2.0.0
 	 */
-	public function colorizeImage ($colorize, $opacity, $legacy = false) {}
+	public function colorizeImage ($colorize, $opacity, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3015,7 +3015,7 @@ class Imagick implements Iterator, Countable {
 	 * @return array Array consisting of new_wand and
 	 * distortion.
 	 */
-	public function compareImageChannels (Imagick $image, $channelType, $metricType) {}
+	public function compareImageChannels (Imagick $image, int $channelType, int $metricType) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3032,7 +3032,7 @@ class Imagick implements Iterator, Countable {
 	 * reconstructed image and a double representing the difference.
 	 * @throws ImagickException Throws ImagickException on error.
 	 */
-	public function compareImages (Imagick $compare, $metric) {}
+	public function compareImages (Imagick $compare, int $metric) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3043,7 +3043,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function contrastImage ($sharpen) {}
+	public function contrastImage (bool $sharpen) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3057,7 +3057,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function combineImages ($channelType) {}
+	public function combineImages (int $channelType) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3074,7 +3074,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function convolveImage (array $kernel, $channel = Imagick::CHANNEL_ALL) {}
+	public function convolveImage (array $kernel, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3085,7 +3085,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function cycleColormapImage ($displace) {}
+	public function cycleColormapImage (int $displace) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3112,7 +3112,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function edgeImage ($radius) {}
+	public function edgeImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3126,7 +3126,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function embossImage ($radius, $sigma) {}
+	public function embossImage (float $radius, float $sigma) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3162,7 +3162,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function evaluateImage ($op, $constant, $channel = Imagick::CHANNEL_ALL) {}
+	public function evaluateImage (int $op, float $constant, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * Merges a sequence of images. This is useful for combining Photoshop layers into a single image.
@@ -3214,7 +3214,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function frameImage ($matte_color, $width, $height, $inner_bevel, $outer_bevel) {}
+	public function frameImage ($matte_color, int $width, int $height, int $inner_bevel, int $outer_bevel) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3231,7 +3231,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick <b>TRUE</b> on success.
 	 */
-	public function fxImage ($expression, $channel = Imagick::CHANNEL_ALL) {}
+	public function fxImage (string $expression, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3248,7 +3248,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function gammaImage ($gamma, $channel = Imagick::CHANNEL_ALL) {}
+	public function gammaImage (float $gamma, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3268,7 +3268,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function gaussianBlurImage ($radius, $sigma, $channel = Imagick::CHANNEL_ALL) {}
+	public function gaussianBlurImage (float $radius, float $sigma, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * @param $key
@@ -3308,7 +3308,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return int <b>TRUE</b> on success.
 	 */
-	public function getImageChannelDepth ($channel) {}
+	public function getImageChannelDepth (int $channel) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3328,7 +3328,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return float <b>TRUE</b> on success.
 	 */
-	public function getImageChannelDistortion (Imagick $reference, $channel, $metric) {}
+	public function getImageChannelDistortion (Imagick $reference, int $channel, int $metric) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3342,7 +3342,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array <b>TRUE</b> on success.
 	 */
-	public function getImageChannelExtrema ($channel) {}
+	public function getImageChannelExtrema (int $channel) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3356,7 +3356,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return array <b>TRUE</b> on success.
 	 */
-	public function getImageChannelMean ($channel) {}
+	public function getImageChannelMean (int $channel) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3375,7 +3375,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return ImagickPixel <b>TRUE</b> on success.
 	 */
-	public function getImageColormapColor ($index) {}
+	public function getImageColormapColor (int $index) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3422,7 +3422,7 @@ class Imagick implements Iterator, Countable {
 	 * @return float the distortion metric used on the image (or the best guess
 	 * thereof).
 	 */
-	public function getImageDistortion (Imagick $reference, $metric) {}
+	public function getImageDistortion (Imagick $reference, int $metric) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3520,7 +3520,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return ImagickPixel an ImagickPixel instance for the color at the coordinates given.
 	 */
-	public function getImagePixelColor ($x, $y) {}
+	public function getImagePixelColor (int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3531,7 +3531,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return string a string containing the image profile.
 	 */
-	public function getImageProfile ($name) {}
+	public function getImageProfile (string $name) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3672,7 +3672,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return Imagick Extracts a region of the image and returns it as a new wand.
 	 */
-	public function getImageRegion ($width, $height, $x, $y) {}
+	public function getImageRegion (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3683,7 +3683,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function implodeImage ($radius) {}
+	public function implodeImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3706,7 +3706,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function levelImage ($blackPoint, $gamma, $whitePoint, $channel = Imagick::CHANNEL_ALL) {}
+	public function levelImage (float $blackPoint, float $gamma, float $whitePoint, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3724,7 +3724,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $dither
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function mapImage (Imagick $map, $dither) {}
+	public function mapImage (Imagick $map, bool $dither) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3749,7 +3749,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function matteFloodfillImage ($alpha, $fuzz, $bordercolor, $x, $y) {}
+	public function matteFloodfillImage (float $alpha, float $fuzz, $bordercolor, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3760,7 +3760,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function medianFilterImage ($radius) {}
+	public function medianFilterImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3777,7 +3777,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function negateImage ($gray, $channel = Imagick::CHANNEL_ALL) {}
+	public function negateImage (bool $gray, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3802,7 +3802,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function paintOpaqueImage ($target, $fill, $fuzz, $channel = Imagick::CHANNEL_ALL) {}
+	public function paintOpaqueImage ($target, $fill, float $fuzz, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3821,7 +3821,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function paintTransparentImage ($target, $alpha, $fuzz) {}
+	public function paintTransparentImage ($target, float $alpha, float $fuzz) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3832,7 +3832,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function previewImages ($preview) {}
+	public function previewImages (int $preview) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3842,7 +3842,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $profile
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function profileImage ($name, $profile) {}
+	public function profileImage (string $name, string $profile) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3855,7 +3855,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $measureError
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function quantizeImage ($numberColors, $colorspace, $treedepth, $dither, $measureError) {}
+	public function quantizeImage (int $numberColors, int $colorspace, int $treedepth, bool $dither, bool $measureError) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3868,7 +3868,7 @@ class Imagick implements Iterator, Countable {
 	 * @param bool $measureError
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function quantizeImages ($numberColors, $colorspace, $treedepth, $dither, $measureError) {}
+	public function quantizeImages (int $numberColors, int $colorspace, int $treedepth, bool $dither, bool $measureError) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3877,7 +3877,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $radius
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function reduceNoiseImage ($radius) {}
+	public function reduceNoiseImage (float $radius) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3886,7 +3886,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $name
 	 * @return string a string containing the profile of the image.
 	 */
-	public function removeImageProfile ($name) {}
+	public function removeImageProfile (string $name) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3895,7 +3895,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function separateImageChannel ($channel) {}
+	public function separateImageChannel (int $channel) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3904,7 +3904,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $threshold
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sepiaToneImage ($threshold) {}
+	public function sepiaToneImage (float $threshold) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3913,7 +3913,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $bias
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageBias ($bias) {}
+	public function setImageBias (float $bias) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3923,7 +3923,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageBluePrimary ($x, $y) {}
+	public function setImageBluePrimary (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3944,7 +3944,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $depth
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageChannelDepth ($channel, $depth) {}
+	public function setImageChannelDepth (int $channel, int $depth) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3954,7 +3954,7 @@ class Imagick implements Iterator, Countable {
 	 * @param ImagickPixel $color
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageColormapColor ($index, ImagickPixel $color) {}
+	public function setImageColormapColor (int $index, ImagickPixel $color) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3965,7 +3965,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageColorspace ($colorspace) {}
+	public function setImageColorspace (int $colorspace) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3974,7 +3974,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $dispose
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageDispose ($dispose) {}
+	public function setImageDispose (int $dispose) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3984,7 +3984,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $rows
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageExtent ($columns, $rows) {}
+	public function setImageExtent (int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -3994,7 +3994,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageGreenPrimary ($x, $y) {}
+	public function setImageGreenPrimary (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4003,7 +4003,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $interlace_scheme
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageInterlaceScheme ($interlace_scheme) {}
+	public function setImageInterlaceScheme (int $interlace_scheme) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4013,7 +4013,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $profile
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageProfile ($name, $profile) {}
+	public function setImageProfile (string $name, string $profile) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4023,7 +4023,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageRedPrimary ($x, $y) {}
+	public function setImageRedPrimary (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4032,7 +4032,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $rendering_intent
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageRenderingIntent ($rendering_intent) {}
+	public function setImageRenderingIntent (int $rendering_intent) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4041,7 +4041,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $method
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageVirtualPixelMethod ($method) {}
+	public function setImageVirtualPixelMethod (int $method) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4051,7 +4051,7 @@ class Imagick implements Iterator, Countable {
 	 * @param float $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setImageWhitePoint ($x, $y) {}
+	public function setImageWhitePoint (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4063,7 +4063,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function sigmoidalContrastImage ($sharpen, $alpha, $beta, $channel = Imagick::CHANNEL_ALL) {}
+	public function sigmoidalContrastImage (bool $sharpen, float $alpha, float $beta, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4094,7 +4094,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws ImagickException Throws ImagickException on error
 	 * @since 2.0.0
 	 */
-	public function tintImage ($tint, $opacity, $legacy = false) {}
+	public function tintImage ($tint, $opacity, bool $legacy = false) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4107,7 +4107,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel [optional]
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function unsharpMaskImage ($radius, $sigma, $amount, $threshold, $channel = Imagick::CHANNEL_ALL) {}
+	public function unsharpMaskImage (float $radius, float $sigma, float $amount, float $threshold, int $channel = Imagick::CHANNEL_ALL) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4157,7 +4157,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function newImage ($cols, $rows, $background, $format = null) {}
+	public function newImage (int $cols, int $rows, $background, string $format = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4174,7 +4174,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function newPseudoImage ($columns, $rows, $pseudoString) {}
+	public function newPseudoImage (int $columns, int $rows, string $pseudoString) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4243,7 +4243,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return string a value associated with a wand and the specified key.
 	 */
-	public function getOption ($key) {}
+	public function getOption (string $key) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4297,7 +4297,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return int the specified resource's memory usage in megabytes.
 	 */
-	public static function getResource ($type) {}
+	public static function getResource (int $type) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4308,7 +4308,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return int the specified resource limit in megabytes.
 	 */
-	public static function getResourceLimit ($type) {}
+	public static function getResourceLimit (int $type) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4352,7 +4352,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $compression
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setCompression ($compression) {}
+	public function setCompression (int $compression) {}
 
 	/**
 	 * (PECL imagick 0.9.10-0.9.9)<br/>
@@ -4361,7 +4361,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $quality
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setCompressionQuality ($quality) {}
+	public function setCompressionQuality (int $quality) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4370,7 +4370,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $filename
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setFilename ($filename) {}
+	public function setFilename (string $filename) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4379,7 +4379,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $format
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setFormat ($format) {}
+	public function setFormat (string $format) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4388,7 +4388,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $interlace_scheme
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setInterlaceScheme ($interlace_scheme) {}
+	public function setInterlaceScheme (int $interlace_scheme) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4398,7 +4398,7 @@ class Imagick implements Iterator, Countable {
 	 * @param string $value
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setOption ($key, $value) {}
+	public function setOption (string $key, string $value) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4410,7 +4410,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $y
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setPage ($width, $height, $x, $y) {}
+	public function setPage (int $width, int $height, int $x, int $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4424,7 +4424,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public static function setResourceLimit ($type, $limit) {}
+	public static function setResourceLimit (int $type, int $limit) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4438,7 +4438,7 @@ class Imagick implements Iterator, Countable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setResolution ($x_resolution, $y_resolution) {}
+	public function setResolution (float $x_resolution, float $y_resolution) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4457,7 +4457,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $rows
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setSize ($columns, $rows) {}
+	public function setSize (int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4466,7 +4466,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $image_type
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setType ($image_type) {}
+	public function setType (int $image_type) {}
 
 	public function key () {}
 
@@ -4499,7 +4499,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function brightnessContrastImage ($brightness, $contrast, $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
+	public function brightnessContrastImage (string $brightness, string $contrast, int $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Applies a user supplied kernel to the image according to the given morphology method.
@@ -4511,7 +4511,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function morphology ($morphologyMethod, $iterations, ImagickKernel $ImagickKernel, $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
+	public function morphology (int $morphologyMethod, int $iterations, ImagickKernel $ImagickKernel, int $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Applies a custom convolution kernel to the image.
@@ -4521,7 +4521,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function filter (ImagickKernel $ImagickKernel , $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
+	public function filter (ImagickKernel $ImagickKernel , int $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Apply color transformation to an image. The method permits saturation changes, hue rotation, luminance to alpha, and various other effects. Although variable-sized transformation matrices can be used, typically one uses a 5x5 matrix for an RGBA image and a 6x6 for CMYKA (or RGBA with offsets).
@@ -4531,7 +4531,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function colorMatrixImage ($color_matrix = Imagick::CHANNEL_DEFAULT) { }
+	public function colorMatrixImage (string $color_matrix = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Deletes an image property.
@@ -4540,7 +4540,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function deleteImageProperty ($name) { }
+	public function deleteImageProperty (string $name) { }
 
 	/**
 	 * Implements the discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
@@ -4549,7 +4549,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function forwardFourierTransformimage ($magnitude) { }
+	public function forwardFourierTransformimage (bool $magnitude) { }
 
 	/**
 	 * Gets the current image's compression type.
@@ -4567,7 +4567,7 @@ class Imagick implements Iterator, Countable {
 	 * @throws Exception Since version >=3.4.3. Throws an exception if the key does not exist, rather than terminating the program.
 	 * @since 3.3.0
 	 */
-	public static function getRegistry ($key) { }
+	public static function getRegistry (string $key) { }
 
 	/**
 	 * Returns the ImageMagick quantum range as an integer.
@@ -4585,7 +4585,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool
 	 * @since 3.3.0
 	 */
-	public function identifyFormat ($embedText) { }
+	public function identifyFormat (string $embedText) { }
 
 	/**
 	 * Implements the inverse discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
@@ -4595,7 +4595,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function inverseFourierTransformImage ($complement, $magnitude) { }
+	public function inverseFourierTransformImage (\Imagick $complement, bool $magnitude) { }
 
 	/**
 	 * List all the registry settings. Returns an array of all the key/value pairs in the registry
@@ -4613,7 +4613,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function rotationalBlurImage ($angle, $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
+	public function rotationalBlurImage (string $angle, string $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Selectively blur an image within a contrast threshold. It is similar to the unsharpen mask that sharpens everything with contrast above a certain threshold.
@@ -4625,7 +4625,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function selectiveBlurImage ($radius, $sigma, $threshold, $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
+	public function selectiveBlurImage (float $radius, float $sigma, float $threshold, int $CHANNEL = Imagick::CHANNEL_DEFAULT) { }
 
 	/**
 	 * Set whether antialiasing should be used for operations. On by default.
@@ -4633,7 +4633,7 @@ class Imagick implements Iterator, Countable {
 	 * @return int
 	 * @since 3.3.0
 	 */
-	public function setAntiAlias ($antialias) { }
+	public function setAntiAlias (bool $antialias) { }
 
 	/**
 	 * @link https://php.net/manual/en/imagick.setimagebiasquantum.php
@@ -4641,7 +4641,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function setImageBiasQuantum ($bias) { }
+	public function setImageBiasQuantum (string $bias) { }
 
 	/**
 	 * Set a callback that will be called during the processing of the Imagick image.
@@ -4654,7 +4654,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function setProgressMonitor ($callback) { }
+	public function setProgressMonitor (callable $callback) { }
 
 	/**
 	 * Sets the ImageMagick registry entry named key to value. This is most useful for setting "temporary-path" which controls where ImageMagick creates temporary images e.g. while processing PDFs.
@@ -4664,7 +4664,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public static function setRegistry ($key, $value) { }
+	public static function setRegistry (string $key, string $value) { }
 
 	/**
 	 * Replace each pixel with corresponding statistic from the neighborhood of the specified width and height.
@@ -4676,7 +4676,7 @@ class Imagick implements Iterator, Countable {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public function statisticImage ($type, $width, $height, $channel = Imagick::CHANNEL_DEFAULT ) { }
+	public function statisticImage (int $type, int $width, int $height, int $channel = Imagick::CHANNEL_DEFAULT ) { }
 
 	/**
 	 * Searches for a subimage in the current image and returns a similarity image such that an exact match location is
@@ -4694,7 +4694,7 @@ class Imagick implements Iterator, Countable {
 	 * @return Imagick
 	 * @since 3.3.0
 	 */
-	public function subImageMatch (Imagick $imagick, array &$bestMatch, &$similarity, $similarity_threshold, $metric) { }
+	public function subImageMatch (Imagick $imagick, array &$bestMatch, float &$similarity, float $similarity_threshold, int $metric) { }
 
 	/**
 	 * Is an alias of Imagick::subImageMatch
@@ -4708,7 +4708,7 @@ class Imagick implements Iterator, Countable {
 	 * @see Imagick::subImageMatch() This function is an alias of subImageMatch()
 	 * @since 3.4.0
 	 */
-	public function similarityImage (Imagick $imagick, array &$bestMatch, &$similarity, $similarity_threshold, $metric) { }
+	public function similarityImage (Imagick $imagick, array &$bestMatch, float &$similarity, float $similarity_threshold, int $metric) { }
 
 	/**
 	 * Returns any ImageMagick  configure options that match the specified pattern (e.g. "*" for all). Options include NAME, VERSION, LIB_VERSION, etc.
@@ -4736,7 +4736,7 @@ class Imagick implements Iterator, Countable {
 	 * @param int $channel
 	 * @since 3.4.0
 	 */
-	public function setImageChannelMask ($channel) {}
+	public function setImageChannelMask (int $channel) {}
 
 	/**
 	 * Merge multiple images of the same size together with the selected operator. https://www.imagemagick.org/Usage/layers/#evaluate-sequence
@@ -4745,7 +4745,7 @@ class Imagick implements Iterator, Countable {
 	 * @see https://www.imagemagick.org/Usage/layers/#evaluate-sequence
 	 * @since 3.4.0
 	 */
-	public function evaluateImages ($EVALUATE_CONSTANT) { }
+	public function evaluateImages (int $EVALUATE_CONSTANT) { }
 
 	/**
 	 * Extracts the 'mean' from the image and adjust the image to try make set its gamma appropriately.
@@ -4753,7 +4753,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function autoGammaImage ($channel = Imagick::CHANNEL_ALL) { }
+	public function autoGammaImage (int $channel = Imagick::CHANNEL_ALL) { }
 
 	/**
 	 * Adjusts an image so that its orientation is suitable $ for viewing (i.e. top-left orientation).
@@ -4771,7 +4771,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function compositeImageGravity(Imagick $imagick, $COMPOSITE_CONSTANT, $GRAVITY_CONSTANT) { }
+	public function compositeImageGravity(Imagick $imagick, int $COMPOSITE_CONSTANT, int $GRAVITY_CONSTANT) { }
 
 	/**
 	 * Attempts to increase the appearance of large-scale light-dark transitions.
@@ -4781,7 +4781,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function localContrastImage($radius, $strength) { }
+	public function localContrastImage(float $radius, float $strength) { }
 
 	/**
 	 * Identifies the potential image type, returns one of the Imagick::IMGTYPE_* constants
@@ -4797,7 +4797,7 @@ class Imagick implements Iterator, Countable {
 	 * @return bool
 	 * @since 3.4.3
 	 */
-	public function setImageAlpha($alpha) { }
+	public function setImageAlpha(float $alpha) { }
 }
 
 /**
@@ -4856,7 +4856,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFillAlpha ($opacity) {}
+	public function setFillAlpha (float $opacity) {}
 
 	/**
 	 * @param $x_resolution
@@ -4884,7 +4884,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeAlpha ($opacity) {}
+	public function setStrokeAlpha (float $opacity) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4895,7 +4895,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeWidth ($stroke_width) {}
+	public function setStrokeWidth (float $stroke_width) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4923,7 +4923,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function circle ($ox, $oy, $px, $py) {}
+	public function circle (float $ox, float $oy, float $px, float $py) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4940,7 +4940,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function annotation ($x, $y, $text) {}
+	public function annotation (float $x, float $y, string $text) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4949,7 +4949,7 @@ class ImagickDraw  {
 	 * @param bool $antiAlias
 	 * @return bool No value is returned.
 	 */
-	public function setTextAntialias ($antiAlias) {}
+	public function setTextAntialias (bool $antiAlias) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4960,7 +4960,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setTextEncoding ($encoding) {}
+	public function setTextEncoding (string $encoding) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4969,7 +4969,7 @@ class ImagickDraw  {
 	 * @param string $font_name
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setFont ($font_name) {}
+	public function setFont (string $font_name) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4980,7 +4980,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setFontFamily ($font_family) {}
+	public function setFontFamily (string $font_family) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -4991,7 +4991,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFontSize ($pointsize) {}
+	public function setFontSize (float $pointsize) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5002,7 +5002,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFontStyle ($style) {}
+	public function setFontStyle (int $style) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5011,7 +5011,7 @@ class ImagickDraw  {
 	 * @param int $font_weight
 	 * @return bool
 	 */
-	public function setFontWeight ($font_weight) {}
+	public function setFontWeight (int $font_weight) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5080,7 +5080,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function rectangle ($x1, $y1, $x2, $y2) {}
+	public function rectangle (float $x1, float $y1, float $x2, float $y2) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5106,7 +5106,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function roundRectangle ($x1, $y1, $x2, $y2, $rx, $ry) {}
+	public function roundRectangle (float $x1, float $y1, float $x2, float $y2, float $rx, float $ry) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5120,7 +5120,7 @@ class ImagickDraw  {
 	 * @param float $end
 	 * @return bool No value is returned.
 	 */
-	public function ellipse ($ox, $oy, $rx, $ry, $start, $end) {}
+	public function ellipse (float $ox, float $oy, float $rx, float $ry, float $start, float $end) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5131,7 +5131,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function skewX ($degrees) {}
+	public function skewX (float $degrees) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5142,7 +5142,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function skewY ($degrees) {}
+	public function skewY (float $degrees) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5156,7 +5156,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function translate ($x, $y) {}
+	public function translate (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5176,7 +5176,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function line ($sx, $sy, $ex, $ey) {}
+	public function line (float $sx, float $sy, float $ex, float $ey) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5202,7 +5202,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function arc ($sx, $sy, $ex, $ey, $sd, $ed) {}
+	public function arc (float $sx, float $sy, float $ex, float $ey, float $sd, float $ed) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5219,7 +5219,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function matte ($x, $y, $paintMethod) {}
+	public function matte (float $x, float $y, int $paintMethod) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5244,7 +5244,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function point ($x, $y) {}
+	public function point (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5275,7 +5275,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFontStretch ($fontStretch) {}
+	public function setFontStretch (int $fontStretch) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5286,7 +5286,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeAntialias ($stroke_antialias) {}
+	public function setStrokeAntialias (bool $stroke_antialias) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5297,7 +5297,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setTextAlignment ($alignment) {}
+	public function setTextAlignment (int $alignment) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5308,7 +5308,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setTextDecoration ($decoration) {}
+	public function setTextDecoration (int $decoration) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5339,7 +5339,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setViewbox ($x1, $y1, $x2, $y2) {}
+	public function setViewbox (int $x1, int $y1, int $x2, int $y2) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5388,7 +5388,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function composite ($compose, $x, $y, $width, $height, Imagick $compositeWand) {}
+	public function composite (int $compose, float $x, float $y, float $width, float $height, Imagick $compositeWand) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5405,7 +5405,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function color ($x, $y, $paintMethod) {}
+	public function color (float $x, float $y, int $paintMethod) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5416,7 +5416,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function comment ($comment) {}
+	public function comment (string $comment) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5611,7 +5611,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToAbsolute ($x1, $y1, $x2, $y2, $x, $y) {}
+	public function pathCurveToAbsolute (float $x1, float $y1, float $x2, float $y2, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5637,7 +5637,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToRelative ($x1, $y1, $x2, $y2, $x, $y) {}
+	public function pathCurveToRelative (float $x1, float $y1, float $x2, float $y2, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5657,7 +5657,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToQuadraticBezierAbsolute ($x1, $y1, $x, $y) {}
+	public function pathCurveToQuadraticBezierAbsolute (float $x1, float $y1, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5677,7 +5677,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToQuadraticBezierRelative ($x1, $y1, $x, $y) {}
+	public function pathCurveToQuadraticBezierRelative (float $x1, float $y1, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5691,7 +5691,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToQuadraticBezierSmoothAbsolute ($x, $y) {}
+	public function pathCurveToQuadraticBezierSmoothAbsolute (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5705,7 +5705,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToQuadraticBezierSmoothRelative ($x, $y) {}
+	public function pathCurveToQuadraticBezierSmoothRelative (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5725,7 +5725,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToSmoothAbsolute ($x2, $y2, $x, $y) {}
+	public function pathCurveToSmoothAbsolute (float $x2, float $y2, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5745,7 +5745,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathCurveToSmoothRelative ($x2, $y2, $x, $y) {}
+	public function pathCurveToSmoothRelative (float $x2, float $y2, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5774,7 +5774,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathEllipticArcAbsolute ($rx, $ry, $x_axis_rotation, $large_arc_flag, $sweep_flag, $x, $y) {}
+	public function pathEllipticArcAbsolute (float $rx, float $ry, float $x_axis_rotation, bool $large_arc_flag, bool $sweep_flag, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5803,7 +5803,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathEllipticArcRelative ($rx, $ry, $x_axis_rotation, $large_arc_flag, $sweep_flag, $x, $y) {}
+	public function pathEllipticArcRelative (float $rx, float $ry, float $x_axis_rotation, bool $large_arc_flag, bool $sweep_flag, float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5825,7 +5825,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToAbsolute ($x, $y) {}
+	public function pathLineToAbsolute (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5839,7 +5839,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToRelative ($x, $y) {}
+	public function pathLineToRelative (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5850,7 +5850,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToHorizontalAbsolute ($x) {}
+	public function pathLineToHorizontalAbsolute (float $x) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5861,7 +5861,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToHorizontalRelative ($x) {}
+	public function pathLineToHorizontalRelative (float $x) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5872,7 +5872,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToVerticalAbsolute ($y) {}
+	public function pathLineToVerticalAbsolute (float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5883,7 +5883,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathLineToVerticalRelative ($y) {}
+	public function pathLineToVerticalRelative (float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5897,7 +5897,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathMoveToAbsolute ($x, $y) {}
+	public function pathMoveToAbsolute (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5911,7 +5911,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pathMoveToRelative ($x, $y) {}
+	public function pathMoveToRelative (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5965,7 +5965,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function pushClipPath ($clip_mask_id) {}
+	public function pushClipPath (string $clip_mask_id) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -5996,7 +5996,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function pushPattern ($pattern_id, $x, $y, $width, $height) {}
+	public function pushPattern (string $pattern_id, float $x, float $y, float $width, float $height) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6015,7 +6015,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function rotate ($degrees) {}
+	public function rotate (float $degrees) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6029,7 +6029,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function scale ($x, $y) {}
+	public function scale (float $x, float $y) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6040,7 +6040,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setClipPath ($clip_mask) {}
+	public function setClipPath (string $clip_mask) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6051,7 +6051,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setClipRule ($fill_rule) {}
+	public function setClipRule (int $fill_rule) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6062,7 +6062,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setClipUnits ($clip_units) {}
+	public function setClipUnits (int $clip_units) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6073,7 +6073,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFillOpacity ($fillOpacity) {}
+	public function setFillOpacity (float $fillOpacity) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6084,7 +6084,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setFillPatternURL ($fill_url) {}
+	public function setFillPatternURL (string $fill_url) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6095,7 +6095,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setFillRule ($fill_rule) {}
+	public function setFillRule (int $fill_rule) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6106,7 +6106,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setGravity ($gravity) {}
+	public function setGravity (int $gravity) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6117,7 +6117,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool imagick.imagickdraw.return.success;
 	 */
-	public function setStrokePatternURL ($stroke_url) {}
+	public function setStrokePatternURL (string $stroke_url) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6128,7 +6128,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeDashOffset ($dash_offset) {}
+	public function setStrokeDashOffset (float $dash_offset) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6139,7 +6139,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeLineCap ($linecap) {}
+	public function setStrokeLineCap (int $linecap) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6150,7 +6150,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeLineJoin ($linejoin) {}
+	public function setStrokeLineJoin (int $linejoin) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6161,7 +6161,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeMiterLimit ($miterlimit) {}
+	public function setStrokeMiterLimit (int $miterlimit) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6172,7 +6172,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool No value is returned.
 	 */
-	public function setStrokeOpacity ($stroke_opacity) {}
+	public function setStrokeOpacity (float $stroke_opacity) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6183,7 +6183,7 @@ class ImagickDraw  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setVectorGraphics ($xml) {}
+	public function setVectorGraphics (string $xml) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6219,7 +6219,7 @@ class ImagickDraw  {
      * @return void
      * @since 3.4.1
      */
-	public function setOpacity($opacity) { }
+	public function setOpacity(float $opacity) { }
 
 	/**
 	 * Returns the opacity used when drawing with the fill or stroke color or texture. Fully opaque is 1.0.
@@ -6237,7 +6237,7 @@ class ImagickDraw  {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function setFontResolution($x, $y) { }
+	public function setFontResolution(float $x, float $y) { }
 
 	/**
 	 * Gets the image X and Y resolution.
@@ -6261,7 +6261,7 @@ class ImagickDraw  {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function setTextDirection($direction) { }
+	public function setTextDirection(int $direction) { }
 
 	/**
 	 * Returns the border color used for drawing bordered objects.
@@ -6293,7 +6293,7 @@ class ImagickDraw  {
 	 * @return bool
 	 * @since 3.4.1
 	 */
-	public function setDensity($density_string) { }
+	public function setDensity(string $density_string) { }
 }
 
 /**
@@ -6331,7 +6331,7 @@ class ImagickPixelIterator implements Iterator {
 	 * @return bool a new ImagickPixelIterator on success; on failure, throws ImagickPixelIteratorException
 	 * @throws ImagickPixelIteratorException
 	 */
-	public function newPixelRegionIterator (Imagick $wand, $x, $y, $columns, $rows) {}
+	public function newPixelRegionIterator (Imagick $wand, int $x, int $y, int $columns, int $rows) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6349,7 +6349,7 @@ class ImagickPixelIterator implements Iterator {
 	 * @param int $row
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setIteratorRow ($row) {}
+	public function setIteratorRow (int $row) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6487,7 +6487,7 @@ class ImagickPixel  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setHSL ($hue, $saturation, $luminosity) {}
+	public function setHSL (float $hue, float $saturation, float $luminosity) {}
 
 	public function getColorValueQuantum () {}
 
@@ -6511,7 +6511,7 @@ class ImagickPixel  {
 	 * The optional color string to use as the initial value of this object.
 	 * </p>
 	 */
-	public function __construct ($color = null) {}
+	public function __construct (string $color = null) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6523,7 +6523,7 @@ class ImagickPixel  {
 	 * </p>
 	 * @return bool <b>TRUE</b> if the specified color was set, <b>FALSE</b> otherwise.
 	 */
-	public function setColor ($color) {}
+	public function setColor (string $color) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6537,7 +6537,7 @@ class ImagickPixel  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function setColorValue ($color, $value) {}
+	public function setColorValue (int $color, float $value) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6552,7 +6552,7 @@ class ImagickPixel  {
 	 * ImagickPixelException on error.
 	 * @throws ImagickPixelException on error
 	 */
-	public function getColorValue ($color) {}
+	public function getColorValue (int $color) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6584,7 +6584,7 @@ class ImagickPixel  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function isSimilar (ImagickPixel $color, $fuzz) {}
+	public function isSimilar (ImagickPixel $color, float $fuzz) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -6600,7 +6600,7 @@ class ImagickPixel  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success.
 	 */
-	public function isPixelSimilar (ImagickPixel $color, $fuzz) {}
+	public function isPixelSimilar (ImagickPixel $color, float $fuzz) {}
 
 	/**
 	 * (PECL imagick 2.0.0)<br/>
@@ -6613,7 +6613,7 @@ class ImagickPixel  {
 	 * ImagickPixelException on error.
 	 * @throws ImagickPixelException on error.
 	 */
-	public function getColor ($normalized = false) {}
+	public function getColor (bool $normalized = false) {}
 
 	/**
 	 * (PECL imagick 2.1.0)<br/>
@@ -6648,7 +6648,7 @@ class ImagickPixel  {
 	 * @return bool
 	 * @since 3.3.0
 	 */
-	public function isPixelSimilarQuantum($color, $fuzz) { }
+	public function isPixelSimilarQuantum($color, string $fuzz) { }
 
 	/**
 	 * Returns the color of the pixel in an array as Quantum values. If ImageMagick was compiled as HDRI these will be floats, otherwise they will be integers.
@@ -6701,7 +6701,7 @@ class ImagickKernel {
 	 * @return void
 	 * @since 3.3.0
 	 */
-	public static function fromBuiltin($kernelType, $kernelString) { }
+	public static function fromBuiltin(string $kernelType, string $kernelString) { }
 
 	/**
 	 * Create a kernel from a builtin in kernel. See https://www.imagemagick.org/Usage/morphology/#kernel for examples.<br>
@@ -6713,7 +6713,7 @@ class ImagickKernel {
 	 * @return ImagickKernel
 	 * @since 3.3.0
 	 */
-	public static function fromMatrix($matrix, $origin) { }
+	public static function fromMatrix(array $matrix, array $origin) { }
 
 	/**
 	 * Get the 2d matrix of values used in this kernel. The elements are either float for elements that are used or 'false' if the element should be skipped.
