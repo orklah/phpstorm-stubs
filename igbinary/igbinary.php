@@ -35,7 +35,7 @@ function igbinary_serialize($value) {}
  * @link https://secure.php.net/manual/en/function.unserialize.php PHP default unserialize
  * @link https://secure.php.net/~helly/php/ext/spl/interfaceSerializable.html Serializable
  */
-function igbinary_unserialize($str) {}
+function igbinary_unserialize(string $str) {}
 
 // End of igbinary v.1.0.0
 ?>
