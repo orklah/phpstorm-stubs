@@ -51,7 +51,7 @@ function mailparse_msg_create () {}
  * Returns FALSE on error.
  * </p>
  */
-function mailparse_msg_extract_part_file ($mimemail, $filename, $callbackfunc) {}
+function mailparse_msg_extract_part_file ($mimemail, $filename, callable $callbackfunc) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -64,7 +64,7 @@ function mailparse_msg_extract_part_file ($mimemail, $filename, $callbackfunc) {
  * @param callable $callbackfunc [optional]
  * @return void
  */
-function mailparse_msg_extract_part ($mimemail, $msgbody, $callbackfunc) {}
+function mailparse_msg_extract_part ($mimemail, string $msgbody, callable $callbackfunc) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -77,7 +77,7 @@ function mailparse_msg_extract_part ($mimemail, $msgbody, $callbackfunc) {}
  * @param callable $callbackfunc [optional]
  * @return string
  */
-function mailparse_msg_extract_whole_part_file ($mimemail, $filename, $callbackfunc) {}
+function mailparse_msg_extract_whole_part_file ($mimemail, string $filename, callable $callbackfunc) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -113,7 +113,7 @@ function mailparse_msg_get_part_data ($mimemail) {}
  * @param string $mimesection
  * @return resource
  */
-function mailparse_msg_get_part ($mimemail, $mimesection) {}
+function mailparse_msg_get_part ($mimemail, string $mimesection) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -135,7 +135,7 @@ function mailparse_msg_get_structure ($mimemail) {}
  * </p>
  * @return resource|false Returns a MIME resource representing the structure, or <bFALSE</b> on error.
  */
-function mailparse_msg_parse_file ($filename) {}
+function mailparse_msg_parse_file (string $filename) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -148,7 +148,7 @@ function mailparse_msg_parse_file ($filename) {}
  * @param string $data
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function mailparse_msg_parse ($mimemail, $data) {}
+function mailparse_msg_parse ($mimemail, string $data) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -176,7 +176,7 @@ function mailparse_msg_parse ($mimemail, $data) {}
  * </tr>
  * </table>
  */
-function mailparse_rfc822_parse_addresses ($addresses) {}
+function mailparse_rfc822_parse_addresses (string $addresses) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
@@ -193,7 +193,7 @@ function mailparse_rfc822_parse_addresses ($addresses) {}
  * </p>
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function mailparse_stream_encode ($sourcefp, $destfp, $encoding) {}
+function mailparse_stream_encode ($sourcefp, $destfp, string $encoding) {}
 
 /**
  * (PECL mailparse >= 0.9.0)</br>
