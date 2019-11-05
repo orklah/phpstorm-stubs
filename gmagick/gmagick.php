@@ -332,7 +332,7 @@ class Gmagick
      *
      * @param string $filename [optional] The path to an image to load or array of paths.
      */
-    public function __construct($filename = null)
+    public function __construct(string $filename = null)
     {
     }
 
@@ -348,7 +348,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function addimage($Gmagick)
+    public function addimage(\Gmagick $Gmagick)
     {
     }
 
@@ -363,7 +363,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function addnoiseimage($NOISE)
+    public function addnoiseimage(int $NOISE)
     {
     }
 
@@ -382,7 +382,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function annotateimage($GmagickDraw, $x, $y, $angle, $text)
+    public function annotateimage(\GmagickDraw $GmagickDraw, float $x, float $y, float $angle, string $text)
     {
     }
 
@@ -399,7 +399,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function blurimage($radius, $sigma, $channel = null)
+    public function blurimage(float $radius, float $sigma, int $channel = null)
     {
     }
 
@@ -416,7 +416,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function borderimage($color, $width, $height)
+    public function borderimage(\GmagickPixel $color, int $width, int $height)
     {
     }
 
@@ -432,7 +432,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function charcoalimage($radius, $sigma)
+    public function charcoalimage(float $radius, float $sigma)
     {
     }
 
@@ -450,7 +450,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function chopimage($width, $height, $x, $y)
+    public function chopimage(int $width, int $height, int $x, int $y)
     {
     }
 
@@ -478,7 +478,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function commentimage($comment)
+    public function commentimage(string $comment)
     {
     }
 
@@ -496,7 +496,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function compositeimage($source, $COMPOSE, $x, $y)
+    public function compositeimage(\Gmagick $source, int $COMPOSE, int $x, int $y)
     {
     }
 
@@ -514,7 +514,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function cropimage($width, $height, $x, $y)
+    public function cropimage(int $width, int $height, int $x, int $y)
     {
     }
 
@@ -530,7 +530,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function cropthumbnailimage($width, $height)
+    public function cropthumbnailimage(int $width, int $height)
     {
     }
 
@@ -559,7 +559,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function cyclecolormapimage($displace)
+    public function cyclecolormapimage(int $displace)
     {
     }
 
@@ -614,7 +614,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function drawimage($GmagickDraw)
+    public function drawimage(\GmagickDraw $GmagickDraw)
     {
     }
 
@@ -630,7 +630,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function edgeimage($radius)
+    public function edgeimage(float $radius)
     {
     }
 
@@ -649,7 +649,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function embossimage($radius, $sigma)
+    public function embossimage(float $radius, float $sigma)
     {
     }
 
@@ -722,7 +722,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function frameimage($color, $width, $height, $inner_bevel, $outer_bevel)
+    public function frameimage(\GmagickPixel $color, int $width, int $height, int $inner_bevel, int $outer_bevel)
     {
     }
 
@@ -740,7 +740,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function gammaimage($gamma)
+    public function gammaimage(float $gamma)
     {
     }
 
@@ -820,7 +820,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function getimagechanneldepth($channel_type)
+    public function getimagechanneldepth(int $channel_type)
     {
     }
 
@@ -1069,7 +1069,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function getimageprofile($name)
+    public function getimageprofile(string $name)
     {
     }
 
@@ -1303,7 +1303,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function implodeimage($radius)
+    public function implodeimage(float $radius)
     {
     }
 
@@ -1318,7 +1318,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function labelimage($label)
+    public function labelimage(string $label)
     {
     }
 
@@ -1344,7 +1344,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function levelimage($blackPoint, $gamma, $whitePoint, $channel = false)
+    public function levelimage(float $blackPoint, float $gamma, float $whitePoint, int $channel = false)
     {
     }
 
@@ -1373,7 +1373,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function mapimage($gmagick, $dither)
+    public function mapimage(\gmagick $gmagick, bool $dither)
     {
     }
 
@@ -1389,7 +1389,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function medianfilterimage($radius)
+    public function medianfilterimage(float $radius)
     {
     }
 
@@ -1424,7 +1424,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function modulateimage($brightness, $saturation, $hue)
+    public function modulateimage(float $brightness, float $saturation, float $hue)
     {
     }
 
@@ -1446,7 +1446,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function motionblurimage($radius, $sigma, $angle)
+    public function motionblurimage(float $radius, float $sigma, float $angle)
     {
     }
 
@@ -1464,7 +1464,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function newimage($width, $height, $background, $format = null)
+    public function newimage(int $width, int $height, string $background, string $format = null)
     {
     }
 
@@ -1492,7 +1492,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function normalizeimage($channel = null)
+    public function normalizeimage(int $channel = null)
     {
     }
 
@@ -1510,7 +1510,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function oilpaintimage($radius)
+    public function oilpaintimage(float $radius)
     {
     }
 
@@ -1545,7 +1545,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function profileimage($name, $profile)
+    public function profileimage(string $name, string $profile)
     {
     }
 
@@ -1577,7 +1577,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function quantizeimage($numColors, $colorspace, $treeDepth, $dither, $measureError)
+    public function quantizeimage(int $numColors, int $colorspace, int $treeDepth, bool $dither, bool $measureError)
     {
     }
 
@@ -1609,7 +1609,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function quantizeimages($numColors, $colorspace, $treeDepth, $dither, $measureError)
+    public function quantizeimages(int $numColors, int $colorspace, int $treeDepth, bool $dither, bool $measureError)
     {
     }
 
@@ -1625,7 +1625,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function queryfontmetrics($draw, $text)
+    public function queryfontmetrics(\GmagickDraw $draw, string $text)
     {
     }
 
@@ -1640,7 +1640,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function queryfonts($pattern = '*')
+    public function queryfonts(string $pattern = '*')
     {
     }
 
@@ -1655,7 +1655,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function queryformats($pattern = '*')
+    public function queryformats(string $pattern = '*')
     {
     }
 
@@ -1671,7 +1671,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function radialblurimage($angle, $channel = Gmagick::CHANNEL_DEFAULT)
+    public function radialblurimage(float $angle, int $channel = Gmagick::CHANNEL_DEFAULT)
     {
     }
 
@@ -1693,7 +1693,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function raiseimage($width, $height, $x, $y, $raise)
+    public function raiseimage(int $width, int $height, int $x, int $y, bool $raise)
     {
     }
 
@@ -1710,7 +1710,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function read($filename)
+    public function read(string $filename)
     {
     }
 
@@ -1725,7 +1725,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function readimage($filename)
+    public function readimage(string $filename)
     {
     }
 
@@ -1741,7 +1741,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function readimageblob($imageContents, $filename = null)
+    public function readimageblob(string $imageContents, string $filename = null)
     {
     }
 
@@ -1757,7 +1757,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function readimagefile($fp, $filename = null)
+    public function readimagefile($fp, string $filename = null)
     {
     }
 
@@ -1777,7 +1777,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function reducenoiseimage($radius)
+    public function reducenoiseimage(float $radius)
     {
     }
 
@@ -1805,7 +1805,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function removeimageprofile($name)
+    public function removeimageprofile(string $name)
     {
     }
 
@@ -1823,7 +1823,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function resampleimage($xResolution, $yResolution, $filter, $blur)
+    public function resampleimage(float $xResolution, float $yResolution, int $filter, float $blur)
     {
     }
 
@@ -1842,7 +1842,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function resizeimage($width, $height, $filter, $blur, $fit = false)
+    public function resizeimage(int $width, int $height, int $filter, float $blur, bool $fit = false)
     {
     }
 
@@ -1858,7 +1858,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function rollimage($x, $y)
+    public function rollimage(int $x, int $y)
     {
     }
 
@@ -1876,7 +1876,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function rotateimage($color, $degrees)
+    public function rotateimage($color, float $degrees)
     {
     }
 
@@ -1895,7 +1895,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function scaleimage($width, $height, $fit = false)
+    public function scaleimage(int $width, int $height, bool $fit = false)
     {
     }
 
@@ -1914,7 +1914,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function separateimagechannel($channel)
+    public function separateimagechannel(int $channel)
     {
     }
 
@@ -1929,7 +1929,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setCompressionQuality($quality = 75)
+    public function setCompressionQuality(int $quality = 75)
     {
 
     }
@@ -1945,7 +1945,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setfilename($filename)
+    public function setfilename(string $filename)
     {
     }
 
@@ -1960,7 +1960,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagebackgroundcolor($color)
+    public function setimagebackgroundcolor(\GmagickPixel $color)
     {
     }
 
@@ -1976,7 +1976,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageblueprimary($x, $y)
+    public function setimageblueprimary(float $x, float $y)
     {
     }
 
@@ -2008,7 +2008,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagechanneldepth($channel, $depth)
+    public function setimagechanneldepth(int $channel, int $depth)
     {
     }
 
@@ -2026,7 +2026,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagecolorspace($colorspace)
+    public function setimagecolorspace(int $colorspace)
     {
     }
 
@@ -2041,7 +2041,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagecompose($composite)
+    public function setimagecompose(int $composite)
     {
     }
 
@@ -2056,7 +2056,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagedelay($delay)
+    public function setimagedelay(int $delay)
     {
     }
 
@@ -2071,7 +2071,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagedepth($depth)
+    public function setimagedepth(int $depth)
     {
     }
 
@@ -2086,7 +2086,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagedispose($disposeType)
+    public function setimagedispose(int $disposeType)
     {
     }
 
@@ -2101,7 +2101,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagefilename($filename)
+    public function setimagefilename(string $filename)
     {
     }
 
@@ -2116,7 +2116,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageformat($imageFormat)
+    public function setimageformat(string $imageFormat)
     {
     }
 
@@ -2131,7 +2131,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagegamma($gamma)
+    public function setimagegamma(float $gamma)
     {
     }
 
@@ -2147,7 +2147,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagegreenprimary($x, $y)
+    public function setimagegreenprimary(float $x, float $y)
     {
     }
 
@@ -2162,7 +2162,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageindex($index)
+    public function setimageindex(int $index)
     {
     }
 
@@ -2177,7 +2177,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageinterlacescheme($interlace)
+    public function setimageinterlacescheme(int $interlace)
     {
     }
 
@@ -2192,7 +2192,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageiterations($iterations)
+    public function setimageiterations(int $iterations)
     {
     }
 
@@ -2211,7 +2211,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageprofile($name, $profile)
+    public function setimageprofile(string $name, string $profile)
     {
     }
 
@@ -2227,7 +2227,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageredprimary($x, $y)
+    public function setimageredprimary(float $x, float $y)
     {
     }
 
@@ -2243,7 +2243,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagerenderingintent($rendering_intent)
+    public function setimagerenderingintent(int $rendering_intent)
     {
     }
 
@@ -2259,7 +2259,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageresolution($xResolution, $yResolution)
+    public function setimageresolution(float $xResolution, float $yResolution)
     {
     }
 
@@ -2274,7 +2274,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagescene($scene)
+    public function setimagescene(int $scene)
     {
     }
 
@@ -2291,7 +2291,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagetype($imgType)
+    public function setimagetype(int $imgType)
     {
     }
 
@@ -2307,7 +2307,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimageunits($resolution)
+    public function setimageunits(int $resolution)
     {
     }
 
@@ -2323,7 +2323,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setimagewhitepoint($x, $y)
+    public function setimagewhitepoint(float $x, float $y)
     {
     }
 
@@ -2339,7 +2339,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setsamplingfactors($factors)
+    public function setsamplingfactors(array $factors)
     {
     }
 
@@ -2357,7 +2357,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function setsize($columns, $rows)
+    public function setsize(int $columns, int $rows)
     {
     }
 
@@ -2379,7 +2379,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function shearimage($color, $xShear, $yShear)
+    public function shearimage($color, float $xShear, float $yShear)
     {
     }
 
@@ -2398,7 +2398,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function solarizeimage($threshold)
+    public function solarizeimage(int $threshold)
     {
     }
 
@@ -2415,7 +2415,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function spreadimage($radius)
+    public function spreadimage(float $radius)
     {
     }
 
@@ -2446,7 +2446,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function swirlimage($degrees)
+    public function swirlimage(float $degrees)
     {
     }
 
@@ -2467,7 +2467,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function thumbnailimage($width, $height, $fit = false)
+    public function thumbnailimage(int $width, int $height, bool $fit = false)
     {
     }
 
@@ -2485,7 +2485,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function trimimage($fuzz)
+    public function trimimage(float $fuzz)
     {
     }
 
@@ -2505,7 +2505,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function write($filename)
+    public function write(string $filename)
     {
     }
 
@@ -2524,7 +2524,7 @@ class Gmagick
      *
      * @throws GmagickException On error.
      */
-    public function writeimage($filename, $all_frames = false)
+    public function writeimage(string $filename, bool $all_frames = false)
     {
     }
 }
@@ -2545,7 +2545,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function annotate($x, $y, $text)
+    public function annotate(float $x, float $y, string $text)
     {
     }
 
@@ -2563,7 +2563,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function arc($sx, $sy, $ex, $ey, $sd, $ed)
+    public function arc(float $sx, float $sy, float $ex, float $ey, float $sd, float $ed)
     {
     }
 
@@ -2594,7 +2594,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function ellipse($ox, $oy, $rx, $ry, $start, $end)
+    public function ellipse(float $ox, float $oy, float $rx, float $ry, float $start, float $end)
     {
     }
 
@@ -2731,7 +2731,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function line($sx, $sy, $ex, $ey)
+    public function line(float $sx, float $sy, float $ex, float $ey)
     {
     }
 
@@ -2745,7 +2745,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function point($x, $y)
+    public function point(float $x, float $y)
     {
     }
 
@@ -2787,7 +2787,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function rectangle($x1, $y1, $x2, $y2)
+    public function rectangle(float $x1, float $y1, float $x2, float $y2)
     {
     }
 
@@ -2800,7 +2800,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function rotate($degrees)
+    public function rotate(float $degrees)
     {
     }
 
@@ -2818,7 +2818,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function roundrectangle($x1, $y1, $x2, $y2, $rx, $ry)
+    public function roundrectangle(float $x1, float $y1, float $x2, float $y2, float $rx, float $ry)
     {
     }
 
@@ -2832,7 +2832,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function scale($x, $y)
+    public function scale(float $x, float $y)
     {
     }
 
@@ -2858,7 +2858,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setfillopacity($fill_opacity)
+    public function setfillopacity(float $fill_opacity)
     {
     }
 
@@ -2871,7 +2871,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setfont($font)
+    public function setfont(string $font)
     {
     }
 
@@ -2884,7 +2884,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setfontsize($pointsize)
+    public function setfontsize(float $pointsize)
     {
     }
 
@@ -2899,7 +2899,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setfontstyle($style)
+    public function setfontstyle(int $style)
     {
     }
 
@@ -2912,7 +2912,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setfontweight($weight)
+    public function setfontweight(int $weight)
     {
     }
 
@@ -2938,7 +2938,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setstrokeopacity($stroke_opacity)
+    public function setstrokeopacity(float $stroke_opacity)
     {
     }
 
@@ -2951,7 +2951,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function setstrokewidth($width)
+    public function setstrokewidth(float $width)
     {
     }
 
@@ -2965,7 +2965,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function settextdecoration($decoration)
+    public function settextdecoration(int $decoration)
     {
     }
 
@@ -2982,7 +2982,7 @@ class GmagickDraw
      *
      * @return GmagickDraw The GmagickDraw object on success.
      */
-    public function settextencoding($encoding)
+    public function settextencoding(string $encoding)
     {
     }
 }
@@ -3005,7 +3005,7 @@ class GmagickPixel
      *
      * @param string $color [optional] The optional color string to use as the initial value of this object.
      */
-    public function __construct($color = null)
+    public function __construct(string $color = null)
     {
     }
 
@@ -3023,7 +3023,7 @@ class GmagickPixel
      *
      * @throws GmagickPixelException On error.
      */
-    public function getcolor($as_array = null, $normalize_array = null)
+    public function getcolor(bool $as_array = null, bool $normalize_array = null)
     {
     }
 
@@ -3051,7 +3051,7 @@ class GmagickPixel
      *
      * @throws GmagickPixelException On error.
      */
-    public function getcolorvalue($color)
+    public function getcolorvalue(int $color)
     {
     }
 
@@ -3067,7 +3067,7 @@ class GmagickPixel
      *
      * @return GmagickPixel The GmagickPixel object on success.
      */
-    public function setcolor($color)
+    public function setcolor(string $color)
     {
     }
 
@@ -3084,7 +3084,7 @@ class GmagickPixel
      *
      * @return GmagickPixel The GmagickPixel object on success.
      */
-    public function setcolorvalue($color, $value)
+    public function setcolorvalue(int $color, float $value)
     {
     }
 }
