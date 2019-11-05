@@ -21,28 +21,28 @@ class Cipher {
      * @param string $prefix
      * @return string
      */
-    public static function getAlgorithms($aliases = false, $prefix = null) {}
+    public static function getAlgorithms(bool $aliases = false, string $prefix = null) {}
     
     /**
      * Finds out whether algorithm exists
      * @param string $algorithm
      * @return bool
      */
-    public static function hasAlgorithm($algorithm) {}
+    public static function hasAlgorithm(string $algorithm) {}
     
     /**
      * Finds out whether the cipher mode is defined in the used OpenSSL library
      * @param int $mode
      * @return bool
      */
-    public static function hasMode($mode) {}
+    public static function hasMode(int $mode) {}
     
     /**
      * Cipher magic method for calling static methods
      * @param string $name
      * @param array $arguments
      */
-    public static function __callStatic($name, $arguments) {}
+    public static function __callStatic(string $name, array $arguments) {}
     
     /**
      * Cipher constructor
@@ -50,7 +50,7 @@ class Cipher {
      * @param int $mode
      * @param string $key_size
      */
-    public function __construct($algorithm, $mode = NULL, $key_size = NULL) {}
+    public function __construct(string $algorithm, int $mode = NULL, string $key_size = NULL) {}
     
     /**
      * Returns cipher algorithm string
@@ -64,14 +64,14 @@ class Cipher {
      * @param string $iv
      * @return bool
      */
-    public function encryptInit($key, $iv = null) {}
+    public function encryptInit(string $key, string $iv = null) {}
     
     /**
      * Updates cipher encryption
      * @param string $data
      * @return string
      */
-    public function encryptUpdate($data) {}
+    public function encryptUpdate(string $data) {}
     
     /**
      * Finalizes cipher encryption
@@ -86,7 +86,7 @@ class Cipher {
      * @param string $iv
      * @return string
      */
-    public function encrypt($data, $key, $iv = null) {}
+    public function encrypt(string $data, string $key, string $iv = null) {}
     
     /**
      * Initializes cipher decryption
@@ -94,14 +94,14 @@ class Cipher {
      * @param string $iv
      * @return null
      */
-    public function decryptInit($key, $iv = null) {}
+    public function decryptInit(string $key, string $iv = null) {}
     
     /**
      * Updates cipher decryption
      * @param string $data
      * @return string
      */
-    public function decryptUpdate($data) {}
+    public function decryptUpdate(string $data) {}
     
     /**
      * Finalizes cipher decryption
@@ -116,7 +116,7 @@ class Cipher {
      * @param string $iv
      * @return string
      */
-    public function decrypt($data, $key, $iv = null) {}
+    public function decrypt(string $data, string $key, string $iv = null) {}
     
     /**
      * Returns cipher block size
@@ -153,21 +153,21 @@ class Cipher {
      * @param string $tag
      * @return bool
      */
-    public function setTag($tag) {}
+    public function setTag(string $tag) {}
     
     /**
      * Set authentication tag length
      * @param int $tag_length
      * @return bool
      */
-    public function setTagLength($tag_length) {}
+    public function setTagLength(int $tag_length) {}
     
     /**
      * Sets additional application data for authenticated encryption
      * @param string $aad
      * @return bool
      */
-    public function setAAD($aad) {}
+    public function setAAD(string $aad) {}
     
 }
 
@@ -338,27 +338,27 @@ class Hash {
      * @param string $prefix
      * @return string
      */
-    public static function getAlgorithms($aliases = false, $prefix = null) {}
+    public static function getAlgorithms(bool $aliases = false, string $prefix = null) {}
     
     /**
      * Finds out whether algorithm exists
      * @param string $algorithm
      * @return bool
      */
-    public static function hasAlgorithm($algorithm) {}
+    public static function hasAlgorithm(string $algorithm) {}
     
     /**
      * Hash magic method for calling static methods
      * @param string $name
      * @param array $arguments
      */
-    public static function __callStatic($name, $arguments) {}
+    public static function __callStatic(string $name, array $arguments) {}
     
     /**
      * Hash constructor
      * @param string $algorithm
      */
-    public function __construct($algorithm) {}
+    public function __construct(string $algorithm) {}
     
     /**
      * Returns hash algorithm string
@@ -371,7 +371,7 @@ class Hash {
      * @param string $data
      * @return null
      */
-    public function update($data) {}
+    public function update(string $data) {}
     
     /**
      * Return hash digest in raw foramt
@@ -450,7 +450,7 @@ abstract class MAC extends Hash {
      * @param string $algorithm
      * @param string $key
      */
-    public function __construct($algorithm, $key) {}
+    public function __construct(string $algorithm, string $key) {}
     
 }
 
@@ -492,7 +492,7 @@ abstract class KDF {
      * @param int $length
      * @param string $salt
      */
-    public function __construct($length, $salt = NULL) {}
+    public function __construct(int $length, string $salt = NULL) {}
     
     /**
      * Get key length
@@ -505,7 +505,7 @@ abstract class KDF {
      * @param int $length
      * @return bool
      */
-    public function setLength($length) {}
+    public function setLength(int $length) {}
     
     /**
      * Get salt
@@ -518,7 +518,7 @@ abstract class KDF {
      * @param string $salt
      * @return bool
      */
-    public function setSalt($salt) {}
+    public function setSalt(string $salt) {}
     
 }
 
@@ -565,14 +565,14 @@ class PBKDF2 extends KDF {
      * @param string $salt
      * @param int $iterations
      */
-    public function __construct($hashAlgorithm, $length, $salt = NULL, $iterations = 1000) {}
+    public function __construct(int $hashAlgorithm, string $length, string $salt = NULL, int $iterations = 1000) {}
     
     /**
      * Deriver hash for password
      * @param string $password
      * @return string
      */
-    public function derive($password) {}
+    public function derive(string $password) {}
     
     /**
      * Get iterations
@@ -585,7 +585,7 @@ class PBKDF2 extends KDF {
      * @param int $iterations
      * @return bool
      */
-    public function setIterations($iterations) {}
+    public function setIterations(int $iterations) {}
     
     /**
      * Get hash algorithm
@@ -598,7 +598,7 @@ class PBKDF2 extends KDF {
      * @param string $hashAlgorithm
      * @return bool
      */
-    public function setHashAlgorithm($hashAlgorithm) {}
+    public function setHashAlgorithm(string $hashAlgorithm) {}
     
 }
 
@@ -628,14 +628,14 @@ class Base64 {
      * @param string $data
      * @return string
      */
-    public function encode($data) {}
+    public function encode(string $data) {}
     
     /**
      * Decodes base64 string $data to raw encoding
      * @param string $data
      * @return string
      */
-    public function decode($data) {}
+    public function decode(string $data) {}
     
     /**
      * Base64 constructor
@@ -647,7 +647,7 @@ class Base64 {
      * to the encoding context
      * @param string $data
      */
-    public function encodeUpdate($data) {}
+    public function encodeUpdate(string $data) {}
     
     /**
      * Encodes characters that left in the encoding context
@@ -659,7 +659,7 @@ class Base64 {
      * to the encoding context
      * @param string $data
      */
-    public function decodeUpdate($data) {}
+    public function decodeUpdate(string $data) {}
     
     /**
      * Decodes characters that left in the encoding context
@@ -716,7 +716,7 @@ class Rand {
      * @param bool $returned_strong_result
      * @return string
      */
-    public static function generate($num, $must_be_strong = true, &$returned_strong_result = true) {}
+    public static function generate(int $num, bool $must_be_strong = true, bool &$returned_strong_result = true) {}
     
     /**
      * Mixes bytes in $buf into PRNG state
@@ -724,7 +724,7 @@ class Rand {
      * @param float $entropy [optional] The default value is (float) strlen($buf)
      * @return null
      */
-    public static function seed($buf, $entropy) {}
+    public static function seed(string $buf, float $entropy) {}
     
     /**
      * Cleans up PRNG state
@@ -740,7 +740,7 @@ class Rand {
      * @param int $max_bytes
      * @return int
      */
-    public static function loadFile($filename, $max_bytes = -1) {}
+    public static function loadFile(string $filename, int $max_bytes = -1) {}
     
     /**
      * Writes a number of random bytes (currently 1024) to file $filename which can be
@@ -748,7 +748,7 @@ class Rand {
      * @param string $filename
      * @return int
      */
-    public static function writeFile($filename) {}
+    public static function writeFile(string $filename) {}
     
 }
 
