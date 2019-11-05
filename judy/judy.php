@@ -39,7 +39,7 @@ class Judy implements ArrayAccess {
      * @link https://php.net/manual/en/judy.construct.php
      * @param int $judy_type <p>The Judy type to be used.</p>
      */
-    public function __construct($judy_type) {}
+    public function __construct(int $judy_type) {}
 
     /**
      * (PECL judy &gt;= 0.1.1)<br/>
@@ -55,7 +55,7 @@ class Judy implements ArrayAccess {
      * @param int $nth_index <p>Nth index to return. If nth_index equal 1, then it will return the first index in the array.</p>
      * @return int <p>Return the index at the given Nth position.</p>
      */
-    public function byCount($nth_index) {}
+    public function byCount(int $nth_index) {}
 
     /**
      * (PECL judy &gt;= 0.1.1)<br/>
@@ -65,7 +65,7 @@ class Judy implements ArrayAccess {
      * @param int $index_end [optional] <p>Stop counting when reaching this index. Default is last index.</p>
      * @return int <p>Return the number of elements.</p>
      */
-    public function count($index_start = 0, $index_end = -1) {}
+    public function count(int $index_start = 0, int $index_end = -1) {}
 
     /**
      * (PECL judy &gt;= 0.1.1)<br/>
@@ -206,7 +206,7 @@ class Judy implements ArrayAccess {
      * @param int $index_end [optional] <p>Stop counting when reaching this index. Default is last index.</p>
      * @return int <p>Return the number of elements.</p>
      */
-    public function size($index_start = 0, $index_end = -1) {}
+    public function size(int $index_start = 0, int $index_end = -1) {}
 }
 
 // End of judy.
