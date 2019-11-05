@@ -20,7 +20,7 @@
  * @since 5.0
  * @since 7.0
  */
-function bcadd ($left_operand, $right_operand, $scale = 0) {}
+function bcadd (string $left_operand, string $right_operand, int $scale = 0) {}
 
 /**
  * Subtract one arbitrary precision number from another
@@ -42,7 +42,7 @@ function bcadd ($left_operand, $right_operand, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcsub ($left_operand, $right_operand, $scale = 0) {}
+function bcsub (string $left_operand, string $right_operand, int $scale = 0) {}
 
 /**
  * Multiply two arbitrary precision numbers
@@ -64,7 +64,7 @@ function bcsub ($left_operand, $right_operand, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcmul ($left_operand, $right_operand, $scale = 0) {}
+function bcmul (string $left_operand, string $right_operand, int $scale = 0) {}
 
 /**
  * Divide two arbitrary precision numbers
@@ -87,7 +87,7 @@ function bcmul ($left_operand, $right_operand, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcdiv ($dividend, $divisor, $scale = 0) {}
+function bcdiv (string $dividend, string $divisor, int $scale = 0) {}
 
 /**
  * Get modulus of an arbitrary precision number
@@ -111,7 +111,7 @@ function bcdiv ($dividend, $divisor, $scale = 0) {}
  * @since 7.0
  * @since 7.2 scale param added, dividend/divisor no longer truncated
  */
-function bcmod ($dividend, $divisor, $scale = 0) {}
+function bcmod (string $dividend, string $divisor, int $scale = 0) {}
 
 /**
  * Raise an arbitrary precision number to another
@@ -135,7 +135,7 @@ function bcmod ($dividend, $divisor, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcpow ($base, $exponent, $scale = 0) {}
+function bcpow (string $base, string $exponent, int $scale = 0) {}
 
 /**
  * Get the square root of an arbitrary precision number
@@ -150,7 +150,7 @@ function bcpow ($base, $exponent, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcsqrt ($operand, $scale = null) {}
+function bcsqrt (string $operand, int $scale = null) {}
 
 /**
  * Set default scale parameter for all bc math functions
@@ -163,7 +163,7 @@ function bcsqrt ($operand, $scale = null) {}
  * @since 5.0
  * @since 7.0
  */
-function bcscale ($scale) {}
+function bcscale (int $scale) {}
 
 /**
  * Compare two arbitrary precision numbers
@@ -186,7 +186,7 @@ function bcscale ($scale) {}
  * @since 5.0
  * @since 7.0
  */
-function bccomp ($left_operand, $right_operand, $scale = 0) {}
+function bccomp (string $left_operand, string $right_operand, int $scale = 0) {}
 
 /**
  * Raise an arbitrary precision number to another, reduced by a specified modulus
@@ -212,4 +212,4 @@ function bccomp ($left_operand, $right_operand, $scale = 0) {}
  * @since 5.0
  * @since 7.0
  */
-function bcpowmod ($base, $exponent, $modulus, $scale = 0) {}
+function bcpowmod (string $base, string $exponent, string $modulus, int $scale = 0) {}
