@@ -38,7 +38,7 @@ interface IteratorAggregate extends Traversable {
      * @throws Exception on failure.
      * @since 5.0
      */
-    public function getIterator();
+public function getIterator();
 }
 
 /**
@@ -170,7 +170,7 @@ interface Serializable {
      * @return void
      * @since 5.1
      */
-    public function unserialize($serialized);
+    public function unserialize(string $serialized);
 }
 
 
@@ -284,7 +284,7 @@ class Exception implements Throwable {
      * @param Throwable $previous [optional] The previous throwable used for the exception chaining.
      * @since 5.1
      */
-    public function __construct($message = "", $code = 0, Throwable $previous = null) { }
+    public function __construct(string $message = "", int $code = 0, Throwable $previous = null) { }
 
     /**
      * Gets the Exception message
@@ -371,7 +371,7 @@ class Error implements Throwable {
      * @param int $code [optional] The Error code.
      * @param Throwable $previous [optional] The previous throwable used for the exception chaining.
      */
-    public function __construct($message = "", $code = 0, Throwable $previous = null)
+    public function __construct(string $message = "", int $code = 0, Throwable $previous = null)
     {
     }
 
@@ -541,7 +541,7 @@ class ErrorException extends Exception {
      * @param Exception $previous [optional] The previous exception used for the exception chaining.
      * @since 5.1
      */
-    public function __construct($message = "", $code = 0, $severity = 1, $filename = __FILE__, $lineno = __LINE__, $previous = null) { }
+    public function __construct(string $message = "", int $code = 0, int $severity = 1, string $filename = __FILE__, int $lineno = __LINE__, \Core_c\Exception $previous = null) { }
 
     /**
      * Gets the exception severity
@@ -588,7 +588,7 @@ final class Closure {
      * This determines the visibility of protected and private methods of the bound object.
      * @return Closure Returns the newly created Closure object or FALSE on failure
      */
-    function bindTo($newthis, $newscope = 'static') { }
+    function bindTo(object $newthis, $newscope = 'static') { }
 
     /**
      * This method is a static version of Closure::bindTo().
@@ -602,7 +602,7 @@ final class Closure {
      * This determines the visibility of protected and private methods of the bound object.
      * @return Closure Returns the newly created Closure object or FALSE on failure
      */
-    static function bind(Closure $closure, $newthis, $newscope = 'static') { }
+    static function bind(Closure $closure, object $newthis, $newscope = 'static') { }
 
     /**
      * Temporarily binds the closure to newthis, and calls it with any given parameters.
@@ -613,7 +613,7 @@ final class Closure {
      * @since 7.0
      */
     function call ($newthis, ...$parameters) {}
-    
+
     /**
      * @param callable $callable
      * @return Closure
