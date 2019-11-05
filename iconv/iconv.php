@@ -28,7 +28,7 @@
  * @since 4.0.5
  * @since 5.0
  */
-function iconv ($in_charset, $out_charset, $str) {}
+function iconv (string $in_charset, string $out_charset, string $str) {}
 
 /**
  * Convert character encoding as output buffer handler
@@ -40,7 +40,7 @@ function iconv ($in_charset, $out_charset, $str) {}
  * @since 4.0.5
  * @since 5.0
  */
-function ob_iconv_handler ($contents, $status) {}
+function ob_iconv_handler (string $contents, int $status) {}
 
 /**
  * Retrieve internal configuration variables of iconv extension
@@ -62,7 +62,7 @@ function ob_iconv_handler ($contents, $status) {}
  * @since 4.0.5
  * @since 5.0
  */
-function iconv_get_encoding ($type = "all") {}
+function iconv_get_encoding (string $type = "all") {}
 
 /**
  * Set current setting for character encoding conversion
@@ -80,7 +80,7 @@ function iconv_get_encoding ($type = "all") {}
  * @since 4.0.5
  * @since 5.0
  */
-function iconv_set_encoding ($type, $charset) {}
+function iconv_set_encoding (string $type, string $charset) {}
 
 /**
  * Returns the character count of string
@@ -96,7 +96,7 @@ function iconv_set_encoding ($type, $charset) {}
  * @return int|false the character count of <i>str</i>, as an integer. False on error.
  * @since 5.0
  */
-function iconv_strlen ($str, $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_strlen (string $str, string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 /**
  * Cut out part of a string
@@ -151,7 +151,7 @@ function iconv_strlen ($str, $charset = 'ini_get("iconv.internal_encoding")') {}
  * characters long, <b>FALSE</b> will be returned.
  * @since 5.0
  */
-function iconv_substr ($str, $offset, $length = 'iconv_strlen($str, $charset)', $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_substr (string $str, int $offset, int $length = 'iconv_strlen($str, $charset)', string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 /**
  * Finds position of first occurrence of a needle within a haystack
@@ -179,7 +179,7 @@ function iconv_substr ($str, $offset, $length = 'iconv_strlen($str, $charset)', 
  * <b>iconv_strpos</b> will return <b>FALSE</b>.
  * @since 5.0
  */
-function iconv_strpos ($haystack, $needle, $offset = 0, $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_strpos (string $haystack, string $needle, int $offset = 0, string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 /**
  * Finds the last occurrence of a needle within a haystack
@@ -203,7 +203,7 @@ function iconv_strpos ($haystack, $needle, $offset = 0, $charset = 'ini_get("ico
  * <b>iconv_strrpos</b> will return <b>FALSE</b>.
  * @since 5.0
  */
-function iconv_strrpos ($haystack, $needle, $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_strrpos (string $haystack, string $needle, string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 /**
  * Composes a MIME header field
@@ -304,7 +304,7 @@ function iconv_strrpos ($haystack, $needle, $charset = 'ini_get("iconv.internal_
  * or <b>FALSE</b> if an error occurs during the encoding.
  * @since 5.0
  */
-function iconv_mime_encode ($field_name, $field_value, array $preferences = null) {}
+function iconv_mime_encode (string $field_name, string $field_value, array $preferences = null) {}
 
 /**
  * Decodes a MIME header field
@@ -356,7 +356,7 @@ function iconv_mime_encode ($field_name, $field_value, array $preferences = null
  * or <b>FALSE</b> if an error occurs during the decoding.
  * @since 5.0
  */
-function iconv_mime_decode ($encoded_header, $mode = 0, $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_mime_decode (string $encoded_header, int $mode = 0, string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 /**
  * Decodes multiple MIME header fields at once
@@ -417,7 +417,7 @@ function iconv_mime_decode ($encoded_header, $mode = 0, $charset = 'ini_get("ico
  * them into a numerically indexed array in the order of occurrence.
  * @since 5.0
  */
-function iconv_mime_decode_headers ($encoded_headers, $mode = 0, $charset = 'ini_get("iconv.internal_encoding")') {}
+function iconv_mime_decode_headers (string $encoded_headers, int $mode = 0, string $charset = 'ini_get("iconv.internal_encoding")') {}
 
 
 /**
