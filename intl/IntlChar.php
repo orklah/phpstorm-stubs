@@ -678,7 +678,7 @@ class IntlChar {
      * Also FALSE if property is out of bounds or if the Unicode version does not have data for the property at all, or not for this code point.
      * @since 7.0
      */
-    static public function hasBinaryProperty($codepoint, $property){}
+    static public function hasBinaryProperty($codepoint, int $property){}
 
     /**
      * @link https://php.net/manual/ru/intlchar.charage.php
@@ -749,7 +749,7 @@ class IntlChar {
      * @return int|false The Unicode value of the code point with the given name (as an integer), or FALSE if there is no such code point.
      * @since 7.0
      */
-    public static function charFromName($characterName, $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
+    public static function charFromName(string $characterName, int $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
 
     /**
      * @link https://php.net/manual/ru/intlchar.charmirror.php
@@ -775,7 +775,7 @@ class IntlChar {
      * @return string The corresponding name, or an empty string if there is no name for this character.
      * @since 7.0
      */
-    public static function charName($codepoint, $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
+    public static function charName($codepoint, int $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
 
     /**
      * Get the general category value for a code point
@@ -841,7 +841,7 @@ class IntlChar {
      * @return int|false Returns the numeric value represented by the character in the specified radix, or <b>FALSE</b> if there is no value or if the value exceeds the radix.
      * @since 7.0
      */
-    public static function digit ($codepoint,$radix = 10 ) {}
+    public static function digit (string $codepoint,int $radix = 10 ) {}
 
     /**
      * Enumerate all assigned Unicode characters within a range
@@ -866,7 +866,7 @@ class IntlChar {
      * </ul>
      * @since 7.0
      */
-    public static function enumCharNames ($start, $limit, $callback, $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
+    public static function enumCharNames ($start, $limit, callable $callback, int $nameChoice = IntlChar::UNICODE_CHAR_NAME) {}
 
     /**
      * Enumerate all code points with their Unicode general categories
@@ -881,7 +881,7 @@ class IntlChar {
      * </ul>
      * @since 7.0
      */
-    public static function enumCharTypes ($callable) {}
+    public static function enumCharTypes (callable $callable) {}
 
     /**
      * Perform case folding on a code point
@@ -891,7 +891,7 @@ class IntlChar {
      * @return mixed Returns the Simple_Case_Folding of the code point, if any; otherwise the code point itself.
      * @since 7.0
      */
-    public static function foldCase ($codepoint, $options = IntlChar::FOLD_CASE_DEFAULT ) {}
+    public static function foldCase ($codepoint, int $options = IntlChar::FOLD_CASE_DEFAULT ) {}
 
     /**
      * Get character representation for a given digit and radix
@@ -901,7 +901,7 @@ class IntlChar {
      * @return int The character representation (as a string) of the specified digit in the specified radix.
      * @since 7.0
      */
-    public static function forDigit ($digit, $radix = 10) {}
+    public static function forDigit (int $digit, int $radix = 10) {}
 
     /**
      * Get the paired bracket character for a code point
@@ -948,7 +948,7 @@ class IntlChar {
      * @return int The maximum value returned by {@see IntlChar::getIntPropertyValue()} for a Unicode property. <=0 if the property selector is out of range.
      * @since 7.0
      */
-    public static function getIntPropertyMaxValue  ($property) {}
+    public static function getIntPropertyMaxValue  (int $property) {}
 
     /**
      * Get the min value for a Unicode property
@@ -957,7 +957,7 @@ class IntlChar {
      * @return int The maximum value returned by {@see IntlChar::getIntPropertyValue()} for a Unicode property. 0 if the property selector is out of range.
      * @since 7.0
      */
-    public static function getIntPropertyMinValue  ($property) {}
+    public static function getIntPropertyMinValue  (int $property) {}
 
     /**
      * Get the value for a Unicode property for a code point
@@ -980,7 +980,7 @@ class IntlChar {
      * </p>
      * @since 7.0
      */
-    public static function getIntPropertyValue ($codepoint, $property ) {}
+    public static function getIntPropertyValue ($codepoint, int $property ) {}
 
     /**
      * Get the numeric value for a Unicode code point
@@ -998,7 +998,7 @@ class IntlChar {
      * @return int Returns an IntlChar::PROPERTY_ constant value, or <b>IntlChar::PROPERTY_INVALID_CODE</b> if the given name does not match any property.
      * @since 7.0
      */
-    public static function getPropertyEnum ($alias ) {}
+    public static function getPropertyEnum (string $alias ) {}
 
     /**
      * Get the Unicode name for a property
@@ -1019,7 +1019,7 @@ class IntlChar {
      * </p>
      * @since 7.0
      */
-    public static function getPropertyName ($property, $nameChoice = IntlChar::LONG_PROPERTY_NAME) {}
+    public static function getPropertyName (int $property, int $nameChoice = IntlChar::LONG_PROPERTY_NAME) {}
 
     /**
      * Get the property value for a given value name
@@ -1030,7 +1030,7 @@ class IntlChar {
      * @return int Returns the corresponding value integer, or IntlChar::PROPERTY_INVALID_CODE if the given name does not match any value of the given property, or if the property is invalid.
      * @since 7.0
      */
-    public static function getPropertyValueEnum ($property, $name) {}
+    public static function getPropertyValueEnum (int $property, string $name) {}
 
     /**
      * Get the Unicode name for a property value
@@ -1060,7 +1060,7 @@ class IntlChar {
      * If a given nameChoice returns FALSE, then all larger values of nameChoice will return FALSE, with one exception: if FALSE is returned for IntlChar::SHORT_PROPERTY_NAME, then IntlChar::LONG_PROPERTY_NAME (and higher) may still return a non-FALSE value.
      * @since 7.0
      */
-    public static function getPropertyValueName ($property, $value, $nameChoice = IntlChar::LONG_PROPERTY_NAME) {}
+    public static function getPropertyValueName (int $property, int $value, int $nameChoice = IntlChar::LONG_PROPERTY_NAME) {}
 
     /**
      * Get the Unicode version
