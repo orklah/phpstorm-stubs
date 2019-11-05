@@ -5,7 +5,7 @@ class ffmpeg_movie
 	 * @param string $path_to_media - File path of video or audio file to open.
 	 * @param bool $persistent - Whether to open this media as a persistent resource. See the PHP documentation for more info about persistent resources
 	 */
-	public function __construct($path_to_media, $persistent)
+	public function __construct(string $path_to_media, bool $persistent)
 	{ }
 
 	/** Return the duration of a movie or audio file in seconds.
@@ -161,7 +161,7 @@ class ffmpeg_movie
 	 * @param int $framenumber - Frame from the movie to return. If no framenumber is specified, returns the next frame of the movie.
 	 * @return ffmpeg_frame
 	 */
-	public function getFrame($framenumber)
+	public function getFrame(int $framenumber)
 	{ }
 
 	/** Returns the next key frame from the movie as an ffmpeg_frame object. Returns false if the frame was not found.
@@ -215,7 +215,7 @@ class ffmpeg_frame
 	 * @param int $crop_right - Remove [cropright] rows of pixels from the right of the frame.
 	 * NOTE: Cropping is always applied to the frame before it is resized. Crop values must be even numbers.
 	 */
-	public function resize($width, $height, $crop_top = 0, $crop_bottom = 0, $crop_left = 0, $crop_right = 0)
+	public function resize(int $width, int $height, int $crop_top = 0, int $crop_bottom = 0, int $crop_left = 0, int $crop_right = 0)
 	{ }
 
 	/** Crop the frame.
@@ -225,7 +225,7 @@ class ffmpeg_frame
 	 * @param int $crop_right - Remove [cropright] rows of pixels from the right of the frame.
 	 * NOTE: Crop values must be even numbers.
 	 */
-	public function crop($crop_top, $crop_bottom = 0, $crop_left = 0, $crop_right = 0)
+	public function crop(int $crop_top, int $crop_bottom = 0, int $crop_left = 0, int $crop_right = 0)
 	{ }
 
 	/** Returns a truecolor GD image of the frame.
@@ -246,7 +246,7 @@ class ffmpeg_animated_gif
 	 * @param int $frame_rate - Frame rate of the animated gif in frames per second.
 	 * @param int $loop_count - Number of times to loop the animation. Put a zero here to loop forever or omit this parameter to disable looping.
 	 */
-	public function __construct($output_file_path, $width, $height, $frame_rate, $loop_count = 0)
+	public function __construct(string $output_file_path, int $width, int $height, int $frame_rate, int $loop_count = 0)
 	{ }
 
 	/** Add a frame to the end of the animated gif.
