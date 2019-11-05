@@ -175,7 +175,7 @@ function event_base_free($event_base) {}
  * and 1 if no events were registered.
  * </p>
  */
-function event_base_loop($event_base, $flags = null) {}
+function event_base_loop($event_base, int $flags = null) {}
 
 /**
  * <p>Tells the event_base to exit its loop immediately.</p>
@@ -216,7 +216,7 @@ function event_base_loopbreak($event_base) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_base_loopexit($event_base, $timeout = -1) {}
+function event_base_loopexit($event_base, int $timeout = -1) {}
 
 /**
  * <p>Associate event base with an event</p>
@@ -248,7 +248,7 @@ function event_base_set($event, $base) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_base_priority_init($event_base, $npriorities) {}
+function event_base_priority_init($event_base, int $npriorities) {}
 
 
 /**
@@ -299,7 +299,7 @@ function event_free($event) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_add($event, $timeout = -1) {}
+function event_add($event, int $timeout = -1) {}
 
 /**
  * <p>Prepares the event to be used in {@link event_add}().</p>
@@ -353,7 +353,7 @@ function event_add($event, $timeout = -1) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_set($event, $fd, $events, $callback, $arg = null) {}
+function event_set($event, $fd, int $events, callable $callback, $arg = null) {}
 
 /**
  * <p>Remove an event from the set of monitored events.</p>
@@ -400,7 +400,7 @@ function event_del($event) {}
  *
  * @return resource|false returns new buffered event resource on success or FALSE on error.
  */
-function event_buffer_new($stream, $readcb, $writecb, $errorcb, $arg = null) {}
+function event_buffer_new($stream, ?callable $readcb, ?callable $writecb, callable $errorcb, $arg = null) {}
 
 /**
  * <p>Destroys the specified buffered event and frees all the resources associated.</p>
@@ -462,7 +462,7 @@ function event_buffer_base_set($bevent, $event_base) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_buffer_priority_set($bevent, $priority) {}
+function event_buffer_priority_set($bevent, int $priority) {}
 
 /**
  * <p>Writes data to the specified buffered event.</p>
@@ -479,7 +479,7 @@ function event_buffer_priority_set($bevent, $priority) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_buffer_write($bevent, $data, $data_size = -1) {}
+function event_buffer_write($bevent, string $data, int $data_size = -1) {}
 
 /**
  * <p>Reads data from the input buffer of the buffered event.</p>
@@ -492,7 +492,7 @@ function event_buffer_write($bevent, $data, $data_size = -1) {}
  *
  * @return string
  */
-function event_buffer_read($bevent, $data_size) {}
+function event_buffer_read($bevent, int $data_size) {}
 
 /**
  * <p>Enables the specified buffered event.</p>
@@ -505,7 +505,7 @@ function event_buffer_read($bevent, $data_size) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_buffer_enable($bevent, $events) {}
+function event_buffer_enable($bevent, int $events) {}
 
 /**
  * <p>Disable a buffered event</p>
@@ -520,7 +520,7 @@ function event_buffer_enable($bevent, $events) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_buffer_disable($bevent, $events) {}
+function event_buffer_disable($bevent, int $events) {}
 
 /**
  * <p>Sets the read and write timeouts for the specified buffered event.</p>
@@ -534,7 +534,7 @@ function event_buffer_disable($bevent, $events) {}
  *
  * @return void
  */
-function event_buffer_timeout_set($bevent, $read_timeout, $write_timeout) {}
+function event_buffer_timeout_set($bevent, int $read_timeout, int $write_timeout) {}
 
 /**
  * <p>Set the watermarks for read and write events.</p>
@@ -576,7 +576,7 @@ function event_buffer_timeout_set($bevent, $read_timeout, $write_timeout) {}
  *
  * @return void
  */
-function event_buffer_watermark_set($bevent, $events, $lowmark, $highmark) {}
+function event_buffer_watermark_set($bevent, int $events, int $lowmark, int $highmark) {}
 
 /**
  * <p>Changes the file descriptor on which the buffered event operates.</p>
@@ -607,7 +607,7 @@ function event_buffer_fd_set($bevent, $fd) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_buffer_set_callback($bevent, $readcb, $writecb, $errorcb, $arg = null) {}
+function event_buffer_set_callback($bevent, ?callable $readcb, ?callable $writecb, callable $errorcb, $arg = null) {}
 
 
 /**
@@ -654,7 +654,7 @@ function event_timer_new() {}
  *
  * @return void
  */
-function event_timer_set($event, $callback, $arg = null) {}
+function event_timer_set($event, callable $callback, $arg = null) {}
 
 /**
  * <p>Checks if a specific event is pending or scheduled.</p>
@@ -668,7 +668,7 @@ function event_timer_set($event, $callback, $arg = null) {}
  *
  * @return bool TRUE if event is not scheduled (added) FALSE otherwise
  */
-function event_timer_pending($event, $timeout = -1) {}
+function event_timer_pending($event, int $timeout = -1) {}
 
 /**
  * <p>Alias of {@link event_add}().</p>
@@ -682,7 +682,7 @@ function event_timer_pending($event, $timeout = -1) {}
  *
  * @return bool returns TRUE on success or FALSE on error.
  */
-function event_timer_add($event, $timeout = -1) {}
+function event_timer_add($event, int $timeout = -1) {}
 
 /**
  * <p>Alias of {@link event_del}().</p>
