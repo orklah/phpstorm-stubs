@@ -45,7 +45,7 @@ class gnupg {
 	 *
 	 * @return bool
 	 */
-	function adddecryptkey($fingerprint, $passphrase)
+	function adddecryptkey(string $fingerprint, string $passphrase)
 	{
 	}
 
@@ -61,7 +61,7 @@ class gnupg {
 	 * @return array|false On success, this function returns information about the signature.
 	 *               On failure, this function returns false.
 	 */
-	function verify($signed_text, $signature, &$plaintext = NULL)
+	function verify($signed_text, string $signature, string &$plaintext = NULL)
 	{
 	}
 
@@ -74,7 +74,7 @@ class gnupg {
 	 *
 	 * @return bool
 	 */
-	function addencryptkey($fingerprint)
+	function addencryptkey(string $fingerprint)
 	{
 	}
 
@@ -88,7 +88,7 @@ class gnupg {
 	 *
 	 * @return bool
 	 */
-	function addsignkey($fingerprint, $passphrase = NULL)
+	function addsignkey(string $fingerprint, string $passphrase = NULL)
 	{
 	}
 
@@ -137,7 +137,7 @@ class gnupg {
 	 * @return string|false On success, this function returns the decrypted text.
 	 *                On failure, this function returns false.
 	 */
-	function decrypt($text)
+	function decrypt(string $text)
 	{
 	}
 
@@ -153,7 +153,7 @@ class gnupg {
 	 *               fills the  parameter with the decrypted text.
 	 *               On failure, this function returns false.
 	 */
-	function decryptverify($text, &$plaintext)
+	function decryptverify(string $text, string &$plaintext)
 	{
 	}
 
@@ -167,7 +167,7 @@ class gnupg {
 	 * @return string|false On success, this function returns the encrypted text.
 	 *                On failure, this function returns false.
 	 */
-	function encrypt($plaintext)
+	function encrypt(string $plaintext)
 	{
 	}
 
@@ -181,7 +181,7 @@ class gnupg {
 	 * @return string|false On success, this function returns the encrypted and signed text.
 	 *                On failure, this function returns false.
 	 */
-	function encryptsign($plaintext)
+	function encryptsign(string $plaintext)
 	{
 	}
 
@@ -195,7 +195,7 @@ class gnupg {
 	 * @return string|false On success, this function returns the keydata.
 	 *                On failure, this function returns false.
 	 */
-	function export($fingerprint)
+	function export(string $fingerprint)
 	{
 	}
 
@@ -235,7 +235,7 @@ class gnupg {
 	 * @return array|false On success, this function returns and info-array about the importprocess.
 	 *               On failure, this function returns false.
 	 */
-	function import($keydata)
+	function import(string $keydata)
 	{
 	}
 
@@ -260,7 +260,7 @@ class gnupg {
 	 * @return array Returns an array with information about all keys that matches the given
 	 *               pattern or false, if an error has occurred.
 	 */
-	function keyinfo($pattern)
+	function keyinfo(string $pattern)
 	{
 	}
 
@@ -273,7 +273,7 @@ class gnupg {
 	 *
 	 * @return bool
 	 */
-	function setarmor($armor)
+	function setarmor(int $armor)
 	{
 	}
 
@@ -286,7 +286,7 @@ class gnupg {
 	 *
 	 * @return void
 	 */
-	function seterrormode($errormode)
+	function seterrormode(int $errormode)
 	{
 	}
 
@@ -299,7 +299,7 @@ class gnupg {
 	 *
 	 * @return bool
 	 */
-	function setsignmode($signmode)
+	function setsignmode(int $signmode)
 	{
 	}
 
@@ -313,7 +313,7 @@ class gnupg {
 	 * @return string|false On success, this function returns the signed text or the signature.
 	 *                On failure, this function returns false.
 	 */
-	function sign($plaintext)
+	function sign(string $plaintext)
 	{
 	}
 
