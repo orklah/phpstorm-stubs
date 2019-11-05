@@ -25,7 +25,7 @@ define('APC_BIN_VERIFY_CRC32', 2);
  * of cache entries. This is useful when trying to optimize calls for statistics gathering.
  * @return array|bool Array of cached data (and meta-data) or FALSE on failure.
  */
-function apc_cache_info($type = '', $limited = false){}
+function apc_cache_info(string $type = '', bool $limited = false){}
 
 /**
  * Clears the APC cache
@@ -34,7 +34,7 @@ function apc_cache_info($type = '', $limited = false){}
  * otherwise, the system cache (cached files) will be cleared.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function apc_clear_cache($cache_type = ''){}
+function apc_clear_cache(string $cache_type = ''){}
 
 /**
  * Retrieves APC's Shared Memory Allocation information
@@ -43,7 +43,7 @@ function apc_clear_cache($cache_type = ''){}
  * return a detailed information about each segment.
  * @return array|bool Array of Shared Memory Allocation data; FALSE on failure.
  */
-function apc_sma_info($limited = false){}
+function apc_sma_info(bool $limited = false){}
 
 /**
  * Cache a variable in the data store
@@ -58,7 +58,7 @@ function apc_sma_info($limited = false){}
  * or otherwise fails to exist in the cache (clear, restart, etc.).
  * @return bool|array Returns TRUE on success or FALSE on failure | array with error keys.
  */
-function apc_store($key, $var, $ttl = 0){}
+function apc_store($key, $var, int $ttl = 0){}
 
 /**
  * Fetch a stored variable from the cache
@@ -68,7 +68,7 @@ function apc_store($key, $var, $ttl = 0){}
  * @param bool $success Set to TRUE in success and FALSE in failure.
  * @return mixed The stored variable or array of variables on success; FALSE on failure.
  */
-function apc_fetch($key, &$success = null){}
+function apc_fetch($key, bool &$success = null){}
 
 /**
  * Removes a stored variable from the cache
@@ -96,7 +96,7 @@ function apc_delete($key){}
  * the constants will be declared as case-insensitive symbols.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function apc_define_constants($key, array $constants, $case_sensitive = true){}
+function apc_define_constants(string $key, array $constants, bool $case_sensitive = true){}
 
 /**
  * Caches a variable in the data store, only if it's not already stored
@@ -112,7 +112,7 @@ function apc_define_constants($key, array $constants, $case_sensitive = true){}
  * or otherwise fails to exist in the cache (clear, restart, etc.).
  * @return bool
  */
-function apc_add($key, $var, $ttl = 0){}
+function apc_add(string $key, $var, int $ttl = 0){}
 
 /**
  * Stores a file in the bytecode cache, bypassing all filters
@@ -122,7 +122,7 @@ function apc_add($key, $var, $ttl = 0){}
  * @param bool $atomic
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function apc_compile_file($filename, $atomic = true){}
+function apc_compile_file($filename, bool $atomic = true){}
 
 /**
  * Loads a set of constants from the cache
@@ -134,7 +134,7 @@ function apc_compile_file($filename, $atomic = true){}
  * the constants will be declared as case-insensitive symbols.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function apc_load_constants($key, $case_sensitive = true){}
+function apc_load_constants(string $key, bool $case_sensitive = true){}
 
 /**
  * Checks if APC key exists
@@ -166,7 +166,7 @@ function apc_delete_file($keys){}
  * @param bool $success Optionally pass the success or fail boolean value to this referenced variable.
  * @return int|bool Returns the current value of key's value on success, or FALSE on failure.
  */
-function apc_inc($key, $step = 1, &$success = null){}
+function apc_inc(string $key, int $step = 1, bool &$success = null){}
 
 /**
  * Decrease a stored number
@@ -176,7 +176,7 @@ function apc_inc($key, $step = 1, &$success = null){}
  * @param bool $success Optionally pass the success or fail boolean value to this referenced variable.
  * @return int|bool Returns the current value of key's value on success, or FALSE on failure.
  */
-function apc_dec($key, $step = 1, &$success = null){}
+function apc_dec(string $key, int $step = 1, bool &$success = null){}
 
 /**
  * @link https://php.net/manual/en/function.apc-cas.php
@@ -185,7 +185,7 @@ function apc_dec($key, $step = 1, &$success = null){}
  * @param int $new
  * @return bool
  */
-function apc_cas($key, $old, $new){}
+function apc_cas(string $key, int $old, int $new){}
 
 /**
  * Returns a binary dump of the given files and user variables from the APC cache
@@ -197,7 +197,7 @@ function apc_cas($key, $old, $new){}
  * @param string[]|null $user_vars The user vars. Passing in NULL signals a dump of every entry, while passing in array() will dump nothing.
  * @return string|bool|null Returns a binary dump of the given files and user variables from the APC cache, FALSE if APC is not enabled, or NULL if an unknown error is encountered.
  */
-function apc_bin_dump($files = null, $user_vars = null){}
+function apc_bin_dump(?array $files = null, ?array $user_vars = null){}
 
 /**
  * Output a binary dump of the given files and user variables from the APC cache to the named file
@@ -212,7 +212,7 @@ function apc_bin_dump($files = null, $user_vars = null){}
  * the file dump can't be completed (e.g., the hard drive is out of disk space),
  * or an unknown error was encountered.
  */
-function apc_bin_dumpfile($files, $user_vars, $filename, $flags = 0, $context = null){}
+function apc_bin_dumpfile(?array $files, ?array $user_vars, string $filename, int $flags = 0, $context = null){}
 
 /**
  * Load the given binary dump into the APC file/user cache
@@ -222,7 +222,7 @@ function apc_bin_dumpfile($files, $user_vars, $filename, $flags = 0, $context = 
  * @return bool Returns TRUE if the binary dump data was loaded with success, otherwise FALSE is returned.
  * FALSE is returned if APC is not enabled, or if the data is not a valid APC binary dump (e.g., unexpected size).
  */
-function apc_bin_load($data, $flags = 0){}
+function apc_bin_load(string $data, int $flags = 0){}
 
 /**
  * Load the given binary dump from the named file into the APC file/user cache
@@ -234,7 +234,7 @@ function apc_bin_load($data, $flags = 0){}
  * is not enabled, filename is an invalid file name or empty, filename can't be opened,
  * the file dump can't be completed, or if the data is not a valid APC binary dump (e.g., unexpected size).
  */
-function apc_bin_loadfile($filename, $context = null, $flags = 0){}
+function apc_bin_loadfile(string $filename, $context = null, int $flags = 0){}
 
 /**
  * The APCIterator class
@@ -260,7 +260,7 @@ class APCIterator implements Iterator
      * @param int $chunk_size The chunk size. Must be a value greater than 0. The default value is 100.
      * @param int $list The type to list. Either pass in APC_LIST_ACTIVE  or APC_LIST_INACTIVE.
      */
-    public function __construct($cache, $search = null, $format = APC_ITER_ALL, $chunk_size = 100, $list = APC_LIST_ACTIVE){}
+    public function __construct(string $cache, $search = null, int $format = APC_ITER_ALL, int $chunk_size = 100, int $list = APC_LIST_ACTIVE){}
 
     /**
      * Rewinds back the iterator to the first element
@@ -416,7 +416,7 @@ function apcu_clear_cache(){}
  *
  * @return array|false Array of Shared Memory Allocation data; FALSE on failure.
  */
-function apcu_sma_info($limited = false){}
+function apcu_sma_info(bool $limited = false){}
 
 /**
  * Cache a variable in the data store
@@ -431,7 +431,7 @@ function apcu_sma_info($limited = false){}
  * or otherwise fails to exist in the cache (clear, restart, etc.).
  * @return bool|array Returns TRUE on success or FALSE on failure | array with error keys.
  */
-function apcu_store($key, $var, $ttl = 0){}
+function apcu_store($key, $var, int $ttl = 0){}
 
 /**
  * Fetch a stored variable from the cache
@@ -441,7 +441,7 @@ function apcu_store($key, $var, $ttl = 0){}
  * @param bool $success Set to TRUE in success and FALSE in failure.
  * @return mixed The stored variable or array of variables on success; FALSE on failure.
  */
-function apcu_fetch($key, &$success = null){}
+function apcu_fetch($key, bool &$success = null){}
 
 /**
  * Removes a stored variable from the cache
@@ -467,7 +467,7 @@ function apcu_delete($key){}
  * @return bool|array Returns TRUE if something has effectively been added into the cache, FALSE otherwise.
  * Second syntax returns array with error keys.
  */
-function apcu_add($key, $var, $ttl = 0){}
+function apcu_add($key, $var, int $ttl = 0){}
 
 /**
  * Checks if APCu key exists
@@ -487,7 +487,7 @@ function apcu_exists($keys){}
  * @param bool $success Optionally pass the success or fail boolean value to this referenced variable.
  * @return int|false Returns the current value of key's value on success, or FALSE on failure.
  */
-function apcu_inc($key, $step = 1, &$success = null){}
+function apcu_inc(string $key, int $step = 1, bool &$success = null){}
 
 /**
  * Decrease a stored number
@@ -497,7 +497,7 @@ function apcu_inc($key, $step = 1, &$success = null){}
  * @param bool $success Optionally pass the success or fail boolean value to this referenced variable.
  * @return int|false Returns the current value of key's value on success, or FALSE on failure.
  */
-function apcu_dec($key, $step = 1, &$success = null){}
+function apcu_dec(string $key, int $step = 1, bool &$success = null){}
 
 /**
  * Updates an old value with a new value
@@ -511,7 +511,7 @@ function apcu_dec($key, $step = 1, &$success = null){}
  * @param int $new The new value to update to.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function apcu_cas($key, $old, $new){}
+function apcu_cas(string $key, int $old, int $new){}
 
 /**
  * Atomically fetch or generate a cache entry
@@ -541,7 +541,7 @@ function apcu_cas($key, $old, $new){}
  * @return mixed Returns the cached value
  * @since APCu 5.1.0
  */
-function apcu_entry($key, callable $generator, $ttl = 0){}
+function apcu_entry(string $key, callable $generator, int $ttl = 0){}
 
 /**
  * Retrieves cached information from APCu's data store
@@ -552,7 +552,7 @@ function apcu_entry($key, callable $generator, $ttl = 0){}
  * This is useful when trying to optimize calls for statistics gathering.
  * @return array|false Array of cached data (and meta-data) or FALSE on failure
  */
-function apcu_cache_info($limited = false){}
+function apcu_cache_info(bool $limited = false){}
 
 /**
  * The APCUIterator class
@@ -578,7 +578,7 @@ class APCUIterator implements Iterator
 	 * @param int $chunk_size The chunk size. Must be a value greater than 0. The default value is 100.
 	 * @param int $list The type to list. Either pass in APC_LIST_ACTIVE  or APC_LIST_DELETED.
 	 */
-	public function __construct($search = null, $format = APC_ITER_ALL, $chunk_size = 100, $list = APC_LIST_ACTIVE){}
+	public function __construct($search = null, int $format = APC_ITER_ALL, int $chunk_size = 100, int $list = APC_LIST_ACTIVE){}
 
 	/**
 	 * Rewinds back the iterator to the first element
