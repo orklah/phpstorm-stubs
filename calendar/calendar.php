@@ -12,7 +12,7 @@
  * @since 4.0
  * @since 5.0
  */
-function jdtogregorian ($julianday) {}
+function jdtogregorian (int $julianday) {}
 
 /**
  * Converts a Gregorian date to Julian Day Count
@@ -30,7 +30,7 @@ function jdtogregorian ($julianday) {}
  * @since 4.0
  * @since 5.0
  */
-function gregoriantojd ($month, $day, $year) {}
+function gregoriantojd (int $month, int $day, int $year) {}
 
 /**
  * Converts a Julian Day Count to a Julian Calendar Date
@@ -42,7 +42,7 @@ function gregoriantojd ($month, $day, $year) {}
  * @since 4.0
  * @since 5.0
  */
-function jdtojulian ($julianday) {}
+function jdtojulian (int $julianday) {}
 
 /**
  * Converts a Julian Calendar date to Julian Day Count
@@ -60,7 +60,7 @@ function jdtojulian ($julianday) {}
  * @since 4.0
  * @since 5.0
  */
-function juliantojd ($month, $day, $year) {}
+function juliantojd (int $month, int $day, int $year) {}
 
 /**
  * Converts a Julian day count to a Jewish calendar date
@@ -81,7 +81,7 @@ function juliantojd ($month, $day, $year) {}
  * @since 4.0
  * @since 5.0
  */
-function jdtojewish ($juliandaycount, $hebrew = false, $fl = 0) {}
+function jdtojewish (int $juliandaycount, bool $hebrew = false, int $fl = 0) {}
 
 /**
  * Converts a date in the Jewish Calendar to Julian Day Count
@@ -99,7 +99,7 @@ function jdtojewish ($juliandaycount, $hebrew = false, $fl = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function jewishtojd ($month, $day, $year) {}
+function jewishtojd (int $month, int $day, int $year) {}
 
 /**
  * Converts a Julian Day Count to the French Republican Calendar
@@ -109,7 +109,7 @@ function jewishtojd ($month, $day, $year) {}
  * @since 4.0
  * @since 5.0
  */
-function jdtofrench ($juliandaycount) {}
+function jdtofrench (int $juliandaycount) {}
 
 /**
  * Converts a date from the French Republican Calendar to a Julian Day Count
@@ -127,7 +127,7 @@ function jdtofrench ($juliandaycount) {}
  * @since 4.0
  * @since 5.0
  */
-function frenchtojd ($month, $day, $year) {}
+function frenchtojd (int $month, int $day, int $year) {}
 
 /**
  * Returns the day of the week
@@ -166,7 +166,7 @@ function frenchtojd ($month, $day, $year) {}
  * @since 4.0
  * @since 5.0
  */
-function jddayofweek ($julianday, $mode = CAL_DOW_DAYNO) {}
+function jddayofweek (int $julianday, int $mode = CAL_DOW_DAYNO) {}
 
 /**
  * Returns a month name
@@ -177,7 +177,7 @@ function jddayofweek ($julianday, $mode = CAL_DOW_DAYNO) {}
  * @since 4.0
  * @since 5.0
  */
-function jdmonthname ($julianday, $mode) {}
+function jdmonthname (int $julianday, int $mode) {}
 
 /**
  * Get Unix timestamp for midnight on Easter of a given year
@@ -189,7 +189,7 @@ function jdmonthname ($julianday, $mode) {}
  * @since 4.0
  * @since 5.0
  */
-function easter_date ($year = null) {}
+function easter_date (int $year = null) {}
 
 /**
  * Get number of days after March 21 on which Easter falls for a given year
@@ -208,7 +208,7 @@ function easter_date ($year = null) {}
  * @since 4.0
  * @since 5.0
  */
-function easter_days ($year = null, $method = CAL_EASTER_DEFAULT) {}
+function easter_days (int $year = null, int $method = CAL_EASTER_DEFAULT) {}
 
 /**
  * Convert Unix timestamp to Julian Day
@@ -220,7 +220,7 @@ function easter_days ($year = null, $method = CAL_EASTER_DEFAULT) {}
  * @since 4.0
  * @since 5.0
  */
-function unixtojd ($timestamp = 0) {}
+function unixtojd (int $timestamp = 0) {}
 
 /**
  * Convert Julian Day to Unix timestamp
@@ -232,7 +232,7 @@ function unixtojd ($timestamp = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function jdtounix ($jday) {}
+function jdtounix (int $jday) {}
 
 /**
  * Converts from a supported calendar to Julian Day Count
@@ -260,7 +260,7 @@ function jdtounix ($jday) {}
  * @since 4.1
  * @since 5.0
  */
-function cal_to_jd ($calendar, $month, $day, $year) {}
+function cal_to_jd (int $calendar, int $month, int $day, int $year) {}
 
 /**
  * Converts from Julian Day Count to a supported calendar
@@ -277,7 +277,7 @@ function cal_to_jd ($calendar, $month, $day, $year) {}
  * @since 4.1
  * @since 5.0
  */
-function cal_from_jd ($jd, $calendar) {}
+function cal_from_jd (int $jd, int $calendar) {}
 
 /**
  * Return the number of days in a month for a given year and calendar
@@ -295,7 +295,7 @@ function cal_from_jd ($jd, $calendar) {}
  * @since 4.1
  * @since 5.0
  */
-function cal_days_in_month ($calendar, $month, $year) {}
+function cal_days_in_month (int $calendar, int $month, int $year) {}
 
 /**
  * Returns information about a particular calendar
@@ -308,7 +308,7 @@ function cal_days_in_month ($calendar, $month, $year) {}
  * @since 4.1
  * @since 5.0
  */
-function cal_info ($calendar = -1) {}
+function cal_info (int $calendar = -1) {}
 
 define ('CAL_GREGORIAN', 0);
 define ('CAL_JULIAN', 1);
