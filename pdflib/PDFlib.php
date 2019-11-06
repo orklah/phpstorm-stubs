@@ -25,7 +25,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=Launch and PDF_create_annotation() with type=Link instead.
 	 */
-	function add_launchlink($llx, $lly, $urx, $ury, $filename){}
+	function add_launchlink(float $llx, float $lly, float $urx, float $ury, string $filename){}
 
 	/**
 	 * Add a link annotation to a target within the current PDF file.
@@ -43,7 +43,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=GoTo and PDF_create_annotation() with type=Link instead.
 	 */
-	function add_locallink($lowerleftx, $lowerlefty, $upperrightx, $upperrighty, $page, $dest){}
+	function add_locallink(float $lowerleftx, float $lowerlefty, float $upperrightx, float $upperrighty, int $page, string $dest){}
 
 	/**
 	 * Creates a named destination on an arbitrary page in the current document.
@@ -55,7 +55,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-add-nameddest.php
 	 */
-	function add_nameddest($name, $optlist){}
+	function add_nameddest(string $name, string $optlist){}
 
 	/**
 	 * Sets an annotation for the current page.
@@ -75,7 +75,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_annotation() with type=Text instead.
 	 */
-	function add_note($llx, $lly, $urx, $ury, $contents, $title, $icon, $open){}
+	function add_note(float $llx, float $lly, float $urx, float $ury, string $contents, string $title, string $icon, int $open){}
 
 	/**
 	 * Add a file link annotation to a PDF target.
@@ -94,7 +94,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=GoToR and PDF_create_annotation() with type=Link instead.
 	 */
-	function add_pdflink($bottom_left_x, $bottom_left_y, $up_right_x, $up_right_y, $filename, $page, $dest){}
+	function add_pdflink(float $bottom_left_x, float $bottom_left_y, float $up_right_x, float $up_right_y, string $filename, int $page, string $dest){}
 
 	/**
 	 * Adds a cell to a new or existing table.
@@ -109,7 +109,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-add-table-cell.php
 	 */
-	function add_table_cell($table, $column, $row, $text, $optlist){}
+	function add_table_cell(int $table, int $column, int $row, string $text, string $optlist){}
 
 	/**
 	 * Creates a Textflow object, or adds text and explicit options to an existing Textflow.
@@ -122,7 +122,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-add-textflow.php
 	 */
-	function add_textflow($textflow, $text, $optlist){}
+	function add_textflow(int $textflow, string $text, string $optlist){}
 
 	/**
 	 * Adds an existing image as thumbnail for the current page.
@@ -133,7 +133,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-add-thumbnail.php
 	 */
-	function add_thumbnail($image){}
+	function add_thumbnail(int $image){}
 
 	/**
 	 * Adds a weblink annotation to a target url on the Web.
@@ -150,7 +150,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-add-weblink.php
 	 */
-	function add_weblink($lowerleftx, $lowerlefty, $upperrightx, $upperrighty, $url){}
+	function add_weblink(float $lowerleftx, float $lowerlefty, float $upperrightx, float $upperrighty, string $url){}
 
 	/**
 	 * Adds a counterclockwise circular arc
@@ -165,7 +165,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-arc.php
 	 */
-	function arc($x, $y, $r, $alpha, $beta){}
+	function arc(float $x, float $y, float $r, float $alpha, float $beta){}
 
 	/**
 	 * Except for the drawing direction, this function behaves exactly like PDF_arc().
@@ -180,7 +180,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-arcn.php
 	 */
-	function arcn($x, $y, $r, $alpha, $beta){}
+	function arcn(float $x, float $y, float $r, float $alpha, float $beta){}
 
 	/**
 	 * Adds a file attachment annotation.
@@ -201,7 +201,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-attach-file.php
 	 */
-	function attach_file($llx, $lly, $urx, $ury, $filename, $description, $author, $mimetype, $icon){}
+	function attach_file(float $llx, float $lly, float $urx, float $ury, string $filename, string $description, string $author, string $mimetype, string $icon){}
 
 	/**
 	 * Creates a new PDF file subject to various options.
@@ -214,7 +214,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-document.php
 	 * @link https://www.pdflib.com/fileadmin/pdflib/pdf/manuals/PDFlib-9.1.2-API-reference.pdf
 	 */
-	function begin_document($filename, $optlist){}
+	function begin_document(string $filename, string $optlist){}
 
 	/**
 	 * Starts a Type 3 font definition.
@@ -232,7 +232,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-font.php
 	 */
-	function begin_font($filename, $a, $b, $c, $d, $e, $f, $optlist){}
+	function begin_font(string $filename, float $a, float $b, float $c, float $d, float $e, float $f, string $optlist){}
 
 	/**
 	 * Starts a glyph definition for a Type 3 font.
@@ -248,7 +248,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-glyph.php
 	 */
-	function begin_glyph($glyphname, $wx, $llx, $lly, $urx, $ury){}
+	function begin_glyph(string $glyphname, float $wx, float $llx, float $lly, float $urx, float $ury){}
 
 	/**
 	 * Opens a structure element or other content item with attributes supplied as options.
@@ -260,7 +260,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-item.php
 	 */
-	function begin_item($tag, $optlist){}
+	function begin_item(string $tag, string $optlist){}
 
 	/**
 	 * Starts a layer for subsequent output on the page.
@@ -271,7 +271,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-layer.php
 	 */
-	function begin_layer($layer){}
+	function begin_layer(int $layer){}
 
 	/**
 	 * Adds a new page to the document, and specifies various options. The parameters width and height are the dimensions of the new page in points.
@@ -284,7 +284,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-page-ext.php
 	 */
-	function begin_page_ext($width, $height, $optlist){}
+	function begin_page_ext(float $width, float $height, string $optlist){}
 
 
 	/**
@@ -299,7 +299,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 6, use PDF_begin_page_ext() instead.
 	 */
-	function begin_page($width, $height){}
+	function begin_page(float $width, float $height){}
 
 	/**
 	 * Starts a new pattern definition.
@@ -314,7 +314,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-pattern.php
 	 */
-	function begin_pattern($width, $height, $xstep, $ystep, $painttype){}
+	function begin_pattern(float $width, float $height, float $xstep, float $ystep, int $painttype){}
 
 	/**
 	 * Starts a new template definition.
@@ -327,7 +327,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-begin-template-ext.php
 	 */
-	function begin_template_ext($width, $height, $optlist){}
+	function begin_template_ext(float $width, float $height, string $optlist){}
 
 	/**
 	 * @param float $width
@@ -339,7 +339,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 7, use PDF_begin_template_ext() instead.
 	 */
-	function begin_template($width, $height){}
+	function begin_template(float $width, float $height){}
 
 	/**
 	 * @param float $x
@@ -350,7 +350,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-circle.php
 	 */
-	function circle($x, $y, $r){}
+	function circle(float $x, float $y, float $r){}
 
 	/**
 	 *
@@ -367,7 +367,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-close-image.php
 	 */
-	function close_image($image){}
+	function close_image(int $image){}
 
 	/**
 	 * Closes the page handle, and frees all page-related resources
@@ -378,7 +378,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-close-pdi-page.php
 	 */
-	function close_pdi_page($page){}
+	function close_pdi_page(int $page){}
 
 	/**
 	 * @param int $doc
@@ -389,7 +389,7 @@ class PDFlib
 	 *
 	 * @deprecated This function is deprecated since PDFlib version 7, use PDF_close_pdi_document() instead.
 	 */
-	function close_pdi($doc){}
+	function close_pdi(int $doc){}
 
 	/**
 	 *
@@ -437,7 +437,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-concat.php
 	 */
-	function concat($a, $b, $c, $d, $e, $f){}
+	function concat(float $a, float $b, float $c, float $d, float $e, float $f){}
 
 	/**
 	 * @param string $text
@@ -446,7 +446,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-continue-text.php
 	 */
-	function continue_text($text){}
+	function continue_text(string $text){}
 
 	/**
 	 * @param string $username
@@ -456,7 +456,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-3dview.php
 	 */
-	function create_3dview($username, $optlist){}
+	function create_3dview(string $username, string $optlist){}
 
 	/**
 	 * @param string $type
@@ -466,7 +466,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-action.php
 	 */
-	function create_action($type, $optlist){}
+	function create_action(string $type, string $optlist){}
 
 	/**
 	 * @param float $llx
@@ -480,7 +480,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-annotation.php
 	 */
-	function create_annotation($llx, $lly, $urx, $ury, $type, $optlist){}
+	function create_annotation(float $llx, float $lly, float $urx, float $ury, string $type, string $optlist){}
 
 	/**
 	 * @param string $text
@@ -490,7 +490,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-bookmark.php
 	 */
-	function create_bookmark($text, $optlist){}
+	function create_bookmark(string $text, string $optlist){}
 
 	/**
 	 * @param float $llx
@@ -505,7 +505,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-field.php
 	 */
-	function create_field($llx, $lly, $urx, $ury, $name, $type, $optlist){}
+	function create_field(float $llx, float $lly, float $urx, float $ury, string $name, string $type, string $optlist){}
 
 	/**
 	 * @param string $name
@@ -515,7 +515,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-fieldgroup.php
 	 */
-	function create_fieldgroup($name, $optlist){}
+	function create_fieldgroup(string $name, string $optlist){}
 
 	/**
 	 * @param string $optlist
@@ -524,7 +524,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-gstate.php
 	 */
-	function create_gstate($optlist){}
+	function create_gstate(string $optlist){}
 
 	/**
 	 * @param string $filename
@@ -535,7 +535,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-pvf.php
 	 */
-	function create_pvf($filename, $data, $optlist){}
+	function create_pvf(string $filename, string $data, string $optlist){}
 
 	/**
 	 * @param string $text
@@ -545,7 +545,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-create-textflow.php
 	 */
-	function create_textflow($text, $optlist){}
+	function create_textflow(string $text, string $optlist){}
 
 	/**
 	 * @param float $x1
@@ -559,7 +559,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-curveto.php
 	 */
-	function curveto($x1, $y1, $x2, $y2, $x3, $y3){}
+	function curveto(float $x1, float $y1, float $x2, float $y2, float $x3, float $y3){}
 
 	/**
 	 * @param string $name
@@ -569,7 +569,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-define-layer.php
 	 */
-	function define_layer($name, $optlist){}
+	function define_layer(string $name, string $optlist){}
 
 	/**
 	 * @param string $filename
@@ -578,7 +578,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-delete-pvf.php
 	 */
-	function delete_pvf($filename){}
+	function delete_pvf(string $filename){}
 
 	/**
 	 * @param int $table
@@ -588,7 +588,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-delete-table.php
 	 */
-	function delete_table($table, $optlist){}
+	function delete_table(int $table, string $optlist){}
 
 	/**
 	 * @param int $textflow
@@ -597,7 +597,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-delete-textflow.php
 	 */
-	function delete_textflow($textflow){}
+	function delete_textflow(int $textflow){}
 
 	/**
 	 *
@@ -617,7 +617,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-encoding-set-char.php
 	 */
-	function encoding_set_char($encoding, $slot, $glyphname, $uv){}
+	function encoding_set_char(string $encoding, int $slot, string $glyphname, int $uv){}
 
 	/**
 	 * @param string $optlist
@@ -626,7 +626,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-end-document.php
 	 */
-	function end_document($optlist){}
+	function end_document(string $optlist){}
 
 	/**
 	 *
@@ -651,7 +651,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-end-item.php
 	 */
-	function end_item($id){}
+	function end_item(int $id){}
 
 	/**
 	 *
@@ -668,7 +668,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-end-page-ext.php
 	 */
-	function end_page_ext($optlist){}
+	function end_page_ext(string $optlist){}
 
 	/**
 	 *
@@ -712,7 +712,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-fill-imageblock.php
 	 */
-	function fill_imageblock($page, $blockname, $image, $optlist){}
+	function fill_imageblock(int $page, string $blockname, int $image, string $optlist){}
 
 	/**
 	 * @param int $page
@@ -724,7 +724,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-fill-pdfblock.php
 	 */
-	function fill_pdfblock($page, $blockname, $contents, $optlist){}
+	function fill_pdfblock(int $page, string $blockname, int $contents, string $optlist){}
 
 	/**
 	 *
@@ -745,7 +745,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fill-textblock.php
 
 	 */
-	function fill_textblock($page, $blockname, $text, $optlist){}
+	function fill_textblock(int $page, string $blockname, string $text, string $optlist){}
 
 	/**
 	 *
@@ -765,7 +765,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-findfont.php(Dep)
 
 	 */
-	function findfont($fontname , $encoding , $embed){}
+	function findfont(string $fontname , string $encoding , int $embed){}
 	/**
 	 * @param int $image
 	 * @param float $x
@@ -777,7 +777,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fit-image.php
 
 	 */
-	function fit_image($image , $x , $y , $optlist){}
+	function fit_image(int $image , float $x , float $y , string $optlist){}
 	/**
 	 * @param int $page
 	 * @param float $x
@@ -789,7 +789,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fit-pdi-page.php
 
 	 */
-	function fit_pdi_page($page , $x , $y , $optlist){}
+	function fit_pdi_page(int $page , float $x , float $y , string $optlist){}
 	/**
 	 * @param int $table
 	 * @param float $llx
@@ -803,7 +803,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fit-table.php
 
 	 */
-	function fit_table($table , $llx , $lly , $urx , $ury , $optlist){}
+	function fit_table(int $table , float $llx , float $lly , float $urx , float $ury , string $optlist){}
 	/**
 	 * @param int $textflow
 	 * @param float $llx
@@ -817,7 +817,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fit-textflow.php
 
 	 */
-	function fit_textflow($textflow , $llx , $lly , $urx , $ury , $optlist){}
+	function fit_textflow(int $textflow , float $llx , float $lly , float $urx , float $ury , string $optlist){}
 	/**
 	 * @param string $text
 	 * @param float $x
@@ -829,7 +829,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-fit-textline.php
 
 	 */
-	function fit_textline($text , $x , $y , $optlist){}
+	function fit_textline(string $text , float $x , float $y , string $optlist){}
 	/**
 	 *
 	 * @return string
@@ -889,7 +889,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-get-parameter.php
 
 	 */
-	function get_parameter($key , $modifier){}
+	function get_parameter(string $key , float $modifier){}
 	/**
 	 * @param string $key
 	 * @param int $doc
@@ -901,7 +901,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-get-pdi-parameter.php
 
 	 */
-	function get_pdi_parameter($key , $doc , $page , $reserved){}
+	function get_pdi_parameter(string $key , int $doc , int $page , int $reserved){}
 	/**
 	 * @param string $key
 	 * @param int $doc
@@ -913,7 +913,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-get-pdi-value.php
 
 	 */
-	function get_pdi_value($key , $doc , $page , $reserved){}
+	function get_pdi_value(string $key , int $doc , int $page , int $reserved){}
 	/**
 	 * @param string $key
 	 * @param float $modifier
@@ -923,7 +923,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-get-value.php
 
 	 */
-	function get_value($key , $modifier){}
+	function get_value(string $key , float $modifier){}
 	/**
 	 * @param int $font
 	 * @param string $keyword
@@ -934,7 +934,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-info-font.php
 
 	 */
-	function info_font($font , $keyword , $optlist){}
+	function info_font(int $font , string $keyword , string $optlist){}
 	/**
 	 * @param string $boxname
 	 * @param int $num
@@ -945,7 +945,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-info-matchbox.php
 
 	 */
-	function info_matchbox($boxname , $num , $keyword){}
+	function info_matchbox(string $boxname , int $num , string $keyword){}
 	/**
 	 * @param int $table
 	 * @param string $keyword
@@ -955,7 +955,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-info-table.php
 
 	 */
-	function info_table($table , $keyword){}
+	function info_table(int $table , string $keyword){}
 	/**
 	 * @param int $textflow
 	 * @param string $keyword
@@ -965,7 +965,7 @@ class PDFlib
 	 * @link https://secure.php.net/manual/en/function.pdf-info-textflow.php
 
 	 */
-	function info_textflow($textflow , $keyword){}
+	function info_textflow(int $textflow , string $keyword){}
 
 	/**
 	 * @param string $text
@@ -976,7 +976,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-info-textline.php
 	 */
-	function info_textline($text , $keyword , $optlist){}
+	function info_textline(string $text , string $keyword , string $optlist){}
 
 	/**
 	 *
@@ -994,7 +994,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-lineto.php
 	 */
-	function lineto($x , $y){}
+	function lineto(float $x , float $y){}
 
 	/**
 	 * @param string $filename
@@ -1004,7 +1004,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-load-3ddata.php
 	 */
-	function load_3ddata($filename , $optlist){}
+	function load_3ddata(string $filename , string $optlist){}
 
 	/**
 	 * @param string $fontname
@@ -1015,7 +1015,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-load-font.php
 	 */
-	function load_font($fontname , $encoding , $optlist){}
+	function load_font(string $fontname , string $encoding , string $optlist){}
 
 	/**
 	 * @param string $profilename
@@ -1025,7 +1025,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-load-iccprofile.php
 	 */
-	function load_iccprofile($profilename , $optlist){}
+	function load_iccprofile(string $profilename , string $optlist){}
 
 	/**
 	 * @param string $imagetype
@@ -1036,7 +1036,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-load-image.php
 	 */
-	function load_image($imagetype , $filename , $optlist){}
+	function load_image(string $imagetype , string $filename , string $optlist){}
 
 	/**
 	 * @param string $spotname
@@ -1045,7 +1045,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-makespotcolor.php
 	 */
-	function makespotcolor($spotname){}
+	function makespotcolor(string $spotname){}
 
 	/**
 	 * @param float $x
@@ -1055,7 +1055,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-moveto.php
 	 */
-	function moveto($x , $y){}
+	function moveto(float $x , float $y){}
 
 	/**
 	 * @param string $filename
@@ -1069,7 +1069,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-ccitt.php(dep)
 	 */
-	function open_ccitt($filename , $width , $height , $BitReverse , $k , $Blackls1){}
+	function open_ccitt(string $filename , int $width , int $height , int $BitReverse , int $k , int $Blackls1){}
 
 	/**
 	 * @param string $filename
@@ -1078,7 +1078,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-file.php(dep)
 	 */
-	function open_file($filename){}
+	function open_file(string $filename){}
 
 	/**
 	 * @param string $imagetype
@@ -1090,7 +1090,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-image-file.php(dep)
 	 */
-	function open_image_file($imagetype , $filename , $stringparam , $intparam){}
+	function open_image_file(string $imagetype , string $filename , string $stringparam , int $intparam){}
 
 	/**
 	 * @param string $imagetype
@@ -1107,7 +1107,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-image.php(dep)
 	 */
-	function open_image($imagetype , $source , $data , $length , $width , $height , $components , $bpc , $params){}
+	function open_image(string $imagetype , string $source , string $data , int $length , int $width , int $height , int $components , int $bpc , string $params){}
 
 	/**
 	 * @param resource $image
@@ -1126,7 +1126,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-pdi-document.php
 	 */
-	function open_pdi_document($filename , $optlist){}
+	function open_pdi_document(string $filename , string $optlist){}
 
 	/**
 	 * @param int $doc
@@ -1137,7 +1137,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-pdi-page.php
 	 */
-	function open_pdi_page($doc , $pagenumber , $optlist){}
+	function open_pdi_page(int $doc , int $pagenumber , string $optlist){}
 
 	/**
 	 * @param string $filename
@@ -1148,7 +1148,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-open-pdi.php
 	 */
-	function open_pdi($filename , $optlist , $len){}
+	function open_pdi(string $filename , string $optlist , int $len){}
 
 	/**
 	 * @param int $doc
@@ -1158,7 +1158,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-pcos-get-number.php
 	 */
-	function pcos_get_number($doc , $path){}
+	function pcos_get_number(int $doc , string $path){}
 
 	/**
 	 * @param int $doc
@@ -1169,7 +1169,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-pcos-get-stream.php
 	 */
-	function pcos_get_stream($doc, $optlist, $path){}
+	function pcos_get_stream(int $doc, string $optlist, string $path){}
 
 	/**
 	 * @param int $doc
@@ -1179,7 +1179,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-pcos-get-string.php
 	 */
-	function pcos_get_string($doc, $path){}
+	function pcos_get_string(int $doc, string $path){}
 
 	/**
 	 * @param int $image
@@ -1191,7 +1191,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-place-image.php (dep)
 	 */
-	function place_image($image, $x, $y, $scale){}
+	function place_image(int $image, float $x, float $y, float $scale){}
 
 	/**
 	 * @param int $page
@@ -1204,7 +1204,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-place-pdi-page.php (dep)
 	 */
-	function place_pdi_page($page, $x, $y, $sx, $sy){}
+	function place_pdi_page(int $page, float $x, float $y, float $sx, float $sy){}
 
 	/**
 	 * @param int $doc
@@ -1215,7 +1215,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-process-pdi.php
 	 */
-	function process_pdi($doc, $page, $optlist){}
+	function process_pdi(int $doc, int $page, string $optlist){}
 
 	/**
 	 * @param float $x
@@ -1227,7 +1227,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-rect.php
 	 */
-	function rect($x, $y, $width, $height){}
+	function rect(float $x, float $y, float $width, float $height){}
 
 	/**
 	 *
@@ -1244,7 +1244,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-resume-page.php
 	 */
-	function resume_page($optlist){}
+	function resume_page(string $optlist){}
 
 	/**
 	 * @param float $phi
@@ -1253,7 +1253,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-rotate.php
 	 */
-	function rotate($phi){}
+	function rotate(float $phi){}
 
 	/**
 	 *
@@ -1271,7 +1271,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-scale.php
 	 */
-	function scale($sx, $sy){}
+	function scale(float $sx, float $sy){}
 
 	/**
 	 * @param float $red
@@ -1282,7 +1282,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-border-color.php (dep)
 	 */
-	function set_border_color($red, $green, $blue){}
+	function set_border_color(float $red, float $green, float $blue){}
 
 	/**
 	 * @param float $black
@@ -1292,7 +1292,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-border-dash.php (dep)
 	 */
-	function set_border_dash($black, $white){}
+	function set_border_dash(float $black, float $white){}
 
 	/**
 	 * @param string $style
@@ -1302,7 +1302,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-border-style.php (dep)
 	 */
-	function set_border_style($style, $width){}
+	function set_border_style(string $style, float $width){}
 
 	/**
 	 * @param int $gstate
@@ -1311,7 +1311,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-gstate.php
 	 */
-	function set_gstate($gstate){}
+	function set_gstate(int $gstate){}
 
 	/**
 	 * @param string $key
@@ -1321,7 +1321,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-info.php
 	 */
-	function set_info($key, $value){}
+	function set_info(string $key, string $value){}
 
 	/**
 	 * @param string $type
@@ -1331,7 +1331,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-layer-dependency.php
 	 */
-	function set_layer_dependency($type, $optlist){}
+	function set_layer_dependency(string $type, string $optlist){}
 
 	/**
 	 * @param string $key
@@ -1341,7 +1341,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-parameter.php
 	 */
-	function set_parameter($key, $value){}
+	function set_parameter(string $key, string $value){}
 
 	/**
 	 * @param float $x
@@ -1351,7 +1351,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-text-pos.php
 	 */
-	function set_text_pos($x, $y){}
+	function set_text_pos(float $x, float $y){}
 
 	/**
 	 * @param string $key
@@ -1361,7 +1361,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-set-value.php
 	 */
-	function set_value($key, $value){}
+	function set_value(string $key, float $value){}
 
 	/**
 	 * @param string $fstype
@@ -1375,7 +1375,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setcolor.php
 	 */
-	function setcolor($fstype, $colorspace, $c1, $c2, $c3, $c4){}
+	function setcolor(string $fstype, string $colorspace, float $c1, float $c2, float $c3, float $c4){}
 
 	/**
 	 * @param float $b
@@ -1385,7 +1385,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setdash.php
 	 */
-	function setdash($b, $w){}
+	function setdash(float $b, float $w){}
 
 	/**
 	 * @param string $optlist
@@ -1394,7 +1394,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setdashpattern.php
 	 */
-	function setdashpattern($optlist){}
+	function setdashpattern(string $optlist){}
 
 	/**
 	 * @param float $flatness
@@ -1403,7 +1403,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setflat.php
 	 */
-	function setflat($flatness){}
+	function setflat(float $flatness){}
 
 	/**
 	 * @param int $font
@@ -1413,7 +1413,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setfont.php
 	 */
-	function setfont($font, $fontsize){}
+	function setfont(int $font, float $fontsize){}
 
 	/**
 	 * @param float $g
@@ -1422,7 +1422,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setgray-fill.php (dep)
 	 */
-	function setgray_fill($g){}
+	function setgray_fill(float $g){}
 
 	/**
 	 * @param float $g
@@ -1431,7 +1431,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setgray-stroke.php (dep)
 	 */
-	function setgray_stroke($g){}
+	function setgray_stroke(float $g){}
 
 	/**
 	 * @param float $g
@@ -1440,7 +1440,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setgray.php (dep)
 	 */
-	function setgray($g){}
+	function setgray(float $g){}
 
 	/**
 	 * @param int $linecap
@@ -1449,7 +1449,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setlinecap.php
 	 */
-	function setlinecap($linecap){}
+	function setlinecap(int $linecap){}
 
 	/**
 	 * @param int $value
@@ -1458,7 +1458,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setlinejoin.php
 	 */
-	function setlinejoin($value){}
+	function setlinejoin(int $value){}
 
 	/**
 	 * @param float $width
@@ -1467,7 +1467,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setlinewidth.php
 	 */
-	function setlinewidth($width){}
+	function setlinewidth(float $width){}
 
 	/**
 	 * @param float $a
@@ -1481,7 +1481,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setmatrix.php
 	 */
-	function setmatrix($a, $b, $c, $d, $e, $f){}
+	function setmatrix(float $a, float $b, float $c, float $d, float $e, float $f){}
 
 	/**
 	 * @param float $miter
@@ -1490,7 +1490,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setmiterlimit.php
 	 */
-	function setmiterlimit($miter){}
+	function setmiterlimit(float $miter){}
 
 	/**
 	 * @param float $red
@@ -1501,7 +1501,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor-fill.php (dep)
 	 */
-	function setrgbcolor_fill($red, $green, $blue){}
+	function setrgbcolor_fill(float $red, float $green, float $blue){}
 
 	/**
 	 * @param float $red
@@ -1512,7 +1512,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor-stroke.php (dep)
 	 */
-	function setrgbcolor_stroke($red, $green, $blue){}
+	function setrgbcolor_stroke(float $red, float $green, float $blue){}
 
 	/**
 	 * @param float $red
@@ -1523,7 +1523,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor.php (dep)
 	 */
-	function setrgbcolor($red, $green, $blue){}
+	function setrgbcolor(float $red, float $green, float $blue){}
 
 	/**
 	 * @param int $shading
@@ -1533,7 +1533,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-shading-pattern.php
 	 */
-	function shading_pattern($shading, $optlist){}
+	function shading_pattern(int $shading, string $optlist){}
 
 	/**
 	 * @param string $shtype
@@ -1551,7 +1551,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-shading.php
 	 */
-	function shading($shtype, $x0, $y0, $x1, $y1, $c1, $c2, $c3, $c4, $optlist){}
+	function shading(string $shtype, float $x0, float $y0, float $x1, float $y1, float $c1, float $c2, float $c3, float $c4, string $optlist){}
 
 	/**
 	 * @param int $shading
@@ -1560,7 +1560,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-shfill.php
 	 */
-	function shfill($shading){}
+	function shfill(int $shading){}
 
 	/**
 	 * @param string $text
@@ -1575,7 +1575,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-show-boxed.php (dep)
 	 */
-	function show_boxed($text, $left, $top, $width, $height, $mode, $feature){}
+	function show_boxed(string $text, float $left, float $top, float $width, float $height, string $mode, string $feature){}
 
 	/**
 	 * @param string $text
@@ -1586,7 +1586,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-show-xy.php
 	 */
-	function show_xy($text, $x, $y){}
+	function show_xy(string $text, float $x, float $y){}
 
 	/**
 	 * @param string $text
@@ -1595,7 +1595,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-show.php
 	 */
-	function show($text){}
+	function show(string $text){}
 
 	/**
 	 * @param float $alpha
@@ -1605,7 +1605,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-skew.php
 	 */
-	function skew($alpha, $beta){}
+	function skew(float $alpha, float $beta){}
 
 	/**
 	 * @param string $text
@@ -1616,7 +1616,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-stringwidth.php
 	 */
-	function stringwidth($text, $font, $fontsize){}
+	function stringwidth(string $text, int $font, float $fontsize){}
 
 	/**
 	 *
@@ -1633,7 +1633,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-suspend-page.php
 	 */
-	function suspend_page($optlist){}
+	function suspend_page(string $optlist){}
 
 	/**
 	 * @param float $tx
@@ -1643,7 +1643,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-translate.php
 	 */
-	function translate($tx, $ty){}
+	function translate(float $tx, float $ty){}
 
 	/**
 	 * @param string $utf16string
@@ -1652,7 +1652,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-utf16-to-utf8.php
 	 */
-	function utf16_to_utf8($utf16string){}
+	function utf16_to_utf8(string $utf16string){}
 
 	/**
 	 * @param string $utf32string
@@ -1662,7 +1662,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-utf32-to-utf16.php
 	 */
-	function utf32_to_utf16($utf32string, $ordering){}
+	function utf32_to_utf16(string $utf32string, string $ordering){}
 
 	/**
 	 * @param string $utf8string
@@ -1672,7 +1672,7 @@ class PDFlib
 	 *
 	 * @link https://secure.php.net/manual/en/function.pdf-utf8-to-utf16.php
 	 */
-	function utf8_to_utf16($utf8string, $ordering){}
+	function utf8_to_utf16(string $utf8string, string $ordering){}
 
 }
 
@@ -1702,7 +1702,7 @@ function PDF_activate_item($pdf, $id){}
  *
  * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=Launch and PDF_create_annotation() with type=Link instead.
  */
-function PDF_add_launchlink($pdf, $llx, $lly, $urx, $ury, $filename){}
+function PDF_add_launchlink($pdf, float $llx, float $lly, float $urx, float $ury, string $filename){}
 
 /**
  * Add a link annotation to a target within the current PDF file.
@@ -1721,7 +1721,7 @@ function PDF_add_launchlink($pdf, $llx, $lly, $urx, $ury, $filename){}
  *
  * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=GoTo and PDF_create_annotation() with type=Link instead.
  */
-function PDF_add_locallink($pdf, $lowerleftx, $lowerlefty, $upperrightx, $upperrighty, $page, $dest){}
+function PDF_add_locallink($pdf, float $lowerleftx, float $lowerlefty, float $upperrightx, float $upperrighty, int $page, string $dest){}
 
 /**
  * Creates a named destination on an arbitrary page in the current document.
@@ -1734,7 +1734,7 @@ function PDF_add_locallink($pdf, $lowerleftx, $lowerlefty, $upperrightx, $upperr
  *
  * @link https://secure.php.net/manual/en/function.pdf-add-nameddest.php
  */
-function PDF_add_nameddest($pdf, $name, $optlist){}
+function PDF_add_nameddest($pdf, string $name, string $optlist){}
 
 /**
  * Sets an annotation for the current page.
@@ -1755,7 +1755,7 @@ function PDF_add_nameddest($pdf, $name, $optlist){}
  *
  * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_annotation() with type=Text instead.
  */
-function PDF_add_note($pdf, $llx, $lly, $urx, $ury, $contents, $title, $icon, $open){}
+function PDF_add_note($pdf, float $llx, float $lly, float $urx, float $ury, string $contents, string $title, string $icon, int $open){}
 
 /**
  * Add a file link annotation to a PDF target.
@@ -1775,7 +1775,7 @@ function PDF_add_note($pdf, $llx, $lly, $urx, $ury, $contents, $title, $icon, $o
  *
  * @deprecated This function is deprecated since PDFlib version 6, use PDF_create_action() with type=GoToR and PDF_create_annotation() with type=Link instead.
  */
-function PDF_add_pdflink($pdf, $bottom_left_x, $bottom_left_y, $up_right_x, $up_right_y, $filename, $page, $dest){}
+function PDF_add_pdflink($pdf, float $bottom_left_x, float $bottom_left_y, float $up_right_x, float $up_right_y, string $filename, int $page, string $dest){}
 
 /**
  * Adds a cell to a new or existing table.
@@ -1791,7 +1791,7 @@ function PDF_add_pdflink($pdf, $bottom_left_x, $bottom_left_y, $up_right_x, $up_
  *
  * @link https://secure.php.net/manual/en/function.pdf-add-table-cell.php
  */
-function PDF_add_table_cell($pdf, $table, $column, $row, $text, $optlist){}
+function PDF_add_table_cell($pdf, int $table, int $column, int $row, string $text, string $optlist){}
 
 /**
  * Creates a Textflow object, or adds text and explicit options to an existing Textflow.
@@ -1805,7 +1805,7 @@ function PDF_add_table_cell($pdf, $table, $column, $row, $text, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-add-textflow.php
  */
-function PDF_add_textflow($pdf , $textflow , $text , $optlist){}
+function PDF_add_textflow($pdf , int $textflow , string $text , string $optlist){}
 
 /**
  * Adds an existing image as thumbnail for the current page.
@@ -1817,7 +1817,7 @@ function PDF_add_textflow($pdf , $textflow , $text , $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-add-thumbnail.php
  */
-function PDF_add_thumbnail($pdf, $image){}
+function PDF_add_thumbnail($pdf, int $image){}
 
 /**
  * Adds a weblink annotation to a target url on the Web.
@@ -1835,7 +1835,7 @@ function PDF_add_thumbnail($pdf, $image){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-add-weblink.php
  */
-function PDF_add_weblink($pdf, $lowerleftx, $lowerlefty, $upperrightx, $upperrighty, $url){}
+function PDF_add_weblink($pdf, float $lowerleftx, float $lowerlefty, float $upperrightx, float $upperrighty, string $url){}
 
 /**
  * Adds a counterclockwise circular arc
@@ -1851,7 +1851,7 @@ function PDF_add_weblink($pdf, $lowerleftx, $lowerlefty, $upperrightx, $upperrig
  *
  * @link https://secure.php.net/manual/en/function.pdf-arc.php
  */
-function PDF_arc($pdf, $x, $y, $r, $alpha, $beta){}
+function PDF_arc($pdf, float $x, float $y, float $r, float $alpha, float $beta){}
 
 /**
  * Except for the drawing direction, this function behaves exactly like PDF_arc().
@@ -1867,7 +1867,7 @@ function PDF_arc($pdf, $x, $y, $r, $alpha, $beta){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-arcn.php
  */
-function PDF_arcn($pdf, $x, $y, $r, $alpha, $beta){}
+function PDF_arcn($pdf, float $x, float $y, float $r, float $alpha, float $beta){}
 
 /**
  * Adds a file attachment annotation.
@@ -1889,7 +1889,7 @@ function PDF_arcn($pdf, $x, $y, $r, $alpha, $beta){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-attach-file.php
  */
-function PDF_attach_file($pdf, $llx, $lly, $urx, $ury, $filename, $description, $author, $mimetype, $icon){}
+function PDF_attach_file($pdf, float $llx, float $lly, float $urx, float $ury, string $filename, string $description, string $author, string $mimetype, string $icon){}
 
 /**
  * Creates a new PDF file subject to various options.
@@ -1903,7 +1903,7 @@ function PDF_attach_file($pdf, $llx, $lly, $urx, $ury, $filename, $description, 
  * @link https://secure.php.net/manual/en/function.pdf-begin-document.php
  * @link https://www.pdflib.com/fileadmin/pdflib/pdf/manuals/PDFlib-9.1.2-API-reference.pdf
  */
-function PDF_begin_document($pdf, $filename, $optlist){}
+function PDF_begin_document($pdf, string $filename, string $optlist){}
 
 /**
  * Starts a Type 3 font definition.
@@ -1922,7 +1922,7 @@ function PDF_begin_document($pdf, $filename, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-font.php
  */
-function PDF_begin_font($pdf, $filename, $a, $b, $c, $d, $e, $f, $optlist){}
+function PDF_begin_font($pdf, string $filename, float $a, float $b, float $c, float $d, float $e, float $f, string $optlist){}
 
 /**
  * Starts a glyph definition for a Type 3 font.
@@ -1939,7 +1939,7 @@ function PDF_begin_font($pdf, $filename, $a, $b, $c, $d, $e, $f, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-glyph.php
  */
-function PDF_begin_glyph($pdf, $glyphname, $wx, $llx, $lly, $urx, $ury){}
+function PDF_begin_glyph($pdf, string $glyphname, float $wx, float $llx, float $lly, float $urx, float $ury){}
 
 /**
  * Opens a structure element or other content item with attributes supplied as options.
@@ -1952,7 +1952,7 @@ function PDF_begin_glyph($pdf, $glyphname, $wx, $llx, $lly, $urx, $ury){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-item.php
  */
-function PDF_begin_item($pdf, $tag, $optlist){}
+function PDF_begin_item($pdf, string $tag, string $optlist){}
 
 /**
  * Starts a layer for subsequent output on the page.
@@ -1964,7 +1964,7 @@ function PDF_begin_item($pdf, $tag, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-layer.php
  */
-function PDF_begin_layer($pdf, $layer){}
+function PDF_begin_layer($pdf, int $layer){}
 
 /**
  * Adds a new page to the document, and specifies various options. The parameters width and height are the dimensions of the new page in points.
@@ -1978,7 +1978,7 @@ function PDF_begin_layer($pdf, $layer){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-page-ext.php
  */
-function PDF_begin_page_ext($pdf, $width, $height, $optlist){}
+function PDF_begin_page_ext($pdf, float $width, float $height, string $optlist){}
 
 
 /**
@@ -1994,7 +1994,7 @@ function PDF_begin_page_ext($pdf, $width, $height, $optlist){}
  *
  * @deprecated This function is deprecated since PDFlib version 6, use PDF_begin_page_ext() instead.
  */
-function PDF_begin_page($pdf, $width, $height){}
+function PDF_begin_page($pdf, float $width, float $height){}
 
 /**
  * Starts a new pattern definition.
@@ -2010,7 +2010,7 @@ function PDF_begin_page($pdf, $width, $height){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-pattern.php
  */
-function PDF_begin_pattern($pdf, $width, $height, $xstep, $ystep, $painttype){}
+function PDF_begin_pattern($pdf, float $width, float $height, float $xstep, float $ystep, int $painttype){}
 
 /**
  * Starts a new template definition.
@@ -2024,7 +2024,7 @@ function PDF_begin_pattern($pdf, $width, $height, $xstep, $ystep, $painttype){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-begin-template-ext.php
  */
-function PDF_begin_template_ext($pdf, $width, $height, $optlist){}
+function PDF_begin_template_ext($pdf, float $width, float $height, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2037,7 +2037,7 @@ function PDF_begin_template_ext($pdf, $width, $height, $optlist){}
  *
  * @deprecated This function is deprecated since PDFlib version 7, use PDF_begin_template_ext() instead.
  */
-function PDF_begin_template($pdf, $width, $height){}
+function PDF_begin_template($pdf, float $width, float $height){}
 
 /**
  * @param resource $pdf
@@ -2049,7 +2049,7 @@ function PDF_begin_template($pdf, $width, $height){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-circle.php
  */
-function PDF_circle($pdf, $x, $y, $r){}
+function PDF_circle($pdf, float $x, float $y, float $r){}
 
 /**
  * @param resource $pdf
@@ -2068,7 +2068,7 @@ function PDF_clip($pdf){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-close-image.php
  */
-function PDF_close_image($pdf, $image){}
+function PDF_close_image($pdf, int $image){}
 
 /**
  * Closes the page handle, and frees all page-related resources
@@ -2080,7 +2080,7 @@ function PDF_close_image($pdf, $image){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-close-pdi-page.php
  */
-function PDF_close_pdi_page($pdf, $page){}
+function PDF_close_pdi_page($pdf, int $page){}
 
 /**
  * @param resource $pdf
@@ -2092,7 +2092,7 @@ function PDF_close_pdi_page($pdf, $page){}
  *
  * @deprecated This function is deprecated since PDFlib version 7, use PDF_close_pdi_document() instead.
  */
-function PDF_close_pdi($pdf, $doc){}
+function PDF_close_pdi($pdf, int $doc){}
 
 /**
  * @param resource $pdf
@@ -2145,7 +2145,7 @@ function PDF_closepath($pdf){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-concat.php
  */
-function PDF_concat($pdf, $a, $b, $c, $d, $e, $f){}
+function PDF_concat($pdf, float $a, float $b, float $c, float $d, float $e, float $f){}
 
 /**
  * @param resource $pdf
@@ -2155,7 +2155,7 @@ function PDF_concat($pdf, $a, $b, $c, $d, $e, $f){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-continue-text.php
  */
-function PDF_continue_text($pdf, $text){}
+function PDF_continue_text($pdf, string $text){}
 
 /**
  * @param resource $pdf
@@ -2166,7 +2166,7 @@ function PDF_continue_text($pdf, $text){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-3dview.php
  */
-function PDF_create_3dview($pdf, $username, $optlist){}
+function PDF_create_3dview($pdf, string $username, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2177,7 +2177,7 @@ function PDF_create_3dview($pdf, $username, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-create-action.php
  */
-function PDF_create_action($pdf, $type, $optlist){}
+function PDF_create_action($pdf, string $type, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2192,7 +2192,7 @@ function PDF_create_action($pdf, $type, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-create-annotation.php
  */
-function PDF_create_annotation($pdf, $llx, $lly, $urx, $ury, $type, $optlist){}
+function PDF_create_annotation($pdf, float $llx, float $lly, float $urx, float $ury, string $type, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2203,7 +2203,7 @@ function PDF_create_annotation($pdf, $llx, $lly, $urx, $ury, $type, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-create-bookmark.php
  */
-function PDF_create_bookmark($pdf, $text, $optlist){}
+function PDF_create_bookmark($pdf, string $text, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2219,7 +2219,7 @@ function PDF_create_bookmark($pdf, $text, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-field.php
  */
-function PDF_create_field($pdf, $llx, $lly, $urx, $ury, $name, $type, $optlist){}
+function PDF_create_field($pdf, float $llx, float $lly, float $urx, float $ury, string $name, string $type, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2230,7 +2230,7 @@ function PDF_create_field($pdf, $llx, $lly, $urx, $ury, $name, $type, $optlist){
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-fieldgroup.php
  */
-function PDF_create_fieldgroup($pdf, $name, $optlist){}
+function PDF_create_fieldgroup($pdf, string $name, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2240,7 +2240,7 @@ function PDF_create_fieldgroup($pdf, $name, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-gstate.php
  */
-function PDF_create_gstate($pdf, $optlist){}
+function PDF_create_gstate($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2252,7 +2252,7 @@ function PDF_create_gstate($pdf, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-pvf.php
  */
-function PDF_create_pvf($pdf, $filename, $data, $optlist){}
+function PDF_create_pvf($pdf, string $filename, string $data, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2263,7 +2263,7 @@ function PDF_create_pvf($pdf, $filename, $data, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-create-textflow.php
  */
-function PDF_create_textflow($pdf, $text, $optlist){}
+function PDF_create_textflow($pdf, string $text, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2278,7 +2278,7 @@ function PDF_create_textflow($pdf, $text, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-curveto.php
  */
-function PDF_curveto($pdf, $x1, $y1, $x2, $y2, $x3, $y3){}
+function PDF_curveto($pdf, float $x1, float $y1, float $x2, float $y2, float $x3, float $y3){}
 
 /**
  * @param resource $pdf
@@ -2289,7 +2289,7 @@ function PDF_curveto($pdf, $x1, $y1, $x2, $y2, $x3, $y3){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-define-layer.php
  */
-function PDF_define_layer($pdf, $name, $optlist){}
+function PDF_define_layer($pdf, string $name, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2299,7 +2299,7 @@ function PDF_define_layer($pdf, $name, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-delete-pvf.php
  */
-function PDF_delete_pvf($pdf, $filename){}
+function PDF_delete_pvf($pdf, string $filename){}
 
 /**
  * @param resource $pdf
@@ -2310,7 +2310,7 @@ function PDF_delete_pvf($pdf, $filename){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-delete-table.php
  */
-function PDF_delete_table($pdf, $table, $optlist){}
+function PDF_delete_table($pdf, int $table, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2320,7 +2320,7 @@ function PDF_delete_table($pdf, $table, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-delete-textflow.php
  */
-function PDF_delete_textflow($pdf, $textflow){}
+function PDF_delete_textflow($pdf, int $textflow){}
 
 /**
  * @param resource $pdf
@@ -2342,7 +2342,7 @@ function PDF_delete($pdf){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-encoding-set-char.php
  */
-function PDF_encoding_set_char($pdf, $encoding, $slot, $glyphname, $uv){}
+function PDF_encoding_set_char($pdf, string $encoding, int $slot, string $glyphname, int $uv){}
 
 /**
  * @param resource $pdf
@@ -2352,7 +2352,7 @@ function PDF_encoding_set_char($pdf, $encoding, $slot, $glyphname, $uv){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-end-document.php
  */
-function PDF_end_document($pdf, $optlist){}
+function PDF_end_document($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2380,7 +2380,7 @@ function PDF_end_glyph($pdf){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-end-item.php
  */
-function PDF_end_item($pdf, $id){}
+function PDF_end_item($pdf, int $id){}
 
 /**
  * @param resource $pdf
@@ -2399,7 +2399,7 @@ function PDF_end_layer($pdf){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-end-page-ext.php
  */
-function PDF_end_page_ext($pdf, $optlist){}
+function PDF_end_page_ext($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2448,7 +2448,7 @@ function PDF_endpath($p){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-fill-imageblock.php
  */
-function PDF_fill_imageblock($pdf, $page, $blockname, $image, $optlist){}
+function PDF_fill_imageblock($pdf, int $page, string $blockname, int $image, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2461,7 +2461,7 @@ function PDF_fill_imageblock($pdf, $page, $blockname, $image, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-fill-pdfblock.php
  */
-function PDF_fill_pdfblock($pdf, $page, $blockname, $contents, $optlist){}
+function PDF_fill_pdfblock($pdf, int $page, string $blockname, int $contents, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2484,7 +2484,7 @@ function PDF_fill_stroke($pdf){}
  * @link https://secure.php.net/manual/en/function.pdf-fill-textblock.php
 
  */
-function PDF_fill_textblock($pdf, $page, $blockname, $text, $optlist){}
+function PDF_fill_textblock($pdf, int $page, string $blockname, string $text, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2506,7 +2506,7 @@ function PDF_fill($pdf){}
  * @link https://secure.php.net/manual/en/function.pdf-findfont.php(Dep)
 
  */
-function PDF_findfont($pdf, $fontname , $encoding , $embed){}
+function PDF_findfont($pdf, string $fontname , string $encoding , int $embed){}
 /**
  * @param resource $pdf
  * @param int $image
@@ -2519,7 +2519,7 @@ function PDF_findfont($pdf, $fontname , $encoding , $embed){}
  * @link https://secure.php.net/manual/en/function.pdf-fit-image.php
 
  */
-function PDF_fit_image($pdf, $image , $x , $y , $optlist){}
+function PDF_fit_image($pdf, int $image , float $x , float $y , string $optlist){}
 /**
  * @param resource $pdf
  * @param int $page
@@ -2532,7 +2532,7 @@ function PDF_fit_image($pdf, $image , $x , $y , $optlist){}
  * @link https://secure.php.net/manual/en/function.pdf-fit-pdi-page.php
 
  */
-function PDF_fit_pdi_page($pdf, $page , $x , $y , $optlist){}
+function PDF_fit_pdi_page($pdf, int $page , float $x , float $y , string $optlist){}
 /**
  * @param resource $pdf
  * @param int $table
@@ -2547,7 +2547,7 @@ function PDF_fit_pdi_page($pdf, $page , $x , $y , $optlist){}
  * @link https://secure.php.net/manual/en/function.pdf-fit-table.php
 
  */
-function PDF_fit_table($pdf, $table , $llx , $lly , $urx , $ury , $optlist){}
+function PDF_fit_table($pdf, int $table , float $llx , float $lly , float $urx , float $ury , string $optlist){}
 /**
  * @param resource $pdf
  * @param int $textflow
@@ -2562,7 +2562,7 @@ function PDF_fit_table($pdf, $table , $llx , $lly , $urx , $ury , $optlist){}
  * @link https://secure.php.net/manual/en/function.pdf-fit-textflow.php
 
  */
-function PDF_fit_textflow($pdf, $textflow , $llx , $lly , $urx , $ury , $optlist){}
+function PDF_fit_textflow($pdf, int $textflow , float $llx , float $lly , float $urx , float $ury , string $optlist){}
 /**
  * @param resource $pdf
  * @param string $text
@@ -2575,7 +2575,7 @@ function PDF_fit_textflow($pdf, $textflow , $llx , $lly , $urx , $ury , $optlist
  * @link https://secure.php.net/manual/en/function.pdf-fit-textline.php
 
  */
-function PDF_fit_textline($pdf, $text , $x , $y , $optlist){}
+function PDF_fit_textline($pdf, string $text , float $x , float $y , string $optlist){}
 /**
  * @param resource $pdf
  * 
@@ -2640,7 +2640,7 @@ function PDF_get_minorversion(){}
  * @link https://secure.php.net/manual/en/function.pdf-get-parameter.php
 
  */
-function PDF_get_parameter($pdf, $key , $modifier){}
+function PDF_get_parameter($pdf, string $key , float $modifier){}
 /**
  * @param resource $pdf
  * @param string $key
@@ -2653,7 +2653,7 @@ function PDF_get_parameter($pdf, $key , $modifier){}
  * @link https://secure.php.net/manual/en/function.pdf-get-pdi-parameter.php
 
  */
-function PDF_get_pdi_parameter($pdf, $key , $doc , $page , $reserved){}
+function PDF_get_pdi_parameter($pdf, string $key , int $doc , int $page , int $reserved){}
 /**
  * @param resource $pdf
  * @param string $key
@@ -2666,7 +2666,7 @@ function PDF_get_pdi_parameter($pdf, $key , $doc , $page , $reserved){}
  * @link https://secure.php.net/manual/en/function.pdf-get-pdi-value.php
 
  */
-function PDF_get_pdi_value($pdf, $key , $doc , $page , $reserved){}
+function PDF_get_pdi_value($pdf, string $key , int $doc , int $page , int $reserved){}
 /**
  * @param resource $pdf
  * @param string $key
@@ -2677,7 +2677,7 @@ function PDF_get_pdi_value($pdf, $key , $doc , $page , $reserved){}
  * @link https://secure.php.net/manual/en/function.pdf-get-value.php
 
  */
-function PDF_get_value($pdf, $key , $modifier){}
+function PDF_get_value($pdf, string $key , float $modifier){}
 /**
  * @param resource $pdf
  * @param int $font
@@ -2689,7 +2689,7 @@ function PDF_get_value($pdf, $key , $modifier){}
  * @link https://secure.php.net/manual/en/function.pdf-info-font.php
 
  */
-function PDF_info_font($pdf, $font , $keyword , $optlist){}
+function PDF_info_font($pdf, int $font , string $keyword , string $optlist){}
 /**
  * @param resource $pdf
  * @param string $boxname
@@ -2701,7 +2701,7 @@ function PDF_info_font($pdf, $font , $keyword , $optlist){}
  * @link https://secure.php.net/manual/en/function.pdf-info-matchbox.php
 
  */
-function PDF_info_matchbox($pdf, $boxname , $num , $keyword){}
+function PDF_info_matchbox($pdf, string $boxname , int $num , string $keyword){}
 /**
  * @param resource $pdf
  * @param int $table
@@ -2712,7 +2712,7 @@ function PDF_info_matchbox($pdf, $boxname , $num , $keyword){}
  * @link https://secure.php.net/manual/en/function.pdf-info-table.php
 
  */
-function PDF_info_table($pdf, $table , $keyword){}
+function PDF_info_table($pdf, int $table , string $keyword){}
 /**
  * @param resource $pdf
  * @param int $textflow
@@ -2723,7 +2723,7 @@ function PDF_info_table($pdf, $table , $keyword){}
  * @link https://secure.php.net/manual/en/function.pdf-info-textflow.php
 
  */
-function PDF_info_textflow($pdf, $textflow , $keyword){}
+function PDF_info_textflow($pdf, int $textflow , string $keyword){}
 
 /**
  * @param resource $pdf
@@ -2735,7 +2735,7 @@ function PDF_info_textflow($pdf, $textflow , $keyword){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-info-textline.php
  */
-function PDF_info_textline($pdf, $text , $keyword , $optlist){}
+function PDF_info_textline($pdf, string $text , string $keyword , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2755,7 +2755,7 @@ function PDF_initgraphics($pdf){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-lineto.php
  */
-function PDF_lineto($pdf, $x , $y){}
+function PDF_lineto($pdf, float $x , float $y){}
 
 /**
  * @param resource $pdf
@@ -2766,7 +2766,7 @@ function PDF_lineto($pdf, $x , $y){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-load-3ddata.php
  */
-function PDF_load_3ddata($pdf, $filename , $optlist){}
+function PDF_load_3ddata($pdf, string $filename , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2778,7 +2778,7 @@ function PDF_load_3ddata($pdf, $filename , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-load-font.php
  */
-function PDF_load_font($pdf, $fontname , $encoding , $optlist){}
+function PDF_load_font($pdf, string $fontname , string $encoding , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2789,7 +2789,7 @@ function PDF_load_font($pdf, $fontname , $encoding , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-load-iccprofile.php
  */
-function PDF_load_iccprofile($pdf, $profilename , $optlist){}
+function PDF_load_iccprofile($pdf, string $profilename , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2801,7 +2801,7 @@ function PDF_load_iccprofile($pdf, $profilename , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-load-image.php
  */
-function PDF_load_image($pdf, $imagetype , $filename , $optlist){}
+function PDF_load_image($pdf, string $imagetype , string $filename , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2811,7 +2811,7 @@ function PDF_load_image($pdf, $imagetype , $filename , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-makespotcolor.php
  */
-function PDF_makespotcolor($pdf, $spotname){}
+function PDF_makespotcolor($pdf, string $spotname){}
 
 /**
  * @param resource $pdf
@@ -2822,7 +2822,7 @@ function PDF_makespotcolor($pdf, $spotname){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-moveto.php
  */
-function PDF_moveto($pdf, $x , $y){}
+function PDF_moveto($pdf, float $x , float $y){}
 
 /**
  * @return resource
@@ -2844,7 +2844,7 @@ function PDF_new(){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-ccitt.php(dep)
  */
-function PDF_open_ccitt($pdf, $filename , $width , $height , $BitReverse , $k , $Blackls1){}
+function PDF_open_ccitt($pdf, string $filename , int $width , int $height , int $BitReverse , int $k , int $Blackls1){}
 
 /**
  * @param resource $pdf
@@ -2854,7 +2854,7 @@ function PDF_open_ccitt($pdf, $filename , $width , $height , $BitReverse , $k , 
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-file.php(dep)
  */
-function PDF_open_file($pdf, $filename){}
+function PDF_open_file($pdf, string $filename){}
 
 /**
  * @param resource $pdf
@@ -2867,7 +2867,7 @@ function PDF_open_file($pdf, $filename){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-image-file.php(dep)
  */
-function PDF_open_image_file($pdf, $imagetype , $filename , $stringparam , $intparam){}
+function PDF_open_image_file($pdf, string $imagetype , string $filename , string $stringparam , int $intparam){}
 
 /**
  * @param resource $pdf
@@ -2885,7 +2885,7 @@ function PDF_open_image_file($pdf, $imagetype , $filename , $stringparam , $intp
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-image.php(dep)
  */
-function PDF_open_image($pdf, $imagetype , $source , $data , $length , $width , $height , $components , $bpc , $params){}
+function PDF_open_image($pdf, string $imagetype , string $source , string $data , int $length , int $width , int $height , int $components , int $bpc , string $params){}
 
 /**
  * @param resource $pdf
@@ -2906,7 +2906,7 @@ function PDF_open_memory_image($pdf, $image){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-pdi-document.php
  */
-function PDF_open_pdi_document($pdf, $filename , $optlist){}
+function PDF_open_pdi_document($pdf, string $filename , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2918,7 +2918,7 @@ function PDF_open_pdi_document($pdf, $filename , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-pdi-page.php
  */
-function PDF_open_pdi_page($pdf, $doc , $pagenumber , $optlist){}
+function PDF_open_pdi_page($pdf, int $doc , int $pagenumber , string $optlist){}
 
 /**
  * @param resource $pdf
@@ -2930,7 +2930,7 @@ function PDF_open_pdi_page($pdf, $doc , $pagenumber , $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-open-pdi.php
  */
-function PDF_open_pdi($pdf, $filename , $optlist , $len){}
+function PDF_open_pdi($pdf, string $filename , string $optlist , int $len){}
 
 /**
  * @param resource $pdf
@@ -2941,7 +2941,7 @@ function PDF_open_pdi($pdf, $filename , $optlist , $len){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-pcos-get-number.php
  */
-function PDF_pcos_get_number($pdf, $doc , $path){}
+function PDF_pcos_get_number($pdf, int $doc , string $path){}
 
 /**
  * @param resource $pdf
@@ -2953,7 +2953,7 @@ function PDF_pcos_get_number($pdf, $doc , $path){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-pcos-get-stream.php
  */
-function PDF_pcos_get_stream($pdf, $doc, $optlist, $path){}
+function PDF_pcos_get_stream($pdf, int $doc, string $optlist, string $path){}
 
 /**
  * @param resource $pdf
@@ -2964,7 +2964,7 @@ function PDF_pcos_get_stream($pdf, $doc, $optlist, $path){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-pcos-get-string.php
  */
-function PDF_pcos_get_string($pdf, $doc, $path){}
+function PDF_pcos_get_string($pdf, int $doc, string $path){}
 
 /**
  * @param resource $pdf
@@ -2977,7 +2977,7 @@ function PDF_pcos_get_string($pdf, $doc, $path){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-place-image.php (dep)
  */
-function PDF_place_image($pdf, $image, $x, $y, $scale){}
+function PDF_place_image($pdf, int $image, float $x, float $y, float $scale){}
 
 /**
  * @param resource $pdf
@@ -2991,7 +2991,7 @@ function PDF_place_image($pdf, $image, $x, $y, $scale){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-place-pdi-page.php (dep)
  */
-function PDF_place_pdi_page($pdf, $page, $x, $y, $sx, $sy){}
+function PDF_place_pdi_page($pdf, int $page, float $x, float $y, float $sx, float $sy){}
 
 /**
  * @param resource $pdf
@@ -3003,7 +3003,7 @@ function PDF_place_pdi_page($pdf, $page, $x, $y, $sx, $sy){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-process-pdi.php
  */
-function PDF_process_pdi($pdf, $doc, $page, $optlist){}
+function PDF_process_pdi($pdf, int $doc, int $page, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3016,7 +3016,7 @@ function PDF_process_pdi($pdf, $doc, $page, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-rect.php
  */
-function PDF_rect($pdf, $x, $y, $width, $height){}
+function PDF_rect($pdf, float $x, float $y, float $width, float $height){}
 
 /**
  * @param resource $pdf
@@ -3035,7 +3035,7 @@ function PDF_restore($p){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-resume-page.php
  */
-function PDF_resume_page($pdf, $optlist){}
+function PDF_resume_page($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3045,7 +3045,7 @@ function PDF_resume_page($pdf, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-rotate.php
  */
-function PDF_rotate($pdf, $phi){}
+function PDF_rotate($pdf, float $phi){}
 
 /**
  * @param resource $pdf
@@ -3065,7 +3065,7 @@ function PDF_save($p){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-scale.php
  */
-function PDF_scale($pdf, $sx, $sy){}
+function PDF_scale($pdf, float $sx, float $sy){}
 
 /**
  * @param resource $pdf
@@ -3077,7 +3077,7 @@ function PDF_scale($pdf, $sx, $sy){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-border-color.php (dep)
  */
-function PDF_set_border_color($pdf, $red, $green, $blue){}
+function PDF_set_border_color($pdf, float $red, float $green, float $blue){}
 
 /**
  * @param resource $pdf
@@ -3088,7 +3088,7 @@ function PDF_set_border_color($pdf, $red, $green, $blue){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-border-dash.php (dep)
  */
-function PDF_set_border_dash($pdf, $black, $white){}
+function PDF_set_border_dash($pdf, float $black, float $white){}
 
 /**
  * @param resource $pdf
@@ -3099,7 +3099,7 @@ function PDF_set_border_dash($pdf, $black, $white){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-border-style.php (dep)
  */
-function PDF_set_border_style($pdf, $style, $width){}
+function PDF_set_border_style($pdf, string $style, float $width){}
 
 /**
  * @param resource $pdf
@@ -3109,7 +3109,7 @@ function PDF_set_border_style($pdf, $style, $width){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-gstate.php
  */
-function PDF_set_gstate($pdf, $gstate){}
+function PDF_set_gstate($pdf, int $gstate){}
 
 /**
  * @param resource $pdf
@@ -3120,7 +3120,7 @@ function PDF_set_gstate($pdf, $gstate){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-info.php
  */
-function PDF_set_info($pdf, $key, $value){}
+function PDF_set_info($pdf, string $key, string $value){}
 
 /**
  * @param resource $pdf
@@ -3131,7 +3131,7 @@ function PDF_set_info($pdf, $key, $value){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-layer-dependency.php
  */
-function PDF_set_layer_dependency($pdf, $type, $optlist){}
+function PDF_set_layer_dependency($pdf, string $type, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3142,7 +3142,7 @@ function PDF_set_layer_dependency($pdf, $type, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-parameter.php
  */
-function PDF_set_parameter($pdf, $key, $value){}
+function PDF_set_parameter($pdf, string $key, string $value){}
 
 /**
  * @param resource $pdf
@@ -3153,7 +3153,7 @@ function PDF_set_parameter($pdf, $key, $value){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-text-pos.php
  */
-function PDF_set_text_pos($pdf, $x, $y){}
+function PDF_set_text_pos($pdf, float $x, float $y){}
 
 /**
  * @param resource $pdf
@@ -3164,7 +3164,7 @@ function PDF_set_text_pos($pdf, $x, $y){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-set-value.php
  */
-function PDF_set_value($pdf, $key, $value){}
+function PDF_set_value($pdf, string $key, float $value){}
 
 /**
  * @param resource $pdf
@@ -3179,7 +3179,7 @@ function PDF_set_value($pdf, $key, $value){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setcolor.php
  */
-function PDF_setcolor($pdf, $fstype, $colorspace, $c1, $c2, $c3, $c4){}
+function PDF_setcolor($pdf, string $fstype, string $colorspace, float $c1, float $c2, float $c3, float $c4){}
 
 /**
  * @param resource $pdf
@@ -3190,7 +3190,7 @@ function PDF_setcolor($pdf, $fstype, $colorspace, $c1, $c2, $c3, $c4){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setdash.php
  */
-function PDF_setdash($pdf, $b, $w){}
+function PDF_setdash($pdf, float $b, float $w){}
 
 /**
  * @param resource $pdf
@@ -3200,7 +3200,7 @@ function PDF_setdash($pdf, $b, $w){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setdashpattern.php
  */
-function PDF_setdashpattern($pdf, $optlist){}
+function PDF_setdashpattern($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3210,7 +3210,7 @@ function PDF_setdashpattern($pdf, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setflat.php
  */
-function PDF_setflat($pdf, $flatness){}
+function PDF_setflat($pdf, float $flatness){}
 
 /**
  * @param resource $pdf
@@ -3221,7 +3221,7 @@ function PDF_setflat($pdf, $flatness){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setfont.php
  */
-function PDF_setfont($pdf, $font, $fontsize){}
+function PDF_setfont($pdf, int $font, float $fontsize){}
 
 /**
  * @param resource $pdf
@@ -3231,7 +3231,7 @@ function PDF_setfont($pdf, $font, $fontsize){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setgray-fill.php (dep)
  */
-function PDF_setgray_fill($pdf, $g){}
+function PDF_setgray_fill($pdf, float $g){}
 
 /**
  * @param resource $pdf
@@ -3241,7 +3241,7 @@ function PDF_setgray_fill($pdf, $g){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setgray-stroke.php (dep)
  */
-function PDF_setgray_stroke($pdf, $g){}
+function PDF_setgray_stroke($pdf, float $g){}
 
 /**
  * @param resource $pdf
@@ -3251,7 +3251,7 @@ function PDF_setgray_stroke($pdf, $g){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setgray.php (dep)
  */
-function PDF_setgray($pdf, $g){}
+function PDF_setgray($pdf, float $g){}
 
 /**
  * @param resource $pdf
@@ -3261,7 +3261,7 @@ function PDF_setgray($pdf, $g){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setlinecap.php
  */
-function PDF_setlinecap($pdf, $linecap){}
+function PDF_setlinecap($pdf, int $linecap){}
 
 /**
  * @param resource $pdf
@@ -3271,7 +3271,7 @@ function PDF_setlinecap($pdf, $linecap){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setlinejoin.php
  */
-function PDF_setlinejoin($pdf, $value){}
+function PDF_setlinejoin($pdf, int $value){}
 
 /**
  * @param resource $pdf
@@ -3281,7 +3281,7 @@ function PDF_setlinejoin($pdf, $value){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setlinewidth.php
  */
-function PDF_setlinewidth($pdf, $width){}
+function PDF_setlinewidth($pdf, float $width){}
 
 /**
  * @param resource $pdf
@@ -3296,7 +3296,7 @@ function PDF_setlinewidth($pdf, $width){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setmatrix.php
  */
-function PDF_setmatrix($pdf, $a, $b, $c, $d, $e, $f){}
+function PDF_setmatrix($pdf, float $a, float $b, float $c, float $d, float $e, float $f){}
 
 /**
  * @param resource $pdf
@@ -3306,7 +3306,7 @@ function PDF_setmatrix($pdf, $a, $b, $c, $d, $e, $f){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setmiterlimit.php
  */
-function PDF_setmiterlimit($pdf, $miter){}
+function PDF_setmiterlimit($pdf, float $miter){}
 
 /**
  * @param resource $pdf
@@ -3318,7 +3318,7 @@ function PDF_setmiterlimit($pdf, $miter){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor-fill.php (dep)
  */
-function PDF_setrgbcolor_fill($pdf, $red, $green, $blue){}
+function PDF_setrgbcolor_fill($pdf, float $red, float $green, float $blue){}
 
 /**
  * @param resource $pdf
@@ -3330,7 +3330,7 @@ function PDF_setrgbcolor_fill($pdf, $red, $green, $blue){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor-stroke.php (dep)
  */
-function PDF_setrgbcolor_stroke($pdf, $red, $green, $blue){}
+function PDF_setrgbcolor_stroke($pdf, float $red, float $green, float $blue){}
 
 /**
  * @param resource $pdf
@@ -3342,7 +3342,7 @@ function PDF_setrgbcolor_stroke($pdf, $red, $green, $blue){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-setrgbcolor.php (dep)
  */
-function PDF_setrgbcolor($pdf, $red, $green, $blue){}
+function PDF_setrgbcolor($pdf, float $red, float $green, float $blue){}
 
 /**
  * @param resource $pdf
@@ -3353,7 +3353,7 @@ function PDF_setrgbcolor($pdf, $red, $green, $blue){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-shading-pattern.php
  */
-function PDF_shading_pattern($pdf, $shading, $optlist){}
+function PDF_shading_pattern($pdf, int $shading, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3372,7 +3372,7 @@ function PDF_shading_pattern($pdf, $shading, $optlist){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-shading.php
  */
-function PDF_shading($pdf, $shtype, $x0, $y0, $x1, $y1, $c1, $c2, $c3, $c4, $optlist){}
+function PDF_shading($pdf, string $shtype, float $x0, float $y0, float $x1, float $y1, float $c1, float $c2, float $c3, float $c4, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3382,7 +3382,7 @@ function PDF_shading($pdf, $shtype, $x0, $y0, $x1, $y1, $c1, $c2, $c3, $c4, $opt
  *
  * @link https://secure.php.net/manual/en/function.pdf-shfill.php
  */
-function PDF_shfill($pdf, $shading){}
+function PDF_shfill($pdf, int $shading){}
 
 /**
  * @param resource $pdf
@@ -3398,7 +3398,7 @@ function PDF_shfill($pdf, $shading){}
  *
  * @link https://secure.php.net/manual/en/function.pdf-show-boxed.php (dep)
  */
-function PDF_show_boxed($pdf, $text, $left, $top, $width, $height, $mode, $feature){}
+function PDF_show_boxed($pdf, string $text, float $left, float $top, float $width, float $height, string $mode, string $feature){}
 
 /**
  * @param resource $pdf
@@ -3410,7 +3410,7 @@ function PDF_show_boxed($pdf, $text, $left, $top, $width, $height, $mode, $featu
  *
  * @link https://secure.php.net/manual/en/function.pdf-show-xy.php
  */
-function PDF_show_xy($pdf, $text, $x, $y){}
+function PDF_show_xy($pdf, string $text, float $x, float $y){}
 
 /**
  * @param resource $pdf
@@ -3420,7 +3420,7 @@ function PDF_show_xy($pdf, $text, $x, $y){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-show.php
  */
-function PDF_show($pdf, $text){}
+function PDF_show($pdf, string $text){}
 
 /**
  * @param resource $pdf
@@ -3431,7 +3431,7 @@ function PDF_show($pdf, $text){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-skew.php
  */
-function PDF_skew($pdf, $alpha, $beta){}
+function PDF_skew($pdf, float $alpha, float $beta){}
 
 /**
  * @param resource $pdf
@@ -3443,7 +3443,7 @@ function PDF_skew($pdf, $alpha, $beta){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-stringwidth.php
  */
-function PDF_stringwidth($pdf, $text, $font, $fontsize){}
+function PDF_stringwidth($pdf, string $text, int $font, float $fontsize){}
 
 /**
  * @param resource $pdf
@@ -3462,7 +3462,7 @@ function PDF_stroke($p){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-suspend-page.php
  */
-function PDF_suspend_page($pdf, $optlist){}
+function PDF_suspend_page($pdf, string $optlist){}
 
 /**
  * @param resource $pdf
@@ -3473,7 +3473,7 @@ function PDF_suspend_page($pdf, $optlist){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-translate.php
  */
-function PDF_translate($pdf, $tx, $ty){}
+function PDF_translate($pdf, float $tx, float $ty){}
 
 /**
  * @param resource $pdf
@@ -3483,7 +3483,7 @@ function PDF_translate($pdf, $tx, $ty){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-utf16-to-utf8.php
  */
-function PDF_utf16_to_utf8($pdf, $utf16string){}
+function PDF_utf16_to_utf8($pdf, string $utf16string){}
 
 /**
  * @param resource $pdf
@@ -3494,7 +3494,7 @@ function PDF_utf16_to_utf8($pdf, $utf16string){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-utf32-to-utf16.php
  */
-function PDF_utf32_to_utf16($pdf, $utf32string, $ordering){}
+function PDF_utf32_to_utf16($pdf, string $utf32string, string $ordering){}
 
 /**
  * @param resource $pdf
@@ -3505,4 +3505,4 @@ function PDF_utf32_to_utf16($pdf, $utf32string, $ordering){}
  * 
  * @link https://secure.php.net/manual/en/function.pdf-utf8-to-utf16.php
  */
-function PDF_utf8_to_utf16($pdf, $utf8string, $ordering){}
+function PDF_utf8_to_utf16($pdf, string $utf8string, string $ordering){}
