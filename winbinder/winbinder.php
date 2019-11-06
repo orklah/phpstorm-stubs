@@ -503,7 +503,7 @@ function wb_save_image($image, $filename)
  *
  * @return int
  */
-function wb_create_image($width = 0, $height = 0, $dibbmi = null, $dibbits = null)
+function wb_create_image(int $width = 0, int $height = 0, $dibbmi = null, $dibbits = null)
 {
     return '' | 0 | null;
 }
@@ -724,7 +724,7 @@ function wb_draw_text($target, $text, $xpos, $ypos, $width = null, $height = nul
  *
  * @return bool
  */
-function wb_draw_image($target, $bitmap, $xpos = 0, $ypos = 0, $width = null, $height = null, $transparentcolor = null, $xoffset = null, $yoffset = null)
+function wb_draw_image($target, $bitmap, int $xpos = 0, int $ypos = 0, $width = null, $height = null, $transparentcolor = null, $xoffset = null, $yoffset = null)
 {
     return '' | 0 | null;
 }
@@ -755,7 +755,7 @@ function wb_destroy_control($control)
  *
  * @return mixed
  */
-function wb_get_value($wbobject, $item = -1, $subitem = -1)
+function wb_get_value($wbobject, int $item = -1, int $subitem = -1)
 {
     return '' | 0 | null;
 }
@@ -1301,7 +1301,7 @@ function wb_send_message($wbobject, $message, $wparam = 0, $lparam = 0)
  *
  * @return string
  */
-function wb_peek($address, $length = 0)
+function wb_peek($address, int $length = 0)
 {
     return '' | 0 | null;
 }
@@ -1415,7 +1415,7 @@ function wb_get_function_address($fname, $idlib)
  *
  * @return int
  */
-function wb_call_function($address, $args = [])
+function wb_call_function($address, array $args = [])
 {
     return '' | 0 | null;
 }
@@ -1953,7 +1953,7 @@ function wbtemp_set_menu_item_checked($ctrl, $selitems, $selected)
  *
  * @return int
  */
-function wbtemp_set_menu_item_selected($ctrl, $item, $selected)
+function wbtemp_set_menu_item_selected($ctrl, int $item, bool $selected)
 {
     return '' | 0 | null;
 }
@@ -2070,7 +2070,7 @@ function wbtemp_sys_dlg_open($parent, $title = null, $filter = null, $path = nul
  *
  * @return int
  */
-function wbtemp_sys_dlg_save($wbObj, $title = '', $filter = '', $path = '', $filename = '', $defext = '')
+function wbtemp_sys_dlg_save($wbObj, string $title = '', string $filter = '', string $path = '', string $filename = '', string $defext = '')
 {
     return '' | 0 | null;
 }
