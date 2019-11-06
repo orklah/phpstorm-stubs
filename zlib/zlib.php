@@ -20,7 +20,7 @@
  * @since 4.0
  * @since 5.0
  */
-function readgzfile ($filename, $use_include_path = 0) {}
+function readgzfile (string $filename, int $use_include_path = 0) {}
 
 /**
  * Rewind the position of a gz-file pointer
@@ -89,7 +89,7 @@ function gzgetc ($zp) {}
  * @since 4.0
  * @since 5.0
  */
-function gzgets ($zp, $length) {}
+function gzgets ($zp, int $length) {}
 
 /**
  * Get line from gz-file pointer and strip HTML tags
@@ -110,7 +110,7 @@ function gzgets ($zp, $length) {}
  * @since 5.0
  * @deprecated 7.3
  */
-function gzgetss ($zp, $length, $allowable_tags = null) {}
+function gzgetss ($zp, int $length, string $allowable_tags = null) {}
 
 /**
  * Binary-safe gz-file read
@@ -126,7 +126,7 @@ function gzgetss ($zp, $length, $allowable_tags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function gzread ($zp, $length) {}
+function gzread ($zp, int $length) {}
 
 /**
  * Open gz-file
@@ -157,7 +157,7 @@ function gzread ($zp, $length) {}
  * @since 4.0
  * @since 5.0
  */
-function gzopen ($filename, $mode, $use_include_path = 0) {}
+function gzopen (string $filename, string $mode, int $use_include_path = 0) {}
 
 /**
  * Output all remaining data on a gz-file pointer
@@ -197,7 +197,7 @@ function gzpassthru ($zp) {}
  * @since 4.0
  * @since 5.0
  */
-function gzseek ($zp, $offset, $whence = SEEK_SET) {}
+function gzseek ($zp, int $offset, int $whence = SEEK_SET) {}
 
 /**
  * Tell gz-file pointer read/write position
@@ -239,7 +239,7 @@ function gztell ($zp) {}
  * @since 4.0
  * @since 5.0
  */
-function gzwrite ($zp, $string, $length = null) {}
+function gzwrite ($zp, string $string, int $length = null) {}
 
 /**
  * Alias of <b>gzwrite</b>
@@ -266,7 +266,7 @@ function gzputs ($fp, $str, $length) {}
  * @since 4.0
  * @since 5.0
  */
-function gzfile ($filename, $use_include_path = 0) {}
+function gzfile (string $filename, int $use_include_path = 0) {}
 
 /**
  * Compress a string
@@ -288,7 +288,7 @@ function gzfile ($filename, $use_include_path = 0) {}
  * @since 4.0.1
  * @since 5.0
  */
-function gzcompress ($data, $level = -1, $encoding = ZLIB_ENCODING_DEFLATE) {}
+function gzcompress (string $data, int $level = -1, int $encoding = ZLIB_ENCODING_DEFLATE) {}
 
 /**
  * Uncompress a compressed string
@@ -308,7 +308,7 @@ function gzcompress ($data, $level = -1, $encoding = ZLIB_ENCODING_DEFLATE) {}
  * @since 4.0.1
  * @since 5.0
  */
-function gzuncompress ($data, $length = 0) {}
+function gzuncompress (string $data, int $length = 0) {}
 
 /**
  * Deflate a string
@@ -328,7 +328,7 @@ function gzuncompress ($data, $length = 0) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gzdeflate ($data, $level = -1, $encoding = ZLIB_ENCODING_RAW) {}
+function gzdeflate (string $data, int $level = -1, int $encoding = ZLIB_ENCODING_RAW) {}
 
 /**
  * Inflate a deflated string
@@ -348,7 +348,7 @@ function gzdeflate ($data, $level = -1, $encoding = ZLIB_ENCODING_RAW) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gzinflate ($data, $length = 0) {}
+function gzinflate (string $data, int $length = 0) {}
 
 /**
  * Create a gzip compressed string
@@ -379,7 +379,7 @@ function gzinflate ($data, $length = 0) {}
  * @since 4.0.4
  * @since 5.0
  */
-function gzencode ($data, $level = -1, $encoding_mode = FORCE_GZIP) {}
+function gzencode (string $data, int $level = -1, int $encoding_mode = FORCE_GZIP) {}
 
 /**
  * Decodes a gzip compressed string
@@ -393,7 +393,7 @@ function gzencode ($data, $level = -1, $encoding_mode = FORCE_GZIP) {}
  * @return string|false The decoded string, or <b>FALSE</b> if an error occurred.
  * @since 5.4
  */
-function gzdecode ($data, $length = null) {}
+function gzdecode (string $data, int $length = null) {}
 
 /**
  * Compress data with the specified encoding
@@ -407,7 +407,7 @@ function gzdecode ($data, $length = null) {}
  * @return string
  * @since 5.4
  */
-function zlib_encode ($data, $encoding, $level) {}
+function zlib_encode (string $data, string $encoding, string $level) {}
 
 /**
  * Uncompress any raw/gzip/zlib encoded data
@@ -419,7 +419,7 @@ function zlib_encode ($data, $encoding, $level) {}
  * @return string
  * @since 5.4
  */
-function zlib_decode ($data, $max_decoded_len = null) {}
+function zlib_decode (string $data, string $max_decoded_len = null) {}
 
 /**
  * Returns the coding type used for output compression
@@ -440,7 +440,7 @@ function zlib_get_coding_type () {}
  * @since 4.0.4
  * @since 5.0
  */
-function ob_gzhandler ($buffer, $mode) {}
+function ob_gzhandler (string $buffer, int $mode) {}
 
 /**
  * Initialize an incremental deflate context
@@ -463,7 +463,7 @@ function ob_gzhandler ($buffer, $mode) {}
  * </p>
  * @since 7.0
  */
-function deflate_init ($encoding, $options = array()) {}
+function deflate_init (int $encoding, array $options = array()) {}
 
 /**
  * Incrementally deflate data
@@ -486,7 +486,7 @@ function deflate_init ($encoding, $options = array()) {}
  * </p>
  * @since 7.0
  */
-function deflate_add ($context, $data, $flush_mode = ZLIB_SYNC_FLUSH) {}
+function deflate_add ($context, string $data, int $flush_mode = ZLIB_SYNC_FLUSH) {}
 
 /**
  * Initialize an incremental inflate context
@@ -509,7 +509,7 @@ function deflate_add ($context, $data, $flush_mode = ZLIB_SYNC_FLUSH) {}
  * </p>
  * @since 7.0
  */
-function inflate_init ($encoding, $options = array()) {}
+function inflate_init ($encoding, array $options = array()) {}
 
 /**
  * Incrementally inflate data
@@ -532,7 +532,7 @@ function inflate_init ($encoding, $options = array()) {}
  * </p>
  * @since 7.0
  */
-function inflate_add ($context, $encoded_data, $flush_mode = ZLIB_SYNC_FLUSH) {}
+function inflate_add ($context, string $encoded_data, int $flush_mode = ZLIB_SYNC_FLUSH) {}
 
 /**
  * @param resource $context
