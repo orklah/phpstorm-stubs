@@ -13,7 +13,7 @@ function xdebug_get_stack_depth () {}
  * @param int $options    A bit mask of the following constants: XDEBUG_STACK_NO_DESC
  * @return array
  */
-function xdebug_get_function_stack ($message = '', $options = 0) {}
+function xdebug_get_function_stack (string $message = '', int $options = 0) {}
 
 /**
  * Returns an array which resembles the stack trace up to this point.
@@ -93,7 +93,7 @@ function xdebug_var_dump ($var) {}
  * @param string $varName
  * @return void
  */
-function xdebug_debug_zval ($varName) {}
+function xdebug_debug_zval (string $varName) {}
 
 /**
  * This function displays structured information about one or more variables that includes its type,
@@ -104,7 +104,7 @@ function xdebug_debug_zval ($varName) {}
  * @param string $varName
  * @return void
  */
-function xdebug_debug_zval_stdout ($varName) {}
+function xdebug_debug_zval_stdout (string $varName) {}
 
 /**
  * Enable showing stack traces on error conditions.
@@ -152,7 +152,7 @@ function xdebug_stop_error_collection () {}
  * @param bool $clean
  * @return string
  */
-function xdebug_get_collected_errors ($clean = false) {}
+function xdebug_get_collected_errors (bool $clean = false) {}
 
 /**
  * This function makes the debugger break on the specific line as if a normal file/line breakpoint was set on this line.
@@ -239,7 +239,7 @@ function xdebug_time_index () {}
  * @param int $options
  * @return void
  */
-function xdebug_start_code_coverage ($options = 0) {}
+function xdebug_start_code_coverage (int $options = 0) {}
 
 /**
  * This function stops collecting information, the information in memory will be destroyed.
@@ -248,7 +248,7 @@ function xdebug_start_code_coverage ($options = 0) {}
  * @param int $cleanup Destroy collected information in memory
  * @return void
  */
-function xdebug_stop_code_coverage ($cleanup = 1) {}
+function xdebug_stop_code_coverage (int $cleanup = 1) {}
 
 /**
  * Returns whether code coverage is active.
