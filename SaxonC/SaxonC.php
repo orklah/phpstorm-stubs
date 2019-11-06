@@ -12,7 +12,7 @@ class SaxonProcessor {
      * @param bool $license Indicates whether the Processor requires features of Saxon that need a license file. If false, the method will creates a Configuration appropriate for Saxon HE (Home edition). If true, the method will create a Configuration appropriate to the version of the software that is running Saxon-PE or Saxon-EE.
      * @param string $cwd The cwd argument is used to manually set the current working directory used for executions of source files
      */
-    public function __construct($license = false, $cwd = '') {}
+    public function __construct(bool $license = false, string $cwd = '') {}
 
     /**
      * Create an Xdm Atomic value from any of the main primitive types (i.e. bool, int, float, double, string)
@@ -28,7 +28,7 @@ class SaxonProcessor {
      * @param string $value The $value is a lexical representation of the XML document.
      * @return XdmNode
      */
-    public function parseXmlFromString($value) {}
+    public function parseXmlFromString(string $value) {}
 
     /**
      * Create an {@link XdmNode} object.
@@ -36,7 +36,7 @@ class SaxonProcessor {
      * @param string $fileName Value is a string type and the file name to the XML document. File name can be relative or absolute. IF relative the cwd is used to resolve the file.
      * @return XdmNode
      */
-    public function parseXmlFromFile($fileName) {}
+    public function parseXmlFromFile(string $fileName) {}
 
     /**
      * Set the current working directory used to resolve against files
@@ -44,7 +44,7 @@ class SaxonProcessor {
      * @param string $cwd
      * @return void
      */
-    public function setcwd($cwd) {}
+    public function setcwd(string $cwd) {}
 
 
     /**
@@ -53,7 +53,7 @@ class SaxonProcessor {
      * @param string $dir
      * @return void
      */
-    public function setResourceDirectory($dir) {}
+    public function setResourceDirectory(string $dir) {}
 
     /**
      * Set a configuration property specific to the processor in use. Properties specified here are common across all the processors.
@@ -63,7 +63,7 @@ class SaxonProcessor {
      * @return void
      * @link https://www.saxonica.com/documentation9.6/index.html#!configuration/config-features
      */
-    public function setConfigurationProperty($name, $value) {}
+    public function setConfigurationProperty(string $name, string $value) {}
 
     /**
      * Create an {@link XsltProcessor} in the PHP environment. An {@link XsltProcessor} is used to compile and execute XSLT sytlesheets
@@ -106,7 +106,7 @@ class SaxonProcessor {
      * @param string $library The full path of the Saxon/C PHP Extension library. This is needed to do the callbacks.
      * @return void
      */
-    public function registerPHPFunctions($library) {}
+    public function registerPHPFunctions(string $library) {}
 }
 
 /**
@@ -122,7 +122,7 @@ class XsltProcessor {
      * @param string $outputfileName
      * @return void
      */
-    public function transformFileToFile($sourceFileName, $stylesheetFileName, $outputfileName) {}
+    public function transformFileToFile(string $sourceFileName, string $stylesheetFileName, string $outputfileName) {}
 
     /**
      * Perform a one shot transformation. The result is returned as a string. If there are failures then a null is returned.
@@ -131,7 +131,7 @@ class XsltProcessor {
      * @param string $stylesheetFileName
      * @return string|null
      */
-    public function transformFileToString($sourceFileName, $stylesheetFileName) {}
+    public function transformFileToString(string $sourceFileName, string $stylesheetFileName) {}
 
     /**
      * Perform a one shot transformation. The result is returned as an {@link XdmValue}.
@@ -139,7 +139,7 @@ class XsltProcessor {
      * @param string $fileName
      * @return XdmValue
      */
-    public function transformFileToValue($fileName) {}
+    public function transformFileToValue(string $fileName) {}
 
     /**
      * Perform the transformation based upon cached stylesheet and source document.
@@ -166,7 +166,7 @@ class XsltProcessor {
      * @param string $fileName
      * @return void
      */
-    public function compileFromFile($fileName) {}
+    public function compileFromFile(string $fileName) {}
 
     /**
      * Compile a stylesheet received as a string.
@@ -174,7 +174,7 @@ class XsltProcessor {
      * @param string $str
      * @return void
      */
-    public function compileFromString($str) {}
+    public function compileFromString(string $str) {}
 
     /**
      * Compile a stylesheet received as an {@link XdmNode}.
@@ -182,7 +182,7 @@ class XsltProcessor {
      * @param XdmNode $node
      * @return void
      */
-    public function compileFromValue($node) {}
+    public function compileFromValue(\Saxon\XdmNode $node) {}
 
     /**
      * Set the output file name of where the transformation result is sent
@@ -190,7 +190,7 @@ class XsltProcessor {
      * @param string $fileName
      * @return void
      */
-    public function setOutputFile($fileName) {}
+    public function setOutputFile(string $fileName) {}
 
     /**
      * The source used for a query or stylesheet. Requires an {@link XdmValue} object
@@ -198,7 +198,7 @@ class XsltProcessor {
      * @param XdmValue $value
      * @return void
      */
-    public function setSourceFromXdmValue($value) {}
+    public function setSourceFromXdmValue(\Saxon\XdmValue $value) {}
 
     /**
      * The source used for a query or stylesheet. Requires a file name as string
@@ -206,7 +206,7 @@ class XsltProcessor {
      * @param string $filename
      * @return void
      */
-    public function setSourceFromFile($filename) {}
+    public function setSourceFromFile(string $filename) {}
 
     /**
      * Set the parameters required for XSLT stylesheet
@@ -215,7 +215,7 @@ class XsltProcessor {
      * @param XdmValue $value
      * @return void
      */
-    public function setParameter($name, $value) {}
+    public function setParameter(string $name, \Saxon\XdmValue $value) {}
 
     /**
      * Set properties for the stylesheet.
@@ -224,7 +224,7 @@ class XsltProcessor {
      * @param string $value
      * @return void
      */
-    public function setProperty($name, $value) {}
+    public function setProperty(string $name, string $value) {}
 
     /**
      * Clear parameter values set
@@ -253,7 +253,7 @@ class XsltProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorCode($i) {}
+    public function getErrorCode(int $i) {}
 
     /**
      * Get the $i'th error message if there are any errors
@@ -261,7 +261,7 @@ class XsltProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorMessage($i) {}
+    public function getErrorMessage(int $i) {}
 
     /**
      * Get number of error during execution or evaluate of stylesheet
@@ -296,7 +296,7 @@ class XQueryProcessor {
      * @param string $outfilename
      * @return void
      */
-    public function runQueryToFile($outfilename) {}
+    public function runQueryToFile(string $outfilename) {}
 
     /**
      * query supplied as a string
@@ -304,13 +304,13 @@ class XQueryProcessor {
      * @param string $str
      * @return void
      */
-    public function setQueryContent($str) {}
+    public function setQueryContent(string $str) {}
 
     /**
      * @param XdmItem $item
      * @return void
      */
-    public function setQueryItem($item) {}
+    public function setQueryItem(\Saxon\XdmItem $item) {}
 
     /**
      * query supplied as a file
@@ -318,7 +318,7 @@ class XQueryProcessor {
      * @param string $filename
      * @return void
      */
-    public function setQueryFile($filename) {}
+    public function setQueryFile(string $filename) {}
 
     /**
      * Set the initial context item for the query. Supplied as filename
@@ -326,7 +326,7 @@ class XQueryProcessor {
      * @param string $fileName
      * @return void
      */
-    public function setContextItemFromFile($fileName) {}
+    public function setContextItemFromFile(string $fileName) {}
 
     /**
      * Set the initial context item for the query.
@@ -335,7 +335,7 @@ class XQueryProcessor {
      * @param XdmValue|XdmItem|XdmNode|XdmAtomicValue $obj
      * @return void
      */
-    public function setContextItem($obj) {}
+    public function setContextItem(\Saxon\XdmValue $obj) {}
 
     /**
      * Set the static base URI for a query expressions compiled using this XQuery Processor. The base URI is part of the static context, and is used to resolve any relative URIS appearing within a query
@@ -343,7 +343,7 @@ class XQueryProcessor {
      * @param string $uri
      * @return void
      */
-    public function setQueryBaseURI($uri) {}
+    public function setQueryBaseURI(string $uri) {}
 
     /**
      * Declare a namespace binding as part of the static context for XPath expressions compiled using this XQuery processor
@@ -352,7 +352,7 @@ class XQueryProcessor {
      * @param string $namespace
      * @return void
      */
-    public function declareNamespace($prefix, $namespace) {}
+    public function declareNamespace(string $prefix, string $namespace) {}
 
     /**
      * Set the parameters required for XQuery Processor
@@ -361,7 +361,7 @@ class XQueryProcessor {
      * @param XdmValue $value
      * @return void
      */
-    public function setParameter($name, $value) {}
+    public function setParameter(string $name, \Saxon\XdmValue $value) {}
 
     /**
      * Set properties for Query.
@@ -370,7 +370,7 @@ class XQueryProcessor {
      * @param string $value
      * @return void
      */
-    public function setProperty($name, $value) {}
+    public function setProperty(string $name, string $value) {}
 
     /**
      * Clear parameter values set
@@ -399,7 +399,7 @@ class XQueryProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorCode($i) {}
+    public function getErrorCode(int $i) {}
 
     /**
      * Get the $i'th error message if there are any errors
@@ -407,7 +407,7 @@ class XQueryProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorMessage($i) {}
+    public function getErrorMessage(int $i) {}
 
     /**
      * Get number of error during execution or evaluate of query
@@ -428,7 +428,7 @@ class XPathProcessor {
      * @param XdmItem $item
      * @return void
      */
-    public function setContextItem($item) {}
+    public function setContextItem(\Saxon\XdmItem $item) {}
 
     /**
      * Set the context item from file
@@ -436,7 +436,7 @@ class XPathProcessor {
      * @param string $fileName
      * @return void
      */
-    public function setContextFile($fileName) {}
+    public function setContextFile(string $fileName) {}
 
     /**
      * Evaluate the XPath expression, returning the effective boolean value of the result.
@@ -444,7 +444,7 @@ class XPathProcessor {
      * @param string $xpathStr
      * @return bool
      */
-    public function effectiveBooleanValue($xpathStr) {}
+    public function effectiveBooleanValue(string $xpathStr) {}
 
     /**
      * Compile and evaluate an XPath expression, supplied as a character string. Result is an {@link XdmValue}
@@ -452,7 +452,7 @@ class XPathProcessor {
      * @param string $xpathStr
      * @return XdmValue
      */
-    public function evaluate($xpathStr) {}
+    public function evaluate(string $xpathStr) {}
 
     /**
      * Compile and evaluate an XPath expression whose result is expected to be a single item, with a given context item. The expression is supplied as a character string.
@@ -460,7 +460,7 @@ class XPathProcessor {
      * @param string $xpathStr
      * @return XdmItem
      */
-    public function evaluateSingle($xpathStr) {}
+    public function evaluateSingle(string $xpathStr) {}
 
     /**
      * Declare a namespace binding as part of the static context for XPath expressions compiled using this {@link XPathProcessor}
@@ -477,7 +477,7 @@ class XPathProcessor {
      * @param string $uri
      * @return void
      */
-    public function setBaseURI($uri) {}
+    public function setBaseURI(string $uri) {}
 
     /**
      * Set the parameters required for XQuery Processor
@@ -486,7 +486,7 @@ class XPathProcessor {
      * @param XdmValue $value
      * @return void
      */
-    public function setParameter($name, $value) {}
+    public function setParameter(string $name, \Saxon\XdmValue $value) {}
 
     /**
      * Set properties for Query.
@@ -495,7 +495,7 @@ class XPathProcessor {
      * @param string $value
      * @return void
      */
-    public function setProperty($name, $value) {}
+    public function setProperty(string $name, string $value) {}
 
     /**
      * Clear parameter values set
@@ -524,7 +524,7 @@ class XPathProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorCode($i) {}
+    public function getErrorCode(int $i) {}
 
     /**
      * Get the $i'th error message if there are any errors
@@ -532,7 +532,7 @@ class XPathProcessor {
      * @param int $i
      * @return string
      */
-    public function getErrorMessage($i) {}
+    public function getErrorMessage(int $i) {}
 
     /**
      * Get number of error during execution or evaluate of stylesheet and query, respectively
@@ -553,7 +553,7 @@ class SchemaValidator {
      * @param XdmNode $node
      * @return void
      */
-    public function setSourceNode($node) {}
+    public function setSourceNode(\Saxon\XdmNode $node) {}
 
     /**
      * The instance document to be validated. Supplied file name is resolved and accessed
@@ -561,7 +561,7 @@ class SchemaValidator {
      * @param string $fileName
      * @return void
      */
-    public function setOutputFile($fileName) {}
+    public function setOutputFile(string $fileName) {}
 
     /**
      * Register the Schema which is given as file name.
@@ -569,7 +569,7 @@ class SchemaValidator {
      * @param string $fileName
      * @return void
      */
-    public function registerSchemaFromFile($fileName) {}
+    public function registerSchemaFromFile(string $fileName) {}
 
     /**
      * Register the Schema which is given as a string representation.
@@ -577,7 +577,7 @@ class SchemaValidator {
      * @param string $schemaStr
      * @return void
      */
-    public function registerSchemaFromString($schemaStr) {}
+    public function registerSchemaFromString(string $schemaStr) {}
 
     /**
      * Validate an instance document supplied as a Source object. Assume source document has already been supplied through accessor methods
@@ -585,7 +585,7 @@ class SchemaValidator {
      * @param string|null $filename The name of the file to be validated. $filename can be null, in that case it is assumed source document has already been supplied through accessor methods
      * @return void
      */
-    public function validate($filename = null) {}
+    public function validate(?string $filename = null) {}
 
     /**
      * Validate an instance document supplied as a Source object with the validated document returned to the calling program.
@@ -593,7 +593,7 @@ class SchemaValidator {
      * @param string|null $filename The name of the file to be validated. $filename can be null, in that case it is assumed source document has already been supplied through accessor methods
      * @return XdmNode
      */
-    public function validateToNode($filename = null) {}
+    public function validateToNode(?string $filename = null) {}
 
     /**
      * Get the validation report produced after validating the source document. The reporting feature is switched on via setting the property on the {@link SchemaValidator): $validator->setProperty('report', 'true').
@@ -609,7 +609,7 @@ class SchemaValidator {
      * @param XdmValue $value
      * @return void
      */
-    public function setParameter($name, $value) {}
+    public function setParameter(string $name, \Saxon\XdmValue $value) {}
 
     /**
      * Set properties for Schema Validator.
@@ -618,7 +618,7 @@ class SchemaValidator {
      * @param string $value
      * @return void
      */
-    public function setProperty($name, $value) {}
+    public function setProperty(string $name, string $value) {}
 
     /**
      * Clear parameter values set
@@ -647,7 +647,7 @@ class SchemaValidator {
      * @param int $i
      * @return string
      */
-    public function getErrorCode($i) {}
+    public function getErrorCode(int $i) {}
 
     /**
      * Get the $i'th error message if there are any errors
@@ -655,7 +655,7 @@ class SchemaValidator {
      * @param int $i
      * @return string
      */
-    public function getErrorMessage($i) {}
+    public function getErrorMessage(int $i) {}
 
     /**
      * Get number of error during execution of the validator
@@ -683,7 +683,7 @@ class XdmValue {
      * @param int $index
      * @return XdmItem
      */
-    public function itemAt($index) {}
+    public function itemAt(int $index) {}
 
     /**
      * Get the number of items in the sequence
@@ -697,7 +697,7 @@ class XdmValue {
      *
      * @param XdmItem $item
      */
-    public function addXdmItem($item) {}
+    public function addXdmItem(\Saxon\XdmItem $item) {}
 }
 
 /**
@@ -794,7 +794,7 @@ class XdmNode extends XdmItem {
      * @param int $index
      * @return XdmNode|null
      */
-    public function getChildNode($index) {}
+    public function getChildNode(int $index) {}
 
     /**
      * Get the parent of this node. If parent node does not exist then return null
@@ -809,7 +809,7 @@ class XdmNode extends XdmItem {
      * @param int $index
      * @return XdmNode|null
      */
-    public function getAttributeNode($index) {}
+    public function getAttributeNode(int $index) {}
 
     /**
      * Get the n'th attribute node value at this node. If the attribute node selected does not exist then return null
@@ -817,7 +817,7 @@ class XdmNode extends XdmItem {
      * @param int $index
      * @return string|null
      */
-    public function getAttributeValue($index) {}
+    public function getAttributeValue(int $index) {}
 }
 
 /**
