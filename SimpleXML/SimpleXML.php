@@ -19,7 +19,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
      * @param bool $is_prefix TRUE if ns is a prefix, FALSE if it's a URI; defaults to FALSE.
 	 * @since 5.0.1
 	 */
-	final public function __construct ($data, $options = 0, $data_is_url = false, $ns = "", $is_prefix = false) {}
+	final public function __construct (string $data, int $options = 0, bool $data_is_url = false, string $ns = "", bool $is_prefix = false) {}
 
 	/**
      * Provides access to element's children
@@ -27,7 +27,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
      * @param string $name child name
      * @return SimpleXMLElement
      */
-    private function __get($name) {}
+    private function __get(string $name) {}
 
 	/**
 	 * Return a well-formed XML string based on SimpleXML element
@@ -42,7 +42,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * successfully and <b>FALSE</b> otherwise.
 	 * @since 5.0.1
 	 */
-	public function asXML ($filename = null) {}
+	public function asXML (string $filename = null) {}
 
 	/**
 	 * Alias of <b>SimpleXMLElement::asXML</b>
@@ -58,7 +58,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
    	 * successfully and false otherwise.
 	 * @since 5.2
 	 */
-	public function saveXML ($filename = null) {}
+	public function saveXML (string $filename = null) {}
 
 	/**
 	 * Runs XPath query on XML data
@@ -70,7 +70,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * case of an error.
 	 * @since 5.2
 	 */
-	public function xpath ($path) {}
+	public function xpath (string $path) {}
 
 	/**
 	 * Creates a prefix/ns context for the next XPath query
@@ -87,7 +87,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.2
 	 */
-	public function registerXPathNamespace ($prefix, $ns) {}
+	public function registerXPathNamespace (string $prefix, string $ns) {}
 
 	/**
 	 * Identifies an element's attributes
@@ -106,7 +106,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * object that already represents an attribute and not a tag.
 	 * @since 5.0.1
 	 */
-	public function attributes ($ns = null, $is_prefix = false) {}
+	public function attributes (string $ns = null, bool $is_prefix = false) {}
 
 	/**
 	 * Finds children of given node
@@ -124,7 +124,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * has children or not.
 	 * @since 5.0.1
 	 */
-	public function children ($ns = null, $is_prefix = false) {}
+	public function children (string $ns = null, bool $is_prefix = false) {}
 
 	/**
 	 * Returns namespaces used in document
@@ -137,7 +137,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * namespace names with their associated URIs.
 	 * @since 5.1.2
 	 */
-	public function getNamespaces ($recursive = false) {}
+	public function getNamespaces (bool $recursive = false) {}
 
 	/**
 	 * Returns namespaces declared in document
@@ -154,7 +154,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * of namespace names with their associated URIs.
 	 * @since 5.1.2
 	 */
-	public function getDocNamespaces ($recursive = false, $from_root = true) {}
+	public function getDocNamespaces (bool $recursive = false, bool $from_root = true) {}
 
 	/**
 	 * Gets the name of the XML element
@@ -181,7 +181,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * object representing the child added to the XML node.
 	 * @since 5.1.3
 	 */
-	public function addChild ($name, $value = null, $namespace = null) {}
+	public function addChild (string $name, string $value = null, string $namespace = null) {}
 
 	/**
 	 * Adds an attribute to the SimpleXML element
@@ -198,7 +198,7 @@ class SimpleXMLElement implements Traversable, ArrayAccess, Countable {
 	 * @return void No value is returned.
 	 * @since 5.1.3
 	 */
-	public function addAttribute ($name, $value = null, $namespace = null) {}
+	public function addAttribute (string $name, string $value = null, string $namespace = null) {}
 
 	/**
 	 * (No version information available, might only be in SVN)<br/>
@@ -366,7 +366,7 @@ class SimpleXMLIterator extends SimpleXMLElement implements RecursiveIterator, C
  * properties containing the data held within the XML document, or <b>FALSE</b> on failure.
  * @since 5.0
  */
-function simplexml_load_file ($filename, $class_name = "SimpleXMLElement", $options = 0, $ns = "", $is_prefix = false) {}
+function simplexml_load_file (string $filename, string $class_name = "SimpleXMLElement", int $options = 0, string $ns = "", bool $is_prefix = false) {}
 
 /**
  * Interprets a string of XML into an object
@@ -395,7 +395,7 @@ function simplexml_load_file ($filename, $class_name = "SimpleXMLElement", $opti
  * properties containing the data held within the xml document, or <b>FALSE</b> on failure.
  * @since 5.0
  */
-function simplexml_load_string ($data, $class_name = "SimpleXMLElement", $options = 0, $ns = "", $is_prefix = false) {}
+function simplexml_load_string (string $data, string $class_name = "SimpleXMLElement", int $options = 0, string $ns = "", bool $is_prefix = false) {}
 
 /**
  * Get a SimpleXMLElement object from a DOM node.
@@ -412,6 +412,6 @@ function simplexml_load_string ($data, $class_name = "SimpleXMLElement", $option
  * @return SimpleXMLElement a SimpleXMLElement or <b>FALSE</b> on failure.
  * @since 5.0
  */
-function simplexml_import_dom (DOMNode $node, $class_name = "SimpleXMLElement") {}
+function simplexml_import_dom (DOMNode $node, string $class_name = "SimpleXMLElement") {}
 
 // End of SimpleXML v.0.1
