@@ -840,7 +840,7 @@ class PDO  {
 	 * @param array $options [optional]
 	 * @throws PDOException if the attempt to connect to the requested database fails.
 	 */
-	public function __construct ($dsn, $username = null, $passwd = null, $options = null) {}
+	public function __construct (string $dsn, string $username = null, string $passwd = null, array $options = null) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -869,7 +869,7 @@ class PDO  {
 	 * Emulated prepared statements does not communicate with the database server
 	 * so <b>PDO::prepare</b> does not check the statement.
 	 */
-	public function prepare ($statement, array $driver_options = array()) {}
+	public function prepare (string $statement, array $driver_options = array()) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -931,7 +931,7 @@ class PDO  {
 	 * @param mixed $value
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setAttribute ($attribute, $value) {}
+	public function setAttribute (int $attribute, $value) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -961,7 +961,7 @@ class PDO  {
 	 * $db->exec() or die(print_r($db->errorInfo(), true));
 	 * </code>
 	 */
-	public function exec ($statement) {}
+	public function exec (string $statement) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.0)<br/>
@@ -987,7 +987,7 @@ class PDO  {
 	 * on failure.
 	 * @see PDOStatement::setFetchMode For a full description of the second and following parameters.
 	 */
-	public function query ($statement, $mode = PDO::ATTR_DEFAULT_FETCH_MODE, $arg3 = null, array $ctorargs = array()) {}
+	public function query (string $statement, int $mode = PDO::ATTR_DEFAULT_FETCH_MODE, $arg3 = null, array $ctorargs = array()) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1012,7 +1012,7 @@ class PDO  {
 	 * <b>PDO::lastInsertId</b> triggers an
 	 * IM001 SQLSTATE.
 	 */
-	public function lastInsertId ($name = null) {}
+	public function lastInsertId (string $name = null) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1106,7 +1106,7 @@ class PDO  {
 	 * @return mixed A successful call returns the value of the requested PDO attribute.
 	 * An unsuccessful call returns null.
 	 */
-	public function getAttribute ($attribute) {}
+	public function getAttribute (int $attribute) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.1)<br/>
@@ -1122,7 +1122,7 @@ class PDO  {
 	 * SQL statement. Returns <b>FALSE</b> if the driver does not support quoting in
 	 * this way.
 	 */
-	public function quote ($string, $parameter_type = PDO::PARAM_STR) {}
+	public function quote (string $string, int $parameter_type = PDO::PARAM_STR) {}
 
 	final public function __wakeup () {}
 
@@ -1158,7 +1158,7 @@ class PDO  {
      * </p>
      * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
      */
-    public function sqliteCreateFunction($function_name, $callback, $num_args = -1, $flags = 0) {}
+    public function sqliteCreateFunction(string $function_name, callable $callback, int $num_args = -1, int $flags = 0) {}
 }
 
 /**
@@ -1197,7 +1197,7 @@ class PDOStatement implements Traversable {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @throws \PDOException On error if PDO::ERRMODE_EXCEPTION option is true.
 	 */
-	public function execute ($input_parameters = null) {}
+	public function execute (array $input_parameters = null) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1226,7 +1226,7 @@ class PDOStatement implements Traversable {
 	 * @return mixed The return value of this function on success depends on the fetch type. In
 	 * all cases, <b>FALSE</b> is returned on failure.
 	 */
-	public function fetch ($fetch_style = null, $cursor_orientation = PDO::FETCH_ORI_NEXT, $cursor_offset = 0) {}
+	public function fetch (int $fetch_style = null, int $cursor_orientation = PDO::FETCH_ORI_NEXT, int $cursor_offset = 0) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1258,7 +1258,7 @@ class PDOStatement implements Traversable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function bindParam ($parameter, &$variable, $data_type = PDO::PARAM_STR, $length = null, $driver_options = null) {}
+	public function bindParam ($parameter, &$variable, int $data_type = PDO::PARAM_STR, int $length = null, $driver_options = null) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1283,7 +1283,7 @@ class PDOStatement implements Traversable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function bindColumn ($column, &$param, $type = null, $maxlen = null, $driverdata = null) {}
+	public function bindColumn ($column, &$param, int $type = null, int $maxlen = null, $driverdata = null) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 1.0.0)<br/>
@@ -1305,7 +1305,7 @@ class PDOStatement implements Traversable {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function bindValue ($parameter, $value, $data_type = PDO::PARAM_STR) {}
+	public function bindValue ($parameter, $value, int $data_type = PDO::PARAM_STR) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1331,7 +1331,7 @@ class PDOStatement implements Traversable {
 	 * There is no way to return another column from the same row if you
 	 * use <b>PDOStatement::fetchColumn</b> to retrieve data.
 	 */
-	public function fetchColumn ($column_number = 0) {}
+	public function fetchColumn (int $column_number = 0) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1383,7 +1383,7 @@ class PDOStatement implements Traversable {
 	 * ORDER BY clauses in SQL to restrict results before retrieving and
 	 * processing them with PHP.
 	 */
-	public function fetchAll ($fetch_style = null, $fetch_argument = null, array $ctor_args = array()) {}
+	public function fetchAll (int $fetch_style = null, $fetch_argument = null, array $ctor_args = array()) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.4)<br/>
@@ -1398,7 +1398,7 @@ class PDOStatement implements Traversable {
 	 * @return mixed an instance of the required class with property names that
 	 * correspond to the column names or <b>FALSE</b> on failure.
 	 */
-	public function fetchObject ($class_name = "stdClass", array $ctor_args = array()) {}
+	public function fetchObject (string $class_name = "stdClass", array $ctor_args = array()) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.1.0)<br/>
@@ -1445,7 +1445,7 @@ class PDOStatement implements Traversable {
 	 * @param mixed $value
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setAttribute ($attribute, $value) {}
+	public function setAttribute (int $attribute, $value) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.0)<br/>
@@ -1454,7 +1454,7 @@ class PDOStatement implements Traversable {
 	 * @param int $attribute
 	 * @return mixed the attribute value.
 	 */
-	public function getAttribute ($attribute) {}
+	public function getAttribute (int $attribute) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.0)<br/>
@@ -1526,7 +1526,7 @@ class PDOStatement implements Traversable {
 	 * Returns <b>FALSE</b> if the requested column does not exist in the result set,
 	 * or if no result set exists.
 	 */
-	public function getColumnMeta ($column) {}
+	public function getColumnMeta (int $column) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.0)<br/>
@@ -1541,7 +1541,7 @@ class PDOStatement implements Traversable {
 	 * @param array $ctorarfg [optional] <p> Constructor arguments. </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setFetchMode ($mode, $classNameObject = null, array $ctorarfg = array()) {}
+	public function setFetchMode (int $mode, $classNameObject = null, array $ctorarfg = array()) {}
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7, PECL pdo &gt;= 0.2.0)<br/>
