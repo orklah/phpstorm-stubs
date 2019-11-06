@@ -16,7 +16,7 @@
  * @since 4.0
  * @since 5.0
  */
-function recode_string ($request, $string) {}
+function recode_string (string $request, string $string) {}
 
 /**
  * Recode from file to file according to recode request
@@ -36,7 +36,7 @@ function recode_string ($request, $string) {}
  * @since 4.0
  * @since 5.0
  */
-function recode_file ($request, $input, $output) {}
+function recode_file (string $request, $input, $output) {}
 
 /**
  * Alias of <b>recode_string</b>
