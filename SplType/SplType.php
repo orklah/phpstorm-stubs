@@ -19,7 +19,7 @@ abstract class SplType {
      * @param bool $strict  If set to true then will throw UnexpectedValueException if value of other type will be assigned. True by default
      * @link https://php.net/manual/en/spltype.construct.php
      */
-    public function __construct ($initial_value = self::__default, $strict = true ){ }
+    public function __construct ($initial_value = self::__default, bool $strict = true ){ }
 }
 
 /**
@@ -61,7 +61,7 @@ class SplEnum extends SplType {
      * @return array
      * @link https://php.net/manual/en/splenum.getconstlist.php
      */
-    public function getConstList ($include_default = false) {}
+    public function getConstList (bool $include_default = false) {}
 }
 
 /**
