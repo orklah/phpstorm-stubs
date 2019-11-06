@@ -145,7 +145,7 @@ namespace {
      * case <b>eval()</b> returned <b>FALSE</b> and execution of the following code continued normally. It is not possible to catch a parse
      * error in <b>eval()</b> using set_error_handler().
      */
-    function PS_UNRESERVE_PREFIX_eval($code){};
+    function PS_UNRESERVE_PREFIX_eval(string $code){};
 
     /**
      * Generator objects are returned from generators, cannot be instantiated via new.

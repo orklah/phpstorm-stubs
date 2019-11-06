@@ -26,7 +26,7 @@ function getlastmod () {}
  * @since 4.0
  * @since 5.0
  */
-function base64_decode ($data, $strict = null) {}
+function base64_decode (string $data, bool $strict = null) {}
 
 /**
  * Encodes data with MIME base64
@@ -38,7 +38,7 @@ function base64_decode ($data, $strict = null) {}
  * @since 4.0
  * @since 5.0
  */
-function base64_encode ($data) {}
+function base64_encode (string $data) {}
 
 /**
  * Uuencode a string
@@ -49,7 +49,7 @@ function base64_encode ($data) {}
  * @return string the uuencoded data.
  * @since 5.0
  */
-function convert_uuencode ($data) {}
+function convert_uuencode (string $data) {}
 
 /**
  * Decode a uuencoded string
@@ -60,7 +60,7 @@ function convert_uuencode ($data) {}
  * @return string the decoded data as a string.
  * @since 5.0
  */
-function convert_uudecode ($data) {}
+function convert_uudecode (string $data) {}
 
 /**
  * Absolute value
@@ -87,12 +87,12 @@ function abs ($number) {}
  * @return float|false value rounded up to the next highest
  * integer.
  * The return value of ceil is still of type
- * float as the value range of float is 
+ * float as the value range of float is
  * usually bigger than that of integer.
  * @since 4.0
  * @since 5.0
  */
-function ceil ($value) {}
+function ceil (float $value) {}
 
 /**
  * Round fractions down
@@ -102,12 +102,12 @@ function ceil ($value) {}
  * </p>
  * @return float|false value rounded to the next lowest integer.
  * The return value of floor is still of type
- * float because the value range of float is 
+ * float because the value range of float is
  * usually bigger than that of integer.
  * @since 4.0
  * @since 5.0
  */
-function floor ($value) {}
+function floor (float $value) {}
 
 /**
  * Returns the rounded value of val to specified precision (number of digits after the decimal point).
@@ -130,7 +130,7 @@ function floor ($value) {}
  * @since 4.0
  * @since 5.0
  */
-function round ($val, $precision = 0, $mode = PHP_ROUND_HALF_UP) {}
+function round (float $val, int $precision = 0, int $mode = PHP_ROUND_HALF_UP) {}
 
 /**
  * Sine
@@ -142,31 +142,31 @@ function round ($val, $precision = 0, $mode = PHP_ROUND_HALF_UP) {}
  * @since 4.0
  * @since 5.0
  */
-function sin ($arg) {}
+function sin (float $arg) {}
 
 /**
  * Cosine
  * @link https://php.net/manual/en/function.cos.php
  * @param float $arg <p>
- * An angle in radians 
+ * An angle in radians
  * </p>
  * @return float The cosine of arg
  * @since 4.0
  * @since 5.0
  */
-function cos ($arg) {}
+function cos (float $arg) {}
 
 /**
  * Tangent
  * @link https://php.net/manual/en/function.tan.php
  * @param float $arg <p>
- * The argument to process in radians 
+ * The argument to process in radians
  * </p>
  * @return float The tangent of arg
  * @since 4.0
  * @since 5.0
  */
-function tan ($arg) {}
+function tan (float $arg) {}
 
 /**
  * Arc sine
@@ -178,7 +178,7 @@ function tan ($arg) {}
  * @since 4.0
  * @since 5.0
  */
-function asin ($arg) {}
+function asin (float $arg) {}
 
 /**
  * Arc cosine
@@ -190,7 +190,7 @@ function asin ($arg) {}
  * @since 4.0
  * @since 5.0
  */
-function acos ($arg) {}
+function acos (float $arg) {}
 
 /**
  * Arc tangent
@@ -202,7 +202,7 @@ function acos ($arg) {}
  * @since 4.0
  * @since 5.0
  */
-function atan ($arg) {}
+function atan (float $arg) {}
 
 /**
  * Inverse hyperbolic tangent
@@ -214,7 +214,7 @@ function atan ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function atanh ($arg) {}
+function atanh (float $arg) {}
 
 /**
  * Arc tangent of two variables
@@ -225,12 +225,12 @@ function atanh ($arg) {}
  * @param float $x <p>
  * Divisor parameter
  * </p>
- * @return float The arc tangent of y/x 
+ * @return float The arc tangent of y/x
  * in radians.
  * @since 4.0
  * @since 5.0
  */
-function atan2 ($y, $x) {}
+function atan2 (float $y, float $x) {}
 
 /**
  * Hyperbolic sine
@@ -242,7 +242,7 @@ function atan2 ($y, $x) {}
  * @since 4.1
  * @since 5.0
  */
-function sinh ($arg) {}
+function sinh (float $arg) {}
 
 /**
  * Hyperbolic cosine
@@ -254,7 +254,7 @@ function sinh ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function cosh ($arg) {}
+function cosh (float $arg) {}
 
 /**
  * Hyperbolic tangent
@@ -266,7 +266,7 @@ function cosh ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function tanh ($arg) {}
+function tanh (float $arg) {}
 
 /**
  * Inverse hyperbolic sine
@@ -278,7 +278,7 @@ function tanh ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function asinh ($arg) {}
+function asinh (float $arg) {}
 
 /**
  * Inverse hyperbolic cosine
@@ -290,7 +290,7 @@ function asinh ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function acosh ($arg) {}
+function acosh (float $arg) {}
 
 /**
  * Returns exp(number) - 1, computed in a way that is accurate even
@@ -303,7 +303,7 @@ function acosh ($arg) {}
  * </p>
  * @return float 'e' to the power of arg minus one
  */
-function expm1 ($arg) {}
+function expm1 (float $arg) {}
 
 /**
  * Returns log(1 + number), computed in a way that is accurate even when
@@ -316,7 +316,7 @@ function expm1 ($arg) {}
  * </p>
  * @return float log(1 + number)
  */
-function log1p ($number) {}
+function log1p (float $number) {}
 
 /**
  * Get value of pi
@@ -339,7 +339,7 @@ function pi () {}
  * @since 4.2
  * @since 5.0
  */
-function is_finite ($val) {}
+function is_finite (float $val) {}
 
 /**
  * Finds whether a value is not a number
@@ -352,7 +352,7 @@ function is_finite ($val) {}
  * @since 4.2
  * @since 5.0
  */
-function is_nan ($val) {}
+function is_nan (float $val) {}
 
 /**
  * Integer division
@@ -378,7 +378,7 @@ function intdiv ($dividend,  $divisor) {}
  * @since 4.2
  * @since 5.0
  */
-function is_infinite ($val) {}
+function is_infinite (float $val) {}
 
 /**
  * Exponential expression
@@ -408,7 +408,7 @@ function pow ($base, $exp) {}
  * @since 4.0
  * @since 5.0
  */
-function exp ($arg) {}
+function exp (float $arg) {}
 
 /**
  * Natural logarithm
@@ -417,16 +417,16 @@ function exp ($arg) {}
  * The value to calculate the logarithm for
  * </p>
  * @param float $base [optional] <p>
- * The optional logarithmic base to use 
+ * The optional logarithmic base to use
  * (defaults to 'e' and so to the natural logarithm).
  * </p>
- * @return float The logarithm of arg to 
+ * @return float The logarithm of arg to
  * base, if given, or the
  * natural logarithm.
  * @since 4.0
  * @since 5.0
  */
-function log ($arg, $base = null) {}
+function log (float $arg, float $base = null) {}
 
 /**
  * Base-10 logarithm
@@ -438,7 +438,7 @@ function log ($arg, $base = null) {}
  * @since 4.0
  * @since 5.0
  */
-function log10 ($arg) {}
+function log10 (float $arg) {}
 
 /**
  * Square root
@@ -451,7 +451,7 @@ function log10 ($arg) {}
  * @since 4.0
  * @since 5.0
  */
-function sqrt ($arg) {}
+function sqrt (float $arg) {}
 
 /**
  * Calculate the length of the hypotenuse of a right-angle triangle
@@ -466,19 +466,19 @@ function sqrt ($arg) {}
  * @since 4.1
  * @since 5.0
  */
-function hypot ($x, $y) {}
+function hypot (float $x, float $y) {}
 
 /**
  * Converts the number in degrees to the radian equivalent
  * @link https://php.net/manual/en/function.deg2rad.php
  * @param float $number <p>
- * Angular value in degrees 
+ * Angular value in degrees
  * </p>
  * @return float The radian equivalent of number
  * @since 4.0
  * @since 5.0
  */
-function deg2rad ($number) {}
+function deg2rad (float $number) {}
 
 /**
  * Converts the radian number to the equivalent number in degrees
@@ -490,7 +490,7 @@ function deg2rad ($number) {}
  * @since 4.0
  * @since 5.0
  */
-function rad2deg ($number) {}
+function rad2deg (float $number) {}
 
 /**
  * Binary to decimal
@@ -502,7 +502,7 @@ function rad2deg ($number) {}
  * @since 4.0
  * @since 5.0
  */
-function bindec ($binary_string) {}
+function bindec (string $binary_string) {}
 
 /**
  * Hexadecimal to decimal
@@ -514,7 +514,7 @@ function bindec ($binary_string) {}
  * @since 4.0
  * @since 5.0
  */
-function hexdec ($hex_string) {}
+function hexdec (string $hex_string) {}
 
 /**
  * Octal to decimal
@@ -526,7 +526,7 @@ function hexdec ($hex_string) {}
  * @since 4.0
  * @since 5.0
  */
-function octdec ($octal_string) {}
+function octdec (string $octal_string) {}
 
 /**
  * Decimal to binary
@@ -646,7 +646,7 @@ function octdec ($octal_string) {}
  * @since 4.0
  * @since 5.0
  */
-function decbin ($number) {}
+function decbin (int $number) {}
 
 /**
  * Decimal to octal
@@ -658,7 +658,7 @@ function decbin ($number) {}
  * @since 4.0
  * @since 5.0
  */
-function decoct ($number) {}
+function decoct (int $number) {}
 
 /**
  * Decimal to hexadecimal
@@ -670,7 +670,7 @@ function decoct ($number) {}
  * @since 4.0
  * @since 5.0
  */
-function dechex ($number) {}
+function dechex (int $number) {}
 
 /**
  * Convert a number between arbitrary bases
@@ -688,7 +688,7 @@ function dechex ($number) {}
  * @since 4.0
  * @since 5.0
  */
-function base_convert ($number, $frombase, $tobase) {}
+function base_convert (string $number, int $frombase, int $tobase) {}
 
 /**
  * Format a number with grouped thousands
@@ -705,7 +705,7 @@ function base_convert ($number, $frombase, $tobase) {}
  * @since 4.0
  * @since 5.0
  */
-function number_format ($number , $decimals = 0 , $dec_point = '.' , $thousands_sep = ',' ) {}
+function number_format (float $number , int $decimals = 0 , string $dec_point = '.' , string $thousands_sep = ',' ) {}
 
 /**
  * Returns the floating point remainder (modulo) of the division
@@ -719,10 +719,10 @@ function number_format ($number , $decimals = 0 , $dec_point = '.' , $thousands_
  * @param float $y <p>
  * The divisor
  * </p>
- * @return float The floating point remainder of 
+ * @return float The floating point remainder of
  * x/y
  */
-function fmod ($x, $y) {}
+function fmod (float $x, float $y) {}
 
 /**
  * Converts a packed internet address to a human readable representation
@@ -733,7 +733,7 @@ function fmod ($x, $y) {}
  * @return string|false a string representation of the address or false on failure.
  * @since 5.1
  */
-function inet_ntop ($in_addr) {}
+function inet_ntop (string $in_addr) {}
 
 /**
  * Converts a human readable IP address to its packed in_addr representation
@@ -745,7 +745,7 @@ function inet_ntop ($in_addr) {}
  * address
  * @since 5.1
  */
-function inet_pton ($address) {}
+function inet_pton (string $address) {}
 
 /**
  * Converts a string containing an (IPv4) Internet Protocol dotted address into a proper address
@@ -758,7 +758,7 @@ function inet_pton ($address) {}
  * @since 4.0
  * @since 5.0
  */
-function ip2long ($ip_address) {}
+function ip2long (string $ip_address) {}
 
 /**
  * Converts an (IPv4) Internet network address into a string in Internet standard dotted format
@@ -790,7 +790,7 @@ function long2ip ($proper_address) {}
  * @since 7.0.9 The local_only parameter has been added.
  * @since 7.1 The varname parameter was made optional.
  */
-function getenv ($varname = null, $local_only = false) {}
+function getenv (string $varname = null, bool $local_only = false) {}
 
 /**
  * Sets the value of an environment variable
@@ -802,7 +802,7 @@ function getenv ($varname = null, $local_only = false) {}
  * @since 4.0
  * @since 5.0
  */
-function putenv ($setting) {}
+function putenv (string $setting) {}
 
 /**
  * Gets options from the command line argument list
@@ -825,7 +825,7 @@ function putenv ($setting) {}
  * @since 4.3
  * @since 5.0
  */
-function getopt ($options, array $longopts = null, &$optind = null) {}
+function getopt (string $options, array $longopts = null, int &$optind = null) {}
 
 /**
  * Gets system load average
@@ -854,7 +854,7 @@ function sys_getloadavg () {}
  * @since 4.0
  * @since 5.0
  */
-function microtime ($get_as_float = null) {}
+function microtime (bool $get_as_float = null) {}
 
 /**
  * Get current time
@@ -874,7 +874,7 @@ function microtime ($get_as_float = null) {}
  * @since 4.0
  * @since 5.0
  */
-function gettimeofday ($return_float = null) {}
+function gettimeofday (bool $return_float = null) {}
 
 /**
  * Gets the current resource usages
@@ -888,7 +888,7 @@ function gettimeofday ($return_float = null) {}
  * @since 4.0
  * @since 5.0
  */
-function getrusage ($who = null) {}
+function getrusage (int $who = null) {}
 
 /**
  * Generate a unique ID
@@ -912,7 +912,7 @@ function getrusage ($who = null) {}
  * @since 4.0
  * @since 5.0
  */
-function uniqid ($prefix = "", $more_entropy = false) {}
+function uniqid (string $prefix = "", bool $more_entropy = false) {}
 
 /**
  * Convert a quoted-printable string to an 8 bit string
@@ -924,7 +924,7 @@ function uniqid ($prefix = "", $more_entropy = false) {}
  * @since 4.0
  * @since 5.0
  */
-function quoted_printable_decode ($str) {}
+function quoted_printable_decode (string $str) {}
 
 /**
  * Convert a 8 bit string to a quoted-printable string
@@ -935,7 +935,7 @@ function quoted_printable_decode ($str) {}
  * @return string the encoded string.
  * @since 5.3
  */
-function quoted_printable_encode ($str) {}
+function quoted_printable_encode (string $str) {}
 
 /**
  * Convert from one Cyrillic character set to another
@@ -954,7 +954,7 @@ function quoted_printable_encode ($str) {}
  * @since 5.0
  * @deprecated 7.4
  */
-function convert_cyr_string ($str, $from, $to) {}
+function convert_cyr_string (string $str, string $from, string $to) {}
 
 /**
  * Gets the name of the owner of the current PHP script
@@ -972,11 +972,11 @@ function get_current_user () {}
  * The maximum execution time, in seconds. If set to zero, no time limit
  * is imposed.
  * </p>
- * @return bool Returns TRUE on success, or FALSE on failure. 
+ * @return bool Returns TRUE on success, or FALSE on failure.
  * @since 4.0
  * @since 5.0
  */
-function set_time_limit ($seconds) {}
+function set_time_limit (int $seconds) {}
 
 /**
  * Gets the value of a PHP configuration option
@@ -989,7 +989,7 @@ function set_time_limit ($seconds) {}
  * @since 4.0
  * @since 5.0
  */
-function get_cfg_var ($option) {}
+function get_cfg_var (string $option) {}
 
 /**
  * &Alias; <function>set_magic_quotes_runtime</function>
@@ -1013,7 +1013,7 @@ function magic_quotes_runtime ($new_setting) {}
  * @since 4.0
  * @since 5.0
  */
-function set_magic_quotes_runtime ($new_setting) {}
+function set_magic_quotes_runtime (bool $new_setting) {}
 
 /**
  * Gets the current configuration setting of magic quotes gpc
@@ -1040,7 +1040,7 @@ function get_magic_quotes_runtime () {}
  * @link https://php.net/manual/en/function.import-request-variables.php
  * @param string $types <p>
  * Using the types parameter, you can specify
- * which request variables to import. You can use 'G', 'P' and 'C' 
+ * which request variables to import. You can use 'G', 'P' and 'C'
  * characters respectively for GET, POST and Cookie. These characters are
  * not case sensitive, so you can also use any combination of 'g', 'p'
  * and 'c'. POST includes the POST uploaded file information.
@@ -1070,7 +1070,7 @@ function get_magic_quotes_runtime () {}
  * @since 4.1
  * @since 5.0
  */
-function import_request_variables ($types, $prefix = null) {}
+function import_request_variables (string $types, string $prefix = null) {}
 
 /**
  * Send an error message somewhere
@@ -1079,7 +1079,7 @@ function import_request_variables ($types, $prefix = null) {}
  * The error message that should be logged.
  * </p>
  * @param int $message_type [optional] <p>
- * Says where the error should go. The possible message types are as 
+ * Says where the error should go. The possible message types are as
  * follows:
  * </p>
  * <p>
@@ -1113,7 +1113,7 @@ function import_request_variables ($types, $prefix = null) {}
  * <td>3</td>
  * <td>
  * message is appended to the file
- * destination. A newline is not automatically 
+ * destination. A newline is not automatically
  * added to the end of the message string.
  * </td>
  * </tr>
@@ -1127,17 +1127,17 @@ function import_request_variables ($types, $prefix = null) {}
  * </table>
  * </p>
  * @param string $destination [optional] <p>
- * The destination. Its meaning depends on the 
+ * The destination. Its meaning depends on the
  * message_type parameter as described above.
  * </p>
  * @param string $extra_headers [optional] <p>
  * The extra headers. It's used when the message_type
  * parameter is set to 1.
- * This message type uses the same internal function as 
+ * This message type uses the same internal function as
  * mail does.
  * </p>
  * @return bool true on success or false on failure.
  * @since 4.0
  * @since 5.0
  */
-function error_log ($message, $message_type = null, $destination = null, $extra_headers = null) {}
+function error_log (string $message, int $message_type = null, string $destination = null, string $extra_headers = null) {}

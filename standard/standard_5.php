@@ -23,21 +23,21 @@ function boolval($var) {}
  * objects return 1.
  * </p>
  * <p>
- * The maximum value depends on the system. 32 bit systems have a 
- * maximum signed integer range of -2147483648 to 2147483647. So for example 
- * on such a system, intval('1000000000000') will return 
- * 2147483647. The maximum signed integer value for 64 bit systems is 
+ * The maximum value depends on the system. 32 bit systems have a
+ * maximum signed integer range of -2147483648 to 2147483647. So for example
+ * on such a system, intval('1000000000000') will return
+ * 2147483647. The maximum signed integer value for 64 bit systems is
  * 9223372036854775807.
  * </p>
  * <p>
- * Strings will most likely return 0 although this depends on the 
- * leftmost characters of the string. The common rules of 
- * integer casting 
+ * Strings will most likely return 0 although this depends on the
+ * leftmost characters of the string. The common rules of
+ * integer casting
  * apply.
  * @since 4.0
  * @since 5.0
  */
-function intval ($var, $base = 10) {}
+function intval ($var, int $base = 10) {}
 
 /**
  * Get float value of a variable
@@ -67,7 +67,7 @@ function doubleval ($var) {}
  * The variable that is being converted to a string.
  * </p>
  * <p>
- * $var may be any scalar type or an object that implements the __toString() method. 
+ * $var may be any scalar type or an object that implements the __toString() method.
  * You cannot use strval() on arrays or objects that do not implement the __toString() method.
  * </p>
  * @return string The string value of var.
@@ -136,7 +136,7 @@ function gettype ($var) {}
  * @since 4.0
  * @since 5.0
  */
-function settype (&$var, $type) {}
+function settype (&$var, string $type) {}
 
 /**
  * Finds whether a variable is &null;
@@ -196,7 +196,7 @@ function is_long ($var) {}
  * @param mixed $var <p>
  * The variable being evaluated.
  * </p>
- * @return bool true if var is a float, 
+ * @return bool true if var is a float,
  * false otherwise.
  * @since 4.0
  * @since 5.0
@@ -209,7 +209,7 @@ function is_float ($var) {}
  * @param mixed $var <p>
  * The variable being evaluated.
  * </p>
- * @return bool true if var is an integer, 
+ * @return bool true if var is an integer,
  * false otherwise.
  * @since 4.0
  * @since 5.0
@@ -347,7 +347,7 @@ function is_scalar ($var) {}
  * @since 5.0
  * @since 7.0
  */
-function is_callable ($var, $syntax_only = null, &$callable_name = null) {}
+function is_callable ($var, bool $syntax_only = null, string &$callable_name = null) {}
 
 /**
  * Verify that the contents of a variable is a countable value
@@ -396,7 +396,7 @@ function pclose ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function popen ($command, $mode) {}
+function popen (string $command, string $mode) {}
 
 /**
  * Outputs a file
@@ -417,7 +417,7 @@ function popen ($command, $mode) {}
  * @since 4.0
  * @since 5.0
  */
-function readfile ($filename, $use_include_path = null, $context = null) {}
+function readfile (string $filename, bool $use_include_path = null, $context = null) {}
 
 /**
  * Rewind the position of a file pointer
@@ -443,7 +443,7 @@ function rewind ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function rmdir ($dirname, $context = null) {}
+function rmdir (string $dirname, $context = null) {}
 
 /**
  * Changes the current umask
@@ -456,7 +456,7 @@ function rmdir ($dirname, $context = null) {}
  * @since 4.0
  * @since 5.0
  */
-function umask ($mask = null) {}
+function umask (int $mask = null) {}
 
 /**
  * Closes an open file pointer
@@ -517,7 +517,7 @@ function fgetc ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function fgets ($handle, $length = null) {}
+function fgets ($handle, int $length = null) {}
 
 /**
  * Gets line from file pointer and strip HTML tags
@@ -540,7 +540,7 @@ function fgets ($handle, $length = null) {}
  * @since 5.0
  * @deprecated 7.3
  */
-function fgetss ($handle, $length = null, $allowable_tags = null) {}
+function fgetss ($handle, int $length = null, string $allowable_tags = null) {}
 
 /**
  * Binary-safe file read
@@ -553,7 +553,7 @@ function fgetss ($handle, $length = null, $allowable_tags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function fread ($handle, $length) {}
+function fread ($handle, int $length) {}
 
 /**
  * Opens file or URL
@@ -664,7 +664,7 @@ function fread ($handle, $length) {}
  * generating an error of level E_WARNING. If
  * the file does not exist, attempt to create it. This is equivalent
  * to specifying O_EXCL|O_CREAT flags for the
- * underlying open(2) system call. 
+ * underlying open(2) system call.
  * </td>
  * </tr>
  * <tr valign="top">
@@ -738,7 +738,7 @@ function fread ($handle, $length) {}
  * @since 4.0
  * @since 5.0
  */
-function fopen ($filename, $mode, $use_include_path = null, $context = null) {}
+function fopen (string $filename, string $mode, bool $use_include_path = null, $context = null) {}
 
 /**
  * Output all remaining data on a file pointer
@@ -777,7 +777,7 @@ function fpassthru ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function ftruncate ($handle, $size) {}
+function ftruncate ($handle, int $size) {}
 
 /**
  * Gets information about a file using an open file pointer
@@ -818,7 +818,7 @@ function fstat ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function fseek ($handle, $offset, $whence = SEEK_SET) {}
+function fseek ($handle, int $offset, int $whence = SEEK_SET) {}
 
 /**
  * Returns the current position of the file read/write pointer
@@ -872,14 +872,14 @@ function fflush ($handle) {}
  * @since 4.0
  * @since 5.0
  */
-function fwrite ($handle, $string, $length = null) {}
+function fwrite ($handle, string $string, int $length = null) {}
 
 /**
  * &Alias; <function>fwrite</function>
  * @see fwrite()
  * @link https://php.net/manual/en/function.fputs.php
  * Binary-safe file write
- * @param resource $handle A file system pointer resource that is typically created using fopen(). 
+ * @param resource $handle A file system pointer resource that is typically created using fopen().
  * @param string $string <p>
  * The string that is to be written.
  * </p>
@@ -899,7 +899,7 @@ function fwrite ($handle, $string, $length = null) {}
  * @since 4.0
  * @since 5.0
  */
-function fputs ($handle, $string, $length = null) {}
+function fputs ($handle, string $string, int $length = null) {}
 
 /**
  * Attempts to create the directory specified by pathname.
@@ -929,7 +929,7 @@ function fputs ($handle, $string, $length = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mkdir ($pathname, $mode = 0777, $recursive = false, $context = null) {}
+function mkdir (string $pathname, int $mode = 0777, bool $recursive = false, $context = null) {}
 
 /**
  * Renames a file or directory
@@ -949,7 +949,7 @@ function mkdir ($pathname, $mode = 0777, $recursive = false, $context = null) {}
  * @since 4.0
  * @since 5.0
  */
-function rename ($oldname, $newname, $context = null) {}
+function rename (string $oldname, string $newname, $context = null) {}
 
 /**
  * Copies file
@@ -966,14 +966,14 @@ function rename ($oldname, $newname, $context = null) {}
  * If the destination file already exists, it will be overwritten.
  * </p>
  * @param resource $context [optional] <p>
- * A valid context resource created with 
+ * A valid context resource created with
  * stream_context_create.
  * </p>
  * @return bool true on success or false on failure.
  * @since 4.0
  * @since 5.0
  */
-function copy ($source, $dest, $context = null) {}
+function copy (string $source, string $dest, $context = null) {}
 
 /**
  * Create file with unique file name
@@ -990,7 +990,7 @@ function copy ($source, $dest, $context = null) {}
  * @since 4.0
  * @since 5.0
  */
-function tempnam ($dir, $prefix) {}
+function tempnam (string $dir, string $prefix) {}
 
 /**
  * Creates a temporary file
@@ -1015,7 +1015,7 @@ function tmpfile () {}
  * FILE_USE_INCLUDE_PATH
  * Search for the file in the include_path.
  * @param resource $context [optional] <p>
- * A context resource created with the 
+ * A context resource created with the
  * stream_context_create function.
  * </p>
  * <p>
@@ -1033,7 +1033,7 @@ function tmpfile () {}
  * @since 4.0
  * @since 5.0
  */
-function file ($filename, $flags = null, $context = null) {}
+function file (string $filename, int $flags = null, $context = null) {}
 
 /**
  * Reads entire file into a string
@@ -1046,7 +1046,7 @@ function file ($filename, $flags = null, $context = null) {}
  * used to trigger include path search.
  * </p>
  * @param resource $context [optional] <p>
- * A valid context resource created with 
+ * A valid context resource created with
  * stream_context_create. If you don't need to use a
  * custom context, you can skip this parameter by &null;.
  * </p>
@@ -1061,7 +1061,7 @@ function file ($filename, $flags = null, $context = null) {}
  * @since 4.3
  * @since 5.0
  */
-function file_get_contents ($filename, $use_include_path = false, $context = null, $offset = 0, $maxlen = null) {}
+function file_get_contents (string $filename, bool $use_include_path = false, $context = null, int $offset = 0, int $maxlen = null) {}
 
 /**
  * Write a string to a file
@@ -1084,8 +1084,8 @@ function file_get_contents ($filename, $use_include_path = false, $context = nul
  * file_put_contents($filename, implode('', $array)).
  * </p>
  * @param int $flags [optional] <p>
- * The value of flags can be any combination of 
- * the following flags (with some restrictions), joined with the binary OR 
+ * The value of flags can be any combination of
+ * the following flags (with some restrictions), joined with the binary OR
  * (|) operator.
  * </p>
  * <p>
@@ -1110,7 +1110,7 @@ function file_get_contents ($filename, $use_include_path = false, $context = nul
  * FILE_APPEND
  * </td>
  * <td>
- * If file filename already exists, append 
+ * If file filename already exists, append
  * the data to the file instead of overwriting it. Mutually
  * exclusive with LOCK_EX since appends are atomic and thus there
  * is no reason to lock.
@@ -1121,7 +1121,7 @@ function file_get_contents ($filename, $use_include_path = false, $context = nul
  * LOCK_EX
  * </td>
  * <td>
- * Acquire an exclusive lock on the file while proceeding to the 
+ * Acquire an exclusive lock on the file while proceeding to the
  * writing. Mutually exclusive with FILE_APPEND.
  * @since 5.1
  * </td>
@@ -1129,11 +1129,11 @@ function file_get_contents ($filename, $use_include_path = false, $context = nul
  * </table>
  * </p>
  * @param resource $context [optional] <p>
- * A valid context resource created with 
+ * A valid context resource created with
  * stream_context_create.
  * </p>
  * @return int|false The function returns the number of bytes that were written to the file, or
  * false on failure.
  * @since 5.0
  */
-function file_put_contents ($filename, $data, $flags = 0, $context = null) {}
+function file_put_contents (string $filename, $data, int $flags = 0, $context = null) {}

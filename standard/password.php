@@ -154,7 +154,7 @@ define('PASSWORD_ARGON2_DEFAULT_THREADS', 1);
  * </ul>
  * @since 5.5
  */
-function password_get_info ($hash) {}
+function password_get_info (string $hash) {}
 
 /**
  * (PHP 5 &gt;= 5.5.0, PHP 5)<br/>
@@ -173,7 +173,7 @@ function password_get_info ($hash) {}
  * @return string|false|null Returns the hashed password, or FALSE on failure, or null if the algorithm is invalid
  * @since 5.5
  */
-function password_hash ($password, $algo, $options = null) {}
+function password_hash (string $password, int $algo, array $options = null) {}
 
 /**
  * (PHP 5 &gt;= 5.5.0, PHP 5)<br/>
@@ -186,7 +186,7 @@ function password_hash ($password, $algo, $options = null) {}
  * @return bool Returns TRUE if the hash should be rehashed to match the given algo and options, or FALSE otherwise.
  * @since 5.5
  */
-function password_needs_rehash ($hash, $algo, $options = null) {}
+function password_needs_rehash (string $hash, int $algo, array $options = null) {}
 
 /**
  * (PHP 5 &gt;= 5.5.0, PHP 5)<br/>
@@ -198,6 +198,6 @@ function password_needs_rehash ($hash, $algo, $options = null) {}
  * @return bool Returns TRUE if the password and hash match, or FALSE otherwise.
  * @since 5.5
  */
-function password_verify ($password, $hash) {}
+function password_verify (string $password, string $hash) {}
 
 // End of password v.

@@ -32,7 +32,7 @@ define("__COMPILER_HALT_OFFSET__",0);
  * @see unpack()
  * @since 5.4
  */
-function hex2bin($data) {};
+function hex2bin(string $data) {};
 
 /**
  * This function flushes all response data to the client and finishes the request.
@@ -48,4 +48,4 @@ function fastcgi_finish_request() {};
  * @param int $response_code [optional] The optional response_code will set the response code.
  * @return int The current response code. By default the return value is int(200).
  */
-function http_response_code($response_code = null) {}
+function http_response_code(int $response_code = null) {}

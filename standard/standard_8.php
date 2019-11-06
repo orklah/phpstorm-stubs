@@ -57,7 +57,7 @@
  * @since 4.0
  * @since 5.0
  */
-function syslog ($priority, $message) {}
+function syslog (int $priority, string $message) {}
 
 /**
  * Close connection to system logger
@@ -98,7 +98,7 @@ function header_register_callback ( callable $callback ) {}
  * that can be used directly in an IMG tag.<br>
  * On failure, FALSE is returned.
  */
-function getimagesizefromstring ($imagedata , array &$imageinfo = null) {}
+function getimagesizefromstring (string $imagedata , array &$imageinfo = null) {}
 
 /**
  * PHP > 5.4.0<br/>
@@ -109,7 +109,7 @@ function getimagesizefromstring ($imagedata , array &$imageinfo = null) {}
  * @return int|false Returns the previous chunk size on success.<br>
  * Will return <b>FALSE</b> if chunk_size is less than 1 or greater than <b>PHP_INT_MAX</b>.
  */
-function stream_set_chunk_size ($fp , $chunk_size) {}
+function stream_set_chunk_size ($fp , int $chunk_size) {}
 
 /**
  * Initializes all syslog related variables
@@ -144,7 +144,7 @@ function lcg_value () {}
  * @since 4.0
  * @since 5.0
  */
-function metaphone ($str, $phonemes = 0) {}
+function metaphone (string $str, int $phonemes = 0) {}
 
 /**
  * Turn on output buffering
@@ -214,12 +214,12 @@ function metaphone ($str, $phonemes = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function ob_start ($output_callback = null, $chunk_size = null, $erase = null) {}
+function ob_start (callable $output_callback = null, int $chunk_size = null, bool $erase = null) {}
 
 /**
  * Flush (send) the output buffer
  * @link https://php.net/manual/en/function.ob-flush.php
- * @return void 
+ * @return void
  * @since 4.2
  * @since 5.0
  */
@@ -228,7 +228,7 @@ function ob_flush () {}
 /**
  * Clean (erase) the output buffer
  * @link https://php.net/manual/en/function.ob-clean.php
- * @return void 
+ * @return void
  * @since 4.2
  * @since 5.0
  */
@@ -306,22 +306,22 @@ function ob_get_level () {}
  * or with full_status = false a simple array
  * with the following elements is returned:
  * <pre>
- * Array 
+ * Array
  * (
  *     [level] => 2
  *     [type] => 0
  *     [status] => 0
  *     [name] => URL-Rewriter
- *     [del] => 1 
+ *     [del] => 1
  * )
  * </pre>
  * <table>
  * <tr><th>Key</th><th>Value</th></tr>
- * <tr><td>level</td><td>Output nesting level</td></tr> 
- * <tr><td>type</td><td><em>PHP_OUTPUT_HANDLER_INTERNAL (0)</em> or <em>PHP_OUTPUT_HANDLER_USER (1)</em></td></tr> 
- * <tr><td>status</td><td>One of <em>PHP_OUTPUT_HANDLER_START</em> (0), <em>PHP_OUTPUT_HANDLER_CONT</em> (1) or <em>PHP_OUTPUT_HANDLER_END</em> (2)</td></tr> 
- * <tr><td>name</td><td>Name of active output handler or &#039; default output handler&#039; if none is set</td></tr> 
- * <tr><td>del</td><td>Erase-flag as set by ob_start()</td></tr> 
+ * <tr><td>level</td><td>Output nesting level</td></tr>
+ * <tr><td>type</td><td><em>PHP_OUTPUT_HANDLER_INTERNAL (0)</em> or <em>PHP_OUTPUT_HANDLER_USER (1)</em></td></tr>
+ * <tr><td>status</td><td>One of <em>PHP_OUTPUT_HANDLER_START</em> (0), <em>PHP_OUTPUT_HANDLER_CONT</em> (1) or <em>PHP_OUTPUT_HANDLER_END</em> (2)</td></tr>
+ * <tr><td>name</td><td>Name of active output handler or &#039; default output handler&#039; if none is set</td></tr>
+ * <tr><td>del</td><td>Erase-flag as set by ob_start()</td></tr>
  * </table>
  * <p>
  * If called with full_status = TRUE an array with one element for each active output buffer
@@ -341,7 +341,7 @@ function ob_get_level () {}
  *             [name] => default output handler
  *             [del] => 1
  *         )
- * 
+ *
  *     [1] => Array
  *         (
  *             [chunk_size] => 0
@@ -353,7 +353,7 @@ function ob_get_level () {}
  *             [name] => URL-Rewriter
  *             [del] => 1
  *         )
- * 
+ *
  * )
  * </pre>
  * <p> The full output contains these additional elements:</p>
@@ -366,7 +366,7 @@ function ob_get_level () {}
  * @since 4.2
  * @since 5.0
  */
-function ob_get_status ($full_status = null) {}
+function ob_get_status (bool $full_status = null) {}
 
 /**
  * Return the contents of the output buffer
@@ -384,11 +384,11 @@ function ob_get_contents () {}
  * @param int $flag [optional] <p>
  * 1 to turn implicit flushing on, 0 otherwise.
  * </p>
- * @return void 
+ * @return void
  * @since 4.0
  * @since 5.0
  */
-function ob_implicit_flush ($flag = 1) {}
+function ob_implicit_flush (int $flag = 1) {}
 
 /**
  * List all output handlers in use
@@ -418,7 +418,7 @@ function ob_list_handlers () {}
  * @since 4.0
  * @since 5.0
  */
-function ksort (array &$array, $sort_flags = null) {}
+function ksort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array by key in reverse order
@@ -435,7 +435,7 @@ function ksort (array &$array, $sort_flags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function krsort (array &$array, $sort_flags = null) {}
+function krsort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array using a "natural order" algorithm
@@ -476,7 +476,7 @@ function natcasesort (array &$array) {}
  * @since 4.0
  * @since 5.0
  */
-function asort (array &$array, $sort_flags = null) {}
+function asort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array in reverse order and maintain index association
@@ -493,7 +493,7 @@ function asort (array &$array, $sort_flags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function arsort (array &$array, $sort_flags = null) {}
+function arsort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array
@@ -513,7 +513,7 @@ function arsort (array &$array, $sort_flags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function sort (array &$array, $sort_flags = null) {}
+function sort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array in reverse order
@@ -530,7 +530,7 @@ function sort (array &$array, $sort_flags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function rsort (array &$array, $sort_flags = null) {}
+function rsort (array &$array, int $sort_flags = null) {}
 
 /**
  * Sort an array by values using a user-defined comparison function
@@ -547,7 +547,7 @@ function rsort (array &$array, $sort_flags = null) {}
  * @since 4.0
  * @since 5.0
  */
-function usort (array &$array, $cmp_function) {}
+function usort (array &$array, callable $cmp_function) {}
 
 /**
  * Sort an array with a user-defined comparison function and maintain index association
@@ -563,7 +563,7 @@ function usort (array &$array, $cmp_function) {}
  * @since 4.0
  * @since 5.0
  */
-function uasort (array &$array, $cmp_function) {}
+function uasort (array &$array, callable $cmp_function) {}
 
 /**
  * Sort an array by keys using a user-defined comparison function
@@ -586,7 +586,7 @@ function uasort (array &$array, $cmp_function) {}
  * @since 4.0
  * @since 5.0
  */
-function uksort (array &$array, $cmp_function) {}
+function uksort (array &$array, callable $cmp_function) {}
 
 /**
  * Shuffle an array
@@ -634,7 +634,7 @@ function shuffle (array &$array) {}
  * @since 4.0
  * @since 5.0
  */
-function array_walk (array &$array, $funcname, $userdata = null) {}
+function array_walk (array &$array, callable $funcname, $userdata = null) {}
 
 /**
  * Apply a user function recursively to every member of an array
@@ -663,7 +663,7 @@ function array_walk (array &$array, $funcname, $userdata = null) {}
  * @return bool true on success or false on failure.
  * @since 5.0
  */
-function array_walk_recursive (array &$input, $funcname, $userdata = null) {}
+function array_walk_recursive (array &$input, callable $funcname, $userdata = null) {}
 
 /**
  * Counts all elements in an array, or something in an object.
@@ -694,7 +694,7 @@ function array_walk_recursive (array &$input, $funcname, $userdata = null) {}
  * @since 4.0
  * @since 5.0
  */
-function count ($var, $mode = COUNT_NORMAL) {}
+function count ($var, int $mode = COUNT_NORMAL) {}
 
 /**
  * Set the internal pointer of an array to its last element
@@ -760,7 +760,7 @@ function reset (array &$array) {}
  * @return mixed The current function simply returns the
  * value of the array element that's currently being pointed to by the
  * internal pointer. It does not move the pointer in any way. If the
- * internal pointer points beyond the end of the elements list or the array is 
+ * internal pointer points beyond the end of the elements list or the array is
  * empty, current returns false.
  * @since 4.0
  * @since 5.0
@@ -776,7 +776,7 @@ function current (array $array) {}
  * @return int|string|null The key function simply returns the
  * key of the array element that's currently being pointed to by the
  * internal pointer. It does not move the pointer in any way. If the
- * internal pointer points beyond the end of the elements list or the array is 
+ * internal pointer points beyond the end of the elements list or the array is
  * empty, key returns &null;.
  * @since 4.0
  * @since 5.0
@@ -835,7 +835,7 @@ function max ($value1, $value2 = null, ...$values) {}
  * @since 4.0
  * @since 5.0
  */
-function in_array ($needle, array $haystack, $strict = false) {}
+function in_array ($needle, array $haystack, bool $strict = false) {}
 
 /**
  * Searches the array for a given value and returns the corresponding key if successful
@@ -867,7 +867,7 @@ function in_array ($needle, array $haystack, $strict = false) {}
  * @since 4.0.5
  * @since 5.0
  */
-function array_search ($needle, array $haystack, $strict = null) {}
+function array_search ($needle, array $haystack, bool $strict = null) {}
 
 /**
  * Import variables into the current symbol table from an array
@@ -897,7 +897,7 @@ function array_search ($needle, array $haystack, $strict = null) {}
  * @since 4.0
  * @since 5.0
  */
-function extract (array $var_array, $extract_type = null, $prefix = null) {}
+function extract (array $var_array, int $extract_type = null, string $prefix = null) {}
 
 /**
  * Create array containing variables and their values
@@ -909,7 +909,7 @@ function extract (array $var_array, $extract_type = null, $prefix = null) {}
  * arrays of variable names inside it; compact
  * handles it recursively.
  * </p>
- * @param mixed $_ [optional] 
+ * @param mixed $_ [optional]
  * @return array the output array with all the variables added to it.
  * @since 4.0
  * @since 5.0
@@ -933,7 +933,7 @@ function compact ($varname, $_ = null) {}
  * @since 4.2
  * @since 5.0
  */
-function array_fill ($start_index, $num, $value) {}
+function array_fill (int $start_index, int $num, $value) {}
 
 /**
  * Fill an array with values, specifying keys
@@ -1109,7 +1109,7 @@ function array_unshift (array &$array, ...$vars) {}
  * @since 4.0
  * @since 5.0
  */
-function array_splice (array &$input, $offset, $length = null, $replacement = null) {}
+function array_splice (array &$input, int $offset, int $length = null, $replacement = null) {}
 
 /**
  * Extract a slice of the array
@@ -1141,7 +1141,7 @@ function array_splice (array &$input, $offset, $length = null, $replacement = nu
  * @since 4.0
  * @since 5.0
  */
-function array_slice (array $array, $offset, $length = null, $preserve_keys = false) {}
+function array_slice (array $array, int $offset, int $length = null, bool $preserve_keys = false) {}
 
 /**
  * Merge one or more arrays
@@ -1149,8 +1149,8 @@ function array_slice (array $array, $offset, $length = null, $preserve_keys = fa
  * @param array $array1 <p>
  * Initial array to merge.
  * </p>
- * @param array $array2 [optional] 
- * @param array $_ [optional] 
+ * @param array $array2 [optional]
+ * @param array $_ [optional]
  * @return array the resulting array.
  * @since 4.0
  * @since 5.0

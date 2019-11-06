@@ -58,7 +58,7 @@ class php_user_filter  {
      * </tr>
      *
      */
-    public function filter($in, $out, &$consumed, $closing)
+    public function filter($in, $out, int &$consumed, bool $closing)
     {
     }
 
@@ -93,7 +93,7 @@ class Directory  {
      * @var resource Can be used with other directory functions such as {@see readdir()}, {@see rewinddir()} and {@see closedir()}.
      */
     public $handle;
-    
+
     /**
      * Close directory handle.
      * Same as closedir(), only dir_handle defaults to $this.
@@ -132,7 +132,7 @@ class Directory  {
  * @since 4.0.4
  * @since 5.0
  */
-function constant ($name) {}
+function constant (string $name) {}
 
 /**
  * Convert binary data into hexadecimal representation
@@ -144,7 +144,7 @@ function constant ($name) {}
  * @since 4.0
  * @since 5.0
  */
-function bin2hex ($str) {}
+function bin2hex (string $str) {}
 
 /**
  * Delay execution
@@ -158,7 +158,7 @@ function bin2hex ($str) {}
  * @since 4.0
  * @since 5.0
  */
-function sleep ($seconds) {}
+function sleep (int $seconds) {}
 
 /**
  * Delay execution in microseconds
@@ -167,11 +167,11 @@ function sleep ($seconds) {}
  * Halt time in micro seconds. A micro second is one millionth of a
  * second.
  * </p>
- * @return void 
+ * @return void
  * @since 4.0
  * @since 5.0
  */
-function usleep ($micro_seconds) {}
+function usleep (int $micro_seconds) {}
 
 /**
  * Delay for a number of seconds and nanoseconds
@@ -193,7 +193,7 @@ function usleep ($micro_seconds) {}
  * remaining in the delay
  * @since 5.0
  */
-function time_nanosleep ($seconds, $nanoseconds) {}
+function time_nanosleep (int $seconds, int $nanoseconds) {}
 
 /**
  * Make the script sleep until the specified time
@@ -204,7 +204,7 @@ function time_nanosleep ($seconds, $nanoseconds) {}
  * @return bool true on success or false on failure.
  * @since 5.1
  */
-function time_sleep_until ($timestamp) {}
+function time_sleep_until (float $timestamp) {}
 
 /**
  * Parse a time/date generated with <function>strftime</function>
@@ -269,12 +269,12 @@ function time_sleep_until ($timestamp) {}
  * </table>
  * @since 5.1
  */
-function strptime ($date, $format) {}
+function strptime (string $date, string $format) {}
 
 /**
  * Flush the output buffer
  * @link https://php.net/manual/en/function.flush.php
- * @return void 
+ * @return void
  * @since 4.0
  * @since 5.0
  */
@@ -303,7 +303,7 @@ function flush () {}
  * @since 4.0.2
  * @since 5.0
  */
-function wordwrap ($str, $width = 75, $break = "\n", $cut = false) {}
+function wordwrap (string $str, int $width = 75, string $break = "\n", bool $cut = false) {}
 
 /**
  * Convert special characters to HTML entities
@@ -423,7 +423,7 @@ function wordwrap ($str, $width = 75, $break = "\n", $cut = false) {}
  * @since 4.0
  * @since 5.0
  */
-function htmlspecialchars ($string, $flags = ENT_COMPAT | ENT_HTML401, $encoding = 'UTF-8', $double_encode = true) {}
+function htmlspecialchars (string $string, int $flags = ENT_COMPAT | ENT_HTML401, string $encoding = 'UTF-8', bool $double_encode = true) {}
 
 /**
  * Convert all applicable characters to HTML entities
@@ -471,7 +471,7 @@ function htmlspecialchars ($string, $flags = ENT_COMPAT | ENT_HTML401, $encoding
  * @since 4.0
  * @since 5.0
  */
-function htmlentities ($string, $quote_style = null, $charset = null, $double_encode = true) {}
+function htmlentities (string $string, int $quote_style = null, string $charset = null, bool $double_encode = true) {}
 
 /**
  * Convert all HTML entities to their applicable characters
@@ -514,7 +514,7 @@ function htmlentities ($string, $quote_style = null, $charset = null, $double_en
  * @since 4.3
  * @since 5.0
  */
-function html_entity_decode ($string, $quote_style = null, $charset = null) {}
+function html_entity_decode (string $string, int $quote_style = null, string $charset = null) {}
 
 /**
  * Convert special HTML entities back to characters
@@ -548,7 +548,7 @@ function html_entity_decode ($string, $quote_style = null, $charset = null) {}
  * @return string the decoded string.
  * @since 5.1
  */
-function htmlspecialchars_decode ($string, $quote_style = null) {}
+function htmlspecialchars_decode (string $string, int $quote_style = null) {}
 
 /**
  * Returns the translation table used by <function>htmlspecialchars</function> and <function>htmlentities</function>
@@ -727,7 +727,7 @@ function htmlspecialchars_decode ($string, $quote_style = null) {}
  * @since 4.0
  * @since 5.0
  */
-function get_html_translation_table ($table = null, $quote_style = null, string $encoding = "UTF-8") {}
+function get_html_translation_table (int $table = null, int $quote_style = null, string $encoding = "UTF-8") {}
 
 /**
  * Calculate the sha1 hash of a string
@@ -745,7 +745,7 @@ function get_html_translation_table ($table = null, $quote_style = null, string 
  * @since 4.3
  * @since 5.0
  */
-function sha1 ($str, $raw_output = false) {}
+function sha1 (string $str, bool $raw_output = false) {}
 
 /**
  * Calculate the sha1 hash of a file
@@ -761,7 +761,7 @@ function sha1 ($str, $raw_output = false) {}
  * @since 4.3
  * @since 5.0
  */
-function sha1_file ($filename, $raw_output = false) {}
+function sha1_file (string $filename, bool $raw_output = false) {}
 
 /**
  * Calculate the md5 hash of a string
@@ -778,7 +778,7 @@ function sha1_file ($filename, $raw_output = false) {}
  * @since 4.0
  * @since 5.0
  */
-function md5 ($str, $raw_output = false) {}
+function md5 (string $str, bool $raw_output = false) {}
 
 /**
  * Calculates the md5 hash of a given file
@@ -794,7 +794,7 @@ function md5 ($str, $raw_output = false) {}
  * @since 4.2
  * @since 5.0
  */
-function md5_file ($filename, $raw_output = false) {}
+function md5_file (string $filename, bool $raw_output = false) {}
 
 /**
  * Calculates the crc32 polynomial of a string
@@ -806,7 +806,7 @@ function md5_file ($filename, $raw_output = false) {}
  * @since 4.0.1
  * @since 5.0
  */
-function crc32 ($str) {}
+function crc32 (string $str) {}
 
 /**
  * Parse a binary IPTC block into single tags.
@@ -820,7 +820,7 @@ function crc32 ($str) {}
  * @since 4.0
  * @since 5.0
  */
-function iptcparse ($iptcblock) {}
+function iptcparse (string $iptcblock) {}
 
 /**
  * Embeds binary IPTC data into a JPEG image.
@@ -833,7 +833,7 @@ function iptcparse ($iptcblock) {}
  * Path to the JPEG image.
  * </p>
  * @param int $spool [optional] <p>
- * Spool flag. If the spool flag is over 2 then the JPEG will be 
+ * Spool flag. If the spool flag is over 2 then the JPEG will be
  * returned as a string.
  * </p>
  * @return string|bool If success and spool flag is lower than 2 then the JPEG will not be
@@ -841,7 +841,7 @@ function iptcparse ($iptcblock) {}
  * @since 4.0
  * @since 5.0
  */
-function iptcembed ($iptcdata, $jpeg_file_name, $spool = null) {}
+function iptcembed (string $iptcdata, string $jpeg_file_name, int $spool = null) {}
 
 /**
  * Get the size of an image
@@ -849,14 +849,14 @@ function iptcembed ($iptcdata, $jpeg_file_name, $spool = null) {}
  * @param string $filename <p>
  * This parameter specifies the file you wish to retrieve information
  * about. It can reference a local file or (configuration permitting) a
- * remote file using one of the supported streams. 
+ * remote file using one of the supported streams.
  * </p>
  * @param array $imageinfo [optional] <p>
  * This optional parameter allows you to extract some extended
  * information from the image file. Currently, this will return the
  * different JPG APP markers as an associative array.
- * Some programs use these APP markers to embed text information in 
- * images. A very common one is to embed 
+ * Some programs use these APP markers to embed text information in
+ * images. A very common one is to embed
  * IPTC information in the APP13 marker.
  * You can use the iptcparse function to parse the
  * binary APP13 marker into something readable.
@@ -873,17 +873,17 @@ function iptcembed ($iptcdata, $jpeg_file_name, $spool = null) {}
  * zero for width and height in these cases.
  * </p>
  * <p>
- * Index 2 is one of the IMAGETYPE_XXX constants indicating 
+ * Index 2 is one of the IMAGETYPE_XXX constants indicating
  * the type of the image.
  * </p>
  * <p>
- * Index 3 is a text string with the correct 
+ * Index 3 is a text string with the correct
  * height="yyy" width="xxx" string that can be used
  * directly in an IMG tag.
  * </p>
  * <p>
  * mime is the correspondant MIME type of the image.
- * This information can be used to deliver images with correct the HTTP 
+ * This information can be used to deliver images with correct the HTTP
  * Content-type header:
  * getimagesize and MIME types
  * </p>
@@ -906,7 +906,7 @@ function iptcembed ($iptcdata, $jpeg_file_name, $spool = null) {}
  * @since 4.0
  * @since 5.0
  */
-function getimagesize ($filename, array &$imageinfo = null) {}
+function getimagesize (string $filename, array &$imageinfo = null) {}
 
 /**
  * Get Mime-Type for image-type returned by getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
@@ -995,7 +995,7 @@ function getimagesize ($filename, array &$imageinfo = null) {}
  * </tr>
  * </table>
  */
-function image_type_to_mime_type ($imagetype) {}
+function image_type_to_mime_type (int $imagetype) {}
 
 /**
  * Get file extension for image type
@@ -1009,7 +1009,7 @@ function image_type_to_mime_type ($imagetype) {}
  * @return string A string with the extension corresponding to the given image type.
  * @since 5.0
  */
-function image_type_to_extension ($imagetype, $include_dot = null) {}
+function image_type_to_extension (int $imagetype, bool $include_dot = null) {}
 
 /**
  * Outputs lots of PHP information
@@ -1072,7 +1072,7 @@ function image_type_to_extension ($imagetype, $include_dot = null) {}
  * <td>INFO_VARIABLES</td>
  * <td>32</td>
  * <td>
- * Shows all 
+ * Shows all
  * predefined variables from EGPCS (Environment, GET,
  * POST, Cookie, Server).
  * </td>
@@ -1097,7 +1097,7 @@ function image_type_to_extension ($imagetype, $include_dot = null) {}
  * @since 4.0
  * @since 5.0
  */
-function phpinfo ($what = null) {}
+function phpinfo (int $what = null) {}
 
 /**
  * Gets the current PHP version
@@ -1112,7 +1112,7 @@ function phpinfo ($what = null) {}
  * @since 4.0
  * @since 5.0
  */
-function phpversion ($extension = null) {}
+function phpversion (string $extension = null) {}
 
 /**
  * Prints out the credits for PHP
@@ -1179,7 +1179,7 @@ function phpversion ($extension = null) {}
  * @since 4.0
  * @since 5.0
  */
-function phpcredits ($flag = null) {}
+function phpcredits (int $flag = null) {}
 
 /**
  * @deprecated 5.5 Removed in PHP 5.5
@@ -1221,14 +1221,14 @@ function zend_logo_guid () {}
  * @return string the interface type, as a lowercase string.
  * </p>
  * <p>
- * Although not exhaustive, the possible return values include 
- * aolserver, apache, 
- * apache2filter, apache2handler, 
- * caudium, cgi (until PHP 5.3), 
- * cgi-fcgi, cli, 
+ * Although not exhaustive, the possible return values include
+ * aolserver, apache,
+ * apache2filter, apache2handler,
+ * caudium, cgi (until PHP 5.3),
+ * cgi-fcgi, cli,
  * continuity, embed,
- * isapi, litespeed, 
- * milter, nsapi, 
+ * isapi, litespeed,
+ * milter, nsapi,
  * phttpd, pi3web, roxen,
  * thttpd, tux, and webjames.
  * @since 4.0.1
@@ -1248,7 +1248,7 @@ function php_sapi_name () {}
  * @since 4.0.2
  * @since 5.0
  */
-function php_uname ($mode = null) {}
+function php_uname (string $mode = null) {}
 
 /**
  * Return a list of .ini files parsed from the additional ini dir
@@ -1289,7 +1289,7 @@ function php_ini_loaded_file () {}
  * @since 4.0
  * @since 5.0
  */
-function strnatcmp ($str1, $str2) {}
+function strnatcmp (string $str1, string $str2) {}
 
 /**
  * Case insensitive string comparisons using a "natural order" algorithm
@@ -1307,7 +1307,7 @@ function strnatcmp ($str1, $str2) {}
  * @since 4.0
  * @since 5.0
  */
-function strnatcasecmp ($str1, $str2) {}
+function strnatcasecmp (string $str1, string $str2) {}
 
 /**
  * Count the number of substring occurrences
@@ -1330,7 +1330,7 @@ function strnatcasecmp ($str1, $str2) {}
  * @since 4.0
  * @since 5.0
  */
-function substr_count ($haystack, $needle, $offset = null, $length = null) {}
+function substr_count (string $haystack, string $needle, int $offset = null, int $length = null) {}
 
 /**
  * Finds the length of the first segment of a string consisting
@@ -1365,7 +1365,7 @@ function substr_count ($haystack, $needle, $offset = null, $length = null) {}
  * </p>
  * @param int $length [optional] <p>
  * The length of the segment from subject
- * to examine. 
+ * to examine.
  * </p>
  * <p>
  * If length is given and is non-negative,
@@ -1384,7 +1384,7 @@ function substr_count ($haystack, $needle, $offset = null, $length = null) {}
  * @since 4.0
  * @since 5.0
  */
-function strspn ($subject, $mask, $start = null, $length = null) {}
+function strspn (string $subject, string $mask, int $start = null, int $length = null) {}
 
 /**
  * Find length of initial segment not matching mask
@@ -1405,7 +1405,7 @@ function strspn ($subject, $mask, $start = null, $length = null) {}
  * @since 4.0
  * @since 5.0
  */
-function strcspn ($str1, $str2, $start = null, $length = null) {}
+function strcspn (string $str1, string $str2, int $start = null, int $length = null) {}
 
 /**
  * Tokenize string
@@ -1425,4 +1425,4 @@ function strcspn ($str1, $str2, $start = null, $length = null) {}
  * @since 4.0
  * @since 5.0
  */
-function strtok ($str = null, $token) {}
+function strtok (string $str = null, string $token) {}

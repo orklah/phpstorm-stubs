@@ -36,7 +36,7 @@
  * @since 4.0
  * @since 5.0
  */
-function dl ($library) {}
+function dl (string $library) {}
 
 /**
  * Sets the process title
@@ -47,7 +47,7 @@ function dl ($library) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.5
  */
-function cli_set_process_title ($title) {}
+function cli_set_process_title (string $title) {}
 
 /**
  * Returns the current process title
@@ -76,7 +76,7 @@ function is_iterable($value) {}
  * @since 4.0
  * @since 5.0
  */
-function utf8_encode ($data) {}
+function utf8_encode (string $data) {}
 
 /**
  * Converts a string with ISO-8859-1 characters encoded with UTF-8
@@ -89,7 +89,7 @@ to single-byte ISO-8859-1
  * </p>
  * @return string the ISO-8859-1 translation of <i>data</i>.
  */
-function utf8_decode ($data) {}
+function utf8_decode (string $data) {}
 
 /**
  * Clear the most recent error
@@ -103,14 +103,14 @@ function error_clear_last () {}
  * @return int
  * @since 7.1
  */
-function sapi_windows_cp_get($kind) {}
+function sapi_windows_cp_get(string $kind) {}
 
 /**
  * @param int $cp
  * @return bool
  * @since 7.1
  */
-function sapi_windows_cp_set($cp) {}
+function sapi_windows_cp_set(int $cp) {}
 
 /**
  * @param int|string $in_codepage
@@ -119,7 +119,7 @@ function sapi_windows_cp_set($cp) {}
  * @return string
  * @since 7.1
  */
-function sapi_windows_cp_conv($in_codepage, $out_codepage, $subject) {}
+function sapi_windows_cp_conv($in_codepage, $out_codepage, string $subject) {}
 
 /**
  * @return bool
@@ -148,7 +148,7 @@ function sapi_windows_cp_is_utf8() {}
  * If <i>enable</i> is specified: Returns TRUE on success or FALSE on failure.
  * @since 7.2
  */
-function sapi_windows_vt100_support ($stream, $enable) {}
+function sapi_windows_vt100_support ($stream, bool $enable) {}
 
 /**
  * The full path and filename of the file. If used inside an include,
