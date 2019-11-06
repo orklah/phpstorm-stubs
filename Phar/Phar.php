@@ -62,7 +62,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void no return value, exception is thrown on failure.
 	 */
-	public function addEmptyDir ($dirname) {}
+	public function addEmptyDir (string $dirname) {}
 
 	/**
 	 * (Unknown)<br/>
@@ -77,7 +77,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void no return value, exception is thrown on failure.
 	 */
-	public function addFile ($file, $localname = null) {}
+	public function addFile (string $file, string $localname = null) {}
 
 	/**
 	 * (Unknown)<br/>
@@ -91,7 +91,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void no return value, exception is thrown on failure.
 	 */
-	public function addFromString ($localname, $contents) {}
+	public function addFromString (string $localname, string $contents) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -110,7 +110,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * mapping internal path of file to the full path of the file on the
 	 * filesystem.
 	 */
-	public function buildFromDirectory ($base_dir, $regex = null) {}
+	public function buildFromDirectory (string $base_dir, string $regex = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -128,7 +128,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * mapping internal path of file to the full path of the file on the
 	 * filesystem.
 	 */
-	public function buildFromIterator (Iterator $iter, $base_directory = null) {}
+	public function buildFromIterator (Iterator $iter, string $base_directory = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -141,7 +141,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	public function compressFiles ($compression) {}
+	public function compressFiles (int $compression) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -169,7 +169,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return object a <b>Phar</b> object.
 	 */
-	public function compress ($compression, $extension = null) {}
+	public function compress (int $compression, string $extension = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -184,7 +184,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return object A <b>Phar</b> object is returned.
 	 */
-	public function decompress ($extension = null) {}
+	public function decompress (string $extension = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -217,7 +217,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * @return Phar The method returns a <b>Phar</b> object on success and throws an
 	 * exception on failure.
 	 */
-	public function convertToExecutable ($format = 9021976, $compression = 9021976, $extension = null) {}
+	public function convertToExecutable (int $format = 9021976, int $compression = 9021976, string $extension = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -248,7 +248,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * @return PharData The method returns a <b>PharData</b> object on success and throws an
 	 * exception on failure.
 	 */
-	public function convertToData ($format = 9021976, $compression = 9021976, $extension = null) {}
+	public function convertToData (int $format = 9021976, int $compression = 9021976, string $extension = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -259,7 +259,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * @return bool returns <b>TRUE</b> on success, but it is safer to encase method call in a
 	 * try/catch block and assume success if no exception is thrown.
 	 */
-	public function copy ($oldfile, $newfile) {}
+	public function copy (string $oldfile, string $newfile) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -280,7 +280,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * @return bool returns <b>TRUE</b> on success, but it is better to check for thrown exception,
 	 * and assume success if none is thrown.
 	 */
-	public function delete ($entry) {}
+	public function delete (string $entry) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br/>
@@ -307,7 +307,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * @return bool returns <b>TRUE</b> on success, but it is better to check for thrown exception,
 	 * and assume success if none is thrown.
 	 */
-	public function extractTo ($pathto, $files = null, $overwrite = false) {}
+	public function extractTo (string $pathto, $files = null, bool $overwrite = false) {}
 
         /**
          * @see setAlias
@@ -403,7 +403,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> if the phar archive matches the file format requested by the parameter
 	 */
-	public function isFileFormat ($format) {}
+	public function isFileFormat (int $format) {}
 
 	/**
 	 * (Unknown)<br/>
@@ -471,7 +471,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool
 	 */
-	public function setAlias ($alias) {}
+	public function setAlias (string $alias) {}
 
 	/**
 	 * (Unknown)<br/>
@@ -485,7 +485,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setDefaultStub ($index = null, $webindex = null) {}
+	public function setDefaultStub (string $index = null, string $webindex = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -521,7 +521,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	public function setSignatureAlgorithm ($sigtype, $privatekey = null) {}
+	public function setSignatureAlgorithm (int $sigtype, string $privatekey = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -535,7 +535,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function setStub ($stub, $len = -1) {}
+	public function setStub (string $stub, int $len = -1) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -572,7 +572,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> if compression/decompression is available, <b>FALSE</b> if not.
 	 */
-	final public static function canCompress ($type = 0) {}
+	final public static function canCompress (int $type = 0) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -592,7 +592,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * that allows the created Phar archive to work with or without the Phar extension
 	 * enabled.
 	 */
-	final public static function createDefaultStub ($indexfile = null, $webindexfile = null) {}
+	final public static function createDefaultStub (string $indexfile = null, string $webindexfile = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br/>
@@ -635,7 +635,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> if the filename is valid, <b>FALSE</b> if not.
 	 */
-	final public static function isValidPharFilename ($filename, $executable = true) {}
+	final public static function isValidPharFilename (string $filename, bool $executable = true) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -652,7 +652,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	final public static function loadPhar ($filename, $alias = null) {}
+	final public static function loadPhar (string $filename, string $alias = null) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
@@ -667,7 +667,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	final public static function mapPhar ($alias = null, $dataoffset = 0) {}
+	final public static function mapPhar (string $alias = null, int $dataoffset = 0) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -679,7 +679,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return string the filename if valid, empty string otherwise.
 	 */
-	final public static function running ($retphar = true) {}
+	final public static function running (bool $retphar = true) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -694,7 +694,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void No return. <b>PharException</b> is thrown on failure.
 	 */
-	final public static function mount ($pharpath, $externalpath) {}
+	final public static function mount (string $pharpath, string $externalpath) {}
 
 	/**
 	 * (Unknown)<br/>
@@ -720,7 +720,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	final public static function unlinkArchive ($archive) {}
+	final public static function unlinkArchive (string $archive) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -800,7 +800,7 @@ class Phar extends RecursiveDirectoryIterator implements RecursiveIterator, Seek
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	final public static function webPhar ($alias = null, $index = "index.php", $f404 = null, array $mimetypes = null, callable $rewrites = null) {}
+	final public static function webPhar (string $alias = null, string $index = "index.php", string $f404 = null, array $mimetypes = null, callable $rewrites = null) {}
 
 	/**
 	 * Returns whether current entry is a directory and not '.' or '..'
@@ -910,7 +910,7 @@ class PharData extends Phar {
 	 * available within the <b>Phar</b> class.
 	 * </p>
 	 */
-	public function __construct ($fname, $flags = null, $alias = null, $format = Phar::TAR) {}
+	public function __construct ($fname, $flags = null, $alias = null, int $format = Phar::TAR) {}
 
 	public function offsetExists ($entry) {}
 
@@ -1051,7 +1051,7 @@ class PharFileInfo extends SplFileInfo  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	public function chmod ($permissions) {}
+	public function chmod (int $permissions) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -1060,7 +1060,7 @@ class PharFileInfo extends SplFileInfo  {
 	 * @param int $compression
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function compress ($compression) {}
+	public function compress (int $compression) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br/>
@@ -1136,7 +1136,7 @@ class PharFileInfo extends SplFileInfo  {
 	 * </p>
 	 * @return bool <b>TRUE</b> if the file is compressed within the Phar archive, <b>FALSE</b> if not.
 	 */
-	public function isCompressed ($compression_type = 9021976) {}
+	public function isCompressed (int $compression_type = 9021976) {}
 
 	/**
 	 * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br/>
