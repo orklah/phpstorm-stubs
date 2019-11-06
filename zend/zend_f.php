@@ -7,7 +7,7 @@
  * can be used to indicate an error in the script logic (e.g. database connection problem)
  * @param string $error_string the error string to display 
  */
-function set_job_failed( $error_string ){};
+function set_job_failed( string $error_string ){};
 
 
 
@@ -25,7 +25,7 @@ function jobqueue_license_info(){};
  * @param string $class
  * @vararg ...
  */
-function java($class) {}
+function java(string $class) {}
 
 
 /**
@@ -46,21 +46,21 @@ function java_last_exception_clear() {}
 tive, just things like $foo->bar and $foo->bar() would match Bar too.
  * @return void
  */
-function java_set_ignore_case($ignore) {}
+function java_set_ignore_case(bool $ignore) {}
 
 /**
  * Set encoding for strings received by Java from PHP. Default is UTF-8.
  * @param string $encoding
  * @return array
  */
-function java_set_encoding($encoding) {}
+function java_set_encoding(string $encoding) {}
 
 /**
  * Control if exceptions are thrown on Java exception. Only for PHP5.
  * @param bool $throw If true, PHP exception is thrown when Java exception happens. If set to false, use java_last_exception_get() to check for exception.
  * @return void
  */
-function java_throw_exceptions($throw) {}
+function java_throw_exceptions(bool $throw) {}
 
 /**
  * Reload Jar's that were dynamically loaded
@@ -68,7 +68,7 @@ function java_throw_exceptions($throw) {}
  * @return array
  * @param string $new_jarpath
  */
-function java_reload($new_jarpath) {}
+function java_reload(string $new_jarpath) {}
 
 /**
  * Add to Java's classpath in runtime
@@ -76,7 +76,7 @@ function java_reload($new_jarpath) {}
  * @return array
  * @param string $new_classpath
  */
-function java_require($new_classpath) {}
+function java_require(string $new_classpath) {}
 
 
 /**
@@ -109,21 +109,21 @@ function zend_loader_current_file() {}
  * @param bool $override [optional]
  * @return bool
  */
-function zend_loader_install_license($license_file, $override) {}
+function zend_loader_install_license(string $license_file, bool $override) {}
 
 /**
  * Obfuscate and return the given function name with the internal obfuscation function.
  * @param string $function_name
  * @return string
  */
-function zend_obfuscate_function_name($function_name) {}
+function zend_obfuscate_function_name(string $function_name) {}
 
 /**
  * Obfuscate and return the given class name with the internal obfuscation function.
  * @param string $class_name
  * @return string
  */
-function zend_obfuscate_class_name($class_name) {}
+function zend_obfuscate_class_name(string $class_name) {}
 
 /**
  * Returns the current obfuscation level support (set by zend_optimizer.obfuscation_level_support)
@@ -142,7 +142,7 @@ function zend_runtime_obfuscate() {}
  * @param bool $all_ids [optional]
  * @return array
  */
-function zend_get_id($all_ids = false) {}
+function zend_get_id(bool $all_ids = false) {}
 
 /**
  * Returns Optimizer version. Alias: zend_loader_version()

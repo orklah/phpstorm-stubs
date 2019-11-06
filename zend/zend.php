@@ -11,7 +11,7 @@ class ZendAPI_Queue {
      * @param string $queue_url Full address where the queue is in the form host:port
      * @return zendapi_queue object
      */
-    function zendapi_queue($queue_url) {}
+    function zendapi_queue(string $queue_url) {}
     
     /**
      * Open a connection to a job queue
@@ -21,7 +21,7 @@ class ZendAPI_Queue {
         unless this job already set an application id, the job will be assigned the queue application id
      * @return bool Success
      */
-    function login($password, $application_id=null) {}
+    function login(string $password, int $application_id=null) {}
     
     
     /**
@@ -41,7 +41,7 @@ class ZendAPI_Queue {
      * @param int $job_id The job id
      * @return Job Object describing a job in the queue
      */
-    function getJob($job_id) {}
+    function getJob(int $job_id) {}
 
     /**
      * Update an existing job in the queue with it's new properties. If job doesn't exists, 
@@ -109,7 +109,7 @@ class ZendAPI_Queue {
      * @param string $path relative script path
      * @return bool - TRUE if script exists in the document root FALSE otherwise
      */
-    function isScriptExists($path) {}
+    function isScriptExists(string $path) {}
 
 
     /**
@@ -131,7 +131,7 @@ class ZendAPI_Queue {
      *     Default is false.
      * @return array  Jobs that satisfies filter_options.
      */
-    function getJobsInQueue($filter_options=null, $max_jobs=-1, $with_globals_and_output=false) {}
+    function getJobsInQueue(array $filter_options=null, int $max_jobs=-1, bool $with_globals_and_output=false) {}
     
 
     /**
@@ -140,7 +140,7 @@ class ZendAPI_Queue {
      *     Options can be: priority, application_id, host, name, status, recurring.
      * @return int  Number of jobs that satisfy filter_options.
      */
-    function getNumOfJobsInQueue($filter_options=null) {}
+    function getNumOfJobsInQueue(array $filter_options=null) {}
 
 
     /**
@@ -171,7 +171,7 @@ class ZendAPI_Queue {
      *
      * @return array of jobs.
      */
-    function getHistoricJobs($status, $start_time, $end_time, $index, $count, &$total) {}
+    function getHistoricJobs(int $status, $start_time, $end_time, int $index, int $count, int &$total) {}
 
 
     /**
@@ -369,7 +369,7 @@ class ZendAPI_Job {
      * @param string $password For authentication, the queue password
      * @return int|false The added job id or false on failure
      */
-    function addJobToQueue($jobqueue_url, $password) {}
+    function addJobToQueue(string $jobqueue_url, string $password) {}
 
 
     /**
@@ -377,7 +377,7 @@ class ZendAPI_Job {
      *
      * @param int $priority Priority options are constants with the "JOB_QUEUE_PRIORITY_" prefix
      */
-    function setJobPriority($priority) {}
+    function setJobPriority(int $priority) {}
     
     // All properties SET functions
     function setJobName($name) {}
@@ -560,7 +560,7 @@ function monitor_pass_error($errno, $errstr, $errfile, $errline) {}
  * @param string $hint
  * @return void
  */
-function monitor_set_aggregation_hint($hint) {}
+function monitor_set_aggregation_hint(string $hint) {}
 
 /**
  * Creates a custom event with class $class, text $text and possibly severity and other user data
@@ -570,7 +570,7 @@ function monitor_set_aggregation_hint($hint) {}
  * @param mixed $user_data [optional]
  * @return void
  */
-function monitor_custom_event($class, $text, $severe = null, $user_data = null) {}
+function monitor_custom_event(string $class, string $text, int $severe = null, $user_data = null) {}
 
 /**
  * Create an HTTPERROR event
@@ -579,7 +579,7 @@ function monitor_custom_event($class, $text, $severe = null, $user_data = null) 
  * @param int $severe [optional] the severety of the event: 0 - not severe, 1 - severe
  * @return void
  */
-function monitor_httperror_event($error_code, $url, $severe = null) {}
+function monitor_httperror_event(int $error_code, string $url, int $severe = null) {}
 
 /**
  * Returns an array containing information about
@@ -600,14 +600,14 @@ his function by passing array($objectname, $methodname) to the function paramete
  * @param int $event_type_mask The mask of event types that the handler should be called on by default it's set to MONITOR_EVENT_ALL.
  * @return bool TRUE on sucess and FALSE if an error occurs.
  */
-function register_event_handler($event_handler_func, $handler_register_name, $event_type_mask) {}
+function register_event_handler(string $event_handler_func, string $handler_register_name, int $event_type_mask) {}
 
 /**
  * Allow you to unregister an event handler.
  * @param string $handler_name the name you registered with the handler you now wish to unregister.
  * @return bool TRUE on sucess and FALSE if no handler we registered under the given name.
  */
-function unregister_event_handler($handler_name) {}
+function unregister_event_handler(string $handler_name) {}
 
 /**
  * Send a file using ZDS
@@ -616,7 +616,7 @@ function unregister_event_handler($handler_name) {}
  * @param string $custom_headers [optional] user defined headers that will be send instead of regular ZDS headers. few basic essential headers will be send anyway
  * @return void|false FALSE if sending file failed, does not return otherwise
  */
-function zend_send_file($filename, $mime_type, $custom_headers) {}
+function zend_send_file(string $filename, string $mime_type, string $custom_headers) {}
 
 /**
  * Send a buffer using ZDS
@@ -625,7 +625,7 @@ function zend_send_file($filename, $mime_type, $custom_headers) {}
  * @param string $custom_headers [optional] user defined headers that will be send instead of regular ZDS headers. few basic essential headers will be send anyway
  * @return void|false FALSE if sending file failed, does not return otherwise
  */
-function zend_send_buffer($buffer, $mime_type, $custom_headers) {}
+function zend_send_buffer(string $buffer, string $mime_type, string $custom_headers) {}
 
 
 class java {
