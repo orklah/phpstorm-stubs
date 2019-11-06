@@ -13,7 +13,7 @@
  * @since 4.0
  * @since 5.0
  */
-function readline ($prompt = null) {}
+function readline (string $prompt = null) {}
 
 /**
  * Gets/sets various internal readline variables
@@ -35,7 +35,7 @@ function readline ($prompt = null) {}
  * @since 4.0
  * @since 5.0
  */
-function readline_info ($varname = null, $newvalue = null) {}
+function readline_info (string $varname = null, string $newvalue = null) {}
 
 /**
  * Adds a line to the history
@@ -47,7 +47,7 @@ function readline_info ($varname = null, $newvalue = null) {}
  * @since 4.0
  * @since 5.0
  */
-function readline_add_history ($line) {}
+function readline_add_history (string $line) {}
 
 /**
  * Clears the history
@@ -78,7 +78,7 @@ function readline_list_history () {}
  * @since 4.0
  * @since 5.0
  */
-function readline_read_history ($filename = null) {}
+function readline_read_history (string $filename = null) {}
 
 /**
  * Writes the history
@@ -90,7 +90,7 @@ function readline_read_history ($filename = null) {}
  * @since 4.0
  * @since 5.0
  */
-function readline_write_history ($filename = null) {}
+function readline_write_history (string $filename = null) {}
 
 /**
  * Registers a completion function
@@ -118,7 +118,7 @@ function readline_completion_function (callable $function) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.1
  */
-function readline_callback_handler_install ($prompt, callable $callback) {}
+function readline_callback_handler_install (string $prompt, callable $callback) {}
 
 /**
  * Reads a character and informs the readline callback interface when a line is received
