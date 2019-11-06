@@ -15,7 +15,7 @@
  * @since 4.0
  * @since 5.0
  */
-function wddx_serialize_value ($var, $comment = null) {}
+function wddx_serialize_value ($var, string $comment = null) {}
 
 /**
  * Serialize variables into a WDDX packet
@@ -41,7 +41,7 @@ function wddx_serialize_vars ($var_name, $_ = null) {}
  * @since 4.0
  * @since 5.0
  */
-function wddx_packet_start ($comment = null) {}
+function wddx_packet_start (string $comment = null) {}
 
 /**
  * Ends a WDDX packet with the specified ID
@@ -83,7 +83,7 @@ function wddx_add_vars ($packet_id, $var_name, $_ = null) {}
  * @since 4.0
  * @since 5.0
  */
-function wddx_deserialize ($packet) {}
+function wddx_deserialize (string $packet) {}
 
 // End of wddx v.
 ?>
