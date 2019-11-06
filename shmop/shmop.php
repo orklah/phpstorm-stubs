@@ -28,7 +28,7 @@
  * @since 4.0.4
  * @since 5.0
  */
-function shmop_open ($key, $flags, $mode, $size) {}
+function shmop_open (int $key, string $flags, int $mode, int $size) {}
 
 /**
  * Read data from shared memory block
@@ -47,7 +47,7 @@ function shmop_open ($key, $flags, $mode, $size) {}
  * @since 4.0.4
  * @since 5.0
  */
-function shmop_read ($shmid, $start, $count) {}
+function shmop_read ($shmid, int $start, int $count) {}
 
 /**
  * Close shared memory block
@@ -95,7 +95,7 @@ function shmop_size ($shmid) {}
  * @since 4.0.4
  * @since 5.0
  */
-function shmop_write ($shmid, $data, $offset) {}
+function shmop_write ($shmid, string $data, int $offset) {}
 
 /**
  * Delete shared memory block
