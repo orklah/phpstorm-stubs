@@ -175,7 +175,7 @@
  * </p>
  * @return resource|false a resource on success, or false on error.
  */
-function ssh2_connect ($host, $port = null, array $methods = null , array $callbacks = null ) {}
+function ssh2_connect (string $host, int $port = null, array $methods = null , array $callbacks = null ) {}
 
 /**
  * (PECL ssh2 &gt;= 1.0)<br/>
@@ -218,7 +218,7 @@ function ssh2_methods_negotiated ($session) {}
  * </p>
  * @return string the hostkey hash as a string.
  */
-function ssh2_fingerprint ($session, $flags = null) {}
+function ssh2_fingerprint ($session, int $flags = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -234,7 +234,7 @@ function ssh2_fingerprint ($session, $flags = null) {}
  * @return mixed true if the server does accept "none" as an authentication
  * method, or an array of accepted authentication methods on failure.
  */
-function ssh2_auth_none ($session, $username) {}
+function ssh2_auth_none ($session, string $username) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -252,7 +252,7 @@ function ssh2_auth_none ($session, $username) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_auth_password ($session, $username, $password) {}
+function ssh2_auth_password ($session, string $username, string $password) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -274,7 +274,7 @@ function ssh2_auth_password ($session, $username, $password) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_auth_pubkey_file ($session, $username, $pubkeyfile, $privkeyfile, $passphrase = null) {}
+function ssh2_auth_pubkey_file ($session, string $username, string $pubkeyfile, string $privkeyfile, string $passphrase = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -302,7 +302,7 @@ function ssh2_auth_pubkey_file ($session, $username, $pubkeyfile, $privkeyfile, 
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_auth_hostbased_file ($session, $username, $hostname, $pubkeyfile, $privkeyfile, $passphrase = null, $local_username = null) {}
+function ssh2_auth_hostbased_file ($session, string $username, string $hostname, string $pubkeyfile, string $privkeyfile, string $passphrase = null, string $local_username = null) {}
 
 function ssh2_forward_listen () {}
 
@@ -337,7 +337,7 @@ function ssh2_forward_accept () {}
  * </p>
  * @return resource
  */
-function ssh2_shell ($session, $term_type = null, array $env = null , $width = null, $height = null, $width_height_type = null) {}
+function ssh2_shell ($session, string $term_type = null, array $env = null , int $width = null, int $height = null, int $width_height_type = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -368,7 +368,7 @@ function ssh2_shell ($session, $term_type = null, array $env = null , $width = n
  * </p>
  * @return resource|false a stream on success or false on failure.
  */
-function ssh2_exec ($session, $command, $pty = null, array $env = null , $width = null, $height = null, $width_height_type = null) {}
+function ssh2_exec ($session, string $command, string $pty = null, array $env = null , int $width = null, int $height = null, int $width_height_type = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -384,7 +384,7 @@ function ssh2_exec ($session, $command, $pty = null, array $env = null , $width 
  * </p>
  * @return resource
  */
-function ssh2_tunnel ($session, $host, $port) {}
+function ssh2_tunnel ($session, string $host, int $port) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -402,7 +402,7 @@ function ssh2_tunnel ($session, $host, $port) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_scp_recv ($session, $remote_file, $local_file) {}
+function ssh2_scp_recv ($session, string $remote_file, string $local_file) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -424,7 +424,7 @@ function ssh2_scp_recv ($session, $remote_file, $local_file) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_scp_send ($session, $local_file, $remote_file, $create_mode = null) {}
+function ssh2_scp_send ($session, string $local_file, string $remote_file, int $create_mode = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -437,7 +437,7 @@ function ssh2_scp_send ($session, $local_file, $remote_file, $create_mode = null
  * </p>
  * @return resource the requested stream resource.
  */
-function ssh2_fetch_stream ($channel, $streamid) {}
+function ssh2_fetch_stream ($channel, int $streamid) {}
 
 /**
  * @param $var1
@@ -473,7 +473,7 @@ function ssh2_sftp ($session) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_sftp_rename ($sftp, $from, $to) {}
+function ssh2_sftp_rename ($sftp, string $from, string $to) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -486,7 +486,7 @@ function ssh2_sftp_rename ($sftp, $from, $to) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_sftp_unlink ($sftp, $filename) {}
+function ssh2_sftp_unlink ($sftp, string $filename) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -507,7 +507,7 @@ function ssh2_sftp_unlink ($sftp, $filename) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_sftp_mkdir ($sftp, $dirname, $mode = null, $recursive = null) {}
+function ssh2_sftp_mkdir ($sftp, string $dirname, int $mode = null, bool $recursive = null) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -520,7 +520,7 @@ function ssh2_sftp_mkdir ($sftp, $dirname, $mode = null, $recursive = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_sftp_rmdir ($sftp, $dirname) {}
+function ssh2_sftp_rmdir ($sftp, string $dirname) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -534,7 +534,7 @@ function ssh2_sftp_rmdir ($sftp, $dirname) {}
  * @return array See the documentation for stat for details on the
  * values which may be returned.
  */
-function ssh2_sftp_stat ($sftp, $path) {}
+function ssh2_sftp_stat ($sftp, string $path) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -548,7 +548,7 @@ function ssh2_sftp_stat ($sftp, $path) {}
  * @return array See the documentation for stat for details on the
  * values which may be returned.
  */
-function ssh2_sftp_lstat ($sftp, $path) {}
+function ssh2_sftp_lstat ($sftp, string $path) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -564,7 +564,7 @@ function ssh2_sftp_lstat ($sftp, $path) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_sftp_symlink ($sftp, $target, $link) {}
+function ssh2_sftp_symlink ($sftp, string $target, string $link) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -578,7 +578,7 @@ function ssh2_sftp_symlink ($sftp, $target, $link) {}
  * </p>
  * @return string the target of the symbolic link.
  */
-function ssh2_sftp_readlink ($sftp, $link) {}
+function ssh2_sftp_readlink ($sftp, string $link) {}
 
 /**
  * (PECL ssh2 &gt;= 0.9.0)<br/>
@@ -591,7 +591,7 @@ function ssh2_sftp_readlink ($sftp, $link) {}
  * </p>
  * @return string the real path as a string.
  */
-function ssh2_sftp_realpath ($sftp, $filename) {}
+function ssh2_sftp_realpath ($sftp, string $filename) {}
 
 /**
  * (PECL ssh2 &gt;= 0.10)<br/>
@@ -629,7 +629,7 @@ function ssh2_publickey_init ($session) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_publickey_add ($pkey, $algoname, $blob, $overwrite = null, array $attributes = null ) {}
+function ssh2_publickey_add ($pkey, string $algoname, string $blob, bool $overwrite = null, array $attributes = null ) {}
 
 /**
  * (PECL ssh2 &gt;= 0.10)<br/>
@@ -646,7 +646,7 @@ function ssh2_publickey_add ($pkey, $algoname, $blob, $overwrite = null, array $
  * </p>
  * @return bool true on success or false on failure.
  */
-function ssh2_publickey_remove ($pkey, $algoname, $blob) {}
+function ssh2_publickey_remove ($pkey, string $algoname, string $blob) {}
 
 /**
  * (PECL ssh2 &gt;= 0.10)<br/>
@@ -695,7 +695,7 @@ function ssh2_publickey_list ($pkey) {}
  * @param int $mode <p>Permissions on the file. See the chmod() for more details on this parameter.</p>
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ssh2_sftp_chmod ($sftp, $filename, $mode) {}
+function ssh2_sftp_chmod ($sftp, string $filename, int $mode) {}
 
 /**
  * (PECL ssh2 &gt;= 0.12)<br/>
@@ -711,7 +711,7 @@ function ssh2_sftp_chmod ($sftp, $filename, $mode) {}
  * @param string $username <p>Remote user name.</p>
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ssh2_auth_agent ($session, $username) {}
+function ssh2_auth_agent ($session, string $username) {}
 
 /**
  * Flag to ssh2_fingerprint requesting hostkey
