@@ -218,7 +218,7 @@ function uopz_set_property ($class, string $property, mixed $value): void {}
  * @return bool
  * @since 7.0
  */
-function uopz_set_return (string $class, string $function, $value, $execute = false): bool {}
+function uopz_set_return (string $class, string $function, $value, bool $execute = false): bool {}
 
 /**
  * Sets the static variables in method scope
