@@ -21,7 +21,7 @@ function msgpack_serialize($value) {}
  * @return mixed
  * @since 5.0
  */
-function msgpack_unserialize($str, $object=NULL) {}
+function msgpack_unserialize(string $str, $object=NULL) {}
 
 /**
  * Alias of msgpack_serialize
@@ -40,7 +40,7 @@ function msgpack_pack($value) {}
  * @return mixed
  * @since 5.0
  */
-function msgpack_unpack($str, $object = null)
+function msgpack_unpack(string $str, $object = null)
 {
 }
 
