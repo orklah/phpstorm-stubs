@@ -156,7 +156,7 @@
  * @since 4.0
  * @since 5.0
  */
-function preg_match ($pattern, $subject, array &$matches = null, $flags = 0, $offset = 0) {}
+function preg_match (string $pattern, string $subject, array &$matches = null, int $flags = 0, int $offset = 0) {}
 
 /**
  * Perform a global regular expression match
@@ -218,7 +218,7 @@ function preg_match ($pattern, $subject, array &$matches = null, $flags = 0, $of
  * @since 4.0
  * @since 5.0
  */
-function preg_match_all ($pattern, $subject, array &$matches = null, $flags = PREG_PATTERN_ORDER, $offset = 0) {}
+function preg_match_all (string $pattern, string $subject, array &$matches = null, int $flags = PREG_PATTERN_ORDER, int $offset = 0) {}
 
 /**
  * Perform a regular expression search and replace
@@ -308,7 +308,7 @@ function preg_match_all ($pattern, $subject, array &$matches = null, $flags = PR
  * @since 4.0
  * @since 5.0
  */
-function preg_replace ($pattern, $replacement, $subject, $limit = -1, &$count = null) {}
+function preg_replace ($pattern, $replacement, $subject, int $limit = -1, int &$count = null) {}
 
 /**
  * Perform a regular expression search and replace using a callback
@@ -380,7 +380,7 @@ function preg_replace ($pattern, $replacement, $subject, $limit = -1, &$count = 
  * @since 4.0.5
  * @since 5.0
  */
-function preg_replace_callback ($pattern, callable $callback, $subject, $limit = -1, &$count = null) {}
+function preg_replace_callback ($pattern, callable $callback, $subject, int $limit = -1, int &$count = null) {}
 
 /**
  * Perform a regular expression search and replace using callbacks
@@ -392,7 +392,7 @@ function preg_replace_callback ($pattern, callable $callback, $subject, $limit =
  * @return string|string[]|null  <p>preg_replace_callback_array() returns an array if the subject parameter is an array, or a string otherwise. On errors the return value is NULL</p>
  * <p>If matches are found, the new subject will be returned, otherwise subject will be returned unchanged.</p>
  */
-function preg_replace_callback_array ($patterns_and_callbacks, $subject , $limit = -1, &$count = null) {}
+function preg_replace_callback_array (array $patterns_and_callbacks, $subject , int $limit = -1, int &$count = null) {}
 
 /**
  * Perform a regular expression search and replace
@@ -411,7 +411,7 @@ function preg_replace_callback_array ($patterns_and_callbacks, $subject , $limit
  * or <b>NULL</b> otherwise.
  * @since 5.3
  */
-function preg_filter ($pattern, $replacement, $subject, $limit = -1, &$count = null) {}
+function preg_filter ($pattern, $replacement, $subject, int $limit = -1, int &$count = null) {}
 
 /**
  * Split string by a regular expression
@@ -441,7 +441,7 @@ function preg_filter ($pattern, $replacement, $subject, $limit = -1, &$count = n
  * @since 4.0
  * @since 5.0
  */
-function preg_split ($pattern, $subject, $limit = -1, $flags = 0) {}
+function preg_split (string $pattern, string $subject, int $limit = -1, int $flags = 0) {}
 
 /**
  * Quote regular expression characters
@@ -459,7 +459,7 @@ function preg_split ($pattern, $subject, $limit = -1, $flags = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function preg_quote ($str, $delimiter = null) {}
+function preg_quote (string $str, string $delimiter = null) {}
 
 /**
  * Return array entries that match the pattern
@@ -480,7 +480,7 @@ function preg_quote ($str, $delimiter = null) {}
  * @since 4.0
  * @since 5.0
  */
-function preg_grep ($pattern, array $input, $flags = 0) {}
+function preg_grep (string $pattern, array $input, int $flags = 0) {}
 
 /**
  * Returns the error code of the last PCRE regex execution
