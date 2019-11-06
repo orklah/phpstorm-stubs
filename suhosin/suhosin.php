@@ -13,7 +13,7 @@
  * </p>
  * @return string|false the encrypted string or false on failure.
  */
-function suhosin_encrypt_cookie ($name, $value) {}
+function suhosin_encrypt_cookie (string $name, string $value) {}
 
 /**
  * Returns an array containing the raw cookie values
