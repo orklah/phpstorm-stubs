@@ -14,7 +14,7 @@
  * @since 4.0
  * @since 5.0
  */
-function mcrypt_ecb ($cipher, $key, $data, $mode) {}
+function mcrypt_ecb ($cipher, string $key, string $data, int $mode) {}
 
 /**
  * Encrypt/decrypt data in CBC mode
@@ -29,7 +29,7 @@ function mcrypt_ecb ($cipher, $key, $data, $mode) {}
  * @since 4.0
  * @since 5.0
  */
-function mcrypt_cbc ($cipher, $key, $data, $mode, $iv = null) {}
+function mcrypt_cbc ($cipher, string $key, string $data, int $mode, string $iv = null) {}
 
 /**
  * Encrypt/decrypt data in CFB mode
@@ -44,7 +44,7 @@ function mcrypt_cbc ($cipher, $key, $data, $mode, $iv = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mcrypt_cfb ($cipher, $key, $data, $mode, $iv = null) {}
+function mcrypt_cfb ($cipher, string $key, string $data, int $mode, string $iv = null) {}
 
 /**
  * Encrypt/decrypt data in OFB mode
@@ -59,7 +59,7 @@ function mcrypt_cfb ($cipher, $key, $data, $mode, $iv = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mcrypt_ofb ($cipher, $key, $data, $mode, $iv = null) {}
+function mcrypt_ofb ($cipher, string $key, string $data, int $mode, string $iv = null) {}
 
 /**
  * Get the key size of the specified cipher
@@ -71,7 +71,7 @@ function mcrypt_ofb ($cipher, $key, $data, $mode, $iv = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_get_key_size ($cipher, $mode) {}
+function mcrypt_get_key_size ($cipher, string $mode) {}
 
 /**
  * Get the block size of the specified cipher
@@ -87,7 +87,7 @@ function mcrypt_get_key_size ($cipher, $mode) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_get_block_size ($cipher, $mode) {}
+function mcrypt_get_block_size ($cipher, string $mode) {}
 
 /**
  * Get the name of the specified cipher
@@ -133,7 +133,7 @@ function mcrypt_get_cipher_name ($cipher) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_create_iv ($size, $source = MCRYPT_DEV_URANDOM) {}
+function mcrypt_create_iv (int $size, int $source = MCRYPT_DEV_URANDOM) {}
 
 /**
  * Get an array of all supported ciphers
@@ -148,7 +148,7 @@ function mcrypt_create_iv ($size, $source = MCRYPT_DEV_URANDOM) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_list_algorithms ($lib_dir = null) {}
+function mcrypt_list_algorithms (string $lib_dir = null) {}
 
 /**
  * Get an array of all supported modes
@@ -163,7 +163,7 @@ function mcrypt_list_algorithms ($lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_list_modes ($lib_dir = null) {}
+function mcrypt_list_modes (string $lib_dir = null) {}
 
 /**
  * Returns the size of the IV belonging to a specific cipher/mode combination
@@ -186,7 +186,7 @@ function mcrypt_list_modes ($lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_get_iv_size ($cipher, $mode) {}
+function mcrypt_get_iv_size (string $cipher, string $mode) {}
 
 /**
  * Encrypts plaintext with given parameters
@@ -229,7 +229,7 @@ function mcrypt_get_iv_size ($cipher, $mode) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_encrypt ($cipher, $key, $data, $mode, $iv = null) {}
+function mcrypt_encrypt (string $cipher, string $key, string $data, string $mode, string $iv = null) {}
 
 /**
  * Decrypts crypttext with given parameters
@@ -264,7 +264,7 @@ function mcrypt_encrypt ($cipher, $key, $data, $mode, $iv = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_decrypt ($cipher, $key, $data, $mode, $iv = null) {}
+function mcrypt_decrypt (string $cipher, string $key, string $data, string $mode, string $iv = null) {}
 
 /**
  * Opens the module of the algorithm and the mode to be used
@@ -293,7 +293,7 @@ function mcrypt_decrypt ($cipher, $key, $data, $mode, $iv = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_open ($algorithm, $algorithm_directory, $mode, $mode_directory) {}
+function mcrypt_module_open (string $algorithm, string $algorithm_directory, string $mode, string $mode_directory) {}
 
 /**
  * This function initializes all buffers needed for encryption
@@ -324,7 +324,7 @@ function mcrypt_module_open ($algorithm, $algorithm_directory, $mode, $mode_dire
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_generic_init ($td, $key, $iv) {}
+function mcrypt_generic_init ($td, string $key, string $iv) {}
 
 /**
  * This function encrypts data
@@ -347,7 +347,7 @@ function mcrypt_generic_init ($td, $key, $iv) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_generic ($td, $data) {}
+function mcrypt_generic ($td, string $data) {}
 
 /**
  * Decrypt data
@@ -364,7 +364,7 @@ function mcrypt_generic ($td, $data) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mdecrypt_generic ($td, $data) {}
+function mdecrypt_generic ($td, string $data) {}
 
 /**
  * This function terminates encryption
@@ -543,7 +543,7 @@ function mcrypt_enc_get_modes_name ($td) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_self_test ($algorithm, $lib_dir = null) {}
+function mcrypt_module_self_test (string $algorithm, string $lib_dir = null) {}
 
 /**
  * Returns if the specified module is a block algorithm or not
@@ -562,7 +562,7 @@ function mcrypt_module_self_test ($algorithm, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_is_block_algorithm_mode ($mode, $lib_dir = null) {}
+function mcrypt_module_is_block_algorithm_mode (string $mode, string $lib_dir = null) {}
 
 /**
  * This function checks whether the specified algorithm is a block algorithm
@@ -580,7 +580,7 @@ function mcrypt_module_is_block_algorithm_mode ($mode, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_is_block_algorithm ($algorithm, $lib_dir = null) {}
+function mcrypt_module_is_block_algorithm (string $algorithm, string $lib_dir = null) {}
 
 /**
  * Returns if the specified mode outputs blocks or not
@@ -599,7 +599,7 @@ function mcrypt_module_is_block_algorithm ($algorithm, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_is_block_mode ($mode, $lib_dir = null) {}
+function mcrypt_module_is_block_mode (string $mode, string $lib_dir = null) {}
 
 /**
  * Returns the blocksize of the specified algorithm
@@ -616,7 +616,7 @@ function mcrypt_module_is_block_mode ($mode, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_get_algo_block_size ($algorithm, $lib_dir = null) {}
+function mcrypt_module_get_algo_block_size (string $algorithm, string $lib_dir = null) {}
 
 /**
  * Returns the maximum supported keysize of the opened mode
@@ -634,7 +634,7 @@ function mcrypt_module_get_algo_block_size ($algorithm, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_get_algo_key_size ($algorithm, $lib_dir = null) {}
+function mcrypt_module_get_algo_key_size (string $algorithm, string $lib_dir = null) {}
 
 /**
  * Returns an array with the supported keysizes of the opened algorithm
@@ -654,7 +654,7 @@ function mcrypt_module_get_algo_key_size ($algorithm, $lib_dir = null) {}
  * @since 5.0
  * @deprecated 7.1
  */
-function mcrypt_module_get_supported_key_sizes ($algorithm, $lib_dir = null) {}
+function mcrypt_module_get_supported_key_sizes (string $algorithm, string $lib_dir = null) {}
 
 /**
  * Close the mcrypt module
