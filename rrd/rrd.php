@@ -28,7 +28,7 @@ function rrd_error() {}
  * @return bool TRUE on success or FALSE on failure.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_create($filename, $options) {}
+function rrd_create(string $filename, array $options) {}
 
 /**
  * Gets data for graph output from RRD database file as array. This function has same result as rrd_graph(), but fetched data are returned as array, no image file is created.
@@ -42,7 +42,7 @@ function rrd_create($filename, $options) {}
  * @return array Array with information about retrieved graph data.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_fetch($filename, $options) {}
+function rrd_fetch(string $filename, array $options) {}
 
 /**
  * Gets the timestamp of the first sample from from the specified RRA of the RRD file.
@@ -56,7 +56,7 @@ function rrd_fetch($filename, $options) {}
  * @return int|false Integer as unix timestamp, FALSE if some error occurs.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_first($file, $raaindex = 0) {}
+function rrd_first(string $file, int $raaindex = 0) {}
 
 /**
  * Creates image from a data.
@@ -70,7 +70,7 @@ function rrd_first($file, $raaindex = 0) {}
  * @return array|false If image is created successfully an array with information about generated image is returned, FALSE when error occurs.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_graph($filename, $options) {}
+function rrd_graph(string $filename, array $options) {}
 
 /**
  * Returns information about particular RRD database file.
@@ -81,7 +81,7 @@ function rrd_graph($filename, $options) {}
  * @return array|false Array with information about requsted RRD file, FALSE when error occurs.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_info($filename) {}
+function rrd_info(string $filename) {}
 
 /**
  * Returns the UNIX timestamp of the most recent update of the RRD database.
@@ -92,7 +92,7 @@ function rrd_info($filename) {}
  * @return int Integer as unix timestamp of the most recent data from the RRD database.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_last($filename) {}
+function rrd_last(string $filename) {}
 
 /**
  * Gets array of the UNIX timestamp and the values stored for each date in the most recent update of the RRD database file.
@@ -103,7 +103,7 @@ function rrd_last($filename) {}
  * @return array|false Array of information about last update, FALSE when error occurs.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_lastupdate($filename) {}
+function rrd_lastupdate(string $filename) {}
 
 /**
  * Restores the RRD file from the XML dump.
@@ -120,7 +120,7 @@ function rrd_lastupdate($filename) {}
  * @return bool Returns TRUE on success, FALSE otherwise.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_restore($xml_file, $rrd_file, $options = array()) {}
+function rrd_restore(string $xml_file, string $rrd_file, array $options = array()) {}
 
 /**
  * Change some options in the RRD dabase header file. E.g. renames the source for the data etc.
@@ -134,7 +134,7 @@ function rrd_restore($xml_file, $rrd_file, $options = array()) {}
  * @return bool Returns TRUE on success, FALSE otherwise.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_tune($filename, $options) {}
+function rrd_tune(string $filename, array $options) {}
 
 /**
  * Updates the RRD database file. The input data is time interpolated according to the properties of the RRD database file.
@@ -148,7 +148,7 @@ function rrd_tune($filename, $options) {}
  * @return bool Updates the RRD database file. The input data is time interpolated according to the properties of the RRD database file.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_update($filename, $options) {}
+function rrd_update(string $filename, array $options) {}
 
 /**
  * Returns information about underlying rrdtool library.
@@ -167,7 +167,7 @@ function rrd_version() {}
  * @return array|false Array with information about RRD database file, FALSE when error occurs.
  * @since PECL rrd >= 0.9.0
  */
-function rrd_xport($options) {}
+function rrd_xport(array $options) {}
 
 /**
  * Close any outstanding connection to rrd caching daemon <p>
@@ -206,7 +206,7 @@ class RRDCreator {
      * @return void
      * @since PECL rrd >= 0.9.0
      */
-    public function addArchive($description) {}
+    public function addArchive(string $description) {}
 
     /**
      * Adds data source definition for RRD database.<p>
@@ -219,7 +219,7 @@ class RRDCreator {
      * @return void
      * @since PECL rrd >= 0.9.0
      */
-    public function addDataSource($description) {}
+    public function addDataSource(string $description) {}
 
     /**
      * Creates new RRDCreator instance.
@@ -235,7 +235,7 @@ class RRDCreator {
      * </p>
      * @since PECL rrd >= 0.9.0
      */
-    public function __construct($path, $startTime='', $step=0) {}
+    public function __construct(string $path, string $startTime='', int $step=0) {}
 
     /**
      * Saves the RRD database into file, which name is defined by RRDCreator::__construct()
@@ -263,7 +263,7 @@ class RRDGraph {
      * </p>
      * @since PECL rrd >= 0.9.0
      */
-    public function __construct($path) {}
+    public function __construct(string $path) {}
 
     /**
      * Saves the result of RRD database query into image defined by RRDGraph::__construct().
@@ -292,7 +292,7 @@ class RRDGraph {
      * @return void
      * @since PECL rrd >= 0.9.0
      */
-    public function setOptions($options) {}
+    public function setOptions(array $options) {}
 
 }
 
@@ -312,7 +312,7 @@ class RRDUpdater {
      * </p>
      * @since PECL rrd >= 0.9.0
      */
-    public function __construct($path) {}
+    public function __construct(string $path) {}
 
     /**
      * Update the RRD file defined via RRDUpdater::__construct(). The file is updated with a specific values.
@@ -327,7 +327,7 @@ class RRDUpdater {
      * @throws \Exception on error
      * @since PECL rrd >= 0.9.0
      */
-    public function update($values, $time='') {}
+    public function update(array $values, string $time='') {}
 
 }
 
