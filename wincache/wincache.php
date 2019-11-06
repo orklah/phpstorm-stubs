@@ -39,7 +39,7 @@
  * </ul></li>
  * </ul></p>
  */
-function wincache_fcache_fileinfo($summaryonly = false) {}
+function wincache_fcache_fileinfo(bool $summaryonly = false) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.0.0)<br/>
@@ -72,7 +72,7 @@ function wincache_fcache_meminfo() {}
  * that have the same parent process identifier. </p>
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function wincache_lock($key, $isglobal = false) {}
+function wincache_lock(string $key, bool $isglobal = false) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.0.0)<br/>
@@ -102,7 +102,7 @@ function wincache_lock($key, $isglobal = false) {}
  * </ul></li>
  * </ul></p>
  */
-function wincache_ocache_fileinfo($summaryonly = false) {}
+function wincache_ocache_fileinfo(bool $summaryonly = false) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.0.0)<br/>
@@ -194,7 +194,7 @@ function wincache_rplist_meminfo() {}
  * </ul></li>
  * </ul></p>
  */
-function wincache_scache_info($summaryonly = false) {}
+function wincache_scache_info(bool $summaryonly = false) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -243,7 +243,7 @@ function wincache_scache_meminfo() {}
  * for which the addition failed in the user cache.</li>
  * </ul></p>
  */
-function wincache_ucache_add($key, $value, $ttl = 0) {}
+function wincache_ucache_add($key, $value, int $ttl = 0) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -257,7 +257,7 @@ function wincache_ucache_add($key, $value, $ttl = 0) {}
  * if a match is found. The value should be of type long, otherwise the function returns FALSE.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function wincache_ucache_cas($key, $old_value, $new_value) {}
+function wincache_ucache_cas(string $key, int $old_value, int $new_value) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -281,7 +281,7 @@ function wincache_ucache_clear() {}
  * <p>Will be set to TRUE on success and FALSE on failure.</p>
  * @return int|false Returns the decremented value on success and FALSE on failure.
  */
-function wincache_ucache_dec($key, $dec_by = 1, &$success) {}
+function wincache_ucache_dec(string $key, int $dec_by = 1, bool &$success) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -303,7 +303,7 @@ function wincache_ucache_delete($key) {}
  * @param string $key The key that was used to store the variable in the cache. key is case sensitive.
  * @return bool Returns TRUE if variable with the key exitsts, otherwise returns FALSE.
  */
-function wincache_ucache_exists($key) {}
+function wincache_ucache_exists(string $key) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -321,7 +321,7 @@ function wincache_ucache_exists($key) {}
  * operation in user cache was successful. If none of the keys in the key array finds a
  * match in the user cache an empty array will be returned.</p>
  */
-function wincache_ucache_get($key, &$success) {}
+function wincache_ucache_get($key, bool &$success) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -337,7 +337,7 @@ function wincache_ucache_get($key, &$success) {}
  * <p>Will be set to TRUE on success and FALSE on failure.</p>
  * @return int|false Returns the incremented value on success and FALSE on failure.
  */
-function wincache_ucache_inc($key, $inc_by = 1, &$success) {}
+function wincache_ucache_inc(string $key, int $inc_by = 1, bool &$success) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -373,7 +373,7 @@ function wincache_ucache_inc($key, $inc_by = 1, &$success) {}
  * </ul></li>
  * </ul></p>
  */
-function wincache_ucache_info($summaryonly = false, $key) {}
+function wincache_ucache_info(bool $summaryonly = false, string $key) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -426,7 +426,7 @@ function wincache_ucache_meminfo() {}
  * name=&gt;value pair for which the addition failed in the user cache.</li>
  * </ul></p>
  */
-function wincache_ucache_set($key, $value, $ttl = 0) {}
+function wincache_ucache_set($key, $value, int $ttl = 0) {}
 
 /**
  * (PHP 5.2+; PECL wincache &gt;= 1.1.0)<br/>
@@ -436,5 +436,5 @@ function wincache_ucache_set($key, $value, $ttl = 0) {}
  * @param string $key Name of the key in the cache to release the lock on.
  * @return bool Returns TRUE on success or FALSE on failure.
  */
-function wincache_unlock($key) {}
+function wincache_unlock(string $key) {}
 ?>
