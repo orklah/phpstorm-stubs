@@ -26,7 +26,7 @@ function xmlrpc_encode ($value) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_decode ($xml, $encoding = "iso-8859-1") {}
+function xmlrpc_decode (string $xml, string $encoding = "iso-8859-1") {}
 
 /**
  * Decodes XML into native PHP types
@@ -38,7 +38,7 @@ function xmlrpc_decode ($xml, $encoding = "iso-8859-1") {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_decode_request ($xml, &$method, $encoding = null) {}
+function xmlrpc_decode_request (string $xml, string &$method, string $encoding = null) {}
 
 /**
  * Generates XML for a method request
@@ -57,7 +57,7 @@ function xmlrpc_decode_request ($xml, &$method, $encoding = null) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_encode_request ($method, $params, array $output_options = null) {}
+function xmlrpc_encode_request (string $method, $params, array $output_options = null) {}
 
 /**
  * Gets xmlrpc type for a PHP value
@@ -85,7 +85,7 @@ function xmlrpc_get_type ($value) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_set_type (&$value, $type) {}
+function xmlrpc_set_type (string &$value, string $type) {}
 
 /**
  * Determines if an array value represents an XMLRPC fault
@@ -130,7 +130,7 @@ function xmlrpc_server_destroy ($server) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_server_register_method ($server, $method_name, $function) {}
+function xmlrpc_server_register_method ($server, string $method_name, callable $function) {}
 
 /**
  * Parses XML requests and call methods
@@ -143,7 +143,7 @@ function xmlrpc_server_register_method ($server, $method_name, $function) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_server_call_method ($server, $xml, $user_data, array $output_options = null) {}
+function xmlrpc_server_call_method ($server, string $xml, $user_data, array $output_options = null) {}
 
 /**
  * Decodes XML into a list of method descriptions
@@ -153,7 +153,7 @@ function xmlrpc_server_call_method ($server, $xml, $user_data, array $output_opt
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_parse_method_descriptions ($xml) {}
+function xmlrpc_parse_method_descriptions (string $xml) {}
 
 /**
  * Adds introspection documentation
@@ -175,6 +175,6 @@ function xmlrpc_server_add_introspection_data ($server, array $desc) {}
  * @since 4.1
  * @since 5.0
  */
-function xmlrpc_server_register_introspection_callback ($server, $function) {}
+function xmlrpc_server_register_introspection_callback ($server, string $function) {}
 
 // End of xmlrpc v.0.51
