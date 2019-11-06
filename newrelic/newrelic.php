@@ -21,7 +21,7 @@
  *
  * @return bool
  */
-function newrelic_add_custom_parameter($key, $value) {}
+function newrelic_add_custom_parameter(string $key, $value) {}
 
 /**
  * Add user-defined functions or methods to the list to be instrumented . API equivalent of the
@@ -39,7 +39,7 @@ function newrelic_add_custom_parameter($key, $value) {}
  *
  * @return bool
  */
-function newrelic_add_custom_tracer($functionName) {}
+function newrelic_add_custom_tracer(string $functionName) {}
 
 /**
  * Mark current transaction as a background job or a web transaction.
@@ -53,7 +53,7 @@ function newrelic_add_custom_tracer($functionName) {}
  *
  * @return void
  */
-function newrelic_background_job($flag = true) {}
+function newrelic_background_job(bool $flag = true) {}
 
 /**
  * Enables the capturing of URL parameters for displaying in transaction traces. This will override the
@@ -68,7 +68,7 @@ function newrelic_background_job($flag = true) {}
  *
  * @return void
  */
-function newrelic_capture_params($enable = true) {}
+function newrelic_capture_params(bool $enable = true) {}
 
 /**
  * Adds a custom metric with the specified name and value.
@@ -92,7 +92,7 @@ function newrelic_capture_params($enable = true) {}
  *
  * @return bool
  */
-function newrelic_custom_metric($metricName, $value) {}
+function newrelic_custom_metric(string $metricName, float $value) {}
 
 /**
  * Prevents the output filter from attempting to insert the JavaScript for page load timing (sometimes referred to as
@@ -149,7 +149,7 @@ function newrelic_end_of_transaction() {}
  *
  * @return bool
  */
-function newrelic_end_transaction($ignore = false) {}
+function newrelic_end_transaction(bool $ignore = false) {}
 
 /**
  * Returns the JavaScript string to inject at the very end of the HTML output for page load timing (sometimes referred
@@ -163,7 +163,7 @@ function newrelic_end_transaction($ignore = false) {}
  *
  * @return string
  */
-function newrelic_get_browser_timing_footer ($includeTags = true) {}
+function newrelic_get_browser_timing_footer (bool $includeTags = true) {}
 
 /**
  * Returns the JavaScript string to inject as part of the header for page load timing (sometimes referred to as real
@@ -177,7 +177,7 @@ function newrelic_get_browser_timing_footer ($includeTags = true) {}
  *
  * @return string
  */
-function newrelic_get_browser_timing_header($includeTags = true) {}
+function newrelic_get_browser_timing_header(bool $includeTags = true) {}
 
 /**
  * Do not generate Apdex metrics for this transaction.
@@ -231,7 +231,7 @@ function newrelic_ignore_transaction() {}
  *
  * @return bool
  */
-function newrelic_name_transaction($name) {}
+function newrelic_name_transaction(string $name) {}
 
 /**
  * Report an error at this line of code, with a complete stack trace.
@@ -263,7 +263,7 @@ function newrelic_name_transaction($name) {}
  *
  * @return void
  */
-function newrelic_notice_error($messageOrUnused = null, $exceptionOrMessage = null, $unused2 = null, $unused3 = null, $unused4 = null) {}
+function newrelic_notice_error($messageOrUnused = null, $exceptionOrMessage = null, string $unused2 = null, int $unused3 = null, $unused4 = null) {}
 
 /**
  * Records a New Relic Insights custom event.
@@ -281,7 +281,7 @@ function newrelic_notice_error($messageOrUnused = null, $exceptionOrMessage = nu
  *
  * @return void
  */
-function newrelic_record_custom_event($name, array $attributes) {}
+function newrelic_record_custom_event(string $name, array $attributes) {}
 
 /**
  * Sets the name of the application to name.
@@ -317,7 +317,7 @@ function newrelic_record_custom_event($name, array $attributes) {}
  *
  * @return bool
  */
-function newrelic_set_appname($name, $license = null, $xmit = false) {}
+function newrelic_set_appname(string $name, string $license = null, bool $xmit = false) {}
 
 /**
  * Sets user attributes (custom parameters).
@@ -335,7 +335,7 @@ function newrelic_set_appname($name, $license = null, $xmit = false) {}
  *
  * @return bool
  */
-function newrelic_set_user_attributes($user, $account, $product) {}
+function newrelic_set_user_attributes(string $user, string $account, string $product) {}
 
 /**
  * If you have ended a transaction before your script terminates (perhaps due to it just having finished a task in a job
@@ -355,7 +355,7 @@ function newrelic_set_user_attributes($user, $account, $product) {}
  *
  * @return bool
  */
-function newrelic_start_transaction($appName, $license = null) {}
+function newrelic_start_transaction(string $appName, string $license = null) {}
 
 /**
  * Records a datastore segment.
