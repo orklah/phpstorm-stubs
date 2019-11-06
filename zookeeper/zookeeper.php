@@ -83,7 +83,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperConnectionException when host is provided and when failed to connect to the host
      */
-    public function __construct($host = '', $watcher_cb = null, $recv_timeout = 10000)
+    public function __construct(string $host = '', callable $watcher_cb = null, int $recv_timeout = 10000)
     {
     }
 
@@ -99,7 +99,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperConnectionException when failed to connect to Zookeeper
      */
-    public function connect($host, $watcher_cb = null, $recv_timeout = 10000)
+    public function connect(string $host, callable $watcher_cb = null, int $recv_timeout = 10000)
     {
     }
 
@@ -130,7 +130,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperNoNodeException when parent path does not exist
      */
-    public function create($path, $value, $acl, $flags = null)
+    public function create(string $path, string $value, array $acl, int $flags = null)
     {
     }
 
@@ -147,7 +147,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperNoNodeException when path does not exist
      */
-    public function delete($path, $version = -1)
+    public function delete(string $path, int $version = -1)
     {
     }
 
@@ -166,7 +166,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperNoNodeException when path does not exist
      */
-    public function set($path, $data, $version = -1, &$stat = null)
+    public function set(string $path, string $data, int $version = -1, array &$stat = null)
     {
     }
 
@@ -185,7 +185,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperNoNodeException when path does not exist
      */
-    public function get($path, $watcher_cb = null, &$stat = null, $max_size = 0)
+    public function get(string $path, callable $watcher_cb = null, array &$stat = null, int $max_size = 0)
     {
     }
 
@@ -202,7 +202,7 @@ class Zookeeper
      * @throws ZookeeperException       when connection not in connected status
      * @throws ZookeeperNoNodeException when path does not exist
      */
-    public function getChildren($path, $watcher_cb = null)
+    public function getChildren(string $path, callable $watcher_cb = null)
     {
     }
 
@@ -218,7 +218,7 @@ class Zookeeper
      *
      * @throws ZookeeperException
      */
-    public function exists($path, $watcher_cb = null)
+    public function exists(string $path, callable $watcher_cb = null)
     {
     }
 
@@ -233,7 +233,7 @@ class Zookeeper
      *
      * @throws ZookeeperException when connection not in connected status
      */
-    public function getAcl($path)
+    public function getAcl(string $path)
     {
     }
 
@@ -250,7 +250,7 @@ class Zookeeper
      *
      * @throws ZookeeperException when connection not in connected status
      */
-    public function setAcl($path, $version, $acls)
+    public function setAcl(string $path, int $version, array $acls)
     {
     }
 
@@ -281,7 +281,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperConnectionException when connection not in connected status
      */
-    public function setWatcher($watcher_cb)
+    public function setWatcher(callable $watcher_cb)
     {
     }
 
@@ -328,7 +328,7 @@ class Zookeeper
      * @throws ZookeeperException
      * @throws ZookeeperConnectionException when connection not in connected status
      */
-    public function addAuth($scheme, $cert, $completion_cb = null)
+    public function addAuth(string $scheme, string $cert, callable $completion_cb = null)
     {
     }
 
@@ -370,7 +370,7 @@ class Zookeeper
      *
      * @return bool
      */
-    public static function setDebugLevel($level)
+    public static function setDebugLevel(int $level)
     {
     }
 
@@ -383,7 +383,7 @@ class Zookeeper
      *
      * @return bool
      */
-    public static function setDeterministicConnOrder($trueOrFalse)
+    public static function setDeterministicConnOrder(bool $trueOrFalse)
     {
     }
 }
