@@ -132,7 +132,7 @@ class XMLReader  {
 	 * <i>name</i> is found or not positioned on an element node.
 	 * @since 5.1.2
 	 */
-	public function getAttribute ($name) {}
+	public function getAttribute (string $name) {}
 
 	/**
 	 * Get the value of an attribute by index
@@ -144,7 +144,7 @@ class XMLReader  {
 	 * at <i>index</i> or not positioned of element.
 	 * @since 5.1.2
 	 */
-	public function getAttributeNo ($index) {}
+	public function getAttributeNo (int $index) {}
 
 	/**
 	 * Get the value of an attribute by localname and URI
@@ -160,7 +160,7 @@ class XMLReader  {
 	 * <i>namespaceURI</i> is found or not positioned of element.
 	 * @since 5.1.2
 	 */
-	public function getAttributeNs ($localName, $namespaceURI) {}
+	public function getAttributeNs (string $localName, string $namespaceURI) {}
 
 	/**
 	 * Indicates if specified property has been set
@@ -172,7 +172,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function getParserProperty ($property) {}
+	public function getParserProperty (int $property) {}
 
 	/**
 	 * Indicates if the parsed document is valid
@@ -191,7 +191,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function lookupNamespace ($prefix) {}
+	public function lookupNamespace (string $prefix) {}
 
 	/**
 	 * Move cursor to an attribute by index
@@ -202,7 +202,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function moveToAttributeNo ($index) {}
+	public function moveToAttributeNo (int $index) {}
 
 	/**
 	 * Move cursor to a named attribute
@@ -213,7 +213,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function moveToAttribute ($name) {}
+	public function moveToAttribute (string $name) {}
 
 	/**
 	 * Move cursor to a named attribute
@@ -227,7 +227,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function moveToAttributeNs ($localName, $namespaceURI) {}
+	public function moveToAttributeNs (string $localName, string $namespaceURI) {}
 
 	/**
 	 * Position cursor on the parent Element of current Attribute
@@ -271,7 +271,7 @@ class XMLReader  {
 	 * <b>XMLReader</b> or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function open ($URI, $encoding = null, $options = 0) {}
+	public function open (string $URI, string $encoding = null, int $options = 0) {}
 
 	/**
 	 * Move to next node in document
@@ -290,7 +290,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function next ($localname = null) {}
+	public function next (string $localname = null) {}
 
 	/**
 	 * Retrieve XML from current node
@@ -326,7 +326,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.2
 	 */
-	public function setSchema ($filename) {}
+	public function setSchema (string $filename) {}
 
 	/**
 	 * Set parser options
@@ -342,7 +342,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function setParserProperty ($property, $value) {}
+	public function setParserProperty (int $property, bool $value) {}
 
 	/**
 	 * Set the filename or URI for a RelaxNG Schema
@@ -353,7 +353,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.2
 	 */
-	public function setRelaxNGSchema ($filename) {}
+	public function setRelaxNGSchema (string $filename) {}
 
 	/**
 	 * Set the data containing a RelaxNG Schema
@@ -364,7 +364,7 @@ class XMLReader  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function setRelaxNGSchemaSource ($source) {}
+	public function setRelaxNGSchemaSource (string $source) {}
 
 	/**
 	 * Set the data containing the XML to parse
@@ -383,7 +383,7 @@ class XMLReader  {
 	 * <b>XMLReader</b> or <b>FALSE</b> on failure.
 	 * @since 5.1.2
 	 */
-	public function XML ($source, $encoding = null, $options = 0) {}
+	public function XML (string $source, string $encoding = null, int $options = 0) {}
 
 	/**
 	 * Returns a copy of the current node as a DOM object
