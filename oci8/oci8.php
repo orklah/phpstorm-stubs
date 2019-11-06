@@ -36,7 +36,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function truncate ($length = 0) {}
+	public function truncate (int $length = 0) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -46,7 +46,7 @@ class OCI_Lob  {
 	 * @param int $length [optional]
 	 * @return int|false The actual number of characters/bytes erased or <b>FALSE</b> on failure.
 	 */
-	public function erase ($offset = null, $length = null) {}
+	public function erase (int $offset = null, int $length = null) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -66,7 +66,7 @@ class OCI_Lob  {
 	 * <p>
 	 * Returns <b>FALSE</b> if buffering was not enabled or an error occurred.
 	 */
-	public function flush ($flag = null) {}
+	public function flush (int $flag = null) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -78,7 +78,7 @@ class OCI_Lob  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure. Repeated calls to this method with the same flag will
 	 * return <b>TRUE</b>.
 	 */
-	public function setbuffering ($on_off) {}
+	public function setbuffering (bool $on_off) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -106,7 +106,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return string|false The contents as a string, or <b>FALSE</b> on failure.
 	 */
-	public function read ($length) {}
+	public function read (int $length) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -137,7 +137,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function seek ($offset, $whence = OCI_SEEK_SET) {}
+	public function seek (int $offset, int $whence = OCI_SEEK_SET) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -153,7 +153,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return int|false The number of bytes written or <b>FALSE</b> on failure.
 	 */
-	public function write ($data, $length = null) {}
+	public function write (string $data, int $length = null) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -201,7 +201,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function export ($filename, $start = null, $length = null) {}
+	public function export (string $filename, int $start = null, int $length = null) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -212,7 +212,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function import ($filename) {}
+	public function import (string $filename) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -229,7 +229,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function writeTemporary ($data, $lob_type = OCI_TEMP_CLOB) {}
+	public function writeTemporary (string $data, int $lob_type = OCI_TEMP_CLOB) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -251,7 +251,7 @@ class OCI_Lob  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function save ($data, $offset = null) {}
+	public function save (string $data, int $offset = null) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -300,7 +300,7 @@ class OCI_Collection  {
 	 * string if element is column of a string datatype or number if element is
 	 * numeric field.
 	 */
-	public function getelem ($index) {}
+	public function getelem (int $index) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -314,7 +314,7 @@ class OCI_Collection  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function assignelem ($index, $value) {}
+	public function assignelem (int $index, $value) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -355,7 +355,7 @@ class OCI_Collection  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function trim ($num) {}
+	public function trim (int $num) {}
 
 	/**
 	 * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -426,7 +426,7 @@ function oci_unregister_taf_callback($connection) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_define_by_name ($statement, $column_name, &$variable, $type = SQLT_CHR) {}
+function oci_define_by_name ($statement, string $column_name, &$variable, int $type = SQLT_CHR) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -474,7 +474,7 @@ function oci_define_by_name ($statement, $column_name, &$variable, $type = SQLT_
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_bind_by_name ($statement, $bv_name, &$variable, $maxlength = -1, $type = SQLT_CHR) {}
+function oci_bind_by_name ($statement, string $bv_name, &$variable, int $maxlength = -1, int $type = SQLT_CHR) {}
 
 /**
  * (PHP 5 &gt;= 5.1.2, PECL OCI8 &gt;= 1.2.0)<br/>
@@ -507,7 +507,7 @@ function oci_bind_by_name ($statement, $bv_name, &$variable, $maxlength = -1, $t
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_bind_array_by_name ($statement, $name, array &$var_array, $max_table_length, $max_item_length = -1, $type = SQLT_AFC) {}
+function oci_bind_array_by_name ($statement, string $name, array &$var_array, int $max_table_length, int $max_item_length = -1, int $type = SQLT_AFC) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -535,7 +535,7 @@ function oci_field_is_null ($statement, $field) {}
  * </p>
  * @return string|false The name as a string, or <b>FALSE</b> on errors.
  */
-function oci_field_name ($statement, $field) {}
+function oci_field_name ($statement, int $field) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -564,7 +564,7 @@ function oci_field_size ($statement, $field) {}
  * </p>
  * @return int|false The scale as an integer, or <b>FALSE</b> on errors.
  */
-function oci_field_scale ($statement, $field) {}
+function oci_field_scale ($statement, int $field) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -578,7 +578,7 @@ function oci_field_scale ($statement, $field) {}
  * </p>
  * @return int|false The precision as an integer, or <b>FALSE</b> on errors.
  */
-function oci_field_precision ($statement, $field) {}
+function oci_field_precision ($statement, int $field) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -592,7 +592,7 @@ function oci_field_precision ($statement, $field) {}
  * </p>
  * @return mixed the field data type as a string, or <b>FALSE</b> on errors.
  */
-function oci_field_type ($statement, $field) {}
+function oci_field_type ($statement, int $field) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -606,7 +606,7 @@ function oci_field_type ($statement, $field) {}
  * </p>
  * @return int|false Oracle's raw data type as a string, or <b>FALSE</b> on errors.
  */
-function oci_field_type_raw ($statement, $field) {}
+function oci_field_type_raw ($statement, int $field) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -674,7 +674,7 @@ function oci_field_type_raw ($statement, $field) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_execute ($statement, $mode = OCI_COMMIT_ON_SUCCESS) {}
+function oci_execute ($statement, int $mode = OCI_COMMIT_ON_SUCCESS) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -845,7 +845,7 @@ function oci_fetch_assoc ($statement) {}
  * to ensure name uniqueness, see example #7. Otherwise only one
  * column will be returned via PHP.
  */
-function oci_fetch_array ($statement, $mode = null) {}
+function oci_fetch_array ($statement, int $mode = null) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -858,7 +858,7 @@ function oci_fetch_array ($statement, $mode = null) {}
  * @param int $mode [optional]
  * @return int|bool
  */
-function ocifetchinto ($statement_resource, &$result, $mode = null) {}
+function ocifetchinto ($statement_resource, array &$result, int $mode = null) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -948,7 +948,7 @@ function ocifetchinto ($statement_resource, &$result, $mode = null) {}
  * @return int|false The number of rows in <i>output</i>, which
  * may be 0 or more, or <b>FALSE</b> on failure.
  */
-function oci_fetch_all ($statement, array &$output, $skip = 0, $maxrows = -1, $flags = OCI_FETCHSTATEMENT_BY_COLUMN | OCI_ASSOC) {}
+function oci_fetch_all ($statement, array &$output, int $skip = 0, int $maxrows = -1, int $flags = OCI_FETCHSTATEMENT_BY_COLUMN | OCI_ASSOC) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -970,7 +970,7 @@ function oci_free_statement ($statement) {}
  * </p>
  * @return void No value is returned.
  */
-function oci_internal_debug ($onoff) {}
+function oci_internal_debug (bool $onoff) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1002,7 +1002,7 @@ function oci_num_fields ($statement) {}
  * </p>
  * @return resource|false A statement handle on success, or <b>FALSE</b> on error.
  */
-function oci_parse ($connection, $sql_text) {}
+function oci_parse ($connection, string $sql_text) {}
 
 /**
  * (PECL OCI8 &gt;= 2.0.0)<br/>
@@ -1240,7 +1240,7 @@ function oci_close ($connection) {}
  * </p>
  * @return resource|false A connection identifier or <b>FALSE</b> on error.
  */
-function oci_connect ($username, $password, $connection_string = null, $character_set = null, $session_mode = null) {}
+function oci_connect (string $username, string $password, string $connection_string = null, string $character_set = null, int $session_mode = null) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1325,7 +1325,7 @@ function oci_connect ($username, $password, $connection_string = null, $characte
  * </p>
  * @return resource|false A connection identifier or <b>FALSE</b> on error.
  */
-function oci_new_connect ($username, $password, $connection_string = null, $character_set = null, $session_mode = null) {}
+function oci_new_connect (string $username, string $password, string $connection_string = null, string $character_set = null, int $session_mode = null) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1410,7 +1410,7 @@ function oci_new_connect ($username, $password, $connection_string = null, $char
  * </p>
  * @return resource|false A connection identifier or <b>FALSE</b> on error.
  */
-function oci_pconnect ($username, $password, $connection_string = null, $character_set = null, $session_mode = null) {}
+function oci_pconnect (string $username, string $password, string $connection_string = null, string $character_set = null, int $session_mode = null) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1507,7 +1507,7 @@ function oci_lob_is_equal (OCI_Lob $lob1, OCI_Lob $lob2) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_lob_copy (OCI_Lob $lob_to, OCI_Lob $lob_from, $length = 0) {}
+function oci_lob_copy (OCI_Lob $lob_to, OCI_Lob $lob_from, int $length = 0) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1549,7 +1549,7 @@ function oci_rollback ($connection) {}
  * </p>
  * @return OCI_Lob|false A new LOB or FILE descriptor on success, <b>FALSE</b> on error.
  */
-function oci_new_descriptor ($connection, $type = OCI_DTYPE_LOB) {}
+function oci_new_descriptor ($connection, int $type = OCI_DTYPE_LOB) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1564,7 +1564,7 @@ function oci_new_descriptor ($connection, $type = OCI_DTYPE_LOB) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_prefetch ($statement, $rows) {}
+function oci_set_prefetch ($statement, int $rows) {}
 
 /**
  * (PHP 5.3.2, PECL OCI8 &gt;= 1.4.0)<br/>
@@ -1578,7 +1578,7 @@ function oci_set_prefetch ($statement, $rows) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_client_identifier ($connection, $client_identifier) {}
+function oci_set_client_identifier ($connection, string $client_identifier) {}
 
 /**
  * (PHP 5.3.2, PECL OCI8 &gt;= 1.4.0)<br/>
@@ -1590,7 +1590,7 @@ function oci_set_client_identifier ($connection, $client_identifier) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_edition ($edition) {}
+function oci_set_edition (string $edition) {}
 
 /**
  * (PHP 5.3.2, PECL OCI8 &gt;= 1.4.0)<br/>
@@ -1604,7 +1604,7 @@ function oci_set_edition ($edition) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_module_name ($connection, $module_name) {}
+function oci_set_module_name ($connection, string $module_name) {}
 
 /**
  * (PHP 5.3.2, PECL OCI8 &gt;= 1.4.0)<br/>
@@ -1618,7 +1618,7 @@ function oci_set_module_name ($connection, $module_name) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_action ($connection, $action_name) {}
+function oci_set_action ($connection, string $action_name) {}
 
 /**
  * (PHP 5.3.2, PECL OCI8 &gt;= 1.4.0)<br/>
@@ -1632,7 +1632,7 @@ function oci_set_action ($connection, $action_name) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_set_client_info ($connection, $client_info) {}
+function oci_set_client_info ($connection, string $client_info) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1653,7 +1653,7 @@ function oci_set_client_info ($connection, $client_info) {}
  * </p>
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function oci_password_change ($connection, $username, $old_password, $new_password) {}
+function oci_password_change ($connection, string $username, string $old_password, string $new_password) {}
 
 /**
  * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br/>
@@ -1673,7 +1673,7 @@ function oci_password_change ($connection, $username, $old_password, $new_passwo
  * @return OCI_Collection|false A new <b>OCICollection</b> object or <b>FALSE</b> on
  * error.
  */
-function oci_new_collection ($connection, $tdo, $schema = null) {}
+function oci_new_collection ($connection, string $tdo, string $schema = null) {}
 
 /**
  * Alias of {@see oci_free_statement()}
@@ -1717,7 +1717,7 @@ function ocibindbyname ($statement, $column_name, &$variable, $maximum_length = 
  * You can optionally use {@see oci_new_descriptor()} to allocate LOB/ROWID/BFILE descriptors.</p>
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function ocidefinebyname ($statement, $column_name, &$variable, $type = SQLT_CHR) {}
+function ocidefinebyname ($statement, string $column_name, &$variable, int $type = SQLT_CHR) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -1845,7 +1845,7 @@ function ocifreestatement ($statement_resource) {}
  * @link https://php.net/manual/en/function.ociinternaldebug.php
  * @param bool $mode
  */
-function ociinternaldebug ($mode) {}
+function ociinternaldebug (bool $mode) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -1864,7 +1864,7 @@ function ocinumcols ($statement_resource) {}
  * @param string $sql_text
  * @return resource|false Returns a statement handle on success, or FALSE on error.
  */
-function ociparse ($connection_resource, $sql_text) {}
+function ociparse ($connection_resource, string $sql_text) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -1932,7 +1932,7 @@ function ocilogoff ($connection_resource) {}
  * @param int $session_mode[optional]
  * @return resource|false Returns a connection identifier or FALSE on error.
  */
-function ocilogon ($username, $password, $connection_string, $character_set, $session_mode) {}
+function ocilogon (string $username, string $password, string $connection_string, string $character_set, int $session_mode) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -1960,7 +1960,7 @@ function ocinlogon ($username, $password, $connection_string, $character_set, $s
  * @param $session_mode [optional]
  * @return resource|false <p>Returns a connection identifier or <b>FALSE</b> on error.</p>
  */
-function ociplogon ($username, $password, $connection_string, $character_set, $session_mode) {}
+function ociplogon (string $username, string $password, $connection_string, $character_set, $session_mode) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -1993,7 +1993,7 @@ function ocifreedesc ($lob_descriptor) {}
  * @param int $offset [optional]
  * @return bool
  */
-function ocisavelob ($lob_descriptor, $data, $offset) {}
+function ocisavelob (\OCI_Lob $lob_descriptor, string $data, int $offset) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2004,7 +2004,7 @@ function ocisavelob ($lob_descriptor, $data, $offset) {}
  * @param string $filename
  * @return bool
  */
-function ocisavelobfile ($lob_descriptor, $filename) {}
+function ocisavelobfile (\OCI_Lob $lob_descriptor, string $filename) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2017,7 +2017,7 @@ function ocisavelobfile ($lob_descriptor, $filename) {}
  * @param int $length [optional] <p>Indicates the length of data to be exported.</p>
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function ociwritelobtofile ($lob_descriptor, $filename, $start, $length) {}
+function ociwritelobtofile (\OCI_Lob $lob_descriptor, string $filename, int $start, int $length) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2027,7 +2027,7 @@ function ociwritelobtofile ($lob_descriptor, $filename, $start, $length) {}
  * @param OCI_Lob $lob_descriptor
  * @return string|false <p>Returns the contents of the object, or <b>FALSE</b> on errors.</p>
  */
-function ociloadlob ($lob_descriptor) {}
+function ociloadlob (\OCI_Lob $lob_descriptor) {}
 
 /**
  * (PHP 4, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2092,7 +2092,7 @@ function ocisetprefetch ($statement_resource, $number_of_rows) {}
  * @param string $new_password <p>The new password to be set.</p>
  * @return resource|bool <p>Returns <b>TRUE</b> on success or <b>FALSE</b> on failure or <b>resource</b>, depending on the function parameters.</p>
  */
-function ocipasswordchange ($connection_resource_or_connection_string_or_dbname, $username, $old_password, $new_password) {}
+function ocipasswordchange ($connection_resource_or_connection_string_or_dbname, string $username, string $old_password, string $new_password) {}
 
 /**
  * (PHP 4 &gt;= 4.0.7, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2101,7 +2101,7 @@ function ocipasswordchange ($connection_resource_or_connection_string_or_dbname,
  * @param OCI_Collection $collection
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function ocifreecollection ($collection) {}
+function ocifreecollection (\OCI_Collection $collection) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2128,7 +2128,7 @@ function ocinewcollection ($connection_resource, $tdo, $schema = null) {}
  * @param mixed $value <p>The value to be added to the collection. Can be a string or a number.</p>
  * @return bool <p>Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.</p>
  */
-function ocicollappend ($collection, $value) {}
+function ocicollappend (\OCI_Collection $collection, $value) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2139,7 +2139,7 @@ function ocicollappend ($collection, $value) {}
  * @param int $index <p>The element index. First index is 0.</p>
  * @return mixed <p>Returns <b>FALSE</b> if such element doesn't exist; <b>NULL</b> if element is <b>NULL</b>; string if element is column of a string datatype or number if element is numeric field.
  */
-function ocicollgetelem ($collection, $index) {}
+function ocicollgetelem (\OCI_Collection $collection, int $index) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2150,7 +2150,7 @@ function ocicollgetelem ($collection, $index) {}
  * @param $value <p>Can be a string or a number.</p>
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ocicollassignelem ($collection, $index, $value) {}
+function ocicollassignelem (\OCI_Collection $collection, $index, $value) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2160,7 +2160,7 @@ function ocicollassignelem ($collection, $index, $value) {}
  * @param OCI_Collection $collection
  * @return int|false <p>Returns the number of elements in the collection or <b>FALSE</b> on error.</p>
  */
-function ocicollsize ($collection) {}
+function ocicollsize (\OCI_Collection $collection) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2171,7 +2171,7 @@ function ocicollsize ($collection) {}
  * @return int|false <p> Returns the maximum number as an integer, or <b>FALSE</b> on errors.
  * If the returned value is 0, then the number of elements is not limited.
  */
-function ocicollmax ($collection) {}
+function ocicollmax (\OCI_Collection $collection) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PHP 5, PECL OCI8 &gt;= 1.0.0)<br/>
@@ -2182,7 +2182,7 @@ function ocicollmax ($collection) {}
  * @param int|float $number
  * @return bool Returns <b>TRUE</b> or <b>FALSE</b> on failure.
  */
-function ocicolltrim ($collection, $number) {}
+function ocicolltrim (\OCI_Collection $collection, $number) {}
 
 
 /**
@@ -2205,7 +2205,7 @@ function ocicolltrim ($collection, $number) {}
  * </ul>
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ociwritetemporarylob($lob_descriptor, $data, $lob_type = OCI_TEMP_CLOB ) {}
+function ociwritetemporarylob(\OCI_Lob $lob_descriptor, string $data, int $lob_type = OCI_TEMP_CLOB ) {}
 
 /**
  * (PHP 4 &gt;= 4.0.6, PECL OCI8 1.0)
@@ -2214,7 +2214,7 @@ function ociwritetemporarylob($lob_descriptor, $data, $lob_type = OCI_TEMP_CLOB 
  * @param OCI_Lob $lob_descriptor
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ocicloselob($lob_descriptor){}
+function ocicloselob(\OCI_Lob $lob_descriptor){}
 
 /**
  * (PHP 4 >= 4.0.6, PECL OCI8 1.0)
@@ -2225,7 +2225,7 @@ function ocicloselob($lob_descriptor){}
  * @param OCI_Collection $from An instance of OCI-Collection.
  * @return bool <p>Returns TRUE on success or FALSE on failure.</p>
  */
-function ocicollassign($to, $from ) {}
+function ocicollassign(\OCI_Collection $to, \OCI_Collection $from ) {}
 /**
  * See <b>OCI_NO_AUTO_COMMIT</b>.
  * @link https://php.net/manual/en/oci8.constants.php
