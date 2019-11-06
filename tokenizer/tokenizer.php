@@ -28,7 +28,7 @@
  * @since 4.2
  * @since 5.0
  */
-function token_get_all ($source, $flags = 0) {}
+function token_get_all (string $source, int $flags = 0) {}
 
 /**
  * Get the symbolic name of a given PHP token
@@ -40,7 +40,7 @@ function token_get_all ($source, $flags = 0) {}
  * @since 4.2
  * @since 5.0
  */
-function token_name ($token) {}
+function token_name (int $token) {}
 
 define('TOKEN_PARSE', 1);
 define('T_REQUIRE_ONCE', 262);
