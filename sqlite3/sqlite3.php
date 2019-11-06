@@ -28,7 +28,7 @@ class SQLite3  {
 	 * @return void No value is returned.
 	 * @since 5.3
 	 */
-	public function open ($filename, $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, $encryption_key = null) {}
+	public function open (string $filename, int $flags = SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, string $encryption_key = null) {}
 
 	/**
 	 * Closes the database connection
@@ -48,7 +48,7 @@ class SQLite3  {
 	 * @return bool <b>TRUE</b> if the query succeeded, <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function exec ($query) {}
+	public function exec (string $query) {}
 
 	/**
 	 * Returns the SQLite3 library version as a string constant and as a number
@@ -94,7 +94,7 @@ class SQLite3  {
 	 * @return bool <b>TRUE</b> on success, <b>FALSE</b> on failure.
 	 * @since 5.3.3
 	 */
-	public function busyTimeout ($msecs) {}
+	public function busyTimeout (int $msecs) {}
 
 	/**
 	 * Attempts to load an SQLite extension library
@@ -106,7 +106,7 @@ class SQLite3  {
 	 * @return bool <b>TRUE</b> if the extension is successfully loaded, <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function loadExtension ($shared_library) {}
+	public function loadExtension (string $shared_library) {}
 
 	/**
 	 * Returns the number of database rows that were changed (or inserted or
@@ -129,7 +129,7 @@ class SQLite3  {
 	 * statement.
 	 * @since 5.3
 	 */
-	public static function escapeString ($value) {}
+	public static function escapeString (string $value) {}
 
 	/**
 	 * Prepares an SQL statement for execution
@@ -140,7 +140,7 @@ class SQLite3  {
 	 * @return SQLite3Stmt|false an <b>SQLite3Stmt</b> object on success or <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function prepare ($query) {}
+	public function prepare (string $query) {}
 
 	/**
 	 * Executes an SQL query
@@ -152,7 +152,7 @@ class SQLite3  {
 	 * returns <b>TRUE</b> if the query succeeded, <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function query ($query) {}
+	public function query (string $query) {}
 
 	/**
 	 * Executes a query and returns a single result
@@ -178,7 +178,7 @@ class SQLite3  {
 	 * Invalid or failing queries will return <b>FALSE</b>.
 	 * @since 5.3
 	 */
-	public function querySingle ($query, $entire_row = false) {}
+	public function querySingle (string $query, bool $entire_row = false) {}
 
 	/**
 	 * Registers a PHP function for use as an SQL scalar function
@@ -202,7 +202,7 @@ class SQLite3  {
 	 * @return bool <b>TRUE</b> upon successful creation of the function, <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function createFunction ($name, $callback, $argument_count = -1, int $flags = 0) {}
+	public function createFunction (string $name, $callback, int $argument_count = -1, int $flags = 0) {}
 
 	/**
 	 * Registers a PHP function for use as an SQL aggregate function
@@ -227,7 +227,7 @@ class SQLite3  {
 	 * failure.
 	 * @since 5.3
 	 */
-	public function createAggregate ($name, $step_callback, $final_callback, $argument_count = -1) {}
+	public function createAggregate (string $name, $step_callback, $final_callback, int $argument_count = -1) {}
 
 	/**
 	 * Registers a PHP function for use as an SQL collating function
@@ -245,7 +245,7 @@ class SQLite3  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.3.11
 	 */
-	public function createCollation ($name, callable $callback) {}
+	public function createCollation (string $name, callable $callback) {}
 
 	/**
 	 * Opens a stream resource to read a BLOB
@@ -284,7 +284,7 @@ class SQLite3  {
 	 * </p>
 	 * @since 5.3
 	 */
-	public function __construct ($filename, $flags = null, $encryption_key = null) {}
+	public function __construct (string $filename, int $flags = null, string $encryption_key = null) {}
 
 }
 
@@ -357,7 +357,7 @@ class SQLite3Stmt  {
 	 * on failure.
 	 * @since 5.3
 	 */
-	public function bindParam ($sql_param, &$param, $type = null) {}
+	public function bindParam (string $sql_param, &$param, int $type = null) {}
 
 	/**
 	 * Binds the value of a parameter to a statement variable
@@ -380,7 +380,7 @@ class SQLite3Stmt  {
 	 * on failure.
 	 * @since 5.3
 	 */
-	public function bindValue ($sql_param, $value, $type = null) {}
+	public function bindValue (string $sql_param, $value, int $type = null) {}
 
 	public function readOnly () {}
 
@@ -415,7 +415,7 @@ class SQLite3Result  {
 	 * <i>column_number</i>.
 	 * @since 5.3
 	 */
-	public function columnName ($column_number) {}
+	public function columnName (int $column_number) {}
 
 	/**
 	 * Returns the type of the nth column
@@ -430,7 +430,7 @@ class SQLite3Result  {
 	 * <b>SQLITE3_NULL</b>).
 	 * @since 5.3
 	 */
-	public function columnType ($column_number) {}
+	public function columnType (int $column_number) {}
 
 	/**
 	 * Fetches a result row as an associative or numerically indexed array or both
@@ -447,7 +447,7 @@ class SQLite3Result  {
 	 * both. Alternately will return <b>FALSE</b> if there are no more rows.
 	 * @since 5.3
 	 */
-	public function fetchArray ($mode = SQLITE3_BOTH) {}
+	public function fetchArray (int $mode = SQLITE3_BOTH) {}
 
 	/**
 	 * Resets the result set back to the first row
