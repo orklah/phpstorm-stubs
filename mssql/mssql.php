@@ -27,7 +27,7 @@
  * </p>
  * @return resource|false a MS SQL link identifier on success, or false on error.
  */
-function mssql_connect ($servername = null, $username = null, $password = null, $new_link = false) {}
+function mssql_connect (string $servername = null, string $username = null, string $password = null, bool $new_link = false) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -55,7 +55,7 @@ function mssql_connect ($servername = null, $username = null, $password = null, 
  * @return resource a positive MS SQL persistent link identifier on success, or
  * false on error.
  */
-function mssql_pconnect ($servername = null, $username = null, $password = null, $new_link = false) {}
+function mssql_pconnect (string $servername = null, string $username = null, string $password = null, bool $new_link = false) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -99,7 +99,7 @@ function mssql_close ($link_identifier = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function mssql_select_db ($database_name, $link_identifier = null) {}
+function mssql_select_db (string $database_name, $link_identifier = null) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -124,7 +124,7 @@ function mssql_select_db ($database_name, $link_identifier = null) {}
  * @return mixed a MS SQL result resource on success, true if no rows were
  * returned, or false on error.
  */
-function mssql_query ($query, $link_identifier = null, $batch_size = 0) {}
+function mssql_query (string $query, $link_identifier = null, int $batch_size = 0) {}
 
 /**
  * (PHP 4 &gt;= 4.0.4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -214,7 +214,7 @@ function mssql_num_fields ($result) {}
  * <p>
  * The properties of the object are:
  */
-function mssql_fetch_field ($result, $field_offset = -1) {}
+function mssql_fetch_field ($result, int $field_offset = -1) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -246,7 +246,7 @@ function mssql_fetch_row ($result) {}
  * @return array|false an array that corresponds to the fetched row, or false if there
  * are no more rows.
  */
-function mssql_fetch_array ($result, $result_type = MSSQL_BOTH) {}
+function mssql_fetch_array ($result, int $result_type = MSSQL_BOTH) {}
 
 /**
  * (PHP 4 &gt;= 4.2.0, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -287,7 +287,7 @@ function mssql_fetch_object ($result) {}
  * </p>
  * @return int|false The length of the specified field index on success or false on failure.
  */
-function mssql_field_length ($result, $offset = null) {}
+function mssql_field_length ($result, int $offset = null) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -302,7 +302,7 @@ function mssql_field_length ($result, $offset = null) {}
  * </p>
  * @return string|false The name of the specified field index on success or false on failure.
  */
-function mssql_field_name ($result, $offset = -1) {}
+function mssql_field_name ($result, int $offset = -1) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -317,7 +317,7 @@ function mssql_field_name ($result, $offset = -1) {}
  * </p>
  * @return string|false The type of the specified field index on success or false on failure.
  */
-function mssql_field_type ($result, $offset = -1) {}
+function mssql_field_type ($result, int $offset = -1) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -331,7 +331,7 @@ function mssql_field_type ($result, $offset = -1) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function mssql_data_seek ($result_identifier, $row_number) {}
+function mssql_data_seek ($result_identifier, int $row_number) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -346,7 +346,7 @@ function mssql_data_seek ($result_identifier, $row_number) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function mssql_field_seek ($result, $field_offset) {}
+function mssql_field_seek ($result, int $field_offset) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -373,7 +373,7 @@ function mssql_field_seek ($result, $field_offset) {}
  * </p>
  * @return string the contents of the specified cell.
  */
-function mssql_result ($result, $row, $field) {}
+function mssql_result ($result, int $row, $field) {}
 
 /**
  * (PHP 4 &gt;= 4.0.5, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -397,7 +397,7 @@ function mssql_next_result ($result_id) {}
  * </p>
  * @return void 
  */
-function mssql_min_error_severity ($severity) {}
+function mssql_min_error_severity (int $severity) {}
 
 /**
  * (PHP 4, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -408,7 +408,7 @@ function mssql_min_error_severity ($severity) {}
  * </p>
  * @return void 
  */
-function mssql_min_message_severity ($severity) {}
+function mssql_min_message_severity (int $severity) {}
 
 /**
  * (PHP 4 &gt;= 4.0.7, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -426,7 +426,7 @@ function mssql_min_message_severity ($severity) {}
  * mssql_bind and mssql_execute,
  * or false on errors.
  */
-function mssql_init ($sp_name, $link_identifier = null) {}
+function mssql_init (string $sp_name, $link_identifier = null) {}
 
 /**
  * (PHP 4 &gt;= 4.0.7, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -472,7 +472,7 @@ function mssql_init ($sp_name, $link_identifier = null) {}
  * </p>
  * @return bool true on success or false on failure.
  */
-function mssql_bind ($stmt, $param_name, &$var, $type, $is_output = false, $is_null = false, $maxlen = -1) {}
+function mssql_bind ($stmt, string $param_name, &$var, int $type, bool $is_output = false, bool $is_null = false, int $maxlen = -1) {}
 
 /**
  * (PHP 4 &gt;= 4.0.7, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -486,7 +486,7 @@ function mssql_bind ($stmt, $param_name, &$var, $type, $is_output = false, $is_n
  * </p>
  * @return mixed 
  */
-function mssql_execute ($stmt, $skip_results = false) {}
+function mssql_execute ($stmt, bool $skip_results = false) {}
 
 /**
  * (PHP 4 &gt;= 4.3.2, PHP 5, PECL odbtp &gt;= 1.1.1)<br/>
@@ -511,7 +511,7 @@ function mssql_free_statement ($stmt) {}
  * </p>
  * @return string the converted string on success.
  */
-function mssql_guid_string ($binary, $short_format = null) {}
+function mssql_guid_string (string $binary, bool $short_format = null) {}
 
 
 /**
