@@ -52,7 +52,7 @@
  * @since 4.0
  * @since 5.0
  */
-function mysql_connect ($server = 'ini_get("mysql.default_host")', $username = 'ini_get("mysql.default_user")', $password = 'ini_get("mysql.default_password")', $new_link = false, $client_flags = 0) {}
+function mysql_connect (string $server = 'ini_get("mysql.default_host")', string $username = 'ini_get("mysql.default_user")', string $password = 'ini_get("mysql.default_password")', bool $new_link = false, int $client_flags = 0) {}
 
 /**
  * @deprecated 5.5
@@ -89,7 +89,7 @@ function mysql_connect ($server = 'ini_get("mysql.default_host")', $username = '
  * @since 4.0
  * @since 5.0
  */
-function mysql_pconnect ($server = 'ini_get("mysql.default_host")', $username = 'ini_get("mysql.default_user")', $password = 'ini_get("mysql.default_password")', $client_flags = null) {}
+function mysql_pconnect (string $server = 'ini_get("mysql.default_host")', string $username = 'ini_get("mysql.default_user")', string $password = 'ini_get("mysql.default_password")', int $client_flags = null) {}
 
 /**
  * @deprecated 5.5
@@ -114,7 +114,7 @@ function mysql_close ($link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_select_db ($database_name, $link_identifier = null) {}
+function mysql_select_db (string $database_name, $link_identifier = null) {}
 
 /**
  * @deprecated 5.5
@@ -157,7 +157,7 @@ function mysql_select_db ($database_name, $link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_query ($query, $link_identifier = null) {}
+function mysql_query (string $query, $link_identifier = null) {}
 
 /**
  * @deprecated 5.5
@@ -182,7 +182,7 @@ function mysql_query ($query, $link_identifier = null) {}
  * @since 4.0.6
  * @since 5.0
  */
-function mysql_unbuffered_query ($query, $link_identifier = null) {}
+function mysql_unbuffered_query (string $query, $link_identifier = null) {}
 
 /**
  * Selects a database and executes a query on it
@@ -205,7 +205,7 @@ function mysql_unbuffered_query ($query, $link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_db_query ($database, $query, $link_identifier = null) {}
+function mysql_db_query (string $database, string $query, $link_identifier = null) {}
 
 /**
  * List databases available on a MySQL server
@@ -238,7 +238,7 @@ function mysql_list_dbs ($link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_list_tables ($database, $link_identifier = null) {}
+function mysql_list_tables (string $database, $link_identifier = null) {}
 
 /**
  * @deprecated 5.5
@@ -262,7 +262,7 @@ function mysql_list_tables ($database, $link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_list_fields ($database_name, $table_name, $link_identifier = null) {}
+function mysql_list_fields (string $database_name, string $table_name, $link_identifier = null) {}
 
 /**
  * @deprecated 5.5
@@ -365,7 +365,7 @@ function mysql_insert_id ($link_identifier = null) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_result ($result, $row, $field = 0) {}
+function mysql_result ($result, int $row, $field = 0) {}
 
 /**
  * Get number of rows in result
@@ -437,7 +437,7 @@ function mysql_fetch_row ($result) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_fetch_array ($result, $result_type = MYSQL_BOTH) {}
+function mysql_fetch_array ($result, int $result_type = MYSQL_BOTH) {}
 
 /**
  * @deprecated 5.5
@@ -484,7 +484,7 @@ function mysql_fetch_assoc ($result) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_fetch_object ($result, $class_name = 'stdClass', array $params = null ) {}
+function mysql_fetch_object ($result, string $class_name = 'stdClass', array $params = null ) {}
 
 /**
  * @deprecated 5.5
@@ -498,7 +498,7 @@ function mysql_fetch_object ($result, $class_name = 'stdClass', array $params = 
  * @since 4.0
  * @since 5.0
  */
-function mysql_data_seek ($result, $row_number) {}
+function mysql_data_seek ($result, int $row_number) {}
 
 /**
  * @deprecated 5.5
@@ -541,7 +541,7 @@ function mysql_fetch_lengths ($result) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_fetch_field ($result, $field_offset = 0) {}
+function mysql_fetch_field ($result, int $field_offset = 0) {}
 
 /**
  * @deprecated 5.5
@@ -553,7 +553,7 @@ function mysql_fetch_field ($result, $field_offset = 0) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_seek ($result, $field_offset) {}
+function mysql_field_seek ($result, int $field_offset) {}
 
 /**
  * @deprecated 5.5
@@ -582,7 +582,7 @@ function mysql_free_result ($result) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_name ($result, $field_offset) {}
+function mysql_field_name ($result, int $field_offset) {}
 
 /**
  * @deprecated 5.5
@@ -594,7 +594,7 @@ function mysql_field_name ($result, $field_offset) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_table ($result, $field_offset) {}
+function mysql_field_table ($result, int $field_offset) {}
 
 /**
  * @deprecated 5.5
@@ -606,7 +606,7 @@ function mysql_field_table ($result, $field_offset) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_len ($result, $field_offset) {}
+function mysql_field_len ($result, int $field_offset) {}
 
 /**
  * @deprecated 5.5
@@ -622,7 +622,7 @@ function mysql_field_len ($result, $field_offset) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_type ($result, $field_offset) {}
+function mysql_field_type ($result, int $field_offset) {}
 
 /**
  * @deprecated 5.5
@@ -643,7 +643,7 @@ function mysql_field_type ($result, $field_offset) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_field_flags ($result, $field_offset) {}
+function mysql_field_flags ($result, int $field_offset) {}
 
 /**
  * Escapes a string for use in a mysql_query
@@ -656,7 +656,7 @@ function mysql_field_flags ($result, $field_offset) {}
  * @since 4.0.3
  * @since 5.0
  */
-function mysql_escape_string ($unescaped_string) {}
+function mysql_escape_string (string $unescaped_string) {}
 
 /**
  * @deprecated 5.5
@@ -670,7 +670,7 @@ function mysql_escape_string ($unescaped_string) {}
  * @since 4.3
  * @since 5.0
  */
-function mysql_real_escape_string ($unescaped_string, $link_identifier = null) {}
+function mysql_real_escape_string (string $unescaped_string, $link_identifier = null) {}
 
 /**
  * @deprecated 5.5
@@ -789,7 +789,7 @@ function mysql_info ($link_identifier = null) {}
  * @return bool true on success or false on failure.
  * @since 5.2.3
  */
-function mysql_set_charset ($charset, $link_identifier = null) {}
+function mysql_set_charset (string $charset, $link_identifier = null) {}
 
 /**
  * @param $database_name
@@ -903,7 +903,7 @@ function mysql_listfields ($database_name, $table_name, $link_identifier) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_db_name ($result, $row, $field = null) {}
+function mysql_db_name ($result, int $row, $field = null) {}
 
 /**
  * @param $result
@@ -933,7 +933,7 @@ function mysql_dbname ($result, $row, $field) {}
  * @since 4.0
  * @since 5.0
  */
-function mysql_tablename ($result, $i) {}
+function mysql_tablename ($result, int $i) {}
 
 /**
  * @deprecated 5.5
