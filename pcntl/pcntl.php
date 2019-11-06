@@ -96,7 +96,7 @@ function pcntl_fork () {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_waitpid ($pid, &$status, $options = 0, array &$rusage) {}
+function pcntl_waitpid (int $pid, int &$status, int $options = 0, array &$rusage) {}
 
 /**
  * Waits on or returns the status of a forked child
@@ -143,7 +143,7 @@ function pcntl_waitpid ($pid, &$status, $options = 0, array &$rusage) {}
  * option (on wait3-available systems) and no child was available.
  * @since 5.0
  */
-function pcntl_wait (&$status, $options = 0, &$rusage) {}
+function pcntl_wait (int &$status, int $options = 0, array &$rusage) {}
 
 /**
  * Installs a signal handler
@@ -175,7 +175,7 @@ function pcntl_wait (&$status, $options = 0, &$rusage) {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_signal ($signo, $handler, $restart_syscalls = true) {}
+function pcntl_signal (int $signo, $handler, bool $restart_syscalls = true) {}
 
 /**
  * Calls signal handlers for pending signals
@@ -196,7 +196,7 @@ function pcntl_signal_dispatch () {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wifexited ($status) {}
+function pcntl_wifexited (int $status) {}
 
 /**
  * Checks whether the child process is currently stopped
@@ -209,7 +209,7 @@ function pcntl_wifexited ($status) {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wifstopped ($status) {}
+function pcntl_wifstopped (int $status) {}
 
 /**
  * Checks whether the status code represents a termination due to a signal
@@ -222,7 +222,7 @@ function pcntl_wifstopped ($status) {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wifsignaled ($status) {}
+function pcntl_wifsignaled (int $status) {}
 
 /**
  * Returns the return code of a terminated child
@@ -234,12 +234,12 @@ function pcntl_wifsignaled ($status) {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wexitstatus ($status) {}
+function pcntl_wexitstatus (int $status) {}
 
 /**
  * @param int $status
  */
-function pcntl_wifcontinued ( $status){}
+function pcntl_wifcontinued ( int $status){}
 /**
  * Returns the signal which caused the child to terminate
  * @link https://php.net/manual/en/function.pcntl-wtermsig.php
@@ -250,7 +250,7 @@ function pcntl_wifcontinued ( $status){}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wtermsig ($status) {}
+function pcntl_wtermsig (int $status) {}
 
 /**
  * Returns the signal which caused the child to stop
@@ -262,7 +262,7 @@ function pcntl_wtermsig ($status) {}
  * @since 4.1
  * @since 5.0
  */
-function pcntl_wstopsig ($status) {}
+function pcntl_wstopsig (int $status) {}
 
 /**
  * Executes specified program in current process space
@@ -287,7 +287,7 @@ function pcntl_wstopsig ($status) {}
  * @since 4.2
  * @since 5.0
  */
-function pcntl_exec ($path, array $args = null, array $envs = null) {}
+function pcntl_exec (string $path, array $args = null, array $envs = null) {}
 
 /**
  * Set an alarm clock for delivery of a signal
@@ -302,7 +302,7 @@ function pcntl_exec ($path, array $args = null, array $envs = null) {}
  * @since 4.3
  * @since 5.0
  */
-function pcntl_alarm ($seconds) {}
+function pcntl_alarm (int $seconds) {}
 
 /**
  * Retrieve the error number set by the last pcntl function which failed
@@ -327,7 +327,7 @@ function pcntl_errno () {}
  * @return string|false error description on success or <b>FALSE</b> on failure.
  * @since 5.3.4
  */
-function pcntl_strerror ($errno) {}
+function pcntl_strerror (int $errno) {}
 
 /**
  * Get the priority of any process
@@ -344,7 +344,7 @@ function pcntl_strerror ($errno) {}
  * scheduling.
  * @since 5.0
  */
-function pcntl_getpriority ($pid, $process_identifier = PRIO_PROCESS) {}
+function pcntl_getpriority (int $pid, int $process_identifier = PRIO_PROCESS) {}
 
 /**
  * Change the priority of any process
@@ -367,7 +367,7 @@ function pcntl_getpriority ($pid, $process_identifier = PRIO_PROCESS) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.0
  */
-function pcntl_setpriority ($priority, $pid, $process_identifier = PRIO_PROCESS) {}
+function pcntl_setpriority (int $priority, int $pid, int $process_identifier = PRIO_PROCESS) {}
 
 /**
  * Sets and retrieves blocked signals
@@ -392,7 +392,7 @@ function pcntl_setpriority ($priority, $pid, $process_identifier = PRIO_PROCESS)
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.3
  */
-function pcntl_sigprocmask ($how, array $set, array &$oldset = null) {}
+function pcntl_sigprocmask (int $how, array $set, array &$oldset = null) {}
 
 /**
  * Waits for signals
@@ -455,7 +455,7 @@ function pcntl_sigwaitinfo (array $set, array &$siginfo = null) {}
  * @return int On success, <b>pcntl_sigtimedwait</b> returns a signal number.
  * @since 5.3
  */
-function pcntl_sigtimedwait (array $set, array &$siginfo = null, $seconds = 0, $nanoseconds = 0) {}
+function pcntl_sigtimedwait (array $set, array &$siginfo = null, int $seconds = 0, int $nanoseconds = 0) {}
 
 /**
  * Enable/disable asynchronous signal handling or return the old setting.<br>
@@ -470,7 +470,7 @@ function pcntl_sigtimedwait (array $set, array &$siginfo = null, $seconds = 0, $
  * @return bool
  * @since 7.1
  */
-function pcntl_async_signals($on = null) {}
+function pcntl_async_signals(bool $on = null) {}
 
 /**
  * Get the current handler for specified signal.
@@ -483,7 +483,7 @@ function pcntl_async_signals($on = null) {}
  * @return bool
  * @since 7.1
  */
-function pcntl_signal_get_handler($signo) {}
+function pcntl_signal_get_handler(int $signo) {}
 
 define ('WNOHANG', 1);
 define ('WUNTRACED', 2);
