@@ -322,7 +322,7 @@ class SNMPException extends RuntimeException  {
  * @since 4.0
  * @since 5.0
  */
-function snmpget ($hostname, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmpget (string $hostname, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch the SNMP object which follows the given object id
@@ -336,7 +336,7 @@ function snmpget ($hostname, $community, $object_id, $timeout = 1000000, $retrie
  * In case of an error, an E_WARNING message is shown.
  * @since 5.0
  */
-function snmpgetnext ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmpgetnext (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch all the SNMP objects from an agent
@@ -365,7 +365,7 @@ function snmpgetnext ($host, $community, $object_id, $timeout = 1000000, $retrie
  * @since 4.0
  * @since 5.0
  */
-function snmpwalk ($hostname, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmpwalk (string $hostname, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Return all objects including their respective object ID within the specified one
@@ -380,7 +380,7 @@ function snmpwalk ($hostname, $community, $object_id, $timeout = 1000000, $retri
  * @since 4.0
  * @since 5.0
  */
-function snmprealwalk ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmprealwalk (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Query for a tree of information about a network entity
@@ -412,7 +412,7 @@ function snmprealwalk ($host, $community, $object_id, $timeout = 1000000, $retri
  * @since 4.0
  * @since 5.0
  */
-function snmpwalkoid ($hostname, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmpwalkoid (string $hostname, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Set the value of an SNMP object
@@ -479,7 +479,7 @@ function snmpwalkoid ($hostname, $community, $object_id, $timeout = 1000000, $re
  * @since 4.0
  * @since 5.0
  */
-function snmpset ($host, $community, $object_id, $type, $value, $timeout = 1000000, $retries = 5) {}
+function snmpset (string $host, string $community, string $object_id, string $type, $value, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetches the current value of the UCD library's quick_print setting
@@ -498,7 +498,7 @@ function snmp_get_quick_print () {}
  * @since 4.0
  * @since 5.0
  */
-function snmp_set_quick_print ($quick_print) {}
+function snmp_set_quick_print (bool $quick_print) {}
 
 /**
  * Return all values that are enums with their enum value instead of the raw integer
@@ -510,7 +510,7 @@ function snmp_set_quick_print ($quick_print) {}
  * @since 4.3
  * @since 5.0
  */
-function snmp_set_enum_print ($enum_print) {}
+function snmp_set_enum_print (int $enum_print) {}
 
 /**
  * Set the OID output format
@@ -531,7 +531,7 @@ function snmp_set_enum_print ($enum_print) {}
  * @return bool No value is returned.
  * @since 5.2
  */
-function snmp_set_oid_output_format ($oid_format = SNMP_OID_OUTPUT_MODULE) {}
+function snmp_set_oid_output_format (int $oid_format = SNMP_OID_OUTPUT_MODULE) {}
 
 /**
  * Return all objects including their respective object id within the specified one
@@ -541,7 +541,7 @@ function snmp_set_oid_output_format ($oid_format = SNMP_OID_OUTPUT_MODULE) {}
  * @since 4.3
  * @since 5.0
  */
-function snmp_set_oid_numeric_print ($oid_format) {}
+function snmp_set_oid_numeric_print (int $oid_format) {}
 
 /**
  * Fetch an SNMP object
@@ -564,7 +564,7 @@ function snmp_set_oid_numeric_print ($oid_format) {}
  * @return string|false SNMP object value on success or <b>FALSE</b> on error.
  * @since 5.2
  */
-function snmp2_get ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp2_get (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch the SNMP object which follows the given object id
@@ -588,7 +588,7 @@ function snmp2_get ($host, $community, $object_id, $timeout = 1000000, $retries 
  * In case of an error, an E_WARNING message is shown.
  * @since 5.2
  */
-function snmp2_getnext ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp2_getnext (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch all the SNMP objects from an agent
@@ -618,7 +618,7 @@ function snmp2_getnext ($host, $community, $object_id, $timeout = 1000000, $retr
  * <i>object_id</i> as root or <b>FALSE</b> on error.
  * @since 5.2
  */
-function snmp2_walk ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp2_walk (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Return all objects including their respective object ID within the specified one
@@ -642,7 +642,7 @@ function snmp2_walk ($host, $community, $object_id, $timeout = 1000000, $retries
  * In case of an error, an E_WARNING message is shown.
  * @since 5.2
  */
-function snmp2_real_walk ($host, $community, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp2_real_walk (string $host, string $community, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Set the value of an SNMP object
@@ -708,7 +708,7 @@ function snmp2_real_walk ($host, $community, $object_id, $timeout = 1000000, $re
  * If an unknown or invalid OID is specified the warning probably reads "Could not add variable".
  * @since 5.2
  */
-function snmp2_set ($host, $community, $object_id, $type, $value, $timeout = 1000000, $retries = 5) {}
+function snmp2_set (string $host, string $community, string $object_id, string $type, string $value, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch an SNMP object
@@ -747,7 +747,7 @@ function snmp2_set ($host, $community, $object_id, $type, $value, $timeout = 100
  * @since 4.0
  * @since 5.0
  */
-function snmp3_get ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphrase, $priv_protocol, $priv_passphrase, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp3_get (string $host, string $sec_name, string $sec_level, string $auth_protocol, string $auth_passphrase, string $priv_protocol, string $priv_passphrase, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch the SNMP object which follows the given object id
@@ -787,7 +787,7 @@ function snmp3_get ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphra
  * In case of an error, an E_WARNING message is shown.
  * @since 5.0
  */
-function snmp3_getnext ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphrase, $priv_protocol, $priv_passphrase, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp3_getnext (string $host, string $sec_name, string $sec_level, string $auth_protocol, string $auth_passphrase, string $priv_protocol, string $priv_passphrase, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Fetch all the SNMP objects from an agent
@@ -833,7 +833,7 @@ function snmp3_getnext ($host, $sec_name, $sec_level, $auth_protocol, $auth_pass
  * @since 4.0
  * @since 5.0
  */
-function snmp3_walk ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphrase, $priv_protocol, $priv_passphrase, $object_id, $timeout = 1000000, $retries = 5) {}
+function snmp3_walk (string $host, string $sec_name, string $sec_level, string $auth_protocol, string $auth_passphrase, string $priv_protocol, string $priv_passphrase, string $object_id, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Return all objects including their respective object ID within the specified one
@@ -875,7 +875,7 @@ function snmp3_walk ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphr
  * @since 4.0
  * @since 5.0
  */
-function snmp3_real_walk ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphrase, $priv_protocol, $priv_passphrase, $object_id, $timeout = null, $retries = null) {}
+function snmp3_real_walk (string $host, string $sec_name, string $sec_level, string $auth_protocol, string $auth_passphrase, string $priv_protocol, string $priv_passphrase, string $object_id, string $timeout = null, string $retries = null) {}
 
 /**
  * Set the value of an SNMP object
@@ -957,7 +957,7 @@ function snmp3_real_walk ($host, $sec_name, $sec_level, $auth_protocol, $auth_pa
  * @since 4.0
  * @since 5.0
  */
-function snmp3_set ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphrase, $priv_protocol, $priv_passphrase, $object_id, $type, $value, $timeout = 1000000, $retries = 5) {}
+function snmp3_set (string $host, string $sec_name, string $sec_level, string $auth_protocol, string $auth_passphrase, string $priv_protocol, string $priv_passphrase, string $object_id, string $type, string $value, int $timeout = 1000000, int $retries = 5) {}
 
 /**
  * Specify the method how the SNMP values will be returned
@@ -986,7 +986,7 @@ function snmp3_set ($host, $sec_name, $sec_level, $auth_protocol, $auth_passphra
  * @since 4.3.3
  * @since 5.0
  */
-function snmp_set_valueretrieval ($method) {}
+function snmp_set_valueretrieval (int $method) {}
 
 /**
  * Return the method how the SNMP values will be returned
@@ -1006,7 +1006,7 @@ function snmp_get_valueretrieval () {}
  * @return bool
  * @since 5.0
  */
-function snmp_read_mib ($filename) {}
+function snmp_read_mib (string $filename) {}
 
 
 /**
