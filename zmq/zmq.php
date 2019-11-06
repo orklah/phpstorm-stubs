@@ -295,7 +295,7 @@ class ZMQContext
      * @param int $io_threads Number of io-threads in the context
      * @param bool $is_persistent Whether the context is persistent. Persistent context is stored over multiple requests and is a requirement for persistent sockets.
      */
-    public function __construct($io_threads = 1, $is_persistent = true)
+    public function __construct(int $io_threads = 1, bool $is_persistent = true)
     {
     }
     /**
@@ -308,7 +308,7 @@ class ZMQContext
      * @return string|int Returns either a string or an integer depending on key. Throws ZMQContextException on error.
      * @throws ZMQContextException
      */
-    public function getOpt($key)
+    public function getOpt(string $key)
     {
     }
     /**
@@ -326,7 +326,7 @@ class ZMQContext
      * @return ZMQSocket
      * @throws ZMQSocketException
      */
-    public function getSocket($type, $persistent_id = null, $on_new_socket = null)
+    public function getSocket(int $type, string $persistent_id = null, callable $on_new_socket = null)
     {
     }
     /**
@@ -353,7 +353,7 @@ class ZMQContext
      * @return ZMQContext
      * @throws ZMQContextException
      */
-    public function setOpt($key, $value)
+    public function setOpt(int $key, $value)
     {
     }
 }
@@ -380,7 +380,7 @@ class ZMQSocket
      *
      * @throws ZMQSocketException
      */
-    public function __construct(ZMQContext $context, $type, $persistent_id = null, $on_new_socket = null)
+    public function __construct(ZMQContext $context, int $type, string $persistent_id = null, callable $on_new_socket = null)
     {
     }
     /**
@@ -397,7 +397,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException if binding fails
      */
-    public function bind($dsn, $force = false)
+    public function bind(string $dsn, bool $force = false)
     {
     }
     /**
@@ -414,7 +414,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException If connection fails
      */
-    public function connect($dsn, $force = false)
+    public function connect(string $dsn, bool $force = false)
     {
     }
     /**
@@ -430,7 +430,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException If connection fails
      */
-    public function disconnect($dsn)
+    public function disconnect(string $dsn)
     {
     }
     /**
@@ -471,7 +471,7 @@ class ZMQSocket
      * </p>
      * @throws ZMQSocketException
      */
-    public function getSockOpt($key)
+    public function getSockOpt(int $key)
     {
     }
     /**
@@ -513,7 +513,7 @@ class ZMQSocket
      * @return string <p>Returns the message. Throws ZMQSocketException in error. If <b>ZMQ::MODE_NOBLOCK</b> is used and the operation would block boolean false shall be returned.</p>
      * @throws ZMQSocketException if receiving fails.
      */
-    public function recv($mode = 0)
+    public function recv(int $mode = 0)
     {
     }
     /**
@@ -529,7 +529,7 @@ class ZMQSocket
      * @return string[] Returns the array of message parts. Throws ZMQSocketException in error. If ZMQ::MODE_NOBLOCK is used and the operation would block boolean false shall be returned.
      * @throws ZMQSocketException if receiving fails.
      */
-    public function recvMulti($mode = 0)
+    public function recvMulti(int $mode = 0)
     {
     }
     /**
@@ -544,7 +544,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException if sending message fails
      */
-    public function send($message, $mode = 0)
+    public function send(string $message, int $mode = 0)
     {
     }
     /**
@@ -559,7 +559,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException if sending message fails
      */
-    public function sendmulti(array $message, $mode = 0)
+    public function sendmulti(array $message, int $mode = 0)
     {
     }
     /**
@@ -574,7 +574,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException
      */
-    public function setSockOpt($key, $value)
+    public function setSockOpt(int $key, $value)
     {
     }
     /**
@@ -589,7 +589,7 @@ class ZMQSocket
      * @return ZMQSocket
      * @throws ZMQSocketException if binding fails
      */
-    public function unbind($dsn)
+    public function unbind(string $dsn)
     {
     }
 }
@@ -613,7 +613,7 @@ class ZMQPoll
      * @return int Returns a string id of the added item which can be later used to remove the item. Throws ZMQPollException on error.
      * @throws ZMQPollException if the object has not been initialized with polling
      */
-    public function add(ZMQSocket $entry, $type)
+    public function add(ZMQSocket $entry, int $type)
     {
     }
     /**
@@ -667,7 +667,7 @@ class ZMQPoll
      * @throws ZMQPollException if polling fails
      * @return int
      */
-    public function poll(array &$readable, array &$writable, $timeout = -1)
+    public function poll(array &$readable, array &$writable, int $timeout = -1)
     {
     }
     /**
@@ -756,7 +756,7 @@ class ZMQDevice
      *
      * @return ZMQDevice On success this method returns the current object.
      */
-    public function setIdleCallback($cb_func, $timeout, $user_data)
+    public function setIdleCallback(callable $cb_func, int $timeout, $user_data)
     {
     }
     /**
@@ -769,7 +769,7 @@ class ZMQDevice
      *
      * @return ZMQDevice On success this method returns the current object.
      */
-    public function setIdleTimeout($timeout)
+    public function setIdleTimeout(int $timeout)
     {
     }
     /**
@@ -786,7 +786,7 @@ class ZMQDevice
      *
      * @return ZMQDevice
      */
-    public function setTimerCallback($cb_func, $timeout, $user_data)
+    public function setTimerCallback(callable $cb_func, int $timeout, $user_data)
     {
     }
     /**
@@ -799,7 +799,7 @@ class ZMQDevice
      *
      * @return ZMQDevice
      */
-    public function setTimerTimeout($timeout)
+    public function setTimerTimeout(int $timeout)
     {
     }
 }
