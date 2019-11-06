@@ -24,7 +24,7 @@ function spl_classes () {}
  * @return void
  * @since 5.1.2
  */
-function spl_autoload ($class_name, $file_extensions = null) {}
+function spl_autoload (string $class_name, string $file_extensions = null) {}
 
 /**
  * Register and return default file extensions for spl_autoload
@@ -40,7 +40,7 @@ function spl_autoload ($class_name, $file_extensions = null) {}
  * spl_autoload.
  * @since 5.1.2
  */
-function spl_autoload_extensions ($file_extensions = null) {}
+function spl_autoload_extensions (string $file_extensions = null) {}
 
 /**
  * Register given function as __autoload() implementation
@@ -57,7 +57,7 @@ function spl_autoload_extensions ($file_extensions = null) {}
  * @return bool true on success or false on failure.
  * @since 5.1.2
  */
-function spl_autoload_register ($autoload_function = null, $throw = true, $prepend = false) {}
+function spl_autoload_register (callable $autoload_function = null, bool $throw = true, bool $prepend = false) {}
 
 /**
  * Unregister given function as __autoload() implementation
@@ -89,7 +89,7 @@ function spl_autoload_functions () {}
  * @return void
  * @since 5.1.2
  */
-function spl_autoload_call ($class_name) {}
+function spl_autoload_call (string $class_name) {}
 
 /**
  * Return the parent classes of the given class
@@ -105,7 +105,7 @@ function spl_autoload_call ($class_name) {}
  * @return array An array on success, or false on error.
  * @since 5.1
  */
-function class_parents ($class, $autoload = null) {}
+function class_parents ($class, bool $autoload = null) {}
 
 /**
  * Return the interfaces which are implemented by the given class
@@ -121,7 +121,7 @@ function class_parents ($class, $autoload = null) {}
  * @return array An array on success, or false on error.
  * @since 5.1
  */
-function class_implements ($class, $autoload = null) {}
+function class_implements ($class, bool $autoload = null) {}
 
 /**
  * Return hash id for given object
@@ -131,7 +131,7 @@ function class_implements ($class, $autoload = null) {}
  * the same object.
  * @since 5.2
  */
-function spl_object_hash ($obj) {}
+function spl_object_hash (object $obj) {}
 
 /**
  * Copy the iterator into an array
@@ -145,7 +145,7 @@ function spl_object_hash ($obj) {}
  * @return array An array containing the elements of the iterator.
  * @since 5.1
  */
-function iterator_to_array ($iterator, $use_keys = true) {}
+function iterator_to_array (\Traversable $iterator, bool $use_keys = true) {}
 
 /**
  * Count the elements in an iterator
@@ -156,7 +156,7 @@ function iterator_to_array ($iterator, $use_keys = true) {}
  * @return int The number of elements in iterator.
  * @since 5.1
  */
-function iterator_count ($iterator) {}
+function iterator_count (\Traversable $iterator) {}
 
 /**
  * Call a function for every element in an iterator
@@ -175,7 +175,7 @@ function iterator_count ($iterator) {}
  * @return int the iteration count.
  * @since 5.1
  */
-function iterator_apply ($iterator, $function, array $args = null) {}
+function iterator_apply (\Traversable $iterator, callable $function, array $args = null) {}
 
 // End of SPL v.0.2
 
@@ -196,6 +196,6 @@ function class_uses($class, bool $autoload = true ) {}
  * @return int
  * @since 7.2
  */
-function spl_object_id($obj) {}
+function spl_object_id(object $obj) {}
 
 ?>

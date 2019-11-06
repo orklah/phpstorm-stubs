@@ -51,7 +51,7 @@ class SplFileInfo  {
          * @return string the base name without path information.
          * @since 5.2.2
          */
-        public function getBasename ($suffix = null) {}
+        public function getBasename (string $suffix = null) {}
 
         /**
          * Gets the path to the file
@@ -208,7 +208,7 @@ class SplFileInfo  {
 	 * @return SplFileInfo An <b>SplFileInfo</b> object created for the file.
          * @since 5.1.2
          */
-        public function getFileInfo ($class_name = null) {}
+        public function getFileInfo (string $class_name = null) {}
 
         /**
          * Gets an SplFileInfo object for the path
@@ -219,7 +219,7 @@ class SplFileInfo  {
 	 * @return SplFileInfo an <b>SplFileInfo</b> object for the parent path of the file.
          * @since 5.1.2
          */
-        public function getPathInfo ($class_name = null) {}
+        public function getPathInfo (string $class_name = null) {}
 
         /**
          * Gets an SplFileObject object for the file
@@ -238,7 +238,7 @@ class SplFileInfo  {
 	 * @return SplFileObject The opened file as an <b>SplFileObject</b> object.
          * @since 5.1.2
          */
-	public function openFile ($open_mode = 'r', $use_include_path = false, $context = null) {}
+	public function openFile (string $open_mode = 'r', bool $use_include_path = false, $context = null) {}
 
         /**
 	 * Sets the class name used with <b>SplFileInfo::openFile</b>
@@ -249,7 +249,7 @@ class SplFileInfo  {
          * @return void 
          * @since 5.1.2
          */
-        public function setFileClass ($class_name = null) {}
+        public function setFileClass (string $class_name = null) {}
 
         /**
          * Sets the class used with getFileInfo and getPathInfo
@@ -260,7 +260,7 @@ class SplFileInfo  {
          * @return void 
          * @since 5.1.2
          */
-        public function setInfoClass ($class_name = null) {}
+        public function setInfoClass (string $class_name = null) {}
 
         /**
          * Returns the path to the file as a string
@@ -351,7 +351,7 @@ class DirectoryIterator extends SplFileInfo implements SeekableIterator {
          * @return void 
 	 * @since 5.3
          */
-        public function seek ($position) {}
+        public function seek (int $position) {}
 }
 
 /**
@@ -434,7 +434,7 @@ class FilesystemIterator extends DirectoryIterator {
          * @return void 
          * @since 5.3
          */
-        public function setFlags ($flags = null) {}
+        public function setFlags (int $flags = null) {}
 }
 
 /**
@@ -463,7 +463,7 @@ class RecursiveDirectoryIterator extends FilesystemIterator implements Recursive
          * @return bool whether the current entry is a directory, but not '.' or '..'
          * @since 5.0
          */
-        public function hasChildren ($allow_links = null) {}
+        public function hasChildren (bool $allow_links = null) {}
 
         /**
          * Returns an iterator for the current entry if it is a directory
@@ -589,7 +589,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          *
          * @since 5.1
          */
-        public function __construct ($file_name, $open_mode = 'r', $use_include_path = false, $context = null) {}
+        public function __construct ($file_name, string $open_mode = 'r', bool $use_include_path = false, $context = null) {}
 
         /**
          * Rewind the file to the first line
@@ -632,7 +632,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return string|false returns the string read from the file or FALSE on failure.
          * @since 5.5.11
          */
-        public function fread ($length) {}
+        public function fread (int $length) {}
 
         /**
          * Gets line from file and parse as CSV fields
@@ -654,7 +654,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * in which case empty lines are skipped.
          * @since 5.1
          */
-	public function fgetcsv ($delimiter = ",", $enclosure = "\"", $escape = "\\") {}
+	public function fgetcsv (string $delimiter = ",", string $enclosure = "\"", string $escape = "\\") {}
 
     /**
      * Write a field array as a CSV line
@@ -672,7 +672,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
      * @since 5.4
      *</p>
      */
-	public function fputcsv (array $fields, $delimiter = ',' , $enclosure = '"', $escape = "\\") {}
+	public function fputcsv (array $fields, string $delimiter = ',' , string $enclosure = '"', string $escape = "\\") {}
 
         /**
          * Set the delimiter and enclosure character for CSV
@@ -689,7 +689,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return void 
          * @since 5.2
          */
-	public function setCsvControl ($delimiter = ",", $enclosure = "\"", $escape = "\\") {}
+	public function setCsvControl (string $delimiter = ",", string $enclosure = "\"", string $escape = "\\") {}
 
         /**
          * Get the delimiter and enclosure character for CSV
@@ -711,7 +711,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
 	 * @return bool true on success or false on failure.
          * @since 5.1
          */
-        public function flock ($operation, &$wouldblock = null) {}
+        public function flock (int $operation, int &$wouldblock = null) {}
 
         /**
          * Flushes the output to the file
@@ -749,7 +749,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * past EOF is not considered an error.
          * @since 5.1
          */
-	public function fseek ($offset, $whence = SEEK_SET) {}
+	public function fseek (int $offset, int $whence = SEEK_SET) {}
 
         /**
          * Gets character from file
@@ -780,7 +780,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @since 5.1
          * @deprecated 7.3
          */
-        public function fgetss ($allowable_tags = null) {}
+        public function fgetss (string $allowable_tags = null) {}
 
         /**
          * Parses input from file according to a format
@@ -797,7 +797,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * parameters must be passed by reference.
          * @since 5.1
          */
-        public function fscanf ($format, &$_ = null) {}
+        public function fscanf (string $format, &$_ = null) {}
 
         /**
          * Write to file
@@ -814,7 +814,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return int the number of bytes written, or 0 on error.
          * @since 5.1
          */
-        public function fwrite ($str, $length = null) {}
+        public function fwrite (string $str, int $length = null) {}
 
         /**
          * Gets information about the file
@@ -840,7 +840,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
 	 * @return bool true on success or false on failure.
          * @since 5.1
          */
-        public function ftruncate ($size) {}
+        public function ftruncate (int $size) {}
 
         /**
          * Retrieve current line of file
@@ -877,7 +877,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return void 
          * @since 5.1
          */
-        public function setFlags ($flags) {}
+        public function setFlags (int $flags) {}
 
         /**
          * Gets flags for the SplFileObject
@@ -896,7 +896,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return void 
          * @since 5.1
          */
-        public function setMaxLineLen ($max_len) {}
+        public function setMaxLineLen (int $max_len) {}
 
         /**
          * Get maximum line length
@@ -932,7 +932,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
          * @return void 
          * @since 5.1
          */
-        public function seek ($line_pos) {}
+        public function seek (int $line_pos) {}
 
         /**
 	     * Alias of <b>SplFileObject::fgets</b>
@@ -1071,7 +1071,7 @@ class SplDoublyLinkedList implements Iterator, Countable, ArrayAccess, Serializa
          * @return void 
          * @since 5.3
          */
-        public function setIteratorMode ($mode) {}
+        public function setIteratorMode (int $mode) {}
 
         /**
          * Returns the mode of iteration
@@ -1232,7 +1232,7 @@ class SplQueue extends SplDoublyLinkedList {
 * <b>SplDoublyLinkedList::IT_MODE_LIFO</b> (Stack style)
      * @return void
      */
-    public function setIteratorMode ($mode) {}
+    public function setIteratorMode (int $mode) {}
 
 }
 /**
@@ -1252,7 +1252,7 @@ class SplStack extends SplDoublyLinkedList {
      * @return void
      * @since 5.3
      */
-    public function setIteratorMode ($mode) {}
+    public function setIteratorMode (int $mode) {}
 }
 
 /**
@@ -1570,7 +1570,7 @@ class SplPriorityQueue implements Iterator, Countable {
          * @return void 
          * @since 5.3
          */
-        public function setExtractFlags ($flags) {}
+        public function setExtractFlags (int $flags) {}
 
         /**
 	 * Peeks at the node from the top of the queue
@@ -1680,7 +1680,7 @@ class SplFixedArray implements Iterator, ArrayAccess, Countable {
          * @param int $size [optional]
          * @since 5.3
          */
-        public function __construct ($size = 0) {}
+        public function __construct (int $size = 0) {}
 
         /**
          * Returns the size of the array
@@ -1711,7 +1711,7 @@ class SplFixedArray implements Iterator, ArrayAccess, Countable {
          * containing the array content.
          * @since 5.3
          */
-	public static function fromArray (array $array, $save_indexes = true) {}
+	public static function fromArray (array $array, bool $save_indexes = true) {}
 
         /**
          * Gets the size of the array
@@ -1730,7 +1730,7 @@ class SplFixedArray implements Iterator, ArrayAccess, Countable {
          * @return bool
          * @since 5.3
          */
-        public function setSize ($size) {}
+        public function setSize (int $size) {}
 
         /**
          * Returns whether the requested index exists
@@ -1905,7 +1905,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
          * @return void 
          * @since 5.1
          */
-        public function attach ($object, $data = null) {}
+        public function attach (object $object, $data = null) {}
 
         /**
 	 * Removes an object from the storage
@@ -1916,7 +1916,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
          * @return void 
          * @since 5.1
          */
-        public function detach ($object) {}
+        public function detach (object $object) {}
 
         /**
          * Checks if the storage contains a specific object
@@ -1927,7 +1927,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
 	 * @return bool true if the object is in the storage, false otherwise.
          * @since 5.1
          */
-        public function contains ($object) {}
+        public function contains (object $object) {}
 
         /**
          * Adds all objects from another storage
@@ -1938,7 +1938,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
          * @return void 
          * @since 5.3
          */
-	public function addAll ($storage) {}
+	public function addAll (\SplObjectStorage $storage) {}
 
         /**
          * Removes objects contained in another storage from the current storage
@@ -1949,7 +1949,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
          * @return void 
          * @since 5.3
          */
-	public function removeAll ($storage) {}
+	public function removeAll (\SplObjectStorage $storage) {}
 
         /**
 	 * Removes all objects except for those contained in another storage from the current storage
@@ -1960,7 +1960,7 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
 	 * @return void
 	 * @since 5.3.6
 	 */
-	public function removeAllExcept ($storage) {}
+	public function removeAllExcept (\SplObjectStorage $storage) {}
 
 	/**
          * Returns the data associated with the current iterator entry
@@ -2145,7 +2145,7 @@ class MultipleIterator implements Iterator {
          * @return void 
          * @since 5.3
          */
-        public function setFlags ($flags) {}
+        public function setFlags (int $flags) {}
 
         /**
          * Attaches iterator information

@@ -193,7 +193,7 @@ class RecursiveCallbackFilterIterator extends CallbackFilterIterator implements 
      * May be any valid callable value.
      * @link https://secure.php.net/manual/en/recursivecallbackfilteriterator.getchildren.php
      */
-    function __construct( RecursiveIterator $iterator, $callback ) { }
+    function __construct( RecursiveIterator $iterator, string $callback ) { }
 
     /**
      * Check whether the inner iterator's current element has children
@@ -269,7 +269,7 @@ class RecursiveIteratorIterator implements OuterIterator {
      * @param int $flags [optional] A bitmask of special flags. See class constants for details.
      * @since 5.1.3
      */
-    public function __construct(Traversable $iterator, $mode = self::LEAVES_ONLY, $flags = 0) { }
+    public function __construct(Traversable $iterator, int $mode = self::LEAVES_ONLY, int $flags = 0) { }
 
     /**
      * Rewind the iterator to the first element of the top level inner iterator
@@ -402,7 +402,7 @@ class RecursiveIteratorIterator implements OuterIterator {
      * @return void
      * @since 5.1
      */
-    public function setMaxDepth($max_depth) { }
+    public function setMaxDepth(string $max_depth) { }
 
     /**
      * Get max depth
@@ -658,7 +658,7 @@ interface SeekableIterator extends Iterator {
      * @return void
      * @since 5.1
      */
-    public function seek($position);
+    public function seek(int $position);
 }
 
 /**
@@ -676,7 +676,7 @@ class LimitIterator extends IteratorIterator {
      * @param int $count [optional] The number of items to iterate. Must be -1 or greater. -1, the default, means no limit.
      * @since 5.1
      */
-    public function __construct(Iterator $iterator, $offset = 0, $count = -1) { }
+    public function __construct(Iterator $iterator, int $offset = 0, int $count = -1) { }
 
     /**
      * Rewind the iterator to the specified starting offset
@@ -727,7 +727,7 @@ class LimitIterator extends IteratorIterator {
      * @return int the offset position after seeking.
      * @since 5.1
      */
-    public function seek($position) { }
+    public function seek(int $position) { }
 
     /**
      * Return the current position
@@ -792,7 +792,7 @@ class CachingIterator extends IteratorIterator implements ArrayAccess, Countable
      * @param int $flags [optional] A bitmask of flags. See CachingIterator class constants for details.
      * @since 5.0
      */
-    public function __construct(Iterator $iterator, $flags = self::CALL_TOSTRING) { }
+    public function __construct(Iterator $iterator, int $flags = self::CALL_TOSTRING) { }
 
     /**
      * Rewind the iterator
@@ -873,7 +873,7 @@ class CachingIterator extends IteratorIterator implements ArrayAccess, Countable
      * @return void
      * @since 5.2
      */
-    public function setFlags($flags) { }
+    public function setFlags(int $flags) { }
 
     /**
      * Internal cache array index to retrieve.
@@ -948,7 +948,7 @@ class RecursiveCachingIterator extends CachingIterator implements RecursiveItera
      * @param int $flags [optional] A bitmask of flags. See CachingIterator class constants for details.
      * @since 5.1
      */
-    public function __construct(Iterator $iterator, $flags = self::CALL_TOSTRING) { }
+    public function __construct(Iterator $iterator, int $flags = self::CALL_TOSTRING) { }
 
     /**
      * Check whether the current element of the inner iterator has children
@@ -1196,7 +1196,7 @@ class RegexIterator extends FilterIterator {
      * @param int $preg_flags [optional] The regular expression flags. These flags depend on the operation mode parameter
      * @since 5.2
      */
-    public function __construct(Iterator $iterator, $regex, $mode = self::MATCH, $flags = 0, $preg_flags = 0) { }
+    public function __construct(Iterator $iterator, string $regex, int $mode = self::MATCH, int $flags = 0, int $preg_flags = 0) { }
 
     /**
      * Get accept status
@@ -1265,7 +1265,7 @@ class RegexIterator extends FilterIterator {
      * @return void
      * @since 5.2
      */
-    public function setMode($mode) { }
+    public function setMode(int $mode) { }
 
     /**
      * Get flags
@@ -1302,7 +1302,7 @@ class RegexIterator extends FilterIterator {
      * @return void
      * @since 5.2
      */
-    public function setFlags($flags) { }
+    public function setFlags(int $flags) { }
 
     /**
     * Returns current regular expression
@@ -1330,7 +1330,7 @@ class RegexIterator extends FilterIterator {
      * @return void
      * @since 5.2
      */
-    public function setPregFlags($preg_flags) { }
+    public function setPregFlags(int $preg_flags) { }
 }
 
 /**
@@ -1348,7 +1348,7 @@ class RecursiveRegexIterator extends RegexIterator implements RecursiveIterator 
      * @param int $preg_flags [optional] The regular expression flags. These flags depend on the operation mode parameter
      * @since 5.2
      */
-    public function __construct(RecursiveIterator $iterator, $regex, $mode = self::MATCH, $flags = 0, $preg_flags = 0) { }
+    public function __construct(RecursiveIterator $iterator, string $regex, int $mode = self::MATCH, int $flags = 0, int $preg_flags = 0) { }
 
     /**
      * Returns whether an iterator can be obtained for the current entry.
@@ -1393,8 +1393,8 @@ class RecursiveTreeIterator extends RecursiveIteratorIterator {
      * @param int $mode [optional] Flags to affect the behavior of the {@see RecursiveIteratorIterator} used internally.
      * @since 5.3
      */
-    public function __construct($iterator, $flags = self::BYPASS_KEY, $caching_it_flags = CachingIterator::CATCH_GET_CHILD,
-                                $mode = self::SELF_FIRST) { }
+    public function __construct(\RecursiveIterator $iterator, int $flags = self::BYPASS_KEY, int $caching_it_flags = CachingIterator::CATCH_GET_CHILD,
+                                int $mode = self::SELF_FIRST) { }
 
     /**
      * Rewind iterator
@@ -1503,7 +1503,7 @@ class RecursiveTreeIterator extends RecursiveIteratorIterator {
     /**
      * @param string $postfix
      */
-    public function setPostfix($postfix) {}
+    public function setPostfix(string $postfix) {}
 
     /**
      * Set a part of the prefix
@@ -1517,7 +1517,7 @@ class RecursiveTreeIterator extends RecursiveIteratorIterator {
      * @return void
      * @since 5.3
      */
-    public function setPrefixPart($part, $value) { }
+    public function setPrefixPart(int $part, string $value) { }
 
     /**
      * Get current entry
@@ -1561,7 +1561,7 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
      * @since 5.0
      *
      */
-    public function __construct($input = array(), $flags = 0, $iterator_class = "ArrayIterator") { }
+    public function __construct($input = array(), int $flags = 0, string $iterator_class = "ArrayIterator") { }
 
     /**
      * Returns whether the requested index exists
@@ -1683,7 +1683,7 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
      * @return void
      * @since 5.1
      */
-    public function setFlags($flags) { }
+    public function setFlags(int $flags) { }
 
     /**
      * Sort the entries by value
@@ -1715,7 +1715,7 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
      * @return void
      * @since 5.2
      */
-    public function uasort($cmp_function) { }
+    public function uasort(callable $cmp_function) { }
 
     /**
      * Sort the entries by keys using a user-defined comparison function
@@ -1734,7 +1734,7 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
      * @return void
      * @since 5.2
      */
-    public function uksort($cmp_function) { }
+    public function uksort(callable $cmp_function) { }
 
     /**
      * Sort entries using a "natural order" algorithm
@@ -1799,7 +1799,7 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
      * @return void
      * @since 5.1
      */
-    public function setIteratorClass($iterator_class) { }
+    public function setIteratorClass(string $iterator_class) { }
 
     /**
      * Gets the iterator classname for the ArrayObject.
@@ -1828,7 +1828,7 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @see ArrayObject::setFlags()
      * @since 5.0
      */
-    public function __construct($array = array(), $flags = 0) { }
+    public function __construct(array $array = array(), int $flags = 0) { }
 
     /**
      * Check if offset exists
@@ -1926,7 +1926,7 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @return void
      * @since 5.1
      */
-    public function setFlags($flags) { }
+    public function setFlags(string $flags) { }
 
     /**
      * Sort array by values
@@ -1953,7 +1953,7 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @return void
      * @since 5.2
      */
-    public function uasort($cmp_function) { }
+    public function uasort(string $cmp_function) { }
 
     /**
      * User defined sort
@@ -1964,7 +1964,7 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @return void
      * @since 5.2
      */
-    public function uksort($cmp_function) { }
+    public function uksort(string $cmp_function) { }
 
     /**
      * Sort an array naturally
@@ -2050,7 +2050,7 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @return void
      * @since 5.0
      */
-    public function seek($position) { }
+    public function seek(int $position) { }
 }
 
 /**
