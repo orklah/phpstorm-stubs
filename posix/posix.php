@@ -15,7 +15,7 @@
  * @since 4.0
  * @since 5.0
  */
-function posix_kill ($pid, $sig) {}
+function posix_kill (int $pid, int $sig) {}
 
 /**
  * Return the current process identifier
@@ -54,7 +54,7 @@ function posix_getuid () {}
  * @since 4.0
  * @since 5.0
  */
-function posix_setuid ($uid) {}
+function posix_setuid (int $uid) {}
 
 /**
  * Return the effective user ID of the current process
@@ -75,7 +75,7 @@ function posix_geteuid () {}
  * @since 4.0.2
  * @since 5.0
  */
-function posix_seteuid ($uid) {}
+function posix_seteuid (int $uid) {}
 
 /**
  * Set system resource limits
@@ -90,7 +90,7 @@ function posix_seteuid ($uid) {}
  * @return bool Returns TRUE on success or FALSE on failure.
  * @since 7.0
  */
-function posix_setrlimit ($resource, $softlimit, $hardlimit ) {}
+function posix_setrlimit (int $resource, int $softlimit, int $hardlimit ) {}
 /**
  * Return the real group ID of the current process
  * @link https://php.net/manual/en/function.posix-getgid.php
@@ -110,7 +110,7 @@ function posix_getgid () {}
  * @since 4.0
  * @since 5.0
  */
-function posix_setgid ($gid) {}
+function posix_setgid (int $gid) {}
 
 /**
  * Return the effective group ID of the current process
@@ -131,7 +131,7 @@ function posix_getegid () {}
  * @since 4.0.2
  * @since 5.0
  */
-function posix_setegid ($gid) {}
+function posix_setegid (int $gid) {}
 
 /**
  * Return the group set of the current process
@@ -183,7 +183,7 @@ function posix_setsid () {}
  * @since 4.0
  * @since 5.0
  */
-function posix_setpgid ($pid, $pgid) {}
+function posix_setpgid (int $pid, int $pgid) {}
 
 /**
  * Get process group id for job control
@@ -195,7 +195,7 @@ function posix_setpgid ($pid, $pgid) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getpgid ($pid) {}
+function posix_getpgid (int $pid) {}
 
 /**
  * Get the current sid of the process
@@ -210,7 +210,7 @@ function posix_getpgid ($pid) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getsid ($pid) {}
+function posix_getsid (int $pid) {}
 
 /**
  * Get system name
@@ -272,7 +272,7 @@ function posix_ctermid () {}
  * @since 4.0
  * @since 5.0
  */
-function posix_ttyname ($fd) {}
+function posix_ttyname (int $fd) {}
 
 /**
  * Determine if a file descriptor is an interactive terminal
@@ -318,7 +318,7 @@ function posix_getcwd () {}
  * @since 4.0
  * @since 5.0
  */
-function posix_mkfifo ($pathname, $mode) {}
+function posix_mkfifo (string $pathname, int $mode) {}
 
 /**
  * Create a special or ordinary file (POSIX.1)
@@ -343,7 +343,7 @@ function posix_mkfifo ($pathname, $mode) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.1
  */
-function posix_mknod ($pathname, $mode, $major = 0, $minor = 0) {}
+function posix_mknod (string $pathname, int $mode, int $major = 0, int $minor = 0) {}
 
 /**
  * Determine accessibility of a file
@@ -366,7 +366,7 @@ function posix_mknod ($pathname, $mode, $major = 0, $minor = 0) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.1
  */
-function posix_access ($file, $mode = POSIX_F_OK) {}
+function posix_access (string $file, int $mode = POSIX_F_OK) {}
 
 /**
  * Return info about a group by name
@@ -414,7 +414,7 @@ function posix_access ($file, $mode = POSIX_F_OK) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getgrnam ($name) {}
+function posix_getgrnam (string $name) {}
 
 /**
  * Return info about a group by group id
@@ -464,7 +464,7 @@ function posix_getgrnam ($name) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getgrgid ($gid) {}
+function posix_getgrgid (int $gid) {}
 
 /**
  * Return info about a user by username
@@ -542,7 +542,7 @@ function posix_getgrgid ($gid) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getpwnam ($username) {}
+function posix_getpwnam (string $username) {}
 
 /**
  * Return info about a user by user id
@@ -619,7 +619,7 @@ function posix_getpwnam ($username) {}
  * @since 4.0
  * @since 5.0
  */
-function posix_getpwuid ($uid) {}
+function posix_getpwuid (int $uid) {}
 
 /**
  * Return info about system resource limits
@@ -737,7 +737,7 @@ function posix_errno () {}
  * @since 4.2
  * @since 5.0
  */
-function posix_strerror ($errno) {}
+function posix_strerror (int $errno) {}
 
 /**
  * Calculate the group access list
@@ -751,7 +751,7 @@ function posix_strerror ($errno) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.2
  */
-function posix_initgroups ($name, $base_group_id) {}
+function posix_initgroups (string $name, int $base_group_id) {}
 
 
 /**
