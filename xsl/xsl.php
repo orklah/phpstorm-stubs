@@ -17,7 +17,7 @@ class XSLTProcessor  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.0
 	 */
-	public function importStylesheet ($stylesheet) {}
+	public function importStylesheet (object $stylesheet) {}
 
 	/**
 	 * Transform to a DOMDocument
@@ -42,7 +42,7 @@ class XSLTProcessor  {
 	 * @return int|false the number of bytes written or <b>FALSE</b> if an error occurred.
 	 * @since 5.0
 	 */
-	public function transformToUri ($doc, $uri) {}
+	public function transformToUri (\DOMDocument $doc, string $uri) {}
 
 	/**
 	 * Transform to XML
@@ -53,7 +53,7 @@ class XSLTProcessor  {
 	 * @return string|false The result of the transformation as a string or <b>FALSE</b> on error.
 	 * @since 5.0
 	 */
-	public function transformToXml ($doc) {}
+	public function transformToXml (\DOMDocument $doc) {}
 
 	/**
 	 * Set value for a parameter
@@ -70,7 +70,7 @@ class XSLTProcessor  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.0
 	 */
-	public function setParameter ($namespace, $name, $value) {}
+	public function setParameter (string $namespace, string $name, string $value) {}
 
 	/**
 	 * Get value of a parameter
@@ -84,7 +84,7 @@ class XSLTProcessor  {
 	 * @return string|false The value of the parameter (as a string), or <b>FALSE</b> if it's not set.
 	 * @since 5.0
 	 */
-	public function getParameter ($namespaceURI, $localName) {}
+	public function getParameter (string $namespaceURI, string $localName) {}
 
 	/**
 	 * Remove parameter
@@ -98,7 +98,7 @@ class XSLTProcessor  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.0
 	 */
-	public function removeParameter ($namespaceURI, $localName) {}
+	public function removeParameter (string $namespaceURI, string $localName) {}
 
 	/**
 	 * Determine if PHP has EXSLT support
@@ -133,7 +133,7 @@ class XSLTProcessor  {
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 * @since 5.3
 	 */
-	public function setProfiling ($filename) {}
+	public function setProfiling (string $filename) {}
 
 	/**
 	 * Set security preferences
@@ -142,7 +142,7 @@ class XSLTProcessor  {
 	 * @return int
 	 * @since 5.4
 	 */
-	public function setSecurityPrefs ($securityPrefs) {}
+	public function setSecurityPrefs (int $securityPrefs) {}
 
 	/**
 	 * Get security preferences
