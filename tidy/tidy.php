@@ -24,7 +24,7 @@ class tidy  {
 	 * @return mixed the value of the specified <i>option</i>.
 	 * The return type depends on the type of the specified one.
 	 */
-	public function getOpt ($option) {}
+	public function getOpt (string $option) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -67,7 +67,7 @@ class tidy  {
 	 * </p>
 	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	public function parseFile ($filename, $config = null, $encoding = null, $use_include_path = false) {}
+	public function parseFile (string $filename, $config = null, string $encoding = null, bool $use_include_path = false) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -96,7 +96,7 @@ class tidy  {
 	 * </p>
 	 * @return bool a new <b>tidy</b> instance.
 	 */
-	public function parseString ($input, $config = null, $encoding = null) {}
+	public function parseString (string $input, $config = null, string $encoding = null) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.7.0)<br/>
@@ -126,7 +126,7 @@ class tidy  {
 	 * </p>
 	 * @return string the repaired string.
 	 */
-	public function repairString ($data, $config = null, $encoding = null) {}
+	public function repairString (string $data, $config = null, string $encoding = null) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.7.0)<br/>
@@ -159,7 +159,7 @@ class tidy  {
 	 * </p>
 	 * @return string the repaired contents as a string.
 	 */
-	public function repairFile ($filename, $config = null, $encoding = null, $use_include_path = false) {}
+	public function repairFile (string $filename, $config = null, string $encoding = null, bool $use_include_path = false) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -219,7 +219,7 @@ class tidy  {
 	 * <b>FALSE</b> otherwise.
 	 * @since 5.1
 	 */
-	public function getOptDoc ($optname) {}
+	public function getOptDoc (string $optname) {}
 
 	/**
 	 * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -312,7 +312,7 @@ class tidy  {
 	 * Search for the file in the include_path.
 	 * </p>
 	 */
-	public function __construct ($filename = null, $config = null, $encoding = null, $use_include_path = null) {}
+	public function __construct (string $filename = null, $config = null, string $encoding = null, bool $use_include_path = null) {}
 
 }
 
@@ -465,7 +465,7 @@ final class tidyNode  {
  * @return mixed the value of the specified <i>option</i>.
  * The return type depends on the type of the specified one.
  */
-function tidy_getopt (tidy $object, $option) {}
+function tidy_getopt (tidy $object, string $option) {}
 
 /**
  * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -494,7 +494,7 @@ function tidy_getopt (tidy $object, $option) {}
  * </p>
  * @return tidy a new <b>tidy</b> instance.
  */
-function tidy_parse_string ($input, $config = null, $encoding = null) {}
+function tidy_parse_string (string $input, $config = null, string $encoding = null) {}
 
 /**
  * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -529,7 +529,7 @@ function tidy_parse_string ($input, $config = null, $encoding = null) {}
  * </p>
  * @return tidy a new <b>tidy</b> instance.
  */
-function tidy_parse_file ($filename, $config = null, $encoding = null, $use_include_path = false) {}
+function tidy_parse_file (string $filename, $config = null, string $encoding = null, bool $use_include_path = false) {}
 
 /**
  * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -590,7 +590,7 @@ function tidy_clean_repair (tidy $object) {}
  * </p>
  * @return string the repaired string.
  */
-function tidy_repair_string ($data, $config = null, $encoding = null) {}
+function tidy_repair_string (string $data, $config = null, string $encoding = null) {}
 
 /**
  * (PHP 5, PECL tidy &gt;= 0.7.0)<br/>
@@ -623,7 +623,7 @@ function tidy_repair_string ($data, $config = null, $encoding = null) {}
  * </p>
  * @return string the repaired contents as a string.
  */
-function tidy_repair_file ($filename, $config = null, $encoding = null, $use_include_path = false) {}
+function tidy_repair_file (string $filename, $config = null, string $encoding = null, bool $use_include_path = false) {}
 
 /**
  * (PHP 5, PECL tidy &gt;= 0.5.2)<br/>
@@ -775,7 +775,7 @@ function tidy_config_count (tidy $object) {}
  * <b>FALSE</b> otherwise.
  * @since 5.1
  */
-function tidy_get_opt_doc (tidy $object, $optname) {}
+function tidy_get_opt_doc (tidy $object, string $optname) {}
 
 /**
  * (PHP 5, PECL tidy 0.5.2-1.0.0)<br/>
@@ -834,7 +834,7 @@ function tidy_get_body (tidy $object) {}
  * @return string the modified buffer.
  * @since 5.0
  */
-function ob_tidyhandler ($input, $mode = null) {}
+function ob_tidyhandler (string $input, int $mode = null) {}
 
 
 /**
