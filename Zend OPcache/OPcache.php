@@ -10,7 +10,7 @@
  * invalidated or if there was nothing to invalidate, or <b>FALSE</b> if the opcode
  * cache is disabled.
  */
-function opcache_compile_file($file) { }
+function opcache_compile_file(string $file) { }
 
 /**
  * (PHP 5 &gt;= 5.5.0, PECL ZendOpcache &gt;= 7.0.0 )<br/>
@@ -23,7 +23,7 @@ function opcache_compile_file($file) { }
  * invalidated or if there was nothing to invalidate, or <b>FALSE</b> if the opcode
  * cache is disabled.
  */
-function opcache_invalidate($script, $force = FALSE) { }
+function opcache_invalidate(string $script, bool $force = FALSE) { }
 
 /**
  * (PHP 5 &gt;= 5.5.0, PECL ZendOpcache &gt;= 7.0.0 )<br/>
@@ -40,7 +40,7 @@ function opcache_reset() { }
  * @param bool $get_scripts <p>Include script specific state information</p>
  * @return array <p>Returns an array of information, optionally containing script specific state information</p>
  */
-function opcache_get_status ($get_scripts = TRUE) {}
+function opcache_get_status (bool $get_scripts = TRUE) {}
 
 /**
  * (PHP 5 &gt;= 5.5.5, PECL ZendOpcache &gt;= 7.0.2 )<br/>
@@ -58,4 +58,4 @@ function opcache_get_configuration() {}
  * @param string $file The path to the PHP script to be checked.
  * @return bool Returns TRUE if file is cached in OPCache, FALSE otherwise.
  */
-function opcache_is_script_cached($file) {}
+function opcache_is_script_cached(string $file) {}
