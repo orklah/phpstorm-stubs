@@ -18,7 +18,7 @@
  * @return array of AddrInfo resource handles that can be used with the other socket_addrinfo functions.
  * @since 7.2
  */
-function socket_addrinfo_lookup($host, $service, $hints) {}
+function socket_addrinfo_lookup(string $host, string $service, array $hints) {}
 
 /**
  * (PHP 7 &gt;= 7.2.0)<br/>
@@ -108,7 +108,7 @@ function socket_addrinfo_explain($addr) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_select (array &$read, array &$write, array &$except, $tv_sec, $tv_usec = 0) {}
+function socket_select (array &$read, array &$write, array &$except, int $tv_sec, int $tv_usec = 0) {}
 
 /**
  * Create a socket (endpoint for communication)
@@ -248,7 +248,7 @@ function socket_select (array &$read, array &$write, array &$except, $tv_sec, $t
  * @since 4.1
  * @since 5.0
  */
-function socket_create ($domain, $type, $protocol) {}
+function socket_create (int $domain, int $type, int $protocol) {}
 
 /**
  * @param resource $socket
@@ -277,7 +277,7 @@ function socket_export_stream($socket) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_create_listen ($port, $backlog = 128) {}
+function socket_create_listen (int $port, int $backlog = 128) {}
 
 /**
  * Creates a pair of indistinguishable sockets and stores them in an array
@@ -312,7 +312,7 @@ function socket_create_listen ($port, $backlog = 128) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_create_pair ($domain, $type, $protocol, array &$fd) {}
+function socket_create_pair (int $domain, int $type, int $protocol, array &$fd) {}
 
 /**
  * Accepts a connection on a socket
@@ -385,7 +385,7 @@ function socket_set_block ($socket) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_listen ($socket, $backlog = 0) {}
+function socket_listen ($socket, int $backlog = 0) {}
 
 /**
  * Closes a socket resource
@@ -427,7 +427,7 @@ function socket_close ($socket) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_write ($socket, $buffer, $length = 0) {}
+function socket_write ($socket, string $buffer, int $length = 0) {}
 
 /**
  * Reads a maximum of length bytes from a socket
@@ -460,7 +460,7 @@ function socket_write ($socket, $buffer, $length = 0) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_read ($socket, $length, $type = PHP_BINARY_READ) {}
+function socket_read ($socket, int $length, int $type = PHP_BINARY_READ) {}
 
 /**
  * Queries the local side of the given socket which may either result in host/port or in a Unix filesystem path, dependent on its type
@@ -493,7 +493,7 @@ function socket_read ($socket, $length, $type = PHP_BINARY_READ) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_getsockname ($socket, &$addr, &$port = null) {}
+function socket_getsockname ($socket, string &$addr, int &$port = null) {}
 
 /**
  * Queries the remote side of the given socket which may either result in host/port or in a Unix filesystem path, dependent on its type
@@ -528,7 +528,7 @@ function socket_getsockname ($socket, &$addr, &$port = null) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_getpeername ($socket, &$address, &$port = null) {}
+function socket_getpeername ($socket, string &$address, int &$port = null) {}
 
 /**
  * Initiates a connection on a socket
@@ -560,7 +560,7 @@ function socket_getpeername ($socket, &$address, &$port = null) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_connect ($socket, $address, $port = 0) {}
+function socket_connect ($socket, string $address, int $port = 0) {}
 
 /**
  * Return a string describing a socket error
@@ -574,7 +574,7 @@ function socket_connect ($socket, $address, $port = 0) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_strerror ($errno) {}
+function socket_strerror (int $errno) {}
 
 /**
  * Binds a name to a socket
@@ -606,7 +606,7 @@ function socket_strerror ($errno) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_bind ($socket, $address, $port = 0) {}
+function socket_bind ($socket, string $address, int $port = 0) {}
 
 /**
  * Receives data from a connected socket
@@ -672,7 +672,7 @@ function socket_bind ($socket, $address, $port = 0) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_recv ($socket, &$buf, $len, $flags) {}
+function socket_recv ($socket, string &$buf, int $len, int $flags) {}
 
 /**
  * Sends data to a connected socket
@@ -726,7 +726,7 @@ function socket_recv ($socket, &$buf, $len, $flags) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_send ($socket, $buf, $len, $flags) {}
+function socket_send ($socket, string $buf, int $len, int $flags) {}
 
 /**
  * (PHP 5 &gt;=5.5.0)<br/>
@@ -738,7 +738,7 @@ function socket_send ($socket, $buf, $len, $flags) {}
  * @return int|false
  * @since 5.5
  */
-function socket_sendmsg ($socket, array $message, $flags ) {}
+function socket_sendmsg ($socket, array $message, int $flags ) {}
 
 /**
  * Receives data from a socket whether or not it is connection-oriented
@@ -814,7 +814,7 @@ function socket_sendmsg ($socket, array $message, $flags ) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_recvfrom ($socket, &$buf, $len, $flags, &$name, &$port = null) {}
+function socket_recvfrom ($socket, string &$buf, int $len, int $flags, string &$name, int &$port = null) {}
 
 /**
  * Read a message
@@ -825,7 +825,7 @@ function socket_recvfrom ($socket, &$buf, $len, $flags, &$name, &$port = null) {
  * @return int|false
  * @since 5.5
  */
-function socket_recvmsg ($socket , $message, $flags) {}
+function socket_recvmsg ($socket , string $message, int $flags) {}
 
 /**
  * Sends a message to a socket, whether it is connected or not
@@ -886,7 +886,7 @@ function socket_recvmsg ($socket , $message, $flags) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_sendto ($socket, $buf, $len, $flags, $addr, $port = 0) {}
+function socket_sendto ($socket, string $buf, int $len, int $flags, string $addr, int $port = 0) {}
 
 /**
  * Gets socket options for the socket
@@ -1254,7 +1254,7 @@ function socket_sendto ($socket, $buf, $len, $flags, $addr, $port = 0) {}
  * @since 4.3
  * @since 5.0
  */
-function socket_get_option ($socket, $level, $optname) {}
+function socket_get_option ($socket, int $level, int $optname) {}
 
 /**
  * Sets socket options for the socket
@@ -1283,7 +1283,7 @@ function socket_get_option ($socket, $level, $optname) {}
  * @since 4.3
  * @since 5.0
  */
-function socket_set_option ($socket, $level, $optname, $optval) {}
+function socket_set_option ($socket, int $level, int $optname, $optval) {}
 
 /**
  * Shuts down a socket for receiving, sending, or both
@@ -1319,7 +1319,7 @@ function socket_set_option ($socket, $level, $optname, $optval) {}
  * @since 4.1
  * @since 5.0
  */
-function socket_shutdown ($socket, $how = 2) {}
+function socket_shutdown ($socket, int $how = 2) {}
 
 /**
  * Returns the last error on the socket
@@ -1365,7 +1365,7 @@ function socket_import_stream ($stream) {}
  * @return int
  * @since 5.5
  */
-function socket_cmsg_space ($level, $type, $n = 0) {}
+function socket_cmsg_space (int $level, int $type, int $n = 0) {}
 
 /**
  * @param $socket
