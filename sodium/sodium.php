@@ -344,7 +344,7 @@ function sodium_crypto_stream_keygen(): string {}
  * @param int $length
  * @return string
  */
-function sodium_pad ($string, $length): string {}
+function sodium_pad (string $string, int $length): string {}
 
 /**
  * Remove padding data
@@ -353,7 +353,7 @@ function sodium_pad ($string, $length): string {}
  * @param string $string
  * @param int $length
  */
-function sodium_unpad ($string, $length): string {}
+function sodium_unpad (string $string, int $length): string {}
 
 
 
