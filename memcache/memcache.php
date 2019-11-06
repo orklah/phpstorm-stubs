@@ -27,7 +27,7 @@ class MemcachePool  {
      * @param int $timeout [optional] <p>Value in seconds which will be used for connecting to the daemon. Think twice before changing the default value of 1 second - you can lose all the advantages of caching if your connection is too slow.</p>
      * @return bool <p>Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.</p>
      */
-    public function connect ($host, $port, $timeout = 1) {}
+    public function connect (string $host, int $port, int $timeout = 1) {}
 
     /**
      * (PECL memcache &gt;= 2.0.0)<br/>
@@ -94,7 +94,7 @@ class MemcachePool  {
      * </p>
      * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
      */
-    public function addServer ($host, $port = 11211, $persistent = true, $weight = null, $timeout = 1, $retry_interval = 15, $status = true, callable $failure_callback = null, $timeoutms = null) {}
+    public function addServer (string $host, int $port = 11211, bool $persistent = true, int $weight = null, int $timeout = 1, int $retry_interval = 15, bool $status = true, callable $failure_callback = null, int $timeoutms = null) {}
 
     /**
      * (PECL memcache &gt;= 2.1.0)<br/>
@@ -127,7 +127,7 @@ class MemcachePool  {
      * </p>
      * @return bool <p>Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.</p>
      */
-    public function setServerParams ($host, $port = 11211, $timeout = 1, $retry_interval = 15, $status = true, callable $failure_callback = null) {}
+    public function setServerParams (string $host, int $port = 11211, int $timeout = 1, int $retry_interval = 15, bool $status = true, callable $failure_callback = null) {}
 
     /**
      *
@@ -142,7 +142,7 @@ class MemcachePool  {
      * @param int $port Point to the port where memcached is listening for connections.
      * @return int Returns a the servers status. 0 if server is failed, non-zero otherwise
      */
-    public function getServerStatus ($host, $port = 11211) {}
+    public function getServerStatus (string $host, int $port = 11211) {}
 
     /**
      *
@@ -172,7 +172,7 @@ class MemcachePool  {
      * You can also use Unix timestamp or a number of seconds starting from current time, but in the latter case the number of seconds may not exceed 2592000 (30 days).</p>
      * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure. Returns <b>FALSE</b> if such key already exist. For the rest Memcache::add() behaves similarly to Memcache::set().
      */
-    public function add ($key , $var, $flag = null, $expire = null) {}
+    public function add (string $key , $var, int $flag = null, int $expire = null) {}
 
     /**
      * (PECL memcache &gt;= 0.2.0)<br/>
@@ -187,7 +187,7 @@ class MemcachePool  {
      * @param int $expire [optional] Expiration time of the item. If it's equal to zero, the item will never expire. You can also use Unix timestamp or a number of seconds starting from current time, but in the latter case the number of seconds may not exceed 2592000 (30 days).
      * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
      */
-    public function set ($key, $var, $flag = null, $expire = null) {}
+    public function set (string $key, $var, int $flag = null, int $expire = null) {}
 
     /**
      * (PECL memcache &gt;= 0.2.0)<br/>
@@ -199,7 +199,7 @@ class MemcachePool  {
      * @param int $expire [optional] <p>Expiration time of the item. If it's equal to zero, the item will never expire. You can also use Unix timestamp or a number of seconds starting from current time, but in the latter case the number of seconds may not exceed 2592000 (30 days).</p>
      * @return bool Returns TRUE on success or FALSE on failure.
      */
-    public function replace ($key,  $var, $flag = null, $expire = null) {}
+    public function replace (string $key,  $var, int $flag = null, int $expire = null) {}
 
 	public function cas () {}
 
@@ -261,7 +261,7 @@ class MemcachePool  {
      * </p>
      * @return array|false Returns an associative array of server statistics or <b>FALSE</b> on failure.
      */
-    public function getStats ($type = null, $slabid = null, $limit = 100) {}
+    public function getStats (string $type = null, int $slabid = null, int $limit = 100) {}
 
     /**
      * (PECL memcache &gt;= 2.0.0)<br/>
@@ -279,7 +279,7 @@ class MemcachePool  {
      * Returns a two-dimensional associative array of server statistics or <b>FALSE</b>
      * on failure.
      */
-    public function getExtendedStats ($type = null, $slabid = null, $limit = 100) {}
+    public function getExtendedStats (string $type = null, int $slabid = null, int $limit = 100) {}
 
     /**
      * (PECL memcache &gt;= 2.0.0)<br/>
@@ -289,7 +289,7 @@ class MemcachePool  {
      * @param float $min_saving [optional] <p>Specifies the minimum amount of savings to actually store the value compressed. The supplied value must be between 0 and 1. Default value is 0.2 giving a minimum 20% compression savings.</p>
      * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
      */
-    public function setCompressThreshold ($thresold, $min_saving = 0.2) {}
+    public function setCompressThreshold (int $thresold, float $min_saving = 0.2) {}
     /**
      * (PECL memcache &gt;= 0.2.0)<br/>
      * Increment item's value
@@ -356,7 +356,7 @@ class Memcache extends MemcachePool  {
 	 * </p>
 	 * @return mixed a Memcache object or <b>FALSE</b> on failure.
 	 */
-	public function pconnect ($host, $port, $timeout = 1) {}
+	public function pconnect (string $host, int $port, int $timeout = 1) {}
 }
 
 //  string $host [, int $port [, int $timeout ]]
@@ -382,7 +382,7 @@ class Memcache extends MemcachePool  {
  * </p>
  * @return bool Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
  */
-function memcache_connect ($host, $port, $timeout = 1) {}
+function memcache_connect (string $host, int $port, int $timeout = 1) {}
 
 /**
  * (PECL memcache >= 0.4.0)
@@ -394,7 +394,7 @@ function memcache_connect ($host, $port, $timeout = 1) {}
  * @param int  $timeout
  * @return Memcache
  */
-function memcache_pconnect ($host, $port=null, $timeout=1) {}
+function memcache_pconnect ($host, $port=null, int $timeout=1) {}
 
 function memcache_add_server () {}
 
@@ -433,7 +433,7 @@ function memcache_delete () {}
  * @return bool <b>TRUE</b> if PHP was built with --enable-debug option, otherwise
  * returns <b>FALSE</b>.
  */
-function memcache_debug ($on_off) {}
+function memcache_debug (bool $on_off) {}
 
 function memcache_get_stats () {}
 
