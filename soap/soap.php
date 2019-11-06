@@ -268,7 +268,7 @@ class SoapClient  {
 	 * @return mixed
 	 * @since 5.0.1
 	 */
-	public function __call ($function_name, $arguments) {}
+	public function __call (string $function_name, array $arguments) {}
 
 	/**
 	 * Calls a SOAP function
@@ -311,7 +311,7 @@ class SoapClient  {
 	 * option set to <b>FALSE</b>, a SoapFault object will be returned.
 	 * @since 5.0.1
 	 */
-	public function __soapCall ($function_name, $arguments, $options = null, $input_headers = null, &$output_headers = null) {}
+	public function __soapCall (string $function_name, array $arguments, array $options = null, $input_headers = null, array &$output_headers = null) {}
 
 	/**
 	 * Returns last SOAP request
@@ -392,7 +392,7 @@ class SoapClient  {
 	 * @return string The XML SOAP response.
 	 * @since 5.0.1
 	 */
-	public function __doRequest ($request, $location, $action, $version, $one_way = 0) {}
+	public function __doRequest (string $request, string $location, string $action, int $version, int $one_way = 0) {}
 
 	/**
 	 * The __setCookie purpose
@@ -406,7 +406,7 @@ class SoapClient  {
 	 * @return void No value is returned.
 	 * @since 5.0.4
 	 */
-	public function __setCookie ($name, $value = null) {}
+	public function __setCookie (string $name, string $value = null) {}
 
 	/**
 	 * Sets the location of the Web service to use
@@ -417,7 +417,7 @@ class SoapClient  {
 	 * @return string The old endpoint URL.
 	 * @since 5.0.1
 	 */
-	public function __setLocation ($new_location = null) {}
+	public function __setLocation (string $new_location = null) {}
 
 	/**
 	 * Sets SOAP headers for subsequent calls
@@ -463,7 +463,7 @@ class SoapVar  {
 	 * </p>
 	 * @since 5.0.1
 	 */
-	public function SoapVar ($data, $encoding, $type_name = null, $type_namespace = null, $node_name = null, $node_namespace = null) {}
+	public function SoapVar ($data, string $encoding, string $type_name = null, string $type_namespace = null, string $node_name = null, string $node_namespace = null) {}
 
 }
 
@@ -535,7 +535,7 @@ class SoapServer  {
 	 * @return void No value is returned.
 	 * @since 5.1.2
 	 */
-	public function setPersistence ($mode) {}
+	public function setPersistence (int $mode) {}
 
 	/**
 	 * Sets the class which handles SOAP requests
@@ -547,7 +547,7 @@ class SoapServer  {
 	 * @return void No value is returned.
 	 * @since 5.0.1
 	 */
-	public function setClass ($class_name, $_ = null) {}
+	public function setClass (string $class_name, $_ = null) {}
 
 	/**
 	 * Sets the object which will be used to handle SOAP requests
@@ -558,7 +558,7 @@ class SoapServer  {
 	 * @return void No value is returned.
 	 * @since 5.2
 	 */
-	public function setObject ($object) {}
+	public function setObject (object $object) {}
 
 	/**
 	 * Adds one or more functions to handle SOAP requests
@@ -602,7 +602,7 @@ class SoapServer  {
 	 * @return void No value is returned.
 	 * @since 5.0.1
 	 */
-	public function handle ($soap_request = null) {}
+	public function handle (string $soap_request = null) {}
 
 	/**
 	 * Issue SoapServer fault indicating an error
@@ -625,7 +625,7 @@ class SoapServer  {
 	 * @return void No value is returned.
 	 * @since 5.0.1
 	 */
-	public function fault ($code, $string, $actor = null, $details = null, $name = null) {}
+	public function fault (string $code, string $string, string $actor = null, string $details = null, string $name = null) {}
 
 	/**
 	 * Add a SOAP header to the response
@@ -694,7 +694,7 @@ class SoapFault extends Exception  {
 	 * </p>
 	 * @since 5.0.1
 	 */
-	public function SoapFault ($faultcode, $faultstring, $faultactor = null, $detail = null, $faultname = null, $headerfault = null) {}
+	public function SoapFault (string $faultcode, string $faultstring, string $faultactor = null, $detail = null, string $faultname = null, $headerfault = null) {}
 
 	/**
 	 * Obtain a string representation of a SoapFault
@@ -726,7 +726,7 @@ class SoapParam  {
 	 * </p>
 	 * @since 5.0.1
 	 */
-	public function SoapParam ($data, $name) {}
+	public function SoapParam ($data, string $name) {}
 
 }
 
@@ -756,7 +756,7 @@ class SoapHeader  {
 	 * </p>
 	 * @since 5.0.1
 	 */
-	public function SoapHeader ($namespace, $name, $data = null, $mustunderstand = false, $actor = null) {}
+	public function SoapHeader (string $namespace, string $name, $data = null, bool $mustunderstand = false, string $actor = null) {}
 
 }
 
@@ -768,7 +768,7 @@ class SoapHeader  {
  * </p>
  * @return bool the original value.
  */
-function use_soap_error_handler ($handler = true) {}
+function use_soap_error_handler (bool $handler = true) {}
 
 /**
  * Checks if a SOAP call has failed
