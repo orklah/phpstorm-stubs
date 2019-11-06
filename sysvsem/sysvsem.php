@@ -24,7 +24,7 @@
  * @since 4.0
  * @since 5.0
  */
-function sem_get ($key, $max_acquire = 1, $perm = 0666, $auto_release = 1) {}
+function sem_get (int $key, int $max_acquire = 1, int $perm = 0666, int $auto_release = 1) {}
 
 /**
  * Acquire a semaphore
@@ -42,7 +42,7 @@ function sem_get ($key, $max_acquire = 1, $perm = 0666, $auto_release = 1) {}
  * @since 4.0
  * @since 5.0
  */
-function sem_acquire ($sem_identifier, $nowait = false) {}
+function sem_acquire ($sem_identifier, bool $nowait = false) {}
 
 /**
  * Release a semaphore
