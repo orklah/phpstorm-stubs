@@ -16,7 +16,7 @@
  * @since 4.3
  * @since 5.0
  */
-function msg_get_queue ($key, $perms = 0666) {}
+function msg_get_queue (int $key, int $perms = 0666) {}
 
 /**
  * Send a message to a message queue
@@ -56,7 +56,7 @@ function msg_get_queue ($key, $perms = 0666) {}
  * @since 4.3
  * @since 5.0
  */
-function msg_send ($queue, $msgtype, $message, $serialize = true, $blocking = true, &$errorcode = null) {}
+function msg_send ($queue, int $msgtype, $message, bool $serialize = true, bool $blocking = true, int &$errorcode = null) {}
 
 /**
  * Receive a message from a message queue
@@ -145,7 +145,7 @@ function msg_send ($queue, $msgtype, $message, $serialize = true, $blocking = tr
  * @since 4.3
  * @since 5.0
  */
-function msg_receive ($queue, $desiredmsgtype, &$msgtype, $maxsize, &$message, $unserialize = true, $flags = 0, &$errorcode = null) {}
+function msg_receive ($queue, int $desiredmsgtype, int &$msgtype, int $maxsize, &$message, bool $unserialize = true, int $flags = 0, int &$errorcode = null) {}
 
 /**
  * Destroy a message queue
@@ -262,7 +262,7 @@ function msg_set_queue ($queue, array $data) {}
  * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
  * @since 5.3
  */
-function msg_queue_exists ($key) {}
+function msg_queue_exists (int $key) {}
 
 define ('MSG_IPC_NOWAIT', 1);
 define ('MSG_EAGAIN', 11);
