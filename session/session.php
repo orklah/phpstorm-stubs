@@ -24,7 +24,7 @@
  * @since 4.0
  * @since 5.0
  */
-function session_name ($name = null) {}
+function session_name (string $name = null) {}
 
 /**
  * Get and/or set the current session module.<br/>
@@ -38,7 +38,7 @@ function session_name ($name = null) {}
  * @since 4.0
  * @since 5.0
  */
-function session_module_name ($module = null) {}
+function session_module_name (string $module = null) {}
 
 /**
  * Get and/or set the current session save path
@@ -59,7 +59,7 @@ function session_module_name ($module = null) {}
  * @since 4.0
  * @since 5.0
  */
-function session_save_path ($path = null) {}
+function session_save_path (string $path = null) {}
 
 /**
  * Get and/or set the current session id
@@ -82,7 +82,7 @@ function session_save_path ($path = null) {}
  * @since 4.0
  * @since 5.0
  */
-function session_id ($id = null) {}
+function session_id (string $id = null) {}
 
 /**
  * Update the current session id with a newly generated one
@@ -94,7 +94,7 @@ function session_id ($id = null) {}
  * @since 4.3.2
  * @since 5.0
  */
-function session_regenerate_id ($delete_old_session = false) {}
+function session_regenerate_id (bool $delete_old_session = false) {}
 
 /**
  * PHP > 5.4.0 <br/>
@@ -113,7 +113,7 @@ function session_register_shutdown  () {}
  * @since 4.0
  * @since 5.0
  */
-function session_decode ($data) {}
+function session_decode (string $data) {}
 
 /**
  * Register one or more global variables with the current session
@@ -141,7 +141,7 @@ function session_register ($name, $_ = null) {}
  * @since 4.0
  * @since 5.0
  */
-function session_unregister ($name) {}
+function session_unregister (string $name) {}
 
 /**
  * Find out whether a global variable is registered in a session
@@ -156,7 +156,7 @@ function session_unregister ($name) {}
  * @since 4.0
  * @since 5.0
  */
-function session_is_registered ($name) {}
+function session_is_registered (string $name) {}
 
 /**
  * Encodes the current session data as a string
@@ -178,7 +178,7 @@ function session_encode () {}
  * @since 5.0
  * @since 7.0
  */
-function session_start ($options = []) {}
+function session_start (array $options = []) {}
 
 /**
  * Create new session id
@@ -190,7 +190,7 @@ function session_start ($options = []) {}
  * If it is used without active session, it omits collision check.
  * @since 7.1
  */
-function session_create_id($prefix) {}
+function session_create_id(string $prefix) {}
 
 /**
  * Perform session data garbage collection
@@ -267,7 +267,7 @@ function session_unset () {}
  * @since 4.0
  * @since 5.0
  */
-function session_set_save_handler ($open, $close, $read, $write, $destroy, $gc, $create_sid = null, $validate_sid = null,  $update_timestamp = null) {}
+function session_set_save_handler (callable $open, callable $close, callable $read, callable $write, callable $destroy, callable $gc, callable $create_sid = null, callable $validate_sid = null,  callable $update_timestamp = null) {}
 
 /**
  * (PHP 5.4)<br/>
@@ -279,7 +279,7 @@ function session_set_save_handler ($open, $close, $read, $write, $destroy, $gc, 
  * @param bool $register_shutdown [optional] Register session_write_close() as a register_shutdown_function() function.
  * @return bool true on success or false on failure.
  */
-function session_set_save_handler (SessionHandlerInterface $session_handler, $register_shutdown = true) {}
+function session_set_save_handler (SessionHandlerInterface $session_handler, bool $register_shutdown = true) {}
 
 /**
  * Get and/or set the current cache limiter
@@ -339,7 +339,7 @@ function session_set_save_handler (SessionHandlerInterface $session_handler, $re
  * @since 5.0
  * @since 7.0
  */
-function session_cache_limiter ($cache_limiter = null) {}
+function session_cache_limiter (string $cache_limiter = null) {}
 
 /**
  * Return current cache expire
@@ -359,7 +359,7 @@ function session_cache_limiter ($cache_limiter = null) {}
  * @since 5.0
  * @since 7.0
  */
-function session_cache_expire ($new_cache_expire = null) {}
+function session_cache_expire (string $new_cache_expire = null) {}
 
 /**
  * Set the session cookie parameters
@@ -391,7 +391,7 @@ function session_cache_expire ($new_cache_expire = null) {}
  * @since 4.0
  * @since 5.0
  */
-function session_set_cookie_params ($lifetime, $path = null, $domain = null, $secure = false, $httponly = false) {}
+function session_set_cookie_params (int $lifetime, string $path = null, string $domain = null, bool $secure = false, bool $httponly = false) {}
 
 /**
  * Get the session cookie parameters

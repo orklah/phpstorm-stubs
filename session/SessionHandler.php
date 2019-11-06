@@ -31,7 +31,7 @@ interface SessionHandlerInterface {
 	 * </p>
 	 * @since 5.4
 	 */
-	public function destroy($session_id);
+	public function destroy(string $session_id);
 
 	/**
 	 * Cleanup old sessions
@@ -46,7 +46,7 @@ interface SessionHandlerInterface {
 	 * </p>
 	 * @since 5.4
 	 */
-	public function gc($maxlifetime);
+	public function gc(int $maxlifetime);
 
 	/**
 	 * Initialize session
@@ -59,7 +59,7 @@ interface SessionHandlerInterface {
 	 * </p>
 	 * @since 5.4
 	 */
-	public function open($save_path, $name);
+	public function open(string $save_path, string $name);
 
 
 	/**
@@ -73,7 +73,7 @@ interface SessionHandlerInterface {
 	 * </p>
 	 * @since 5.4
 	 */
-	public function read($session_id);
+	public function read(string $session_id);
 
 	/**
 	 * Write session data
@@ -92,7 +92,7 @@ interface SessionHandlerInterface {
 	 * </p>
 	 * @since 5.4
 	 */
-	public function write($session_id, $session_data);
+	public function write(string $session_id, string $session_data);
 }
 
 /**
@@ -125,7 +125,7 @@ interface SessionUpdateTimestampHandlerInterface {
      * Note this value is returned internally to PHP for processing.
      * </p>
      */
-    public function validateId($session_id);
+    public function validateId(string $session_id);
 
     /**
      * Update timestamp of a session
@@ -139,7 +139,7 @@ interface SessionUpdateTimestampHandlerInterface {
      * </p>
      * @return bool
      */
-    public function updateTimestamp($session_id, $session_data);
+    public function updateTimestamp(string $session_id, string $session_data);
 
 }
 
@@ -190,7 +190,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
 	 * </p>
 	 * @since 5.4
 	 */
-	public function destroy($session_id) { }
+	public function destroy(string $session_id) { }
 
 	/**
 	 * Cleanup old sessions
@@ -205,7 +205,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
 	 * </p>
 	 * @since 5.4
 	 */
-	public function gc($maxlifetime) { }
+	public function gc(int $maxlifetime) { }
 
 	/**
 	 * Initialize session
@@ -218,7 +218,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
 	 * </p>
 	 * @since 5.4
 	 */
-	public function open($save_path, $session_name) { }
+	public function open(string $save_path, string $session_name) { }
 
 
 	/**
@@ -232,7 +232,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
 	 * </p>
 	 * @since 5.4
 	 */
-	public function read($session_id) { }
+	public function read(string $session_id) { }
 
 	/**
 	 * Write session data
@@ -251,7 +251,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
 	 * </p>
 	 * @since 5.4
 	 */
-	public function write($session_id, $session_data) { }
+	public function write(string $session_id, string $session_data) { }
 
     /**
      * Validate session id
@@ -260,7 +260,7 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
      * Note this value is returned internally to PHP for processing.
      * </p>
      */
-    public function validateId($session_id) { }
+    public function validateId(string $session_id) { }
 
     /**
      * Update timestamp of a session
@@ -274,6 +274,6 @@ class SessionHandler implements SessionHandlerInterface, SessionIdInterface
      * </p>
      * @return bool
      */
-    public function updateTimestamp($session_id, $session_data) { }
+    public function updateTimestamp(string $session_id, string $session_data) { }
 
 }
