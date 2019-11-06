@@ -309,7 +309,7 @@ define( "WIN32_REALTIME_PRIORITY_CLASS", 0x00000100 );
  * @return int|false Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the parameters or a Win32 Error Code
  *             on failure.
  */
-function win32_continue_service( $serviceName, $machine = "" ) { }
+function win32_continue_service( string $serviceName, string $machine = "" ) { }
 
 /**
  * Creates a new service entry in the SCM database
@@ -412,7 +412,7 @@ function win32_continue_service( $serviceName, $machine = "" ) { }
  *             on failure.
  */
 
-function win32_create_service( $details, $machine = "" ) { }
+function win32_create_service( array $details, string $machine = "" ) { }
 
 /**
  *  Deletes a service entry from the SCM database
@@ -426,7 +426,7 @@ function win32_create_service( $details, $machine = "" ) { }
  * @return int|false Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the parameters or a Win32 Error Code
  *             on failure.
  */
-function win32_delete_service( $serviceName, $machine = "" ) { }
+function win32_delete_service( string $serviceName, string $machine = "" ) { }
 
 /**
  *   Returns the last control message that was sent to this service
@@ -452,7 +452,7 @@ function win32_get_last_control_message() { }
  *             on failure.
  *
  */
-function win32_pause_service( $serviceName, $machine = "" ) { }
+function win32_pause_service( string $serviceName, string $machine = "" ) { }
 
 /**
  * Queries the current status for a service, returning an array of information.
@@ -506,7 +506,7 @@ function win32_pause_service( $serviceName, $machine = "" ) { }
  *                   </li>
  *               </ul>
  */
-function win32_query_service_status( $serviceName, $machine = "" ) { }
+function win32_query_service_status( string $serviceName, string $machine = "" ) { }
 
 /**
  *   Update the service status
@@ -531,7 +531,7 @@ function win32_query_service_status( $serviceName, $machine = "" ) { }
  *             failure.
  *
  */
-function win32_set_service_status( $status, $checkpoint = 0 ) { }
+function win32_set_service_status( int $status, int $checkpoint = 0 ) { }
 
 /**
  * Registers the script with the SCM, so that it can act as the service with the given name
@@ -555,7 +555,7 @@ function win32_set_service_status( $status, $checkpoint = 0 ) { }
  * @return mixed Returns TRUE on success, FALSE if there is a problem with the parameters or a Win32 Error Code on
  *               failure.
  */
-function win32_start_service_ctrl_dispatcher( $name ) { }
+function win32_start_service_ctrl_dispatcher( string $name ) { }
 
 /**
  *   Starts a service
@@ -568,7 +568,7 @@ function win32_start_service_ctrl_dispatcher( $name ) { }
  *             on failure.
  *
  */
-function win32_start_service( $serviceName, $machine = "" ) { }
+function win32_start_service( string $serviceName, string $machine = "" ) { }
 
 /**
  *   Stops a named service. Requires administrative privileges.
@@ -579,4 +579,4 @@ function win32_start_service( $serviceName, $machine = "" ) { }
  * @return int|false Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the parameters or a Win32 Error Code
  *             on failure.
  */
-function win32_stop_service( $serviceName, $machine = "" ) { }
+function win32_stop_service( string $serviceName, string $machine = "" ) { }
