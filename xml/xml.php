@@ -22,7 +22,7 @@
  * @since 4.0
  * @since 5.0
  */
-function xml_parser_create ($encoding = null) {}
+function xml_parser_create (string $encoding = null) {}
 
 /**
  * Create an XML parser with namespace support
@@ -47,7 +47,7 @@ function xml_parser_create ($encoding = null) {}
  * @since 4.0.5
  * @since 5.0
  */
-function xml_parser_create_ns ($encoding = null, $separator = ':') {}
+function xml_parser_create_ns (string $encoding = null, string $separator = ':') {}
 
 /**
  * Use XML Parser within an object
@@ -62,7 +62,7 @@ function xml_parser_create_ns ($encoding = null, $separator = ':') {}
  * @since 4.0
  * @since 5.0
  */
-function xml_set_object ($parser, &$object) {}
+function xml_set_object ($parser, object &$object) {}
 
 /**
  * Set up start and end element handlers
@@ -360,7 +360,7 @@ function xml_set_end_namespace_decl_handler ($parser, callable $handler) {}
  * @since 4.0
  * @since 5.0
  */
-function xml_parse ($parser, $data, $is_final = false) {}
+function xml_parse ($parser, string $data, bool $is_final = false) {}
 
 /**
  * Parse XML data into an array structure
@@ -383,7 +383,7 @@ function xml_parse ($parser, $data, $is_final = false) {}
  * @since 4.0
  * @since 5.0
  */
-function xml_parse_into_struct ($parser, $data, array &$values, array &$index = null) {}
+function xml_parse_into_struct ($parser, string $data, array &$values, array &$index = null) {}
 
 /**
  * Get XML parser error code
@@ -411,7 +411,7 @@ function xml_get_error_code ($parser) {}
  * @since 4.0
  * @since 5.0
  */
-function xml_error_string ($code) {}
+function xml_error_string (int $code) {}
 
 /**
  * Get current line number for an XML parser
@@ -531,7 +531,7 @@ function xml_parser_free ($parser) {}
  * @since 4.0
  * @since 5.0
  */
-function xml_parser_set_option ($parser, $option, $value) {}
+function xml_parser_set_option ($parser, int $option, $value) {}
 
 /**
  * Get options from an XML parser
@@ -547,7 +547,7 @@ function xml_parser_set_option ($parser, $option, $value) {}
  * @since 4.0
  * @since 5.0
  */
-function xml_parser_get_option ($parser, $option) {}
+function xml_parser_get_option ($parser, int $option) {}
 
 define ('XML_ERROR_NONE', 0);
 define ('XML_ERROR_NO_MEMORY', 1);
