@@ -21,7 +21,7 @@ class V8Js
      * @param bool $report_uncaught_exceptions
      * @param string $snapshot_blob
      */
-    public function __construct($object_name = "PHP", array $variables = [], array $extensions = [], $report_uncaught_exceptions = TRUE, $snapshot_blob = NULL)
+    public function __construct(string $object_name = "PHP", array $variables = [], array $extensions = [], bool $report_uncaught_exceptions = TRUE, string $snapshot_blob = NULL)
     {}
 
     /**
@@ -55,7 +55,7 @@ class V8Js
      * @param int $memory_limit in bytes
      * @return mixed
      */
-    public function executeString($script, $identifier = '', $flags = V8Js::FLAG_NONE, $time_limit = 0, $memory_limit = 0)
+    public function executeString(string $script, string $identifier = '', int $flags = V8Js::FLAG_NONE, int $time_limit = 0, int $memory_limit = 0)
     {}
 
     /**
@@ -64,7 +64,7 @@ class V8Js
      * @param string $identifier
      * @return resource
      */
-    public function compileString($script, $identifier = '')
+    public function compileString($script, string $identifier = '')
     {}
 
     /**
@@ -75,7 +75,7 @@ class V8Js
      * @param int $time_limit
      * @param int $memory_limit
      */
-    public function executeScript($script, $flags = V8Js::FLAG_NONE, $time_limit = 0 , $memory_limit = 0)
+    public function executeScript($script, int $flags = V8Js::FLAG_NONE, int $time_limit = 0 , int $memory_limit = 0)
     {}
 
     /**
@@ -83,14 +83,14 @@ class V8Js
      * works similar to the set_time_limit php
      * @param int $limit
      */
-    public function setTimeLimit($limit)
+    public function setTimeLimit(int $limit)
     {}
 
     /**
      * Set the memory limit (in bytes) for this V8Js object
      * @param int $limit
      */
-    public function setMemoryLimit($limit)
+    public function setMemoryLimit(int $limit)
     {}
 
     /**
@@ -98,7 +98,7 @@ class V8Js
      * V8's "amount of external memory" is adjusted by this value for every exported object.  V8 triggers a garbage collection once this totals to 192 MB.
      * @param int $average_object_size
      */
-    public function setAverageObjectSize($average_object_size)
+    public function setAverageObjectSize(int $average_object_size)
     {}
 
     /**
@@ -126,7 +126,7 @@ class V8Js
      * @param bool $auto_enable
      * @return bool
      */
-    public static function registerExtension($extension_name, $code, array $dependencies, $auto_enable = FALSE)
+    public static function registerExtension(string $extension_name, string $code, array $dependencies, bool $auto_enable = FALSE)
     {}
 
     /**
@@ -143,7 +143,7 @@ class V8Js
      * @param string $embed_source
      * @return string|false
      */
-    public static function createSnapshot($embed_source)
+    public static function createSnapshot(string $embed_source)
     {}
 }
 
