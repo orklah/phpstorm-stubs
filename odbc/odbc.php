@@ -22,7 +22,7 @@
  * @since 4.0
  * @since 5.0
  */
-function odbc_autocommit ($connection_id, $OnOff = false) {}
+function odbc_autocommit ($connection_id, bool $OnOff = false) {}
 
 /**
  * Handling of binary column data
@@ -45,7 +45,7 @@ function odbc_autocommit ($connection_id, $OnOff = false) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_binmode ($result_id, $mode) {}
+function odbc_binmode ($result_id, int $mode) {}
 
 /**
  * Close an ODBC connection
@@ -107,7 +107,7 @@ function odbc_close_all () {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_columns ($connection_id, $qualifier = null, $schema = null, $table_name = null, $column_name = null) {}
+function odbc_columns ($connection_id, string $qualifier = null, string $schema = null, string $table_name = null, string $column_name = null) {}
 
 /**
  * Commit an ODBC transaction
@@ -145,7 +145,7 @@ function odbc_commit ($connection_id) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_connect ($dsn, $user, $password, $cursor_type = null) {}
+function odbc_connect (string $dsn, string $user, string $password, int $cursor_type = null) {}
 
 /**
  * Get cursorname
@@ -174,7 +174,7 @@ function odbc_cursor ($result_id) {}
  * @since 4.3
  * @since 5.0
  */
-function odbc_data_source ($connection_id, $fetch_type) {}
+function odbc_data_source ($connection_id, int $fetch_type) {}
 
 /**
  * Execute a prepared statement
@@ -256,7 +256,7 @@ function odbc_errormsg ($connection_id = null) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_exec ($connection_id, $query_string, $flags = null) {}
+function odbc_exec ($connection_id, string $query_string, int $flags = null) {}
 
 /**
  * Fetch a result row as an associative array
@@ -272,7 +272,7 @@ function odbc_exec ($connection_id, $query_string, $flags = null) {}
  * @since 4.0.2
  * @since 5.0
  */
-function odbc_fetch_array ($result, $rownumber = null) {}
+function odbc_fetch_array ($result, int $rownumber = null) {}
 
 /**
  * Fetch a result row as an object
@@ -288,7 +288,7 @@ function odbc_fetch_array ($result, $rownumber = null) {}
  * @since 4.0.2
  * @since 5.0
  */
-function odbc_fetch_object ($result, $rownumber = null) {}
+function odbc_fetch_object ($result, int $rownumber = null) {}
 
 /**
  * Fetch a row
@@ -315,7 +315,7 @@ function odbc_fetch_object ($result, $rownumber = null) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_fetch_row ($result_id, $row_number = null) {}
+function odbc_fetch_row ($result_id, int $row_number = null) {}
 
 /**
  * Fetch one result row into array
@@ -337,7 +337,7 @@ function odbc_fetch_row ($result_id, $row_number = null) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_fetch_into ($result_id, array &$result_array, $rownumber = null) {}
+function odbc_fetch_into ($result_id, array &$result_array, int $rownumber = null) {}
 
 /**
  * Get the length (precision) of a field
@@ -352,7 +352,7 @@ function odbc_fetch_into ($result_id, array &$result_array, $rownumber = null) {
  * @since 4.0
  * @since 5.0
  */
-function odbc_field_len ($result_id, $field_number) {}
+function odbc_field_len ($result_id, int $field_number) {}
 
 /**
  * Get the scale of a field
@@ -367,7 +367,7 @@ function odbc_field_len ($result_id, $field_number) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_field_scale ($result_id, $field_number) {}
+function odbc_field_scale ($result_id, int $field_number) {}
 
 /**
  * Get the columnname
@@ -382,7 +382,7 @@ function odbc_field_scale ($result_id, $field_number) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_field_name ($result_id, $field_number) {}
+function odbc_field_name ($result_id, int $field_number) {}
 
 /**
  * Datatype of a field
@@ -397,7 +397,7 @@ function odbc_field_name ($result_id, $field_number) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_field_type ($result_id, $field_number) {}
+function odbc_field_type ($result_id, int $field_number) {}
 
 /**
  * Return column number
@@ -413,7 +413,7 @@ function odbc_field_type ($result_id, $field_number) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_field_num ($result_id, $field_name) {}
+function odbc_field_num ($result_id, string $field_name) {}
 
 /**
  * Free resources associated with a result
@@ -462,7 +462,7 @@ function odbc_free_result ($result_id) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_gettypeinfo ($connection_id, $data_type = null) {}
+function odbc_gettypeinfo ($connection_id, int $data_type = null) {}
 
 /**
  * Handling of LONG columns
@@ -479,7 +479,7 @@ function odbc_gettypeinfo ($connection_id, $data_type = null) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_longreadlen ($result_id, $length) {}
+function odbc_longreadlen ($result_id, int $length) {}
 
 /**
  * Checks if multiple results are available
@@ -530,7 +530,7 @@ function odbc_num_rows ($result_id) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_pconnect ($dsn, $user, $password, $cursor_type = null) {}
+function odbc_pconnect (string $dsn, string $user, string $password, int $cursor_type = null) {}
 
 /**
  * Prepares a statement for execution
@@ -545,7 +545,7 @@ function odbc_pconnect ($dsn, $user, $password, $cursor_type = null) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_prepare ($connection_id, $query_string) {}
+function odbc_prepare ($connection_id, string $query_string) {}
 
 /**
  * Get result data
@@ -578,7 +578,7 @@ function odbc_result ($result_id, $field) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_result_all ($result_id, $format = null) {}
+function odbc_result_all ($result_id, string $format = null) {}
 
 /**
  * Rollback a transaction
@@ -614,7 +614,7 @@ function odbc_rollback ($connection_id) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_setoption ($id, $function, $option, $param) {}
+function odbc_setoption ($id, int $function, int $option, int $param) {}
 
 /**
  * Retrieves special columns
@@ -659,7 +659,7 @@ function odbc_setoption ($id, $function, $option, $param) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_specialcolumns ($connection_id, $type, $qualifier, $owner, $table, $scope, $nullable) {}
+function odbc_specialcolumns ($connection_id, int $type, string $qualifier, string $owner, string $table, int $scope, int $nullable) {}
 
 /**
  * Retrieve statistics about a table
@@ -701,7 +701,7 @@ function odbc_specialcolumns ($connection_id, $type, $qualifier, $owner, $table,
  * @since 4.0
  * @since 5.0
  */
-function odbc_statistics ($connection_id, $qualifier, $owner, $table_name, $unique, $accuracy) {}
+function odbc_statistics ($connection_id, string $qualifier, string $owner, string $table_name, int $unique, int $accuracy) {}
 
 /**
  * Get the list of table names stored in a specific data source
@@ -741,7 +741,7 @@ function odbc_statistics ($connection_id, $qualifier, $owner, $table_name, $uniq
  * @since 4.0
  * @since 5.0
  */
-function odbc_tables ($connection_id, $qualifier = null, $owner = null, $name = null, $types = null) {}
+function odbc_tables ($connection_id, string $qualifier = null, string $owner = null, string $name = null, string $types = null) {}
 
 /**
  * Gets the primary keys for a table
@@ -764,7 +764,7 @@ function odbc_tables ($connection_id, $qualifier = null, $owner = null, $name = 
  * @since 4.0
  * @since 5.0
  */
-function odbc_primarykeys ($connection_id, $qualifier, $owner, $table) {}
+function odbc_primarykeys ($connection_id, string $qualifier, string $owner, string $table) {}
 
 /**
  * Lists columns and associated privileges for the given table
@@ -805,7 +805,7 @@ function odbc_primarykeys ($connection_id, $qualifier, $owner, $table) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_columnprivileges ($connection_id, $qualifier, $owner, $table_name, $column_name) {}
+function odbc_columnprivileges ($connection_id, string $qualifier, string $owner, string $table_name, string $column_name) {}
 
 /**
  * Lists tables and the privileges associated with each table
@@ -837,7 +837,7 @@ function odbc_columnprivileges ($connection_id, $qualifier, $owner, $table_name,
  * @since 4.0
  * @since 5.0
  */
-function odbc_tableprivileges ($connection_id, $qualifier, $owner, $name) {}
+function odbc_tableprivileges ($connection_id, string $qualifier, string $owner, string $name) {}
 
 /**
  * Retrieves a list of foreign keys
@@ -897,7 +897,7 @@ function odbc_tableprivileges ($connection_id, $qualifier, $owner, $name) {}
  * @since 4.0
  * @since 5.0
  */
-function odbc_foreignkeys ($connection_id, $pk_qualifier, $pk_owner, $pk_table, $fk_qualifier, $fk_owner, $fk_table) {}
+function odbc_foreignkeys ($connection_id, string $pk_qualifier, string $pk_owner, string $pk_table, string $fk_qualifier, string $fk_owner, string $fk_table) {}
 
 /**
  * Get the list of procedures stored in a specific data source
