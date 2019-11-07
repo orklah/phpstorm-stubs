@@ -255,7 +255,7 @@ class SoapClient  {
      * <b>SOAP_SSL_METHOD_SSLv3</b> or
      * <b>SOAP_SSL_METHOD_SSLv23</b>.
      * </p>
-     * @throws SoapFault A SoapFault exception will be thrown if the wsdl URI cannot be loaded. 
+     * @throws SoapFault A SoapFault exception will be thrown if the wsdl URI cannot be loaded.
      * @since 5.0.1
      */
     public function __construct ($wsdl, array $options = null) {}
@@ -446,7 +446,7 @@ class SoapVar  {
 	 * @param mixed $data <p>
 	 * The data to pass or return.
 	 * </p>
-	 * @param string $encoding <p>
+	 * @param int $encoding <p>
 	 * The encoding ID, one of the XSD_... constants.
 	 * </p>
 	 * @param string $type_name [optional] <p>
