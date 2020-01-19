@@ -659,8 +659,7 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
     /**
      * Write a field array as a CSV line
      * @link https://php.net/manual/en/splfileobject.fputcsv.php
-     * @param array $fields <p>
-     * An array of values
+     * @param array $fields An array of values
      * @param string $delimiter [optional] <p>
      * The field delimiter (one character only). Defaults as a comma or the value set using <b>SplFileObject::setCsvControl</b>.
      * </p>
@@ -670,7 +669,6 @@ class SplFileObject extends SplFileInfo implements RecursiveIterator, SeekableIt
      * @param string $escape The optional escape parameter sets the escape character (one character only).
      * @return int|false Returns the length of the written string or FALSE on failure.
      * @since 5.4
-     *</p>
      */
 	public function fputcsv (array $fields, string $delimiter = ',' , string $enclosure = '"', string $escape = "\\") {}
 
@@ -1192,6 +1190,18 @@ class SplDoublyLinkedList implements Iterator, Countable, ArrayAccess, Serializa
          * @since 5.4
          */
          public function  serialize () {}
+
+        /**
+         * @return array
+         * @since 7.4
+         */
+        public function __serialize(): array {}
+
+        /**
+         * @param array $data
+         * @since 7.4
+         */
+        public function __unserialize(array $data): void {}
 
 }
 
@@ -2105,6 +2115,18 @@ class SplObjectStorage implements Countable, Iterator, Serializable, ArrayAccess
          * @since 5.4
         */
         public function getHash($object) {}
+
+        /**
+         * @return array
+         * @since 7.4
+         */
+        public function __serialize(): array {}
+
+        /**
+         * @param array $data
+         * @since 7.4
+         */
+        public function __unserialize(array $data): void {}
 
 }
 

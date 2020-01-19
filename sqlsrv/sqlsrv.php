@@ -1275,7 +1275,7 @@ function sqlsrv_fetch($stmt, ?int $row=null, ?int $offset=null){}
  * information about specifying PHP data types,
  * see {@link http://msdn.microsoft.com/en-us/library/cc296208.aspx How to: Specify PHP Data Types}.
  */
-function sqlsrv_get_field($stmt, int $field_index, int $get_as_type){}
+function sqlsrv_get_field($stmt, int $field_index, int $get_as_type=null){}
 
 /**
  * Retrieves the next row of data as a numerically indexed array, an associative array, or both.

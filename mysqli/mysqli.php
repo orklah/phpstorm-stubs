@@ -216,7 +216,6 @@ class mysqli  {
 	 * @param int $flags A bitmask of MYSQLI_TRANS_COR_* constants.
 	 * @param string $name If provided then COMMIT $name is executed.
 	 * @return bool true on success or false on failure.
-	 * @since 5.5 Added flags and name parameters.
 	 * @since 5.0
 	 */
 	public function commit ($flags = null, $name = null) {}
@@ -1857,10 +1856,9 @@ function mysqli_get_client_info () {}
 /**
  * Returns the MySQL client version as an integer
  * @link https://php.net/manual/en/mysqli.get-client-version.php
- * @param mysqli $link A link identifier returned by mysqli_connect() or mysqli_init()
  * @return int
  */
-function mysqli_get_client_version ($link) {}
+function mysqli_get_client_version () {}
 
 /**
  * Returns a string representing the type of connection used

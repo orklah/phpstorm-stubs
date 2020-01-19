@@ -183,6 +183,7 @@ class CallbackFilterIterator extends FilterIterator {
  * (PHP 5 >= 5.4.0)<br>
  * RecursiveCallbackFilterIterator from a RecursiveIterator
  * @link https://secure.php.net/manual/en/class.recursivecallbackfilteriterator.php
+ * @since 5.4
  */
 class RecursiveCallbackFilterIterator extends CallbackFilterIterator implements RecursiveIterator {
 
@@ -1772,6 +1773,18 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Serializable, Count
     public function serialize() { }
 
     /**
+     * @return array
+     * @since 7.4
+     */
+    public function __serialize(): array {}
+
+    /**
+     * @param array $data
+     * @since 7.4
+     */
+    public function __unserialize(array $data): void {}
+
+    /**
      * Create a new iterator from an ArrayObject instance
      * @link https://php.net/manual/en/arrayobject.getiterator.php
      * @return ArrayIterator An iterator from an <b>ArrayObject</b>.
@@ -2051,6 +2064,18 @@ class ArrayIterator implements SeekableIterator, ArrayAccess, Serializable, Coun
      * @since 5.0
      */
     public function seek(int $position) { }
+
+    /**
+     * @return array
+     * @since 7.4
+     */
+    public function __serialize(): array {}
+
+    /**
+     * @param array $data
+     * @since 7.4
+     */
+    public function __unserialize(array $data): void {}
 }
 
 /**

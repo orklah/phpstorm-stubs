@@ -780,15 +780,15 @@ function rtrim (string $str, string $charlist = " \t\n\r\0\x0B") {}
 /**
  * Replace all occurrences of the search string with the replacement string
  * @link https://php.net/manual/en/function.str-replace.php
- * @param mixed $search <p>
+ * @param string|string[] $search <p>
  * The value being searched for, otherwise known as the needle.
  * An array may be used to designate multiple needles.
  * </p>
- * @param mixed $replace <p>
+ * @param string|string[] $replace <p>
  * The replacement value that replaces found search
  * values. An array may be used to designate multiple replacements.
  * </p>
- * @param mixed $subject <p>
+ * @param string|string[] $subject <p>
  * The string or array being searched and replaced on,
  * otherwise known as the haystack.
  * </p>
@@ -1005,7 +1005,7 @@ function similar_text (string $first, string $second, float &$percent = null) {}
  * <p>
  * If the limit parameter is zero, then this is treated as 1.
  * </p>
- * @return array If delimiter is an empty string (""),
+ * @return string[]|false If delimiter is an empty string (""),
  * explode will return false.
  * If delimiter contains a value that is not
  * contained in string and a negative
